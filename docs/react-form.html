@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Form · Jafar</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Form component gets as props form model object and resources object that will list all its settings (such as validations, disable term, field dependencies and more) and lifecycle hooks (such as before and after actions, submit, form level validations and dto conversions). In addition, Form component exposes a context object that includes current form model, resources and actions (such as `changeValue`) to perform on the form. The context can be used within any child component of the Form component (not necessary direct child component). "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Form · Jafar"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/index.html"/><meta property="og:description" content="Form component gets as props form model object and resources object that will list all its settings (such as validations, disable term, field dependencies and more) and lifecycle hooks (such as before and after actions, submit, form level validations and dto conversions). In addition, Form component exposes a context object that includes current form model, resources and actions (such as `changeValue`) to perform on the form. The context can be used within any child component of the Form component (not necessary direct child component). "/><meta property="og:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><link rel="shortcut icon" href="https://yahoo.github.io/jafar/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://yahoo.github.io/jafar/js/update-href-urls.js"></script><script src="https://yahoo.github.io/jafar/js/scrollSpy.js"></script><link rel="stylesheet" href="https://yahoo.github.io/jafar/css/main.css"/><script src="https://yahoo.github.io/jafar/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://yahoo.github.io/jafar/"><img class="logo" src="https://yahoo.github.io/jafar/img/docusaurus.svg" alt="Jafar"/><h2 class="headerTitleWithLogo">Jafar</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="https://yahoo.github.io/jafar/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-form.html" target="_self">Form Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-components.html" target="_self">Components Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-layout.html" target="_self">Layout Demos</a></li><li class=""><a href="https://github.com/yahoo/jafar" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>React Form</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/introduction.html">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Class<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/arguments.html">Arguments</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/id.html">Id</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/data.html">Data</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/fields.html">Fields</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/path.html">Path</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/component.html">Component</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/formatter-parser.html">Formatter &amp; Parser</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies.html">Dependencies</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/required.html">Required</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/validators.html">Validators</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/exclude-term.html">Exclude Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/disable-term.html">Disable Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/require-term.html">Require Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies-change.html">Dependencies Change</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/context.html">Context</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dirty.html">Dirty</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/invalid.html">Invalid</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/errors.html">Errors</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/processing.html">Processing</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/pending-actions.html">Pending Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/hooks.html">Hooks</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/term.html">Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/log.html">Log</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/error-codes.html">Error Codes</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/actions.html">Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/definition-shorthand.html">Definition Shorthand</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced Usages<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/grid-usage.html">Grid Usage</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/persistency.html">Form Persistency</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/undo-redo.html">Undo &amp; Redo</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/replay.html">Replay Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/track.html">Track Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/server-validation.html">Server Validation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/entity-templates.html">Entity Templates</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/folder-structure.html">Folder Structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">React Form<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-overview.html">Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-form.html">Form</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-field.html">Field</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-components.html">Components</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-demos.html">Demos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">More Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/test.html">Test Jafar</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/packages.html">Packages</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/why-jafar.html">Why Jafar?</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/videos.html">Videos</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/channels.html">Channels</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Form</h1></header><article><div><span><p>Form component gets as props form model object and resources object that will list all its settings (such as validations, disable term, field dependencies and more) and lifecycle hooks (such as before and after actions, submit, form level validations and dto conversions). In addition, Form component exposes a context object that includes current form model, resources and actions (such as <code>changeValue</code>) to perform on the form. The context can be used within any child component of the Form component (not necessary direct child component).</p>
+<h2><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>model</td><td>required object</td><td>Model object that defines fields, validators and more as described in <a href="arguments#model">Form Class</a></td></tr>
+<tr><td>resources</td><td>object</td><td>Resources object that defines all the handlers that the form model defined as described in <a href="arguments#resources">Form Class</a></td></tr>
+<tr><td>settings</td><td>object</td><td>Settings overrides object as described in <a href="arguments#settings">Form Class</a></td></tr>
+<tr><td>data</td><td>object</td><td>Pass <a href="data">data</a> as a prop outside the model object - only when data might change outside the Form component during the app life. On <code>init</code> - Form will applies data to the model and pass the final model to the underline <a href="form-overview">Form class</a> instance, and when data prop reference changes only <code>changeData</code> action called on the underline form instance.</td></tr>
+<tr><td>context</td><td>object</td><td>Pass <a href="context">context</a> as a prop outside the model object - only when context might change outside the Form component during the app life. On <code>init</code> - Form will applies context to the model and pass the final model to the underline <a href="form-overview">Form class</a> instance, and when context prop reference changes only <code>changeContext</code> action called on the underline form instance.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h2>
+<pre><code class="hljs css language-jsx"><span class="hljs-keyword">import</span> { Form, Field } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+<span class="hljs-keyword">import</span> SomeInputText <span class="hljs-keyword">from</span> <span class="hljs-string">'./my-components/Text.jsx'</span>;
+
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">firstName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'firstName'</span>,
+      <span class="hljs-attr">label</span>: <span class="hljs-string">'First Name'</span>,
+      <span class="hljs-attr">description</span>: <span class="hljs-string">'Enter user first name'</span>,
+      <span class="hljs-attr">component</span>: {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'InputText'</span>,
+      },
+    },
+    <span class="hljs-attr">lastName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'lastName'</span>,
+      <span class="hljs-attr">label</span>: <span class="hljs-string">'Last Name'</span>,
+      <span class="hljs-attr">component</span>: {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'InputText'</span>,
+      },
+    },
+    <span class="hljs-attr">data</span>: {
+      <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Roos'</span>,
+      <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span>,
+    }
+  },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-attr">InputText</span>: { <span class="hljs-attr">renderer</span>: SomeInputText },
+  }
+};
+
+&lt;Form model={model} resources={resources}&gt;
+  &lt;h2&gt;User Details&lt;/h2&gt;
+  &lt;Field id="firstName" /&gt;
+  &lt;Field id="lastName" /&gt;
+&lt;/Form&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="context"></a><a href="#context" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context</h2>
+<p>Form provides a context object used by direct and non-direct children components.</p>
+<blockquote>
+<p><strong>Note:</strong> In <code>@jafar/react-form</code> - <code>context</code> refer to the data provided by the <code>Form</code> component object, which can be consumed by each
+underline component (i.e react's context feature). Whereas in <code>@jafar/form</code> <a href="context">context</a> refers to the app data which is stored in the model to
+serve the form's lifecycle handlers.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="context-object"></a><a href="#context-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context object</h3>
+<p>Context object contains:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>model</td><td>object</td><td>The current model object. Can be used to pull data for an underline component. For instance, a save button component, should use form data to disable the button in some cases</td></tr>
+<tr><td>resources</td><td>object</td><td>The current resources object</td></tr>
+<tr><td>actions</td><td>object</td><td>actions object contains a set of function to be called in order to manipulate the from. Full actions docs can be found <a href="actions.html">here</a></td></tr>
+</tbody>
+</table>
+<p>For Example:</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> reset = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  context.actions.reset();
+};
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">{context.model.invalid</span> || <span class="hljs-attr">context.model.processing</span> || 
+  !<span class="hljs-attr">context.model.dirty</span>} <span class="hljs-attr">onClick</span>=<span class="hljs-string">{reset}</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="context-consume"></a><a href="#context-consume" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context Consume</h3>
+<p>In order to use the Form context in child components, components first need to consume Form context.</p>
+<p>Example using class component:</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorsSummary</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">static</span> contextType = FormContext;
+
+  render() {
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Errors summary:<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      {
+          Object.values(this.context.model.fields).map((field, i) =&gt; (<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span>&gt;</span>
+            { field.errors.map((error, index) =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>Error in {field.label}: {error.message}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>) }
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>))
+      }
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>);
+  }
+}
+</code></pre>
+<p>Example using functional component:</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React, { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+
+<span class="hljs-keyword">const</span> ErrorsSummary = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> context = useContext(FormContext);
+
+  <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Errors summary:<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+    {
+        Object.values(context.model.fields).map((field, i) =&gt; (<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span>&gt;</span>
+          { field.errors.map((error, index) =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>Error in {field.label}: {error.message}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>) }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>))
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>);
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="context-usage"></a><a href="#context-usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context Usage</h3>
+<p>Components declared inside a Form tag component can define contextType of form, and then
+use <code>this.context</code> to gain access to the form context.</p>
+<p>Examples</p>
+<ol>
+<li>Jafar <a href="componentsField.html">Field component</a> - consumes the form context and interacts with it. It uses the
+<code>this.context.model</code> to get field's data, <code>this.context.actions.changeValue</code> and <code>this.context.actions.changeState</code> actions to notify the form about a change in the component.</li>
+<li>Your custom component. You can define another custom components to interact with the form like <code>SaveButton</code></li>
+</ol>
+<p>Example</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Button'</span>;
+<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SaveButton</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">static</span> contextType = FormContext;
+
+  render() {
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">{this.context.model.invalid}</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.onSave}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>);
+  }
+
+  onSave = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-comment">// save data to the server</span>
+    serverCallToSaveData(<span class="hljs-keyword">this</span>.context.model.data).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-comment">// reset the form to its initial state</span>
+      <span class="hljs-keyword">this</span>.context.actions.reset();
+    });
+  }
+}
+</code></pre>
+<ol start="3">
+<li>Pass to custom components any additional data (for example app data) through resources or model objects that are passed via context.</li>
+</ol>
+<p>Example</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> model = {
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">appData</span>: {
+    <span class="hljs-attr">user</span>: { <span class="hljs-comment">/* ... */</span> },
+    <span class="hljs-attr">currency</span>: <span class="hljs-string">'USD'</span>,
+  },
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Currency</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">static</span> contextType = FormContext;
+
+  render() {
+    <span class="hljs-keyword">return</span> (&lt;Input
+      type="number" 
+      value={this.props.value} 
+      onChange={this.onValueChange} 
+      endAdornment={&lt;Label value={this.context.model.appData.currency}/&gt;}/&gt;);
+  }
+
+  onValueChange = (e) =&gt; {
+    this.props.onValueChange(e.target.value);
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="using-createform-helper"></a><a href="#using-createform-helper" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using createForm helper</h2>
+<p>Instead of defining multiple custom inner components using form context (like the above SaveButton), you can use our <code>createForm</code> function. This function
+gets a form definition (model &amp; resources) and returns an HOC that gets your single component. Your component should define its context as the form context, and then the form context will be available in your component.</p>
+<p>Example</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> { Field, FormContext, createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Button'</span>;
+<span class="hljs-keyword">import</span> form <span class="hljs-keyword">from</span> <span class="hljs-string">'../form'</span>; <span class="hljs-comment">// object of { model, resources }</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">static</span> contextType = FormContext;
+
+  render() {
+    <span class="hljs-keyword">return</span> (&lt;div&gt;
+      &lt;h2&gt;User Details&lt;/h2&gt;
+      &lt;Field id="firstName" /&gt;
+      &lt;Field id="lastName" /&gt;
+      &lt;Button disabled={this.context.model.invalid} onClick={this.onSave}&gt;&lt;/Button&gt;
+    &lt;/div&gt;
+     );
+  }
+
+  onSave = () =&gt; {
+    // save data to the server
+    serverCallToSaveData(this.context.model.data).then(() =&gt; {
+      // reset the form to its initial state
+      this.context.actions.reset();
+    });
+  }
+}
+
+return createForm(form)(MyComponent);
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/react-overview.html"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/react-field.html"><span>Field</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#props">Props</a></li><li><a href="#example">Example</a></li><li><a href="#context">Context</a><ul class="toc-headings"><li><a href="#context-object">Context object</a></li><li><a href="#context-consume">Context Consume</a></li><li><a href="#context-usage">Context Usage</a></li></ul></li><li><a href="#using-createform-helper">Using createForm helper</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Verizon Media</section></footer></div></body></html>

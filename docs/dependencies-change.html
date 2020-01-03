@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Dependencies Change · Jafar</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Define dependencies change for a field, in order to change its value / state when another field has changed its value."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Dependencies Change · Jafar"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/index.html"/><meta property="og:description" content="Define dependencies change for a field, in order to change its value / state when another field has changed its value."/><meta property="og:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><link rel="shortcut icon" href="https://yahoo.github.io/jafar/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://yahoo.github.io/jafar/js/update-href-urls.js"></script><script src="https://yahoo.github.io/jafar/js/scrollSpy.js"></script><link rel="stylesheet" href="https://yahoo.github.io/jafar/css/main.css"/><script src="https://yahoo.github.io/jafar/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://yahoo.github.io/jafar/"><img class="logo" src="https://yahoo.github.io/jafar/img/docusaurus.svg" alt="Jafar"/><h2 class="headerTitleWithLogo">Jafar</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="https://yahoo.github.io/jafar/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-form.html" target="_self">Form Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-components.html" target="_self">Components Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-layout.html" target="_self">Layout Demos</a></li><li class=""><a href="https://github.com/yahoo/jafar" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Form Class</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/introduction.html">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Class<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/arguments.html">Arguments</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/id.html">Id</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/data.html">Data</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/fields.html">Fields</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/path.html">Path</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/component.html">Component</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/formatter-parser.html">Formatter &amp; Parser</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies.html">Dependencies</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/required.html">Required</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/validators.html">Validators</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/exclude-term.html">Exclude Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/disable-term.html">Disable Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/require-term.html">Require Term</a></li><li class="navListItem navListItemActive"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies-change.html">Dependencies Change</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/context.html">Context</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dirty.html">Dirty</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/invalid.html">Invalid</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/errors.html">Errors</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/processing.html">Processing</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/pending-actions.html">Pending Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/hooks.html">Hooks</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/term.html">Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/log.html">Log</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/error-codes.html">Error Codes</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/actions.html">Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/definition-shorthand.html">Definition Shorthand</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced Usages<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/grid-usage.html">Grid Usage</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/persistency.html">Form Persistency</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/undo-redo.html">Undo &amp; Redo</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/replay.html">Replay Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/track.html">Track Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/server-validation.html">Server Validation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/entity-templates.html">Entity Templates</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/folder-structure.html">Folder Structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">React Form<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-form.html">Form</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-field.html">Field</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-components.html">Components</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-demos.html">Demos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">More Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/test.html">Test Jafar</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/packages.html">Packages</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/why-jafar.html">Why Jafar?</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/videos.html">Videos</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/channels.html">Channels</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Dependencies Change</h1></header><article><div><span><p>Define dependencies change for a field, in order to change its value / state when another field has changed its value.</p>
+<h2><a class="anchor" aria-hidden="true" id="field-dependencies-change"></a><a href="#field-dependencies-change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Field Dependencies Change</h2>
+<p>Field dependencies change function is evaluated on init and when each of its dependencies fields value changed.
+To define field dependency change - a definition is required in the <code>model.fields.someField</code> object, and implementation is
+required in the <code>resources.dependenciesChanges</code> object.</p>
+<h3><a class="anchor" aria-hidden="true" id="model"></a><a href="#model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Model</h3>
+<p><code>model.fields.someField.dependenciesChange</code> - object. Contains:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>required string</td><td>Represents the key in <a href="dependencies-change#resources">resources.dependenciesChanges</a> object</td></tr>
+<tr><td>args</td><td>object</td><td>Custom data to pass to the dependencies change function</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="resources"></a><a href="#resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resources</h3>
+<p><code>resources.dependenciesChanges</code> - dependenciesChanges. Required only if <a href="dependencies-change#model">model.fields.someField.dependenciesChange</a> defined.
+Key is the dependenciesChange name, and value is an object that contains:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>func</td><td>required function</td><td>Evaluates on each field’s dependencies value change. Function can be <code>sync</code> or <code>async</code> function (that resolves to the return value). <a href="dependencies-change#func">More info</a></td></tr>
+<tr><td>defaultArgs</td><td>object</td><td>Default args for all fields. This will be shallow merged with field level conversion <code>args</code> before passed to the <code>func</code></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="func"></a><a href="#func" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>func</h4>
+<pre><code class="hljs"><span class="hljs-keyword">function</span> ({ 
+ <span class="hljs-built_in"> id</span>, 
+  <span class="hljs-keyword">value</span>, 
+  state, 
+  dependencies {<span class="hljs-built_in"> id</span>: { <span class="hljs-keyword">value</span> } },
+  prevDependencies {<span class="hljs-built_in"> id</span>: { <span class="hljs-keyword">value</span> } },
+  args,
+  <span class="hljs-keyword">context</span>,
+})
+</code></pre>
+<p><code>return value</code> - object. Object defines which changes should be applied to the current field. Contains one or both of:</p>
+<ol>
+<li>value - the new value of that field</li>
+<li>state - the new state of that field</li>
+</ol>
+<p>The function can also return <code>undefined</code> - in that case, the field value / state remains the same.</p>
+<p>After the function completes, and the field is evaluated again (excludeTerm, validators and disableTerm), so even if the function doesn't change anything (returned undefined), the field is still evaluated again.</p>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>Each time 'country' changes - 'city' value is initiated to the country's capital city, and state's items are replaces to the country's cities.</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">/* 
+countryToCities - object like { 
+  ISRAEL: [{ label: 'Jerusalem', value: 'JERUSALEM', capital: true }, { label: 'Tel Aviv', value: 'TEL_AVIV', }],
+  MEXICO: [{ label: 'Mexico City', value: 'MEXICO_CITY', capital: true }, { label: 'Cancun', value: 'CANCUN', }],
+}
+*/</span>
+<span class="hljs-keyword">import</span> { countryToCities } <span class="hljs-keyword">from</span> <span class="hljs-string">'./consts'</span>; 
+
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">country</span>: {
+      <span class="hljs-comment">// ...</span>
+    }.
+    city: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">dependencies</span>: [<span class="hljs-string">'country'</span>]
+      <span class="hljs-attr">dependenciesChange</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'cityDependenciesChange'</span> }, 
+    }
+  },
+  <span class="hljs-attr">data</span>: { <span class="hljs-attr">country</span>: <span class="hljs-string">'ISRAEL'</span>, <span class="hljs-attr">city</span>: <span class="hljs-string">'TEL_AVIV'</span> },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">dependenciesChanges</span>: {
+    <span class="hljs-attr">cityDependenciesChange</span>: {
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (props.prevDependencies &amp;&amp; 
+          (props.dependencies.country.value !== props.prevDependencies.country.value)) {
+          <span class="hljs-keyword">const</span> cities = countryToCities[props.dependencies.country.value];
+          
+          <span class="hljs-keyword">return</span> {
+            <span class="hljs-attr">value</span>: cities.find(<span class="hljs-function"><span class="hljs-params">city</span> =&gt;</span> city.capital).value,
+            <span class="hljs-attr">state</span>: { ...props.state, <span class="hljs-attr">items</span>: cities },
+          };
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">undefined</span>; <span class="hljs-comment">// no changes needed</span>
+      }
+    }
+  }
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="shorthand"></a><a href="#shorthand" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shorthand</h3>
+<p>Definition shorthand for dependencies changes can be found in <a href="definition-shorthand#dependencies-change">definition shorthand documentation</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="circular-dependencies"></a><a href="#circular-dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Circular Dependencies</h3>
+<ol>
+<li>Circular dependencies can happen only if these 4 conditions apply simultaneously:</li>
+</ol>
+<ul>
+<li>Field “b” defines a dependency for field “a” (field.dependencies = [‘a’])</li>
+<li>Field “a” defines a dependency for field “b” (field.dependencies = [‘b’])</li>
+<li>Field “b” defines a “field.dependenciesChange” func that returns “value” change in every case</li>
+<li>Field “a” defines a “field.dependenciesChange” func that returns “value” change in every case</li>
+</ul>
+<p>Example</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> model = {
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">a</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">dependencies</span>: [<span class="hljs-string">'b'</span>],
+      dependenciesChange”: <span class="hljs-string">'aDependenciesChange'</span>,
+    }, 
+    <span class="hljs-attr">b</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">dependencies</span>: [<span class="hljs-string">'a'</span>],
+      dependenciesChange”: <span class="hljs-string">'bDependenciesChange'</span>,
+    }
+  },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">dependenciesChanges</span>: {
+    <span class="hljs-attr">aDependenciesChange</span>: {
+        <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> ({ <span class="hljs-attr">value</span>: props.dependencies.b.value + <span class="hljs-number">1</span> }),
+    },
+    <span class="hljs-attr">bDependenciesChange</span>: {
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> ({ <span class="hljs-attr">value</span>: props.dependencies.a.value + <span class="hljs-number">1</span> }),
+    },
+  }
+}
+</code></pre>
+<ol start="2">
+<li><p>Circular dependencies can happen also on a larger chain(<code>a -&gt; b -&gt; c -&gt; d -&gt; a</code>)</p></li>
+<li><p>There are also non circular cases like:</p></li>
+</ol>
+<ul>
+<li>“a” changes
+<ul>
+<li>triggers “b” to change value (in dependencyChange func return value to change)
+<ul>
+<li>triggers “a” to change value (in dependencyChange func return value to change)
+<ul>
+<li>triggers “b” to evaluate (in dependencyChange func return undefined)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Example</p>
+<p>a = 0, b = 0. a changes to 1 -&gt; triggers b change to 1 -&gt; triggers a change to 2 -&gt; trigger b to return undefined and not change anything. loop ends.</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> model = {
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">a</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">dependencies</span>: [<span class="hljs-string">'b'</span>],
+      dependenciesChange”: <span class="hljs-string">'aDependenciesChange'</span>,
+    }, 
+    <span class="hljs-attr">b</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">dependencies</span>: [<span class="hljs-string">'a'</span>],
+      dependenciesChange”: <span class="hljs-string">'bDependenciesChange'</span>,
+    }
+  },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">dependenciesChanges</span>: {
+    <span class="hljs-attr">aDependenciesChange</span>: {
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> (props.dependencies.b.value &lt; <span class="hljs-number">2</span> ? { <span class="hljs-attr">value</span>: props.value + <span class="hljs-number">1</span> } : <span class="hljs-literal">undefined</span>);
+    },
+    <span class="hljs-attr">bDependenciesChange</span>: {
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> (props.dependencies.a.value &lt; <span class="hljs-number">2</span> ? ),
+    },
+  }
+};
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/require-term.html"><span class="arrow-prev">← </span><span>Require Term</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/context.html"><span>Context</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#field-dependencies-change">Field Dependencies Change</a><ul class="toc-headings"><li><a href="#model">Model</a></li><li><a href="#resources">Resources</a></li><li><a href="#example">Example</a></li><li><a href="#shorthand">Shorthand</a></li><li><a href="#circular-dependencies">Circular Dependencies</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Verizon Media</section></footer></div></body></html>

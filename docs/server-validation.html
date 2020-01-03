@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Server Validation · Jafar</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Writing form validations 2 times - both in the client and server can be a huge headache - consuming duplicate type of work and time, usually write them in a different language, and the validations might not be consistence in both sides. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Server Validation · Jafar"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/index.html"/><meta property="og:description" content="Writing form validations 2 times - both in the client and server can be a huge headache - consuming duplicate type of work and time, usually write them in a different language, and the validations might not be consistence in both sides. "/><meta property="og:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><link rel="shortcut icon" href="https://yahoo.github.io/jafar/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://yahoo.github.io/jafar/js/update-href-urls.js"></script><script src="https://yahoo.github.io/jafar/js/scrollSpy.js"></script><link rel="stylesheet" href="https://yahoo.github.io/jafar/css/main.css"/><script src="https://yahoo.github.io/jafar/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://yahoo.github.io/jafar/"><img class="logo" src="https://yahoo.github.io/jafar/img/docusaurus.svg" alt="Jafar"/><h2 class="headerTitleWithLogo">Jafar</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="https://yahoo.github.io/jafar/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-form.html" target="_self">Form Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-components.html" target="_self">Components Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-layout.html" target="_self">Layout Demos</a></li><li class=""><a href="https://github.com/yahoo/jafar" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Advanced Usages</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/introduction.html">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Class<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/arguments.html">Arguments</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/id.html">Id</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/data.html">Data</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/fields.html">Fields</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/path.html">Path</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/component.html">Component</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/formatter-parser.html">Formatter &amp; Parser</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies.html">Dependencies</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/required.html">Required</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/validators.html">Validators</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/exclude-term.html">Exclude Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/disable-term.html">Disable Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/require-term.html">Require Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies-change.html">Dependencies Change</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/context.html">Context</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dirty.html">Dirty</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/invalid.html">Invalid</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/errors.html">Errors</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/processing.html">Processing</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/pending-actions.html">Pending Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/hooks.html">Hooks</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/term.html">Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/log.html">Log</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/error-codes.html">Error Codes</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/actions.html">Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/definition-shorthand.html">Definition Shorthand</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced Usages<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/grid-usage.html">Grid Usage</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/persistency.html">Form Persistency</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/undo-redo.html">Undo &amp; Redo</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/replay.html">Replay Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/track.html">Track Actions</a></li><li class="navListItem navListItemActive"><a class="navItem" href="https://yahoo.github.io/jafar/docs/server-validation.html">Server Validation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/entity-templates.html">Entity Templates</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/folder-structure.html">Folder Structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">React Form<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-form.html">Form</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-field.html">Field</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-components.html">Components</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-demos.html">Demos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">More Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/test.html">Test Jafar</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/packages.html">Packages</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/why-jafar.html">Why Jafar?</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/videos.html">Videos</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/channels.html">Channels</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Server Validation</h1></header><article><div><span><p>Writing form validations 2 times - both in the client and server can be a huge headache - consuming duplicate type of work and time, usually write them in a different language, and the validations might not be consistence in both sides.</p>
+<p>Jafar allow you to do it only one time in a single place! Using a server Node.js you can expose an endpoint that validates the same form definition that was already defined to the client pages usage.</p>
+<p>Jafar separates the logical form from the ui Form component. The logical form is a pure javascript form
+class that can be used both from the Form component (for example <code>@jafar/react-form/Form</code> component uses it behind the scene)
+as well as in a node server.</p>
+<p>By defining a form definition schema in a common package - and use in it both in the client page
+(using Form component that gets that model &amp; resources form definition as a props) as well as in a Node.js server - you reduce work duplication and time, consist all form related in one language support, and keep the validations synced in both client and server.</p>
+<h2><a class="anchor" aria-hidden="true" id="architecture"></a><a href="#architecture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Architecture</h2>
+<p><img src="https://yahoo.github.io/jafar/docs/assets/server-validation-v1.0.0.png" alt="server-validation"></p>
+<p>In the Node.js server - all you need to do to preform server validation is:</p>
+<ol>
+<li>Expose a POST endpoint for validation - that gets the form's data from the body and the form name as a url parameter</li>
+<li>Require the javascript Form class from <code>@jafar/form</code></li>
+<li>Require the specific form definition using the formName param from the forms definitions common package</li>
+<li>Apply the data to the form definition model</li>
+<li>Initialize the Form class with the model &amp; resources, and await for init to finish</li>
+<li>Check if the form is valid</li>
+<li>Return response valid / invalid</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="example---jafar-node-server"></a><a href="#example---jafar-node-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example - Jafar Node Server</h2>
+<p>The following example demonstrate a simple Node.js server that validates a specific form with the given data from the client.
+Running <code>node server.js</code> will start the server and wait for requests.</p>
+<blockquote>
+<p><strong>Note:</strong> If a form used <a href="context">context</a> object to contain dependent app data such as logged-in user data or permissions, you should override
+it in the server with the expected data (e.g get the logged-in user data from the server session for example)</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="endpointsvalidatejs"></a><a href="#endpointsvalidatejs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>endpoints/validate.js</h3>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> clone = <span class="hljs-built_in">require</span>(<span class="hljs-string">'lodash/clone'</span>);
+<span class="hljs-keyword">const</span> Form = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@jafar/form'</span>).default;
+<span class="hljs-keyword">const</span> handleError = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../handle-response'</span>).handleError;
+<span class="hljs-keyword">const</span> handleSuccess = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../handle-response'</span>).handleSuccess;
+
+<span class="hljs-keyword">const</span> errors = {
+  <span class="hljs-attr">FORM_NAME_PARAM_MISSING</span>:
+  <span class="hljs-string">'formName was not defined as a url parameter. For example http://localhost:3001/validate?formName=user'</span>,
+};
+<span class="hljs-comment">/*
+ POST
+ headers = { 'Content-Type': 'application/json' }
+ url = http://localhost:3001/validate?formName=user
+ body = { firstName: 'Monica' }
+*/</span>
+<span class="hljs-built_in">module</span>.exports.validate = <span class="hljs-keyword">async</span> (req, res) =&gt; {  
+  <span class="hljs-comment">// get the form param. example: form=user</span>
+  <span class="hljs-keyword">let</span> formName = req.url.query.formName;
+
+  <span class="hljs-keyword">if</span> (!formName) {
+    <span class="hljs-keyword">return</span> handleError(res, <span class="hljs-number">500</span>, errors.FORM_NAME_PARAM_MISSING);
+  }
+  
+  <span class="hljs-comment">// get form definition using dynamic require</span>
+  <span class="hljs-keyword">let</span> { model, resources } = <span class="hljs-built_in">require</span>(<span class="hljs-string">`../forms/<span class="hljs-subst">${formName}</span>`</span>).default;
+  model = clone(model);
+
+  <span class="hljs-comment">// add data from request body</span>
+  model.data = req.body || {};
+
+  <span class="hljs-comment">// init js-form and wait for init to finish</span>
+  <span class="hljs-keyword">const</span> currForm = <span class="hljs-keyword">new</span> Form();
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">await</span> currForm.init(model, resources);
+  } <span class="hljs-keyword">catch</span> (e) {
+    <span class="hljs-keyword">return</span> handleError(res, <span class="hljs-number">500</span>, e.message);
+  }
+  
+  <span class="hljs-comment">// check if form is valid</span>
+  <span class="hljs-keyword">const</span> invalid = currForm.invalid;
+  <span class="hljs-keyword">const</span> result = invalid ? <span class="hljs-string">'false'</span> : <span class="hljs-string">'true'</span>;
+
+  <span class="hljs-comment">// return response</span>
+  handleSuccess(res, result);
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="handle-responsejs"></a><a href="#handle-responsejs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>handle-response.js</h3>
+<pre><code class="hljs css language-javascript"><span class="hljs-built_in">module</span>.exports.handleSuccess = <span class="hljs-function">(<span class="hljs-params">res, result</span>) =&gt;</span> {
+  res.statusCode = <span class="hljs-number">200</span>;
+  res.setHeader(<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">'text/plain'</span>);
+  res.end(result);
+};
+
+<span class="hljs-built_in">module</span>.exports.handleError = <span class="hljs-function">(<span class="hljs-params">res, number, message</span>) =&gt;</span> {
+  res.statusCode = number;
+  res.setHeader(<span class="hljs-string">'Content-Type'</span>, <span class="hljs-string">'text/plain'</span>);
+  res.end(<span class="hljs-string">`Jafar server error: <span class="hljs-subst">${message}</span>`</span>);
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="serverjs"></a><a href="#serverjs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>server.js</h3>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">'http'</span>);
+<span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">'url'</span>);
+<span class="hljs-keyword">const</span> handleError = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./handle-response'</span>).handleError;
+<span class="hljs-keyword">const</span> validate = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./endpoints/validate'</span>).validate;
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">'127.0.0.1'</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3001</span>;
+
+<span class="hljs-keyword">const</span> supportedMethods = {
+  <span class="hljs-attr">POST</span>: <span class="hljs-string">'POST'</span>,
+};
+
+<span class="hljs-keyword">const</span> router = {
+  <span class="hljs-string">'/validate'</span>: validate,
+};
+
+<span class="hljs-keyword">const</span> handleRequest = <span class="hljs-function">(<span class="hljs-params">request, response</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> urlData = url.parse(request.url, <span class="hljs-literal">true</span>);
+  <span class="hljs-keyword">const</span> handler = router[urlData.pathname];
+
+  <span class="hljs-keyword">if</span> (!handler) {
+    <span class="hljs-keyword">return</span> handleError(response, <span class="hljs-number">404</span>, <span class="hljs-string">'Page not found'</span>);
+  }
+ 
+  <span class="hljs-keyword">switch</span> (request.method) {
+    <span class="hljs-keyword">case</span> supportedMethods.POST: {
+      <span class="hljs-keyword">return</span> handlePost(request, response, handler);
+    }
+    <span class="hljs-attr">default</span>: {
+      <span class="hljs-keyword">return</span> handleError(response, <span class="hljs-number">405</span>, <span class="hljs-string">`Method '<span class="hljs-subst">${request.method}</span>' not allowed`</span>);
+    }
+  }
+};
+
+<span class="hljs-keyword">const</span> handlePost = <span class="hljs-function">(<span class="hljs-params">request, response, handler</span>) =&gt;</span> {
+  collectRequestData(request, body =&gt; {
+    <span class="hljs-keyword">const</span> req = { 
+      <span class="hljs-attr">url</span>: url.parse(request.url, <span class="hljs-literal">true</span>),
+      body,
+    };
+    handler(req, response);
+  });
+};
+
+<span class="hljs-keyword">const</span> collectRequestData = <span class="hljs-function">(<span class="hljs-params">request, callback</span>) =&gt;</span> {
+  <span class="hljs-keyword">let</span> body = <span class="hljs-string">''</span>;
+  request.on(<span class="hljs-string">'data'</span>, chunk =&gt; {
+    body += chunk.toString();
+
+    <span class="hljs-comment">// if POST data too big, kill the connection.</span>
+    <span class="hljs-comment">// 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB</span>
+    <span class="hljs-keyword">if</span> (body.length &gt; <span class="hljs-number">1e6</span>) {request.connection.destroy();}
+  });
+  request.on(<span class="hljs-string">'end'</span>, () =&gt; {
+    callback(<span class="hljs-built_in">JSON</span>.parse(body));
+  });
+};
+
+<span class="hljs-keyword">const</span> onServerStart = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Jafar server is running at http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>); <span class="hljs-comment">// eslint-disable-line</span>
+};
+
+<span class="hljs-comment">// create and start server</span>
+<span class="hljs-keyword">const</span> server = http.createServer(handleRequest);
+
+server.listen(port, hostname, onServerStart);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="formsuser"></a><a href="#formsuser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>forms/user</h3>
+<pre><code class="hljs css language-javascript">const inputText = require('@jafar/react-components/edit/Text').default;
+
+const model = {
+  fields = {
+    firstName: {
+      label: 'First Name',
+      description: 'Enter user first name',
+      path: 'firstName',
+      component': {
+        name: 'inputText'
+      },
+      validators: [
+        {
+          name: 'uniqueName'
+        }
+      ]
+    }
+  },
+};
+
+const resources = {
+  components: {
+    inputText: { renderer: inputText },
+  },
+  validators = {
+    uniqueName: {
+      func: props =&gt; new Promise((resolve) =&gt; {
+        setTimeout(() =&gt; {
+          const allServerNames = ['Rachel', 'Monica'];
+          const isNameUnique = !allServerNames.includes(props.value || '');
+          resolve(isNameUnique);
+        }, 1);
+      }),
+      message: props =&gt; `${props.label} should be unique`,
+    },
+  },
+};
+
+module.exports.default = {
+  model,
+  resources,
+};
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="example---client-request"></a><a href="#example---client-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example - Client request</h2>
+<ul>
+<li>Method = POST</li>
+<li>Headers = { 'Content-Type': 'application/json' }</li>
+<li>Url = <a href="http://localhost:3001/validate?formName=user">http://localhost:3001/validate?formName=user</a></li>
+<li>Body =
+<ol>
+<li>{ firstName: 'Monica' } - Will return invalid - since 'Monica' is already taken and firstName has unique name validation.</li>
+<li>{ firstName: 'Ross' } - Will return valid.</li>
+</ol></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/track.html"><span class="arrow-prev">← </span><span>Track Actions</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/entity-templates.html"><span>Entity Templates</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#architecture">Architecture</a></li><li><a href="#example---jafar-node-server">Example - Jafar Node Server</a><ul class="toc-headings"><li><a href="#endpointsvalidatejs">endpoints/validate.js</a></li><li><a href="#handle-responsejs">handle-response.js</a></li><li><a href="#serverjs">server.js</a></li><li><a href="#formsuser">forms/user</a></li></ul></li><li><a href="#example---client-request">Example - Client request</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Verizon Media</section></footer></div></body></html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog</id>
+    <title>Jafar Blog</title>
+    <updated>2019-02-18T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Jafar news and events.</subtitle>
+    <logo>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.svg</logo>
+    <rights>Copyright © 2020 Verizon Media</rights>
+    <entry>
+        <title type="html"><![CDATA[New Version 1.0.0]]></title>
+        <id>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog/2019/02/18/new-version-1.0.0.html</id>
+        <link href="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog/2019/02/18/new-version-1.0.0.html"/>
+        <updated>2019-02-18T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Welcome Jafar 🎉🎉🎉</p> ]]></summary>
+        <author>
+            <name>Gal Havivi</name>
+            <email/>
+            <uri>https://www.facebook.com/gal.havivi</uri>
+        </author>
+    </entry>
+</feed>

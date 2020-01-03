@@ -1,0 +1,733 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Actions · Jafar</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Form actions (api functions) allows interaction and manipulation of the form model object and the model&#x27;s data in particular. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Actions · Jafar"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/index.html"/><meta property="og:description" content="Form actions (api functions) allows interaction and manipulation of the form model object and the model&#x27;s data in particular. "/><meta property="og:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><link rel="shortcut icon" href="https://yahoo.github.io/jafar/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://yahoo.github.io/jafar/js/update-href-urls.js"></script><script src="https://yahoo.github.io/jafar/js/scrollSpy.js"></script><link rel="stylesheet" href="https://yahoo.github.io/jafar/css/main.css"/><script src="https://yahoo.github.io/jafar/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://yahoo.github.io/jafar/"><img class="logo" src="https://yahoo.github.io/jafar/img/docusaurus.svg" alt="Jafar"/><h2 class="headerTitleWithLogo">Jafar</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="https://yahoo.github.io/jafar/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-form.html" target="_self">Form Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-components.html" target="_self">Components Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-layout.html" target="_self">Layout Demos</a></li><li class=""><a href="https://github.com/yahoo/jafar" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Form Class</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/introduction.html">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Class<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/arguments.html">Arguments</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/id.html">Id</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/data.html">Data</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/fields.html">Fields</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/path.html">Path</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/component.html">Component</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/formatter-parser.html">Formatter &amp; Parser</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies.html">Dependencies</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/required.html">Required</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/validators.html">Validators</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/exclude-term.html">Exclude Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/disable-term.html">Disable Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/require-term.html">Require Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies-change.html">Dependencies Change</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/context.html">Context</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dirty.html">Dirty</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/invalid.html">Invalid</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/errors.html">Errors</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/processing.html">Processing</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/pending-actions.html">Pending Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/hooks.html">Hooks</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/term.html">Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/log.html">Log</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/error-codes.html">Error Codes</a></li><li class="navListItem navListItemActive"><a class="navItem" href="https://yahoo.github.io/jafar/docs/actions.html">Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/definition-shorthand.html">Definition Shorthand</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced Usages<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/grid-usage.html">Grid Usage</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/persistency.html">Form Persistency</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/undo-redo.html">Undo &amp; Redo</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/replay.html">Replay Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/track.html">Track Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/server-validation.html">Server Validation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/entity-templates.html">Entity Templates</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/folder-structure.html">Folder Structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">React Form<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-form.html">Form</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-field.html">Field</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-components.html">Components</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-demos.html">Demos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">More Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/test.html">Test Jafar</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/packages.html">Packages</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/why-jafar.html">Why Jafar?</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/videos.html">Videos</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/channels.html">Channels</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Actions</h1></header><article><div><span><p>Form actions (api functions) allows interaction and manipulation of the form model object and the model's data in particular.
+The following actions are the exposed api and their example of usage:</p>
+<h2><a class="anchor" aria-hidden="true" id="init"></a><a href="#init" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>init</h2>
+<p>Init the form instance with a model &amp; resources objects. Form can't be used before calling init.</p>
+<pre><code class="hljs"><span class="hljs-function">await myForm.<span class="hljs-title">init</span><span class="hljs-params">(model, resources, settings)</span></span>;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="args"></a><a href="#args" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Args</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>model</td><td>required object</td><td><a href="arguments#model">Model</a> definition object. represent the current form state</td></tr>
+<tr><td>resources</td><td>object</td><td><a href="arguments#resources">Resources</a> of the model that will be in used by the form class</td></tr>
+<tr><td>settings</td><td>object</td><td><a href="arguments#settings">Settings</a> overrides that will be in used by the form class</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle"></a><a href="#lifecycle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li><a href="definition-shorthand">Transpile</a> form definition</li>
+<li>Verify form definition</li>
+<li>Init form with <code>model</code>, <code>resources</code> as <code>settings</code> as described in <a href="actions#init-form">init form</a></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define user form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">firstName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'firstName'</span>,
+      <span class="hljs-attr">validators</span>: [{
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'uniqueName'</span>
+      }],
+    },
+    <span class="hljs-attr">lastName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'lastName'</span>,
+    }
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span>,
+  }
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">validators</span>: {
+    <span class="hljs-attr">uniqueName</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-comment">// ...</span>
+    },
+  }
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model);
+
+<span class="hljs-comment">// verify initial data</span>
+expect(form.data).toEqual({ <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="changevalue"></a><a href="#changevalue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>changeValue</h2>
+<p>Change a field's value to a new value. New value will be placed in the form's data object according to the field's path.</p>
+<pre><code class="hljs"><span class="hljs-function">await myForm.<span class="hljs-title">changeValue</span><span class="hljs-params">(<span class="hljs-string">'firstName'</span>, <span class="hljs-string">'Monica'</span>)</span></span>;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="args-1"></a><a href="#args-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Args</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>fieldId</td><td>required string</td><td>Field id to apply the change on</td></tr>
+<tr><td>value</td><td>any</td><td>New value</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-1"></a><a href="#lifecycle-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li>If field component is defined - set the value to the form as the vew value (i.e field.component.value).</li>
+<li>If field parser is defined - parse the value to data value. Otherwise value is data value.</li>
+<li>If data value considered to be empty (using <a href="hooks.html#isempty">isEmpty</a> function) - unset it from the form's data, otherwise - set the data value to the form's data object (i.e model.data).</li>
+<li>Evaluate field and dependencies - as described in <a href="actions#evaluate-field-and-dependencies">evaluate field and dependencies</a>.</li>
+<li>Set form evaluation result - as described in <a href="actions#set-form-evaluation-result">set form evaluate result</a>.</li>
+</ol>
+<h5><a class="anchor" aria-hidden="true" id="high-level-demonstration"></a><a href="#high-level-demonstration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>high level demonstration</h5>
+<p><img src="https://yahoo.github.io/jafar/docs/assets/action-change-field-value-v1.0.0.png" alt="custom-field-view"></p>
+<h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define destination form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'destination'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">country</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'country'</span>,
+    }
+    <span class="hljs-attr">city</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'city'</span>,
+      <span class="hljs-attr">dependencies</span>: [<span class="hljs-string">'country'</span>], 
+      <span class="hljs-attr">disableTerm</span>: { <span class="hljs-comment">// city is disabled if country equals Spain</span>
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'equals'</span>,
+        <span class="hljs-attr">args</span>: {
+          <span class="hljs-attr">fieldId</span>: <span class="hljs-string">'country'</span>,
+          <span class="hljs-attr">value</span>: <span class="hljs-string">'Spain'</span>,
+        }
+      },
+    },
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">country</span>: <span class="hljs-string">'Israel'</span>,
+  }
+};
+
+<span class="hljs-comment">// create destination form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model);
+
+<span class="hljs-comment">// verify initial data</span>
+expect(form.data).toEqual({ <span class="hljs-attr">country</span>: <span class="hljs-string">'Israel'</span> });
+expect(form.fields.city.disabled).toBeFalsy();
+
+<span class="hljs-comment">// change field country value</span>
+<span class="hljs-keyword">const</span> newValue = <span class="hljs-string">'Spain'</span>;
+form.changeValue(<span class="hljs-string">'country'</span>, newValue);
+
+<span class="hljs-comment">// verify form after the change</span>
+expect(form.data.country).toEqual(newValue);
+expect(form.fields.city.disabled).toBeTruthy();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="changedata"></a><a href="#changedata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>changeData</h2>
+<p>Change form's data object to a new object.</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">await</span> <span class="hljs-selector-tag">myForm</span><span class="hljs-selector-class">.changeData</span>({ <span class="hljs-attribute">firstName</span>: <span class="hljs-string">'Janice'</span>, lastName: <span class="hljs-string">'Litman-Goralnik'</span> });
+</code></pre>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>data</td><td>required object</td><td>New data object</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-2"></a><a href="#lifecycle-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li>Run <a href="hooks#todto">toDto</a> hook, and set new data result to the form's store in <code>model.data</code>.</li>
+<li>Evaluate form - as described in <a href="actions#evaluate-form">evaluate form</a>.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define user form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">firstName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'firstName'</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+    },
+    <span class="hljs-attr">lastName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'lastName'</span>,
+    }
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span>,
+  }
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model);
+
+<span class="hljs-comment">// verify initial data</span>
+expect(form.data).toEqual({ <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+
+<span class="hljs-comment">// change data</span>
+<span class="hljs-keyword">const</span> newData = { <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Green'</span> };
+form.changeData(newData);
+
+<span class="hljs-comment">// verify form after the change</span>
+expect(form.data).toEqual(newData);
+expect(form.invalid).toBeTruthy();
+expect(form.fields.firstName.errors).toEqual([{
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'required'</span>,
+  <span class="hljs-attr">message</span>: <span class="hljs-string">'Field required'</span>,
+}]]);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="changestate"></a><a href="#changestate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>changeState</h2>
+<p>Change a field's state object to a new object.</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">await</span> <span class="hljs-selector-tag">myForm</span><span class="hljs-selector-class">.changeState</span>(<span class="hljs-string">'hobbies'</span>, { 
+  <span class="hljs-attribute">isLoadingItems</span>: false, 
+  <span class="hljs-attribute">searchValue</span>: <span class="hljs-string">'ball'</span>,
+  <span class="hljs-attribute">items</span>: [
+    { <span class="hljs-attribute">label</span>: <span class="hljs-string">'Basketball'</span>, <span class="hljs-attribute">value</span>: <span class="hljs-string">'BASKETBALL'</span> },
+    { <span class="hljs-attribute">label</span>: <span class="hljs-string">'Football'</span>, <span class="hljs-attribute">value</span>: <span class="hljs-string">'FOOTBALL'</span> },
+  ] 
+});
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="args-2"></a><a href="#args-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Args</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>fieldId</td><td>required string</td><td>Field id to apply the change on</td></tr>
+<tr><td>state</td><td>object</td><td>New component state object</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-3"></a><a href="#lifecycle-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li>Set the state of the field's component in the store</li>
+<li>If <code>stateChange</code> function is defined - run it and if a value(sync/async) returns, then:</li>
+</ol>
+<ul>
+<li>Set new state to <code>component.state</code>.</li>
+<li>Call <code>changeState</code> with the new state
+(if no value is returned from <code>stateChange</code> function - action complete)</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>stateChange</code> can create recursive set states, so make sure you always define an exit case that returns an undefined value.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> InputDate <span class="hljs-keyword">from</span> <span class="hljs-string">'./my-components/InputDate'</span>;
+<span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define user form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">birthDate</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'birthDate'</span>,
+      <span class="hljs-attr">component</span>: {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'InputDate'</span>,
+        <span class="hljs-attr">state</span>: {
+          <span class="hljs-attr">format</span>: <span class="hljs-string">'mm/dd/yyyy'</span>,
+        },
+      },
+    },
+  },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-attr">InputDate</span>: { <span class="hljs-attr">renderer</span>: InputDate },
+  },
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model, resources);
+
+<span class="hljs-comment">// change birthDate field state</span>
+<span class="hljs-keyword">const</span> newState = { <span class="hljs-attr">format</span>: <span class="hljs-string">'MMMM dd, yyyy'</span> };
+form.changeState(<span class="hljs-string">'birthDate'</span>, newState);
+
+<span class="hljs-comment">// verify form after the change</span>
+expect(form.fields.birthDate.component.state).toEqual(newState);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="changeui"></a><a href="#changeui" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>changeUi</h2>
+<p>Change a field's ui definitions.</p>
+<pre><code class="hljs"><span class="hljs-keyword">const</span> ui = { 
+  component: { name: <span class="hljs-string">'InputNumber'</span> }, 
+  description: <span class="hljs-string">'Item count'</span>,
+}
+<span class="hljs-keyword">await</span> myForm.changeUi(<span class="hljs-string">'hobbies'</span>, ui);
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="args-3"></a><a href="#args-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Args</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>fieldId</td><td>required string</td><td>Field id to apply the change on</td></tr>
+<tr><td>ui</td><td>object</td><td><a href="actions#ui-object">Ui object</a> to be assigned to the field</td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="ui-object"></a><a href="#ui-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ui object</h5>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>label</td><td>string</td><td>New label string to be placed instead of current field's label</td></tr>
+<tr><td>description</td><td>string</td><td>New description string to be placed instead of current field's description</td></tr>
+<tr><td>component</td><td>object</td><td>New <a href="component">component</a> object to be placed instead of current field's component</td></tr>
+<tr><td>formatter</td><td>object</td><td>New <a href="formatter-parser">formatter</a> object to be placed instead of current field's formatter</td></tr>
+<tr><td>parser</td><td>object</td><td>New <a href="formatter-parser">parser</a> object to be placed instead of current field's parser</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-4"></a><a href="#lifecycle-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li>Verify form definition</li>
+<li>Replace field's ui definitions in the form</li>
+<li>If component formatter is defined - format the value of the field as view value, otherwise current data value is the view value.</li>
+<li>Set view value as the value of the component.</li>
+<li>If component stateChange defined - Run state change as specified on the second step of <code>changeState</code> function.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> When changing ui and including a new <code>component</code>, <code>parser</code> or <code>formatter</code>, their resources must be pre-defined in the initial resources object passed to the Form on init - since resources object is not persistent, and passing new resources might damage form persistency.
+For example:</p>
+<ol>
+<li>A form model is begin persisted after each action (saved to the local storage).</li>
+<li>A change ui is called with new ui and formatter resources that are being replaced in the form.</li>
+<li>After a while a refresh is done to the page.</li>
+<li>On page load - the form model is taken from the local storage (containing the definitions for new component and formatter) to return to the last form state, and the original resource object is being used with it to init the form.</li>
+<li>A missing component / formatter resource error is thrown.</li>
+</ol>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> InputDate <span class="hljs-keyword">from</span> <span class="hljs-string">'./my-components/InputDate'</span>;
+<span class="hljs-keyword">import</span> DatePicker <span class="hljs-keyword">from</span> <span class="hljs-string">'./my-components/DatePicker'</span>;
+<span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define user form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">birthDate</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'birthDate'</span>,
+      <span class="hljs-attr">component</span>: {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'InputDate'</span>,
+        <span class="hljs-attr">state</span>: {
+          <span class="hljs-attr">format</span>: <span class="hljs-string">'mm/dd/yyyy'</span>,
+        },
+      },
+    },
+  },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-attr">InputDate</span>: { <span class="hljs-attr">renderer</span>: InputDate },
+    <span class="hljs-attr">DatePicker</span>: { <span class="hljs-attr">renderer</span>: DatePicker }, <span class="hljs-comment">// new component resource should be set in the initial resources</span>
+  },
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model, resources);
+
+<span class="hljs-comment">// change birthDate field component</span>
+<span class="hljs-keyword">const</span> component = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'DatePicker'</span>,
+  <span class="hljs-attr">state</span>: {
+    <span class="hljs-attr">format</span>: <span class="hljs-string">'mm/dd/yyyy'</span>,
+  },
+};
+
+form.changeUi(<span class="hljs-string">'birthDate'</span>, { component });
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="changecontext"></a><a href="#changecontext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>changeContext</h2>
+<p>Change form's context object to a new object.</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">await</span> <span class="hljs-selector-tag">myForm</span><span class="hljs-selector-class">.changeContext</span>({ <span class="hljs-attribute">userId</span>: <span class="hljs-string">'123'</span>, companyId: <span class="hljs-string">'456'</span> });
+</code></pre>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>context</td><td>required object</td><td>New context object</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-5"></a><a href="#lifecycle-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li>Replace the context object in <code>model.context</code>.</li>
+<li>Evaluate form - as described in <a href="actions#evaluate-form">evaluate form</a>.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example-5"></a><a href="#example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define order form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'order-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-attr">refundMoney</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'refundMoney'</span>,
+      <span class="hljs-attr">component</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'InputNumber'</span> },
+      <span class="hljs-attr">context</span>: [<span class="hljs-string">'loggedInUser'</span>],
+      <span class="hljs-attr">excludeTerm</span>: {  <span class="hljs-comment">// field excluded to users that don't have refund permission</span>
+        <span class="hljs-attr">not</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'hasPermission'</span>,
+        <span class="hljs-attr">args</span>: { <span class="hljs-attr">permission</span>: <span class="hljs-string">'REFUND_USER'</span> }
+      }
+    } 
+  },
+  <span class="hljs-attr">context</span>: {
+    <span class="hljs-attr">loggedInUser</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">'123'</span>, <span class="hljs-attr">permissions</span>: [<span class="hljs-string">'EDIT'</span>, <span class="hljs-string">'REFUND_USER'</span>] }
+  },
+  <span class="hljs-comment">// ...</span>
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">terms</span>: {
+    <span class="hljs-attr">hasPermission</span>: {
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">{ context, args }</span>) =&gt;</span> context.loggedInUser.permissions.includes(args.permission),
+    }
+  }
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model, resources);
+
+<span class="hljs-comment">// verify initial status</span>
+expect(form.context).toEqual({
+  <span class="hljs-attr">loggedInUser</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">'123'</span>, <span class="hljs-attr">permissions</span>: [<span class="hljs-string">'EDIT'</span>, <span class="hljs-string">'REFUND_USER'</span>] }
+});
+expect(form.fields.refundMoney.excluded).toBeFalsy();
+
+<span class="hljs-comment">// change context</span>
+<span class="hljs-keyword">const</span> newContext = { 
+  <span class="hljs-attr">loggedInUser</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">'456'</span>, <span class="hljs-attr">permissions</span>: [<span class="hljs-string">'READ'</span>] }
+};
+form.changeContext(newContext);
+
+<span class="hljs-comment">// verify form after the change</span>
+expect(form.context).toEqual(newContext);
+expect(form.fields.refundMoney.excluded).toBeTruthy();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="submit"></a><a href="#submit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>submit</h2>
+<p>Submit the form using the form's model.data. Resolves to <code>true</code> on success.</p>
+<pre><code class="hljs"><span class="hljs-keyword">const</span> success = <span class="hljs-function">await myForm.<span class="hljs-title">submit</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="args-4"></a><a href="#args-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Args</h4>
+<p>Function has no args.</p>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-6"></a><a href="#lifecycle-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li>If form is invalid - throw invalid submit error.</li>
+<li>Run form level <a href="hooks#validate">validation hook</a> with the form's data.</li>
+<li>If return errors object
+<ul>
+<li>update fields and form errors and invalid flags.</li>
+<li>return</li>
+</ul></li>
+<li>Run <a href="hooks#fromdto">fromDto</a> hook, and keep result as appData.</li>
+<li>Run <a href="hooks#submit">submit hook</a> with the appData.</li>
+<li>Return true</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example-6"></a><a href="#example-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> MyService <span class="hljs-keyword">from</span> <span class="hljs-string">'./MyService'</span>;
+<span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define user form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">firstName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'firstName'</span>,
+    },
+    <span class="hljs-attr">lastName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'lastName'</span>,
+    }
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">id</span>: <span class="hljs-string">'123456'</span>,
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span>,
+  },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">hooks</span>: {
+    <span class="hljs-attr">submit</span>: <span class="hljs-keyword">async</span> (data) =&gt; {
+      <span class="hljs-comment">// save to server</span>
+      <span class="hljs-keyword">await</span> MyService.update(data);
+    }
+  }
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model, resources);
+
+<span class="hljs-comment">// verify initial data</span>
+expect(form.data).toEqual({ <span class="hljs-attr">id</span>: <span class="hljs-string">'123456'</span>: firstName: <span class="hljs-string">'Ross'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+
+<span class="hljs-comment">// change field first name</span>
+<span class="hljs-keyword">await</span> form.changeValue(<span class="hljs-string">'firstName'</span>, <span class="hljs-string">'Monica'</span>);
+
+<span class="hljs-comment">// submit the form</span>
+<span class="hljs-keyword">const</span> success = <span class="hljs-keyword">await</span> form.submit();
+
+<span class="hljs-comment">// verify submit</span>
+expect(success).toEqual(<span class="hljs-literal">true</span>);
+<span class="hljs-keyword">const</span> updatedUser = <span class="hljs-keyword">await</span> MyService.fetchById(<span class="hljs-string">'123456'</span>);
+expect(updatedUser).toEqual({ <span class="hljs-attr">id</span>: <span class="hljs-string">'123456'</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Monica'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+
+<span class="hljs-comment">// clear the form</span>
+<span class="hljs-keyword">if</span> (success) {
+  form.changeData({});
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="destroy"></a><a href="#destroy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>destroy</h2>
+<p>Destroys the form. After destroy the form instance cant be used again, unless init is called again.</p>
+<pre><code class="hljs">await myForm.destroy()<span class="hljs-comment">;</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="args-5"></a><a href="#args-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Args</h4>
+<p>Function has no args.</p>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-7"></a><a href="#lifecycle-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<p>Delete internal form definition (model &amp; resources).</p>
+<h4><a class="anchor" aria-hidden="true" id="example-7"></a><a href="#example-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define user form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">firstName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'firstName'</span>,
+    },
+    <span class="hljs-attr">lastName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'lastName'</span>,
+    }
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span>,
+  }
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model);
+
+<span class="hljs-comment">// verify initial data</span>
+expect(form.data).toEqual({ <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+
+<span class="hljs-comment">// destroy the form</span>
+<span class="hljs-keyword">await</span> form.destroy();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="reset"></a><a href="#reset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>reset</h2>
+<p>Init the form using the form's initial model and resources definitions.</p>
+<pre><code class="hljs">await myForm.reset()<span class="hljs-comment">;</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="args-6"></a><a href="#args-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Args</h4>
+<p>Function has no args.</p>
+<h4><a class="anchor" aria-hidden="true" id="lifecycle-8"></a><a href="#lifecycle-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle</h4>
+<ol>
+<li>Init form with initial <code>model</code> and <code>resources</code> as described in <a href="actions#init-form">init form</a></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example-8"></a><a href="#example-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> MyService <span class="hljs-keyword">from</span> <span class="hljs-string">'./MyService'</span>;
+<span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/form'</span>;
+
+<span class="hljs-comment">// define user form</span>
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">id</span>: <span class="hljs-string">'user-form'</span>,
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">firstName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'firstName'</span>,
+    },
+    <span class="hljs-attr">lastName</span>: {
+      <span class="hljs-attr">path</span>: <span class="hljs-string">'lastName'</span>,
+    }
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>,
+    <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span>,
+  },
+};
+
+<span class="hljs-comment">// create user form</span>
+<span class="hljs-keyword">const</span> form = <span class="hljs-keyword">new</span> Form();
+<span class="hljs-keyword">await</span> form.init(model);
+
+<span class="hljs-comment">// verify initialized data</span>
+expect(form.data).toEqual({ <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+
+<span class="hljs-comment">// change field first name</span>
+<span class="hljs-keyword">await</span> form.changeValue(<span class="hljs-string">'firstName'</span>, <span class="hljs-string">'Monica'</span>);
+
+<span class="hljs-comment">// verify changed data</span>
+expect(form.data).toEqual({ <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Monica'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+
+<span class="hljs-comment">// reset the form</span>
+<span class="hljs-keyword">await</span> form.reset();
+
+<span class="hljs-comment">// verify data back to its initialized data.</span>
+expect(form.data).toEqual({ <span class="hljs-attr">firstName</span>: <span class="hljs-string">'Ross'</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">'Geller'</span> });
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="common-logic"></a><a href="#common-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Logic</h2>
+<h4><a class="anchor" aria-hidden="true" id="init-form"></a><a href="#init-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Init form</h4>
+<ol>
+<li>Set <code>model</code>, <code>resources</code> and <code>settings</code> to the form's store.</li>
+<li>If <code>model</code> is persist model (checks if <code>model.initializedData</code> defined) - return.</li>
+<li>Run <a href="hooks#todto">toDto</a> hook, and set new data result to the form's store.</li>
+<li>Evaluate form - as described in <a href="actions#evaluate-form">evaluate form</a>.</li>
+<li>Set initialized data to the form.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="evaluate-form"></a><a href="#evaluate-form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Evaluate Form</h4>
+<ul>
+<li>Format all fields to their view value and set to the store as the component value (if field formatter was not defined - view value is the data value).</li>
+<li>For Each field:
+<ul>
+<li>Evaluate field and dependencies  - as described in <a href="actions#evaluate-field-and-dependencies">evaluate field and dependencies</a>.</li>
+</ul></li>
+<li>Set form evaluation result - as described in <a href="actions#set-form-evaluation-result">set form evaluate result</a>.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="evaluate-field-and-dependencies"></a><a href="#evaluate-field-and-dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Evaluate Field And Dependencies</h4>
+<ul>
+<li>Wait for 2 parallel tasks to finish:
+<ul>
+<li>Evaluate field - as described in <a href="actions#evaluate-field">evaluate field</a>.</li>
+<li>Evaluate dependent fields - as described in <a href="actions#evaluate-dependent-fields">evaluate dependent fields</a>.</li>
+</ul></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="evaluate-field"></a><a href="#evaluate-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Evaluate Field</h4>
+<ul>
+<li>Run excludeTerm - to evaluate field.excluded</li>
+<li>If field is excluded
+<ul>
+<li>Set field evaluation result:
+excluded = true, disabled = false, dirty = dirtyResult, errors = [], invalid = false, required = false.</li>
+</ul></li>
+<li>Else field is not excluded
+<ul>
+<li>await for the following parallel tasks to finish:
+<ul>
+<li>Run validators (see <a href="actions.html#validate-field">validate field</a>) - to evaluate field.errors, field.invalid, field.empty.</li>
+<li>Run disableTerm - to evaluate field.disabled</li>
+<li>Calc is field dirty - to evaluate field.dirty</li>
+<li>Run <code>stateChange</code> recursive function (as specified on the second step of changeState function) and apply component state changes</li>
+</ul></li>
+<li>Set field evaluation result:
+excluded = false, disabled = disabledResult, dirty = dirtyResult, errors = errorsResult, invalid = invalidResult, required = requiredResult.</li>
+</ul></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="evaluate-dependent-fields"></a><a href="#evaluate-dependent-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Evaluate Dependent Fields</h4>
+<ul>
+<li>await for all - for each dependent field
+<ul>
+<li>Run dependenciesChange function if exists. The function can return:
+<ul>
+<li>value - dependent field can required value change (format value to view value and call <a href="actions#changevalue">changeValue</a>).</li>
+<li>state - dependent field can required state change (call <a href="actions#changestate">changeState</a>).</li>
+</ul></li>
+<li>If dependenciesChange not exists OR its result didn't require a value change, then do:
+<ul>
+<li>Evaluate the dependent field as described in <a href="actions#evaluate-field">evaluate field</a> - because we need to evaluate the dependant field anyway (and if the dependenciesChange required value change - its is done anyway in the change field value cycle).</li>
+</ul></li>
+</ul></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="validate-field"></a><a href="#validate-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validate Field</h4>
+<ul>
+<li>If field is empty (using <a href="hooks.html#isempty">isEmpty</a> function)
+<ul>
+<li>Set <code>field.empty = true</code></li>
+<li>Verify if field is required: if a field defined <code>requireTerm</code> evaluate it and use it as <code>field.required</code>, otherwise use <code>field.required</code>.</li>
+<li>If field is required
+<ul>
+<li>Set <code>field.errors</code> with only required message, and <code>field.invalid = true</code></li>
+</ul></li>
+<li>Else
+<ul>
+<li>Clear <code>field.errors</code>, and <code>field.invalid = false</code></li>
+</ul></li>
+</ul></li>
+<li>Else
+<ul>
+<li>Set <code>field.empty = false</code></li>
+<li>Evaluated <code>field.validators</code> and update results of <code>field.errors</code>, <code>field.invalid</code></li>
+</ul></li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> There is no need to evaluate <code>field.validators</code> when a field is empty because:</p>
+<ul>
+<li>If its not required - then the field is valid anyway (by having <code>field.required = false</code> means that an empty value for a field is a valid value)</li>
+<li>If its required - then only a <code>required</code> error is needed in the errors. We cant evaluate if a value is invalid if the user hasn't entered any value to test. User must first enter a value, and only then a set of validations will evaluate if its valid or not.</li>
+</ul>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="set-form-evaluation-result"></a><a href="#set-form-evaluation-result" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set Form Evaluation Result</h4>
+<ul>
+<li>Calc form dirty</li>
+<li>Calc form errors</li>
+<li>Calc form invalid</li>
+<li>Set form evaluation result - set form dirty, invalid and errors.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/error-codes.html"><span class="arrow-prev">← </span><span>Error Codes</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/definition-shorthand.html"><span>Definition Shorthand</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#init">init</a></li><li><a href="#changevalue">changeValue</a></li><li><a href="#changedata">changeData</a></li><li><a href="#changestate">changeState</a></li><li><a href="#changeui">changeUi</a></li><li><a href="#changecontext">changeContext</a></li><li><a href="#submit">submit</a></li><li><a href="#destroy">destroy</a></li><li><a href="#reset">reset</a></li><li><a href="#common-logic">Common Logic</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Verizon Media</section></footer></div></body></html>

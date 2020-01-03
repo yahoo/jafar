@@ -1,0 +1,575 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Formatter &amp; Parser · Jafar</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Define formatter and parser to a field component definition when the field&#x27;s value structure is different then the structure that"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Formatter &amp; Parser · Jafar"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/index.html"/><meta property="og:description" content="Define formatter and parser to a field component definition when the field&#x27;s value structure is different then the structure that"/><meta property="og:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.png"/><link rel="shortcut icon" href="https://yahoo.github.io/jafar/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://yahoo.github.io/jafar/js/update-href-urls.js"></script><script src="https://yahoo.github.io/jafar/js/scrollSpy.js"></script><link rel="stylesheet" href="https://yahoo.github.io/jafar/css/main.css"/><script src="https://yahoo.github.io/jafar/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="https://yahoo.github.io/jafar/"><img class="logo" src="https://yahoo.github.io/jafar/img/docusaurus.svg" alt="Jafar"/><h2 class="headerTitleWithLogo">Jafar</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="https://yahoo.github.io/jafar/docs/introduction.html" target="_self">Docs</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-form.html" target="_self">Form Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-components.html" target="_self">Components Demos</a></li><li class=""><a href="https://yahoo.github.io/jafar/demo-react-layout.html" target="_self">Layout Demos</a></li><li class=""><a href="https://github.com/yahoo/jafar" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Form Class</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/introduction.html">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Form Class<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/form-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/arguments.html">Arguments</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/id.html">Id</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/data.html">Data</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/fields.html">Fields</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/path.html">Path</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/component.html">Component</a></li><li class="navListItem navListItemActive"><a class="navItem" href="https://yahoo.github.io/jafar/docs/formatter-parser.html">Formatter &amp; Parser</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies.html">Dependencies</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/required.html">Required</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/validators.html">Validators</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/exclude-term.html">Exclude Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/disable-term.html">Disable Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/require-term.html">Require Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dependencies-change.html">Dependencies Change</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/context.html">Context</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/dirty.html">Dirty</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/invalid.html">Invalid</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/errors.html">Errors</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/processing.html">Processing</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/pending-actions.html">Pending Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/hooks.html">Hooks</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/term.html">Term</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/log.html">Log</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/error-codes.html">Error Codes</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/actions.html">Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/definition-shorthand.html">Definition Shorthand</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced Usages<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/grid-usage.html">Grid Usage</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/persistency.html">Form Persistency</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/undo-redo.html">Undo &amp; Redo</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/replay.html">Replay Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/track.html">Track Actions</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/server-validation.html">Server Validation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/entity-templates.html">Entity Templates</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/folder-structure.html">Folder Structure</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">React Form<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-form.html">Form</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-field.html">Field</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-components.html">Components</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-layout.html">Layout</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/react-demos.html">Demos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">More Info<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/test.html">Test Jafar</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/packages.html">Packages</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/why-jafar.html">Why Jafar?</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/videos.html">Videos</a></li><li class="navListItem"><a class="navItem" href="https://yahoo.github.io/jafar/docs/channels.html">Channels</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Formatter &amp; Parser</h1></header><article><div><span><p>Define formatter and parser to a field component definition when the field's value structure is different then the structure that
+the component can handle.</p>
+<p>For example - if a field 'birthDate' value is a string and its component of 'DatePicker' can only accept Date() objects.</p>
+<p><img src="https://yahoo.github.io/jafar/docs/assets/formatter-parser-v1.0.0.png" alt="formatter-parser"></p>
+<h2><a class="anchor" aria-hidden="true" id="field-formatter-parser"></a><a href="#field-formatter-parser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Field Formatter Parser</h2>
+<p>To define field component formatter and parser - a definition is required in <code>model.fields.someField.component</code> object, and implementation is required in <code>resources.conversions</code> object.</p>
+<blockquote>
+<p><strong>Note:</strong> Define both formatter and parser if the field uses editable component (i.e component calls change value), and only formatter if the field uses readonly component (i.e component doesn't call change value).</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="model"></a><a href="#model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Model</h3>
+<p><code>model.fields.someField.formatter</code> and <code>model.fields.someField.parser</code>- object. Contains:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>required string</td><td>Represents the key in <a href="formatter-parser.html#resources">resources.conversions</a> object</td></tr>
+<tr><td>args</td><td>object</td><td>Custom data to pass to the conversion function</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="resources"></a><a href="#resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resources</h3>
+<p><code>resources.conversions</code> - object. Required only if <a href="formatter-parser#model">formatter</a> or <a href="formatter-parser#model">parser</a> defined in at least one of the fields.
+Key is the conversion name, and value is an object that contains:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>func</td><td>required function</td><td>Gets a value and return new value. Function can be <code>sync</code> or <code>async</code> function (that resolves to a new value). <a href="formatter-parser#func">More info</a></td></tr>
+<tr><td>defaultArgs</td><td>object</td><td>Default args for all fields. This will be shallow merged with field level conversion <code>args</code> before passed to the <code>func</code></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="func"></a><a href="#func" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>func</h4>
+<pre><code class="hljs"><span class="hljs-keyword">function</span> ({ 
+ <span class="hljs-built_in"> id</span>, 
+  <span class="hljs-keyword">value</span>, 
+  state, 
+  dependencies {<span class="hljs-built_in"> id</span>: { <span class="hljs-keyword">value</span> } },
+  args,
+  <span class="hljs-keyword">context</span>,
+})
+</code></pre>
+<p><code>return value</code> -</p>
+<ul>
+<li>When used by <code>formatter</code> - value is the <code>data value</code> (from model.data) and return value is the formatted value (view value for component).</li>
+<li>When used by <code>parser</code> - value is the <code>view value</code> (from component) and return value is the parsed value (data value).</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>consider <code>birthDate</code> field which uses <code>DatePicker</code> component, which accepts only Date() objects, but your model.data.birthDate is a string value that represent a date in the server. So, field <code>birthDate</code> should define:</p>
+<ul>
+<li>A formatter function that gets the data value (string date) and return it as Date() object (then <code>DatePicker</code> component can accept it).</li>
+<li>A parser function that gets the view value (date object from the component) and return it as string (then it will be set back in the model.data).</li>
+</ul>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> DatePicker <span class="hljs-keyword">from</span> <span class="hljs-string">'../myComponents/DatePicker'</span>;
+<span class="hljs-keyword">import</span> dateformat <span class="hljs-keyword">from</span> <span class="hljs-string">'dateformat'</span>;
+
+<span class="hljs-keyword">const</span> model = {
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-attr">birthDate</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">component</span>: {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'DatePicker'</span>,
+      },
+      <span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toDate'</span> },
+      <span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'formatDate'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">format</span>: <span class="hljs-string">'mm/dd/yyyy'</span> } },
+    }
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">birthDate</span>: <span class="hljs-string">'06/22/1989'</span>,
+  }
+};
+
+<span class="hljs-comment">// Note: both 'toDate' and 'formatDate' are built-in conversions and are not required here.</span>
+<span class="hljs-comment">// We added them just for the example.</span>
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">components</span>: {
+    <span class="hljs-attr">DatePicker</span>: { 
+      <span class="hljs-attr">renderer</span>: DatePicker 
+    },
+  },
+  <span class="hljs-attr">conversions</span>: {
+    <span class="hljs-attr">toDate</span>: {
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> { <span class="hljs-comment">// return Date()</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(props.value); <span class="hljs-comment">// here 'props.value' is the data value (string) taken from model.data</span>
+      }
+    },
+    <span class="hljs-attr">formatDate</span>: {
+      <span class="hljs-attr">defaultArgs</span>: { <span class="hljs-attr">format</span>: <span class="hljs-string">'mm-dd-yyyy'</span> }, <span class="hljs-comment">// can be overridden by field level args</span>
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> { <span class="hljs-comment">// return string</span>
+        <span class="hljs-keyword">return</span> dateformat(props.value, props.args.format); <span class="hljs-comment">// here 'props.value' is the view value (Date object) from the component</span>
+      }
+    }
+  }
+};
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="shorthand"></a><a href="#shorthand" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shorthand</h3>
+<p>Definition shorthand for formatters / parsers can be found in <a href="definition-shorthand#formatters-parsers">definition shorthand documentation</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="built-in-conversions"></a><a href="#built-in-conversions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Built-in Conversions</h2>
+<p>Jafar also defines built-in conversions: <code>'toString', 'toNumber'</code> and so on.
+Built-in conversions work out of the box, there's no need to define them in <code>resources.conversions</code>.
+Jafar extends custom <code>resources.conversions</code> object with the built-in conversions object.</p>
+<p>Examples:</p>
+<ol>
+<li>Define <code>formatter</code> / <code>parser</code> conversion that is not part of the built-in conversions. In this case - conversions functions
+should be supplied in <code>resources.conversions</code> object:</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> model = {
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-attr">birthDate</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">component</span> :{
+        <span class="hljs-comment">// ...</span>
+      },
+      <span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'myFormatter'</span> },
+      <span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'myParser'</span> },
+    }
+  },
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  conversions = {
+    <span class="hljs-attr">myFormatter</span>: {
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+        <span class="hljs-comment">// ...</span>
+      },
+    },
+    <span class="hljs-attr">myParser</span>: {
+      <span class="hljs-attr">defaultArgs</span>: { <span class="hljs-comment">// defaultArgs are not required</span>
+        <span class="hljs-comment">// ...</span>
+      }
+      <span class="hljs-attr">func</span>: <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+        <span class="hljs-comment">// ...</span>
+      },
+    }
+  }
+}
+</code></pre>
+<ol start="2">
+<li>Define <code>formatter</code> / <code>parser</code> conversion that is part of the built-in conversion. In this case there is not need to supply
+conversion in <code>resources.conversions</code> object:</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> model = {
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-attr">age</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">component</span> :{
+        <span class="hljs-comment">// ...</span>
+      },
+      <span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toNumber'</span> },
+      <span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toString'</span> },
+    }
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">age</span>: <span class="hljs-string">'18'</span>, <span class="hljs-comment">// as is string in the database</span>
+  }
+};
+
+<span class="hljs-comment">// no need to define resources.conversions</span>
+</code></pre>
+<ol start="3">
+<li>Define <code>formatter</code> / <code>parser</code> conversion that is part of the built-in conversion and also define it in <code>resources.conversions</code> object in order to override the built-in function behavior (can override <code>func</code> / <code>args</code> / <code>both</code>):</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> model = {
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">fields</span>: {
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-attr">age</span>: {
+      <span class="hljs-comment">// ...</span>
+      <span class="hljs-attr">component</span> :{
+        <span class="hljs-comment">// ...</span>
+      },
+      <span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toNumber'</span> },
+      <span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toString'</span> },
+    },
+  },
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">age</span>: <span class="hljs-string">'18'</span>, <span class="hljs-comment">// as is string in the database</span>
+  }
+};
+
+<span class="hljs-keyword">const</span> resources = {
+  <span class="hljs-attr">conversions</span>: {
+    <span class="hljs-attr">toString</span>: { <span class="hljs-comment">// override the default build in conversion 'toString'. You can also supply defaultArgs or only supply defaultArgs</span>
+      <span class="hljs-attr">func</span>: <span class="hljs-function"><span class="hljs-params">props</span> =&gt;</span> { 
+        <span class="hljs-comment">// return ... </span>
+      }
+    }
+  }
+};
+</code></pre>
+<p>The following are Jafar's built-in conversions and their usage:</p>
+<h3><a class="anchor" aria-hidden="true" id="tostring"></a><a href="#tostring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toString</h3>
+<p>Convert <code>value</code> to string representation.</p>
+<p>Expected value:</p>
+<p><code>string</code> / <code>number</code> / <code>boolean</code> / <code>Date()</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>string</code> - if value is <code>string</code> / <code>number</code> / <code>boolean</code> / <code>Date()</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Example:</p>
+<p>Age field has a string representation in the model.data, but uses a component that only gets number values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.age</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toNumber'</span> }
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toString'</span> }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { <span class="hljs-attr">age</span>: <span class="hljs-string">'18'</span> }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="tonumber"></a><a href="#tonumber" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toNumber</h3>
+<p>Convert <code>value</code> to number representation.</p>
+<p>Expected value:</p>
+<p><code>string</code> / <code>number</code> / <code>boolean</code> / <code>Date()</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>number</code> - if value is <code>string</code> / <code>number</code> / <code>boolean</code> / <code>Date()</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Example:</p>
+<p>Age field has a string representation in the model.data, but uses a component that only gets number values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.age</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toNumber'</span> }
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toString'</span> }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { <span class="hljs-attr">age</span>: <span class="hljs-string">'18'</span> }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="todate"></a><a href="#todate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toDate</h3>
+<p>Convert <code>value</code> to Date() representation.</p>
+<p>Expected value:</p>
+<p><code>string</code> / <code>number</code> / <code>Date()</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>Date()</code> - if value is <code>string</code> / <code>number</code> / <code>Date()</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Example:</p>
+<p>Birthdate field has a number representation in the model.data, but uses a component that only gets date values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.birthDate</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toDate'</span> }
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toNumber'</span> }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { <span class="hljs-attr">birthDate</span>: <span class="hljs-number">1575715837659</span> }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="toboolean"></a><a href="#toboolean" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toBoolean</h3>
+<p>Convert <code>value</code> to boolean representation.</p>
+<p>Expected value:</p>
+<p><code>string</code> / <code>number</code> / <code>boolean</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>boolean</code> - if value is <code>string</code> / <code>number</code> / <code>boolean</code> / <code>null</code> / <code>undefined</code></li>
+</ul>
+<p>Example:</p>
+<p>CanViewVideo field has a string representation in the model.data, but uses a component that only gets boolean values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.canViewVideo</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toBoolean'</span> }
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toString'</span> }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { <span class="hljs-attr">canViewVideo</span>: <span class="hljs-string">'true'</span> }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="formatdate"></a><a href="#formatdate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>formatDate</h3>
+<p>Convert <code>value</code> to formatted date string.</p>
+<p>Expected value:</p>
+<p><code>Date()</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>string</code> - if value is Date() <code>object</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Default args:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>format</td><td>string</td><td>'mm-dd-yyyy'</td><td>Format of a date in a string representation</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p>Birthdate field has a string representation in the model.data, but uses a component that only gets Date() values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.birthDate</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'toDate'</span> }
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'formatDate'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">format</span>: <span class="hljs-string">'mm/dd/yyyy'</span> } }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { <span class="hljs-attr">birthDate</span>: <span class="hljs-string">'06/22/1989'</span> }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="split"></a><a href="#split" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>split</h3>
+<p>Convert <code>value</code> to array representation containing split parts of <code>value</code>.</p>
+<p>Expected value:</p>
+<p><code>string</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>string array</code> - if value is <code>string</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Default args:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>separator</td><td>string</td><td>','</td><td>Separates value using this</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p>Friends field has a string representation in the model.data, but uses a component that only gets array values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.friends</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'split'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">separator</span>: <span class="hljs-string">';'</span> } } <span class="hljs-comment">// default separator is ','</span>
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'join'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">separator</span>: <span class="hljs-string">';'</span> } }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { <span class="hljs-attr">friends</span>: <span class="hljs-string">'Rachel;Ross;Monica'</span> }
+
+<span class="hljs-comment">// split will return ['Rachel', 'Ross', 'Monica']</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="join"></a><a href="#join" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>join</h3>
+<p>Convert <code>value</code> to string representation containing joined parts of <code>value</code>.</p>
+<p>Expected value:</p>
+<p><code>array</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>string</code> - if value is <code>array</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Default args:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>separator</td><td>string</td><td>','</td><td>Join value using this</td></tr>
+<tr><td>path</td><td>string</td><td>undefined</td><td>If array is array of objects - define a path to the sub data to join for each object in the array</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<ol>
+<li>Friends field has a string representation in the model.data, but uses a component that only gets array values</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.friends</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'split'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">separator</span>: <span class="hljs-string">';'</span> } } <span class="hljs-comment">// default separator is ','</span>
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'join'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">separator</span>: <span class="hljs-string">';'</span> } }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { <span class="hljs-attr">friends</span>: <span class="hljs-string">'Rachel;Ross;Monica'</span> }
+
+<span class="hljs-comment">// split will return ['Rachel', 'Ross', 'Monica']</span>
+</code></pre>
+<ol start="2">
+<li>Friends field has an objects array representation in the model.data, but uses a component that only gets string value</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.friends</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'join'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">path</span>: <span class="hljs-string">'name'</span>, <span class="hljs-attr">separator</span>: <span class="hljs-string">', '</span> } }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { 
+  <span class="hljs-attr">friends</span>: [
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">'Rachel'</span>}, 
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">'Monica'</span> }, 
+    { <span class="hljs-attr">name</span>: <span class="hljs-string">'Ross'</span> }
+  ]; 
+}
+
+<span class="hljs-comment">// join will return 'Rachel, Monica, Ross'</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="joinkeys"></a><a href="#joinkeys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>joinKeys</h3>
+<p>Convert keys of <code>value</code> to string representation containing joined parts of <code>value</code>'s keys.</p>
+<p>Expected value:</p>
+<p><code>object</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>string</code> - if value is <code>object</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Default args:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>separator</td><td>string</td><td>','</td><td>Join value using this</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p>Colors field has an object representation in the model.data, but uses a component that only gets string</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.colors</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'joinKeys'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">separator</span>: <span class="hljs-string">', '</span> } } <span class="hljs-comment">// default separator is ','</span>
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { 
+  <span class="hljs-attr">colors</span>: { 
+    <span class="hljs-attr">RED</span>: <span class="hljs-string">'Red'</span>, 
+    <span class="hljs-attr">BLUE</span>: <span class="hljs-string">'Blue'</span>, 
+    <span class="hljs-attr">GREEN</span>: <span class="hljs-string">'Green'</span> 
+  } 
+}
+
+<span class="hljs-comment">// joinKeys will return 'RED, BLUE, GREEN'</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="joinvalues"></a><a href="#joinvalues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>joinValues</h3>
+<p>Convert values of <code>value</code> to string representation containing joined parts of <code>value</code>'s values.</p>
+<p>Expected value:</p>
+<p><code>object</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>string</code> - if value is <code>object</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Default args:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>separator</td><td>string</td><td>','</td><td>Join value using this</td></tr>
+<tr><td>path</td><td>string</td><td>undefined</td><td>Define a path to the sub data to join each object in the object values</td></tr>
+</tbody>
+</table>
+<p>Example:</p>
+<ol>
+<li>Colors field has an object representation in the model.data, but uses a component that only gets string</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.colors</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'joinValues'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">separator</span>: <span class="hljs-string">', '</span> } } <span class="hljs-comment">// default separator is ','</span>
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { 
+  <span class="hljs-attr">colors</span>: { 
+    <span class="hljs-attr">RED</span>: <span class="hljs-string">'Red'</span>, 
+    <span class="hljs-attr">BLUE</span>: <span class="hljs-string">'Blue'</span>, 
+    <span class="hljs-attr">GREEN</span>: <span class="hljs-string">'Green'</span> 
+  } 
+}
+
+<span class="hljs-comment">// joinValues will return 'Red, Blue, Green'</span>
+</code></pre>
+<ol start="2">
+<li>Colors field has an object representation in the model.data, but uses a component that only gets string</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.colors</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'joinValues'</span>, <span class="hljs-attr">args</span>: { <span class="hljs-attr">separator</span>: <span class="hljs-string">', '</span>, <span class="hljs-attr">path</span>: <span class="hljs-string">'label'</span> } } <span class="hljs-comment">// default separator is ','</span>
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { 
+  <span class="hljs-attr">colors</span>: { 
+    <span class="hljs-attr">RED</span>: { <span class="hljs-attr">label</span>: <span class="hljs-string">'Red'</span> }, 
+    <span class="hljs-attr">BLUE</span>: { <span class="hljs-attr">label</span>: <span class="hljs-string">'Blue'</span> }, 
+    <span class="hljs-attr">GREEN</span>: { <span class="hljs-attr">label</span>: <span class="hljs-string">'Green'</span> }
+  }
+}
+
+<span class="hljs-comment">// joinValues will return 'Red, Blue, Green'</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="jsonstringify"></a><a href="#jsonstringify" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>jsonStringify</h3>
+<p>Convert <code>value</code> to json string representation.</p>
+<p>Expected value:</p>
+<p><code>any</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>string</code> - if value is <code>any</code></li>
+</ul>
+<p>Example:</p>
+<p>CustomDate field has a string representation in the model.data, but uses a json editor component that only gets object values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.customDate</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'jsonParse'</span> }
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'jsonStringify'</span> }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { 
+  <span class="hljs-attr">customData</span>: <span class="hljs-string">'{"name":"Rachel","age":25}'</span>
+}
+
+<span class="hljs-comment">// jsonParse will return { </span>
+<span class="hljs-comment">//     name: "Rachel", </span>
+<span class="hljs-comment">//     age: 25, </span>
+<span class="hljs-comment">//   }</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="jsonparse"></a><a href="#jsonparse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>jsonParse</h3>
+<p>Convert <code>value</code> to object.</p>
+<p>Expected value:</p>
+<p><code>string</code> / <code>null</code> / <code>undefined</code></p>
+<p>Returns:</p>
+<ul>
+<li><code>object</code> - if value is stringified <code>string</code></li>
+<li><code>undefined</code> - if value is <code>undefined</code></li>
+<li><code>null</code> - if value is <code>null</code></li>
+</ul>
+<p>Example:</p>
+<p>CustomDate field has a string representation in the model.data, but uses a json editor component that only gets object values</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// model.fields.customDate</span>
+<span class="hljs-attr">formatter</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'jsonParse'</span> }
+<span class="hljs-attr">parser</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">'jsonStringify'</span> }
+
+<span class="hljs-comment">// model.data</span>
+<span class="hljs-attr">data</span>: { 
+  <span class="hljs-attr">customData</span>: <span class="hljs-string">'{"name":"Rachel","age":25}'</span>
+}
+
+<span class="hljs-comment">// jsonParse will return { </span>
+<span class="hljs-comment">//     name: "Rachel", </span>
+<span class="hljs-comment">//     age: 25, </span>
+<span class="hljs-comment">//   }</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/component.html"><span class="arrow-prev">← </span><span>Component</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/dependencies.html"><span>Dependencies</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#field-formatter-parser">Field Formatter Parser</a><ul class="toc-headings"><li><a href="#model">Model</a></li><li><a href="#resources">Resources</a></li><li><a href="#example">Example</a></li><li><a href="#shorthand">Shorthand</a></li></ul></li><li><a href="#built-in-conversions">Built-in Conversions</a><ul class="toc-headings"><li><a href="#tostring">toString</a></li><li><a href="#tonumber">toNumber</a></li><li><a href="#todate">toDate</a></li><li><a href="#toboolean">toBoolean</a></li><li><a href="#formatdate">formatDate</a></li><li><a href="#split">split</a></li><li><a href="#join">join</a></li><li><a href="#joinkeys">joinKeys</a></li><li><a href="#joinvalues">joinValues</a></li><li><a href="#jsonstringify">jsonStringify</a></li><li><a href="#jsonparse">jsonParse</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Verizon Media</section></footer></div></body></html>
