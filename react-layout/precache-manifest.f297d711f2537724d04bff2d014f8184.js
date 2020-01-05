@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1cd828992aafd1c51ef265e9254d5c22",
+    "revision": "9c74348fbeb65f294538a2e41c9adad8",
     "url": "https://yahoo.github.io/jafar/react-layout/index.html"
   },
   {
-    "revision": "467e4d3a89db90e4f4b2",
+    "revision": "6122a39a387aa82b440a",
     "url": "https://yahoo.github.io/jafar/react-layout/static/css/main.efbfe3cd.css"
   },
   {
-    "revision": "467e4d3a89db90e4f4b2",
-    "url": "https://yahoo.github.io/jafar/react-layout/static/js/main.5f9b039c.js"
+    "revision": "6122a39a387aa82b440a",
+    "url": "https://yahoo.github.io/jafar/react-layout/static/js/main.2fd5096d.js"
   },
   {
     "revision": "1c1a52059bdc91a8a6e4ac28bea53710",
