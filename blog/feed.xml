@@ -2,21 +2,21 @@
 <rss version="2.0">
     <channel>
         <title>Jafar Blog</title>
-        <link>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog</link>
+        <link>https://yahoo.github.io/jafarhttps://yahoo.github.io/jafar/blog</link>
         <description>The best place to stay up-to-date with the latest Jafar news and events.</description>
         <lastBuildDate>Mon, 18 Feb 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Jafar Blog</title>
-            <url>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/img/docusaurus.svg</url>
-            <link>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog</link>
+            <url>https://yahoo.github.io/jafarhttps://yahoo.github.io/jafar/img/docusaurus.svg</url>
+            <link>https://yahoo.github.io/jafarhttps://yahoo.github.io/jafar/blog</link>
         </image>
         <copyright>Copyright © 2020 Verizon Media</copyright>
         <item>
             <title><![CDATA[New Version 1.0.0]]></title>
-            <link>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog/2019/02/18/new-version-1.0.0.html</link>
-            <guid>https://github.com/pages/yahoo/jafarhttps://yahoo.github.io/jafar/blog/2019/02/18/new-version-1.0.0.html</guid>
+            <link>https://yahoo.github.io/jafarhttps://yahoo.github.io/jafar/blog/2019/02/18/new-version-1.0.0.html</link>
+            <guid>https://yahoo.github.io/jafarhttps://yahoo.github.io/jafar/blog/2019/02/18/new-version-1.0.0.html</guid>
             <pubDate>Mon, 18 Feb 2019 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Welcome Jafar 🎉🎉🎉</p> ]]></description>
         </item>
