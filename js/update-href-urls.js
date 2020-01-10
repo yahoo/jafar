@@ -19,14 +19,17 @@
     }
   });
   const syncLocationWithIframe = (event) => {
-    isReady = true;
-    const frames = document && document.getElementsByClassName('hosted-frame');
-    if (location && location.hash) {
-      Object.values(frames || []).forEach(frame => {
-        const host = frame.src.substr(0, frame.src.indexOf('html') + 4);
-        frame.src = `${host}${location.hash}`;
-      });
-    }
+    setTimeout(()=> {
+      isReady = true;
+
+      const frames = document && document.getElementsByClassName('hosted-frame');
+      if (location && location.hash) {
+        Object.values(frames || []).forEach(frame => {
+          const host = frame.src.substr(0, frame.src.indexOf('html') + 4);
+          frame.src = `${host}${location.hash}`;
+        });
+      }
+    }, 20); 
   };
   window.addEventListener('load', syncLocationWithIframe);
   window.addEventListener('popstate', syncLocationWithIframe);
