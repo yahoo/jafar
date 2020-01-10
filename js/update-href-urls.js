@@ -29,7 +29,7 @@
           frame.src = `${host}${location.hash}`;
         });
       }
-    }, 20); 
+    }, 1000); 
   };
   window.addEventListener('load', syncLocationWithIframe);
   window.addEventListener('popstate', syncLocationWithIframe);
