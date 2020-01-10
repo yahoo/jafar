@@ -25,13 +25,13 @@
     isReady = true;
 
     const frames = document && document.getElementsByClassName('hosted-frame');
-    if (location && location.hash) {
+    // if (location && location.hash) {
       Object.values(frames || []).forEach(frame => {
         const demoUrl = frame.getAttribute('demo');
         const host = demoUrl.substr(0, demoUrl.indexOf('html') + 4);
         frame.src = `${host}${location.hash}`;
       });
-    }
+    // } 
   };
 
   const syncLocationWithIframeDelayed = (event) => {
