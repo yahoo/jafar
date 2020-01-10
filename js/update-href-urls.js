@@ -27,7 +27,7 @@
     const frames = document && document.getElementsByClassName('hosted-frame');
     if (location && location.hash) {
       Object.values(frames || []).forEach(frame => {
-        const host = frame.src.substr(0, frame.demo.indexOf('html') + 4);
+        const host = frame.src.substr(0, frame.getAttribute('demo').indexOf('html') + 4);
         frame.src = `${host}${location.hash}`;
       });
     }
