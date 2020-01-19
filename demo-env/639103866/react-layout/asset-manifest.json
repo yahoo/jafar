@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/static/css/main.99903ae4.css",
+    "main.js": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/static/js/main.cf9b5553.js",
+    "main.css.map": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/static/css/main.99903ae4.css.map",
+    "main.js.map": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/static/js/main.cf9b5553.js.map",
+    "index.html": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/index.html",
+    "precache-manifest.dce284855381f2fc672d1bce9ae33780.js": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/precache-manifest.dce284855381f2fc672d1bce9ae33780.js",
+    "service-worker.js": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/service-worker.js",
+    "static/media/jafar.svg": "https://yahoo.github.io/jafar/demo-env/639103866/react-layout/static/media/jafar.1c1a5205.svg"
+  }
+}
