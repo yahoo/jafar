@@ -1,0 +1,1 @@
+module.exports = require('@jafar/js-kit/config/eslintrc.js');

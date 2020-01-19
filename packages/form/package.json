@@ -1,0 +1,42 @@
+{
+  "name": "@jafar/form",
+  "version": "1.0.0",
+  "description": "Javascript Form Class",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahoo/jafar.git",
+    "directory": "packages/form"
+  },
+  "publishConfig": {
+    "directory": "dist",
+    "access": "public"
+  },
+  "scripts": {
+    "build-package": "rm -rf dist/* && node ../../node_modules/@babel/cli/bin/babel.js  src --out-dir dist --copy-files && cp package.json ./dist && cp .npmrc ./dist",
+    "test": "node ../../node_modules/jest/bin/jest.js",
+    "coverage": "npm run test -- --coverage",
+    "lint": "node ../../node_modules/eslint/bin/eslint.js './src/**/*.{js,json}' --config .eslintrc.js",
+    "lint-fix": "npm run lint -- --fix",
+    "pre-push": "lint-staged",
+    "watch-package": "npm-watch build-package",
+    "publish-package": "npm publish dist --access public"
+  },
+  "watch": {
+    "build-package": "src/**/*.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "dateformat": "^3.0.3"
+  },
+  "devDependencies": {
+    "@jafar/js-kit": "^1.0.0"
+  },
+  "keywords": [
+    "jafar",
+    "form",
+    "development",
+    "javascript",
+    "verizon"
+  ]
+}

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Boolean /> should render provided data 1`] = `
+<styled.div
+  color="#1adc91"
+>
+  <CheckCircleOutlineIcon />
+</styled.div>
+`;

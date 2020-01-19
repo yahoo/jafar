@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> should render provided data 1`] = `
+<WithStyles(ForwardRef(Select))
+  disabled={false}
+  error={false}
+  onChange={[Function]}
+  value="\\"FOOTBALL\\""
+>
+  <WithStyles(ForwardRef(MenuItem))
+    value=""
+  >
+    <em>
+      None
+    </em>
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))
+    key="Basketball"
+    value="\\"BASKETBALL\\""
+  >
+    Basketball
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))
+    key="Football"
+    value="\\"FOOTBALL\\""
+  >
+    Football
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))
+    key="Shop"
+    value="\\"SHOP\\""
+  >
+    Shop
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))
+    key="Fashion"
+    value="\\"FASHION\\""
+  >
+    Fashion
+  </WithStyles(ForwardRef(MenuItem))>
+  <WithStyles(ForwardRef(MenuItem))
+    key="Cook"
+    value="\\"COOK\\""
+  >
+    Cook
+  </WithStyles(ForwardRef(MenuItem))>
+</WithStyles(ForwardRef(Select))>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Url /> should render provided data 1`] = `
+<WithStyles(ForwardRef(Input))
+  disabled={false}
+  error={false}
+  onChange={[Function]}
+  placeholder="Enter URL"
+  type="url"
+  value="http://test.com"
+/>
+`;

@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldView rendered correctly with disabled: with disabled field 1`] = `
+<styled.div
+  component="mockConstructor"
+  id="mockId"
+  margin="0 40px 40px 0"
+>
+  <styled.div>
+    <styled.div
+      color="#cccccc"
+    >
+      mockLabel
+    </styled.div>
+    <styled.div
+      color="#cccccc"
+    >
+      *
+    </styled.div>
+    <styled.i
+      title="mockDescription"
+    >
+      ?
+    </styled.i>
+  </styled.div>
+  <div
+    aria-label="Field Component"
+  >
+    <mockConstructor
+      dirty={false}
+      disabled={true}
+      empty={false}
+      invalid={false}
+      onStateChange={[Function]}
+      onValueChange={[Function]}
+      required={true}
+      state={Object {}}
+      value="mockValue"
+    />
+  </div>
+</styled.div>
+`;
+
+exports[`FieldView rendered correctly with invalid and required: invalid field required 1`] = `
+<styled.div
+  component="mockConstructor"
+  id="mockId"
+  margin="0 40px 40px 0"
+>
+  <styled.div>
+    <styled.div
+      color="#989697"
+    >
+      mockLabel
+    </styled.div>
+    <styled.div
+      color="#989697"
+    >
+      *
+    </styled.div>
+    <styled.i
+      title="mockDescription"
+    >
+      ?
+    </styled.i>
+  </styled.div>
+  <div
+    aria-label="Field Component"
+  >
+    <mockConstructor
+      dirty={false}
+      disabled={false}
+      empty={false}
+      invalid={false}
+      onStateChange={[Function]}
+      onValueChange={[Function]}
+      required={true}
+      state={Object {}}
+      value="mockValue"
+    />
+  </div>
+  <styled.div
+    color="#3a3a3a"
+  />
+</styled.div>
+`;
+
+exports[`FieldView rendered correctly with invalid not required: invalid field not required 1`] = `
+<styled.div
+  component="mockConstructor"
+  id="mockId"
+  margin="0 40px 40px 0"
+>
+  <styled.div>
+    <styled.div
+      color="#e04336"
+    >
+      mockLabel
+    </styled.div>
+    <styled.div
+      color="#e04336"
+    >
+      *
+    </styled.div>
+    <styled.i
+      title="mockDescription"
+    >
+      ?
+    </styled.i>
+  </styled.div>
+  <div
+    aria-label="Field Component"
+  >
+    <mockConstructor
+      dirty={false}
+      disabled={false}
+      empty={false}
+      invalid={true}
+      onStateChange={[Function]}
+      onValueChange={[Function]}
+      required={true}
+      state={Object {}}
+      value="mockValue"
+    />
+  </div>
+  <styled.div
+    color="#e04336"
+  />
+</styled.div>
+`;
+
+exports[`FieldView rendered correctly with reserved jafar field view props - don't pass it to the underline component, pass the jafar props: with reserved prop 1`] = `
+<styled.div
+  component="mockConstructor"
+  id="mockId"
+  margin="0 40px 40px 0"
+>
+  <styled.div>
+    <styled.div
+      color="#989697"
+    >
+      mockLabel
+    </styled.div>
+    <styled.div
+      color="#989697"
+    >
+      *
+    </styled.div>
+    <styled.i
+      title="mockDescription"
+    >
+      ?
+    </styled.i>
+  </styled.div>
+  <div
+    aria-label="Field Component"
+  >
+    <mockConstructor
+      dirty={false}
+      disabled={false}
+      empty={false}
+      invalid={false}
+      onStateChange={[Function]}
+      onValueChange={[Function]}
+      required={true}
+      state={Object {}}
+      value="mockValue"
+    />
+  </div>
+</styled.div>
+`;
+
+exports[`FieldView rendered correctly with unsupported jafar field props - pass it to the underline component: with unsupported prop 1`] = `
+<styled.div
+  component="mockConstructor"
+  id="mockId"
+  margin="0 40px 40px 0"
+>
+  <styled.div>
+    <styled.div
+      color="#989697"
+    >
+      mockLabel
+    </styled.div>
+    <styled.div
+      color="#989697"
+    >
+      *
+    </styled.div>
+    <styled.i
+      title="mockDescription"
+    >
+      ?
+    </styled.i>
+  </styled.div>
+  <div
+    aria-label="Field Component"
+  >
+    <mockConstructor
+      dirty={false}
+      disabled={false}
+      empty={false}
+      invalid={false}
+      mickey="mouse"
+      onStateChange={[Function]}
+      onValueChange={[Function]}
+      required={true}
+      state={Object {}}
+      value="mockValue"
+    />
+  </div>
+</styled.div>
+`;
+
+exports[`FieldView rendered correctly: default values 1`] = `
+<styled.div
+  component="mockConstructor"
+  id="mockId"
+  margin="0 40px 40px 0"
+>
+  <styled.div>
+    <styled.div
+      color="#989697"
+    >
+      mockLabel
+    </styled.div>
+    <styled.div
+      color="#989697"
+    >
+      *
+    </styled.div>
+    <styled.i
+      title="mockDescription"
+    >
+      ?
+    </styled.i>
+  </styled.div>
+  <div
+    aria-label="Field Component"
+  >
+    <mockConstructor
+      dirty={false}
+      disabled={false}
+      empty={false}
+      invalid={false}
+      onStateChange={[Function]}
+      onValueChange={[Function]}
+      required={true}
+      state={Object {}}
+      value="mockValue"
+    />
+  </div>
+</styled.div>
+`;

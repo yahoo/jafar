@@ -1,0 +1,52 @@
+language: node_js
+node_js: 
+  - "12.14.0"
+dist: trusty
+env:
+  - NODE_ENV=production CI=true
+cache:
+  npm: true
+  directories:
+    - "node_modules"
+before_install:
+  - echo cicd - install npm 
+  - npm i -g npm@6.13.6
+install:
+  - echo cicd - install root dependencies
+  - npm ci
+
+  - echo cicd - install global dependencies
+  - npm i -g npx serve gh-pages@2.2.0 --force
+
+  - echo cicd - clean npm cache
+  - npx lerna exec -- npm cache clean --force
+
+  - echo cicd - install and link all local packages to dist folders regardless of matching version range
+  - echo cicd - note - lerna looks on package.json -> publishConfig -> directory to link to it
+  - npx lerna bootstrap --force-local --hoist --ci -- --production=false
+
+  - echo cicd - build packages to dist folder
+  - npx lerna run build-package
+jobs:
+  include:
+    - stage: "Test"
+
+      name: "Lint" 
+      script: npx lerna run lint
+
+    - name: "Unit Tests" 
+      script: npx lerna exec -- npm run test -- --coverage
+
+    - name: "E2E Tests"
+      script: npx lerna run ci-e2e
+
+    - stage: "Deploy"
+
+      name: "Publish To Npm"
+      script: bash scripts/publish.sh
+      if: branch = master AND repo = yahoo/jafar AND type = push AND commit_message = jafar-deploy
+
+    - name: "Deploy To Gh-Pages"
+      script: bash scripts/deploy.sh
+      if: branch = master AND repo = yahoo/jafar AND type = push AND commit_message = jafar-deploy
+

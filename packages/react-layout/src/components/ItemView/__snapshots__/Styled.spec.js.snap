@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styled Title Should render ok - with tabs 1`] = `
+.c0 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 25px 0 10px 0;
+}
+
+<h3
+  className="c0"
+/>
+`;
+
+exports[`Styled Title Should render ok 1`] = `
+.c0 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+  padding: 25px 0;
+}
+
+<h3
+  className="c0"
+/>
+`;

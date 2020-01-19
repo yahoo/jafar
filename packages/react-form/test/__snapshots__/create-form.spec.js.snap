@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create form hoc render ok 1`] = `
+<Form
+  model={
+    Object {
+      "data": Object {
+        "name": "rachel",
+      },
+      "fields": Object {
+        "name": Object {
+          "component": "inputText",
+          "path": "name",
+        },
+      },
+      "id": "simpleForm",
+    }
+  }
+  resources={
+    Object {
+      "inputText": [MockFunction],
+    }
+  }
+  settings={Object {}}
+>
+  <MockComponent
+    label="Save"
+  />
+</Form>
+`;

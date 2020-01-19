@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popover Should render - ok 1`] = `
+<ForwardRef(Popper)
+  anchorEl={<div />}
+  className="makeStyles-popper-1"
+  id="My Id"
+  modifiers={
+    Object {
+      "arrow": Object {
+        "element": null,
+        "enabled": true,
+      },
+      "flip": Object {
+        "enabled": true,
+      },
+      "preventOverflow": Object {
+        "boundariesElement": "scrollParent",
+        "enabled": true,
+      },
+    }
+  }
+  open={true}
+  placement="top"
+>
+  <span
+    className="makeStyles-arrow-3"
+  />
+  <WithStyles(ForwardRef(Paper))
+    className="makeStyles-paper-2"
+  >
+    <div
+      className="makeStyles-header-4"
+    >
+      My Title
+    </div>
+    <div
+      className="makeStyles-body-5"
+    >
+      <component />
+    </div>
+  </WithStyles(ForwardRef(Paper))>
+</ForwardRef(Popper)>
+`;
+
+exports[`Popover elementRef.current null 1`] = `""`;

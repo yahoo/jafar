@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> should render provided data 1`] = `
+<ForwardRef(RadioGroup)
+  onChange={[Function]}
+  value="value2"
+>
+  <WithStyles(ForwardRef(FormControlLabel))
+    control={<ForwardRef(WithStyles) />}
+    key="value1"
+    label="label 1"
+    value="value1"
+  />
+  <WithStyles(ForwardRef(FormControlLabel))
+    control={<ForwardRef(WithStyles) />}
+    key="value2"
+    label="label 2"
+    value="value2"
+  />
+  <WithStyles(ForwardRef(FormControlLabel))
+    control={<ForwardRef(WithStyles) />}
+    key="value3"
+    label="label 3"
+    value="value3"
+  />
+</ForwardRef(RadioGroup)>
+`;

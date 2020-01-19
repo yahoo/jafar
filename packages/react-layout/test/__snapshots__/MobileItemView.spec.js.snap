@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileItemView Should render - ok 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      Employee
+    </styled.div>
+    <span>
+      <WithStyles(ForwardRef(IconButton))
+        aria-label="Save"
+        color="primary"
+        key="Save"
+        onClick={[MockFunction]}
+      >
+        <icon />
+      </WithStyles(ForwardRef(IconButton))>
+    </span>
+    <WithStyles(ForwardRef(IconButton))
+      aria-label="Options"
+      color="primary"
+      onClick={[Function]}
+    >
+      <MoreVertIcon />
+    </WithStyles(ForwardRef(IconButton))>
+    <Menu
+      anchorEl={null}
+      anchorOrigin={
+        Object {
+          "horizontal": "center",
+          "vertical": "bottom",
+        }
+      }
+      getContentAnchorEl={null}
+      onClose={[Function]}
+      open={false}
+      options={
+        Array [
+          Object {
+            "label": "History",
+            "onClick": [MockFunction],
+          },
+        ]
+      }
+      style={
+        Object {
+          "height": "58px",
+          "marginTop": "-20px",
+          "maxHeight": "NaNpx",
+          "width": "NaNpx",
+        }
+      }
+      transformOrigin={
+        Object {
+          "horizontal": "center",
+          "vertical": "top",
+        }
+      }
+    />
+  </styled.div>
+  <styled.div
+    aria-label="Sections"
+  >
+    <ForwardRef
+      id="general"
+      key="general"
+      showBorder={false}
+      smallLayout={true}
+      title="General"
+    />
+  </styled.div>
+  <div
+    id="menu-anchor"
+  />
+</styled.div>
+`;

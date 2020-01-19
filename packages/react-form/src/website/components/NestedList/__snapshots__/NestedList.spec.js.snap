@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NestedList /> should render provided data selected defiend 1`] = `
+<Styled(WithStyles(ForwardRef(List)))
+  component="nav"
+>
+  <Styled(WithStyles(ForwardRef(ListItem)))
+    button={true}
+    id="/react"
+    level={0}
+    onClick={[Function]}
+    selected={false}
+  >
+    <WithStyles(ForwardRef(ListItemText))
+      inset={true}
+      primary="React"
+    />
+    <ExpandLessIcon />
+  </Styled(WithStyles(ForwardRef(ListItem)))>
+  <WithStyles(ForwardRef(Collapse))
+    in={true}
+    timeout="auto"
+    unmountOnExit={true}
+  >
+    <Styled(WithStyles(ForwardRef(ListItem)))
+      button={true}
+      component={[Function]}
+      id="/react/simple"
+      level={1}
+      onClick={[Function]}
+      selected={true}
+      to="/react/simple"
+    >
+      <WithStyles(ForwardRef(ListItemText))
+        inset={true}
+        primary="Simple"
+      />
+    </Styled(WithStyles(ForwardRef(ListItem)))>
+  </WithStyles(ForwardRef(Collapse))>
+  <Styled(WithStyles(ForwardRef(ListItem)))
+    button={true}
+    id="/react-redux"
+    level={0}
+    onClick={[Function]}
+    selected={false}
+  >
+    <WithStyles(ForwardRef(ListItemText))
+      inset={true}
+      primary="React Redux"
+    />
+    <ExpandMoreIcon />
+  </Styled(WithStyles(ForwardRef(ListItem)))>
+  <WithStyles(ForwardRef(Collapse))
+    timeout="auto"
+    unmountOnExit={true}
+  >
+    <Styled(WithStyles(ForwardRef(ListItem)))
+      button={true}
+      component={[Function]}
+      id="/react-redux/simple"
+      level={1}
+      onClick={[Function]}
+      selected={false}
+      to="/react-redux/simple"
+    >
+      <WithStyles(ForwardRef(ListItemText))
+        inset={true}
+        primary="Simple"
+      />
+    </Styled(WithStyles(ForwardRef(ListItem)))>
+  </WithStyles(ForwardRef(Collapse))>
+</Styled(WithStyles(ForwardRef(List)))>
+`;
+
+exports[`<NestedList /> should render provided data selected undefined 1`] = `
+<Styled(WithStyles(ForwardRef(List)))
+  component="nav"
+>
+  <Styled(WithStyles(ForwardRef(ListItem)))
+    button={true}
+    id="/react"
+    level={0}
+    onClick={[Function]}
+    selected={false}
+  >
+    <WithStyles(ForwardRef(ListItemText))
+      inset={true}
+      primary="React"
+    />
+    <ExpandMoreIcon />
+  </Styled(WithStyles(ForwardRef(ListItem)))>
+  <WithStyles(ForwardRef(Collapse))
+    timeout="auto"
+    unmountOnExit={true}
+  >
+    <Styled(WithStyles(ForwardRef(ListItem)))
+      button={true}
+      component={[Function]}
+      id="/react/simple"
+      level={1}
+      onClick={[Function]}
+      selected={false}
+      to="/react/simple"
+    >
+      <WithStyles(ForwardRef(ListItemText))
+        inset={true}
+        primary="Simple"
+      />
+    </Styled(WithStyles(ForwardRef(ListItem)))>
+  </WithStyles(ForwardRef(Collapse))>
+  <Styled(WithStyles(ForwardRef(ListItem)))
+    button={true}
+    id="/react-redux"
+    level={0}
+    onClick={[Function]}
+    selected={false}
+  >
+    <WithStyles(ForwardRef(ListItemText))
+      inset={true}
+      primary="React Redux"
+    />
+    <ExpandMoreIcon />
+  </Styled(WithStyles(ForwardRef(ListItem)))>
+  <WithStyles(ForwardRef(Collapse))
+    timeout="auto"
+    unmountOnExit={true}
+  >
+    <Styled(WithStyles(ForwardRef(ListItem)))
+      button={true}
+      component={[Function]}
+      id="/react-redux/simple"
+      level={1}
+      onClick={[Function]}
+      selected={false}
+      to="/react-redux/simple"
+    >
+      <WithStyles(ForwardRef(ListItemText))
+        inset={true}
+        primary="Simple"
+      />
+    </Styled(WithStyles(ForwardRef(ListItem)))>
+  </WithStyles(ForwardRef(Collapse))>
+</Styled(WithStyles(ForwardRef(List)))>
+`;

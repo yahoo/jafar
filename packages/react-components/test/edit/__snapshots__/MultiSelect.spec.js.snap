@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiSelect /> Should render provided data - disabled 1`] = `
+<StateManager
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  isDisabled={true}
+  isMulti={true}
+  isSearchable={false}
+  onChange={[Function]}
+  onInputChange={[Function]}
+  options={Array []}
+  styles={
+    Object {
+      "clearIndicator": [Function],
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "menu": [Function],
+      "singleValue": [Function],
+      "valueContainer": [Function],
+    }
+  }
+  value={
+    Array [
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`<MultiSelect /> Should render provided data - required 1`] = `
+<StateManager
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  isDisabled={false}
+  isMulti={true}
+  isSearchable={false}
+  onChange={[Function]}
+  onInputChange={[Function]}
+  options={Array []}
+  styles={
+    Object {
+      "clearIndicator": [Function],
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "menu": [Function],
+      "singleValue": [Function],
+      "valueContainer": [Function],
+    }
+  }
+  value={
+    Array [
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`<MultiSelect /> Should render provided data 1`] = `
+<StateManager
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  isDisabled={false}
+  isMulti={true}
+  isSearchable={false}
+  onChange={[Function]}
+  onInputChange={[Function]}
+  options={Array []}
+  styles={
+    Object {
+      "clearIndicator": [Function],
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "menu": [Function],
+      "singleValue": [Function],
+      "valueContainer": [Function],
+    }
+  }
+  value={
+    Array [
+      undefined,
+    ]
+  }
+/>
+`;

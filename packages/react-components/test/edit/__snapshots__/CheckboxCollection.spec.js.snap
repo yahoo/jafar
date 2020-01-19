@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxCollection /> should render provided data checkboxes disabled 1`] = `
+<CheckboxCollection
+  disabled={true}
+  inline={false}
+  items={
+    Array [
+      Object {
+        "label": "Ross Geller",
+        "value": "1",
+      },
+      Object {
+        "label": "Monica Geller",
+        "value": "2",
+      },
+      Object {
+        "label": "Rachel Green",
+        "value": "3",
+      },
+      Object {
+        "label": "Chandler Bing",
+        "value": "4",
+      },
+      Object {
+        "label": "Joey Tribbiani",
+        "value": "5",
+      },
+      Object {
+        "label": "Phoebe Buffay",
+        "value": "6",
+      },
+    ]
+  }
+  onChange={[MockFunction]}
+  onSearchChange={[Function]}
+  value={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+/>
+`;
+
+exports[`<CheckboxCollection /> should render provided data checkboxes inline 1`] = `
+<CheckboxCollection
+  disabled={false}
+  inline={true}
+  items={
+    Array [
+      Object {
+        "label": "Ross Geller",
+        "value": "1",
+      },
+      Object {
+        "label": "Monica Geller",
+        "value": "2",
+      },
+      Object {
+        "label": "Rachel Green",
+        "value": "3",
+      },
+      Object {
+        "label": "Chandler Bing",
+        "value": "4",
+      },
+      Object {
+        "label": "Joey Tribbiani",
+        "value": "5",
+      },
+      Object {
+        "label": "Phoebe Buffay",
+        "value": "6",
+      },
+    ]
+  }
+  onChange={[MockFunction]}
+  onSearchChange={[Function]}
+  value={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+/>
+`;
+
+exports[`<CheckboxCollection /> should render provided data checkboxes only 1`] = `
+<CheckboxCollection
+  disabled={false}
+  inline={false}
+  items={
+    Array [
+      Object {
+        "label": "Ross Geller",
+        "value": "1",
+      },
+      Object {
+        "label": "Monica Geller",
+        "value": "2",
+      },
+      Object {
+        "label": "Rachel Green",
+        "value": "3",
+      },
+      Object {
+        "label": "Chandler Bing",
+        "value": "4",
+      },
+      Object {
+        "label": "Joey Tribbiani",
+        "value": "5",
+      },
+      Object {
+        "label": "Phoebe Buffay",
+        "value": "6",
+      },
+    ]
+  }
+  onChange={[MockFunction]}
+  onSearchChange={[Function]}
+  value={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+/>
+`;
+
+exports[`<CheckboxCollection /> should render provided data checkboxes with search 1`] = `
+<CheckboxCollection
+  disabled={false}
+  inline={false}
+  items={
+    Array [
+      Object {
+        "label": "Ross Geller",
+        "value": "1",
+      },
+      Object {
+        "label": "Monica Geller",
+        "value": "2",
+      },
+      Object {
+        "label": "Rachel Green",
+        "value": "3",
+      },
+      Object {
+        "label": "Chandler Bing",
+        "value": "4",
+      },
+      Object {
+        "label": "Joey Tribbiani",
+        "value": "5",
+      },
+      Object {
+        "label": "Phoebe Buffay",
+        "value": "6",
+      },
+    ]
+  }
+  onChange={[MockFunction]}
+  onSearchChange={[Function]}
+  search={
+    Object {
+      "placeholder": "Search",
+      "value": "geller",
+    }
+  }
+  value={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+/>
+`;

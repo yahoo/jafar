@@ -1,0 +1,388 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxCollection /> should render provided data checkboxes disabled 1`] = `
+<Fragment>
+  <styled.div
+    key="Ross Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={true}
+          onChange={[Function]}
+          value="1"
+        />
+      }
+      label="Ross Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Monica Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={true}
+          onChange={[Function]}
+          value="2"
+        />
+      }
+      label="Monica Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Rachel Green"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={true}
+          onChange={[Function]}
+          value="3"
+        />
+      }
+      label="Rachel Green"
+    />
+  </styled.div>
+  <styled.div
+    key="Chandler Bing"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={true}
+          onChange={[Function]}
+          value="4"
+        />
+      }
+      label="Chandler Bing"
+    />
+  </styled.div>
+  <styled.div
+    key="Joey Tribbiani"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={true}
+          onChange={[Function]}
+          value="5"
+        />
+      }
+      label="Joey Tribbiani"
+    />
+  </styled.div>
+  <styled.div
+    key="Phoebe Buffay"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={true}
+          onChange={[Function]}
+          value="6"
+        />
+      }
+      label="Phoebe Buffay"
+    />
+  </styled.div>
+</Fragment>
+`;
+
+exports[`<CheckboxCollection /> should render provided data checkboxes inline 1`] = `
+<Fragment>
+  <styled.div
+    key="Ross Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={false}
+          onChange={[Function]}
+          value="1"
+        />
+      }
+      label="Ross Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Monica Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={false}
+          onChange={[Function]}
+          value="2"
+        />
+      }
+      label="Monica Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Rachel Green"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="3"
+        />
+      }
+      label="Rachel Green"
+    />
+  </styled.div>
+  <styled.div
+    key="Chandler Bing"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="4"
+        />
+      }
+      label="Chandler Bing"
+    />
+  </styled.div>
+  <styled.div
+    key="Joey Tribbiani"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="5"
+        />
+      }
+      label="Joey Tribbiani"
+    />
+  </styled.div>
+  <styled.div
+    key="Phoebe Buffay"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="6"
+        />
+      }
+      label="Phoebe Buffay"
+    />
+  </styled.div>
+</Fragment>
+`;
+
+exports[`<CheckboxCollection /> should render provided data checkboxes only 1`] = `
+<Fragment>
+  <styled.div
+    key="Ross Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={false}
+          onChange={[Function]}
+          value="1"
+        />
+      }
+      label="Ross Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Monica Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={false}
+          onChange={[Function]}
+          value="2"
+        />
+      }
+      label="Monica Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Rachel Green"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="3"
+        />
+      }
+      label="Rachel Green"
+    />
+  </styled.div>
+  <styled.div
+    key="Chandler Bing"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="4"
+        />
+      }
+      label="Chandler Bing"
+    />
+  </styled.div>
+  <styled.div
+    key="Joey Tribbiani"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="5"
+        />
+      }
+      label="Joey Tribbiani"
+    />
+  </styled.div>
+  <styled.div
+    key="Phoebe Buffay"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="6"
+        />
+      }
+      label="Phoebe Buffay"
+    />
+  </styled.div>
+</Fragment>
+`;
+
+exports[`<CheckboxCollection /> should render provided data checkboxes with search 1`] = `
+<Fragment>
+  <WithStyles(SearchInput)
+    disabled={false}
+    onChange={[Function]}
+    onSearch={[Function]}
+    placeholder="Search"
+    value="geller"
+  />
+  <styled.div
+    key="Ross Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={false}
+          onChange={[Function]}
+          value="1"
+        />
+      }
+      label="Ross Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Monica Geller"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={true}
+          disabled={false}
+          onChange={[Function]}
+          value="2"
+        />
+      }
+      label="Monica Geller"
+    />
+  </styled.div>
+  <styled.div
+    key="Rachel Green"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="3"
+        />
+      }
+      label="Rachel Green"
+    />
+  </styled.div>
+  <styled.div
+    key="Chandler Bing"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="4"
+        />
+      }
+      label="Chandler Bing"
+    />
+  </styled.div>
+  <styled.div
+    key="Joey Tribbiani"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="5"
+        />
+      }
+      label="Joey Tribbiani"
+    />
+  </styled.div>
+  <styled.div
+    key="Phoebe Buffay"
+  >
+    <WithStyles(ForwardRef(FormControlLabel))
+      control={
+        <ForwardRef(WithStyles)
+          checked={false}
+          disabled={false}
+          onChange={[Function]}
+          value="6"
+        />
+      }
+      label="Phoebe Buffay"
+    />
+  </styled.div>
+</Fragment>
+`;

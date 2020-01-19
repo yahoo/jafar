@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemView Should render - ok 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.h3
+      hasTabs={true}
+    >
+      Employee
+    </styled.h3>
+    <styled.div>
+      <Options
+        options={Array []}
+      />
+    </styled.div>
+    <styled.div>
+      <WithStyles(ForwardRef(Tabs))
+        aria-label="Tabs"
+        indicatorColor="primary"
+        onChange={[MockFunction]}
+        textColor="primary"
+      >
+        <WithStyles(ForwardRef(Tab))
+          key="general"
+          label="General"
+          value="general"
+        />
+      </WithStyles(ForwardRef(Tabs))>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    aria-label="Sections"
+  >
+    <ForwardRef
+      id="general"
+      key="general"
+      showBorder={false}
+    />
+  </styled.div>
+  <Footer
+    actions={Array []}
+    aria-label="Footer"
+  />
+</styled.div>
+`;
+
+exports[`ItemView Should render header options only - ok 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <Options
+        options={Array []}
+      />
+    </styled.div>
+  </styled.div>
+  <styled.div
+    aria-label="Sections"
+  >
+    <ForwardRef
+      id="general"
+      key="general"
+      showBorder={false}
+    />
+  </styled.div>
+  <Footer
+    actions={Array []}
+    aria-label="Footer"
+  />
+</styled.div>
+`;
+
+exports[`ItemView Should render without footer - ok 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.h3
+      hasTabs={true}
+    >
+      Employee
+    </styled.h3>
+    <styled.div>
+      <Options
+        options={Array []}
+      />
+    </styled.div>
+    <styled.div>
+      <WithStyles(ForwardRef(Tabs))
+        aria-label="Tabs"
+        indicatorColor="primary"
+        onChange={[MockFunction]}
+        textColor="primary"
+      >
+        <WithStyles(ForwardRef(Tab))
+          key="general"
+          label="General"
+          value="general"
+        />
+      </WithStyles(ForwardRef(Tabs))>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    aria-label="Sections"
+  >
+    <ForwardRef
+      id="general"
+      key="general"
+      showBorder={false}
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`ItemView Should render without options - ok 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.h3
+      hasTabs={true}
+    >
+      Employee
+    </styled.h3>
+    <styled.div>
+      <WithStyles(ForwardRef(Tabs))
+        aria-label="Tabs"
+        indicatorColor="primary"
+        onChange={[MockFunction]}
+        textColor="primary"
+      >
+        <WithStyles(ForwardRef(Tab))
+          key="general"
+          label="General"
+          value="general"
+        />
+      </WithStyles(ForwardRef(Tabs))>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    aria-label="Sections"
+  >
+    <ForwardRef
+      id="general"
+      key="general"
+      showBorder={false}
+    />
+  </styled.div>
+  <Footer
+    actions={Array []}
+    aria-label="Footer"
+  />
+</styled.div>
+`;
+
+exports[`ItemView Should render without tabs - ok 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.h3
+      hasTabs={false}
+    >
+      Employee
+    </styled.h3>
+    <styled.div>
+      <Options
+        options={Array []}
+      />
+    </styled.div>
+  </styled.div>
+  <styled.div
+    aria-label="Sections"
+  >
+    <ForwardRef
+      id="general"
+      key="general"
+      showBorder={false}
+    />
+  </styled.div>
+  <Footer
+    actions={Array []}
+    aria-label="Footer"
+  />
+</styled.div>
+`;
+
+exports[`ItemView Should render without title - ok 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <Options
+        options={Array []}
+      />
+    </styled.div>
+    <styled.div>
+      <WithStyles(ForwardRef(Tabs))
+        aria-label="Tabs"
+        indicatorColor="primary"
+        onChange={[MockFunction]}
+        textColor="primary"
+      >
+        <WithStyles(ForwardRef(Tab))
+          key="general"
+          label="General"
+          value="general"
+        />
+      </WithStyles(ForwardRef(Tabs))>
+    </styled.div>
+  </styled.div>
+  <styled.div
+    aria-label="Sections"
+  >
+    <ForwardRef
+      id="general"
+      key="general"
+      showBorder={false}
+    />
+  </styled.div>
+  <Footer
+    actions={Array []}
+    aria-label="Footer"
+  />
+</styled.div>
+`;

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DynamicItemsModal /> component functions render itemsDisplay 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-jKJlTe",
+        "isStatic": false,
+        "lastClassName": "ivFuYh",
+        "rules": Array [
+          "
+	list-style: none;
+	padding: 0;
+	max-height: 180px;
+	overflow-y: auto;
+",
+        ],
+      },
+      "displayName": "styled.ul",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-jKJlTe",
+      "target": "ul",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+>
+  <styled.li
+    key="0"
+  >
+    <styled.div>
+      <span>
+        first
+         - 
+        last
+      </span>
+       
+    </styled.div>
+    <styled.div>
+      <WithStyles(ForwardRef(Fab))
+        color="secondary"
+        onClick={[Function]}
+        size="small"
+        style={
+          Object {
+            "margin": "0 5px",
+          }
+        }
+      >
+        <CreateIcon />
+      </WithStyles(ForwardRef(Fab))>
+      <WithStyles(ForwardRef(Fab))
+        color="secondary"
+        onClick={[Function]}
+        size="small"
+        style={
+          Object {
+            "margin": "0 5px",
+          }
+        }
+      >
+        <DeleteIcon />
+      </WithStyles(ForwardRef(Fab))>
+    </styled.div>
+  </styled.li>
+</StyledComponent>
+`;
+
+exports[`<DynamicItemsModal /> should render provided data 1`] = `
+<div>
+  <ul
+    class="sc-jKJlTe ivFuYh"
+  />
+  <button
+    class="MuiButtonBase-root MuiFab-root MuiFab-sizeSmall MuiFab-primary"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="MuiFab-label"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+    </span>
+  </button>
+  <span
+    class="sc-kkGfuU lehQSk"
+  >
+    Add New
+  </span>
+</div>
+`;

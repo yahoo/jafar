@@ -1,0 +1,32 @@
+{
+  "name": "@jafar/documentation",
+  "version": "1.0.0",
+  "description": "Jafar documentation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahoo/jafar"
+  },
+  "scripts": {
+    "start": "cd website && npm start",
+    "postinstall": "cd website && npm install --production=false",
+    "build-website": "rm -rf ./build && cd website && npm run build && mv build/jafar ../build",
+    "build": "npm run build-website",
+    "test": "echo unit tests not needed",
+    "coverage": "echo coverage not needed",
+    "e2e": "echo e2e not needed",
+    "lint": "echo no lint yet",
+    "lint-todo": "node node_modules/eslint/bin/eslint.js './website/**/*.{js,jsx,json}' --config .eslintrc.js",
+    "lint-fix": "npm run lint -- --fix",
+    "deploy-website": "PUBLIC_URL=https://yahoo.github.io/jafar npm run build-website && gh-pages --dist build --add",
+    "pre-push": "lint-staged"
+  },
+  "devDependencies": {
+    "@jafar/react-kit": "^1.0.0",
+    "filepath": "^1.1.0",
+    "front-matter": "^2.3.0",
+    "glob-promise": "^3.3.0",
+    "husky": "^3.0.0",
+    "prettier": "^1.13.7",
+    "rimraf": "^2.6.2"
+  }
+}

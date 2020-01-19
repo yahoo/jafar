@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Should render - ok 1`] = `
+<styled.div
+  actions={
+    Array [
+      Object {
+        "label": "Cancel",
+        "onClick": [MockFunction],
+        "type": "secondary",
+      },
+      Object {
+        "label": "Save",
+        "onClick": [MockFunction],
+        "type": "primary",
+      },
+    ]
+  }
+>
+  <styled.div>
+    <styled.div
+      key="Cancel"
+    >
+      <Button
+        label="Cancel"
+        onClick={[MockFunction]}
+        type="secondary"
+      />
+    </styled.div>
+    <styled.div
+      key="Save"
+    >
+      <Button
+        label="Save"
+        onClick={[MockFunction]}
+        type="primary"
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

@@ -1,0 +1,51 @@
+/**
+  * Copyright 2020, Verizon Media
+  * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
+  */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Radio from '@material-ui/core/Radio';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import MuiRadioGroup from '@material-ui/core/RadioGroup';
+import { propTypes, defaultProps } from '../props';
+
+export default class RadioGroup extends React.Component {
+  static propTypes = Object.assign({}, propTypes, {
+    value: PropTypes.any,
+    state: PropTypes.shape({
+      inline: PropTypes.bool,
+      items: PropTypes.arrayOf(PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        value: PropTypes.any.isRequired,
+        disabled: PropTypes.bool,
+      })).isRequired,
+    }),
+  });
+
+  static defaultProps = Object.assign({}, defaultProps, {
+    value: '',
+    state: {
+      inline: false,
+      items: [],
+    },
+  });
+
+  render() {
+    return (
+      <MuiRadioGroup value={this.props.value} onChange={this.onChange} row={this.props.state.inline}>
+        {this.props.state.items.map((item) => {
+          return (
+            <FormControlLabel
+              key={item.value} value={item.value} label={item.label} 
+              disabled={this.props.disabled || item.disabled} control={<Radio />}
+            />);
+        })}
+      </MuiRadioGroup>
+    );
+  }
+
+  onChange = (e) => {
+    this.props.onValueChange(e.target.value);
+  }
+}

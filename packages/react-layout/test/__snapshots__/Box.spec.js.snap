@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box Should render column, ok 1`] = `
+<styled.div>
+  <Box
+    boxes={Array []}
+    component={[Function]}
+    direction="column"
+    key="0"
+    props={
+      Object {
+        "id": "firstName",
+      }
+    }
+    style={Object {}}
+  />
+  <Box
+    boxes={Array []}
+    component={[Function]}
+    direction="column"
+    key="1"
+    props={
+      Object {
+        "id": "lastName",
+      }
+    }
+    style={Object {}}
+  />
+</styled.div>
+`;
+
+exports[`Box Should render component - ok 1`] = `
+<component
+  id="firstName"
+/>
+`;
+
+exports[`Box Should render nested content, ok 1`] = `<styled.div />`;
+
+exports[`Box Should render row - ok 1`] = `
+<styled.div>
+  <Box
+    boxes={Array []}
+    component={[Function]}
+    direction="column"
+    key="0"
+    props={
+      Object {
+        "id": "firstName",
+      }
+    }
+    style={Object {}}
+  />
+  <Box
+    boxes={Array []}
+    component={[Function]}
+    direction="column"
+    key="1"
+    props={
+      Object {
+        "id": "lastName",
+      }
+    }
+    style={Object {}}
+  />
+</styled.div>
+`;
+
+exports[`Box Should render with style, ok 1`] = `
+<styled.div
+  margin="10px 20px"
+  maxWidth="500px"
+  width="300px"
+>
+  <Box
+    boxes={Array []}
+    component={[Function]}
+    direction="column"
+    key="0"
+    props={
+      Object {
+        "id": "firstName",
+      }
+    }
+    style={Object {}}
+  />
+  <Box
+    boxes={Array []}
+    component={[Function]}
+    direction="column"
+    key="1"
+    props={
+      Object {
+        "id": "lastName",
+      }
+    }
+    style={Object {}}
+  />
+</styled.div>
+`;

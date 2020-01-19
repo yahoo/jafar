@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`field-with-context rendered correctly 1`] = `
+<FieldView
+  component={[MockFunction]}
+  description="Enter first name"
+  dirty={false}
+  disabled={false}
+  empty={false}
+  errors={Array []}
+  excluded={false}
+  id="firstName"
+  invalid={false}
+  label="First Name"
+  onStateChange={[Function]}
+  onValueChange={[Function]}
+  required={false}
+  state={Object {}}
+  value="Rachel"
+/>
+`;
+
+exports[`field-with-context rendered correctly with reserved jafar field view prop - dont pass it to the underline component, pass the jafar props 1`] = `
+<FieldView
+  component={[MockFunction]}
+  description="Enter first name"
+  dirty={false}
+  disabled={false}
+  empty={false}
+  errors={Array []}
+  excluded={false}
+  id="firstName"
+  invalid={false}
+  label="First Name"
+  onStateChange={[Function]}
+  onValueChange={[Function]}
+  required={false}
+  state={Object {}}
+  value="Rachel"
+/>
+`;
+
+exports[`field-with-context rendered correctly with reserved jafar field view prop that is undefined - dont pass it to the underline component, pass the jafar props 1`] = `
+<FieldView
+  component={[MockFunction]}
+  description="Enter first name"
+  dirty={false}
+  disabled={false}
+  empty={false}
+  errors={Array []}
+  excluded={false}
+  id="firstName"
+  invalid={false}
+  label="First Name"
+  onStateChange={[Function]}
+  onValueChange={[Function]}
+  required={false}
+  state={Object {}}
+/>
+`;
+
+exports[`field-with-context rendered correctly with unsupported jafar field props - pass it to the underline component 1`] = `
+<FieldView
+  component={[MockFunction]}
+  description="Enter first name"
+  dirty={false}
+  disabled={false}
+  empty={false}
+  errors={Array []}
+  excluded={false}
+  id="firstName"
+  invalid={false}
+  label="First Name"
+  mickey="mouse"
+  onStateChange={[Function]}
+  onValueChange={[Function]}
+  required={false}
+  state={Object {}}
+  value="Rachel"
+/>
+`;

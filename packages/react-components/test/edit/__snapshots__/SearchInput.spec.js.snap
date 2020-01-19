@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchInput /> should render provided data 1`] = `
+<SearchInput
+  classes={
+    Object {
+      "iconButton": "SearchInput-iconButton-3",
+      "input": "SearchInput-input-2",
+      "root": "SearchInput-root-1",
+    }
+  }
+  disabled={false}
+  onChange={[MockFunction]}
+  onSearch={[MockFunction]}
+  placeholder="Search Food"
+  value="avocado"
+/>
+`;

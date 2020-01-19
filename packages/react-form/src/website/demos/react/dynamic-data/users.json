@@ -1,0 +1,23 @@
+[{
+  "firstName": "Rachel",
+  "lastName": "Green",
+  "address": "90 Bedford Street"
+}, {
+  "firstName": "Ross",
+  "lastName": "Geller"
+}, {
+  "firstName": "Monica",
+  "lastName": "Geller",
+  "address": "90 Bedford Street"
+}, {
+  "firstName": "Joey",
+  "lastName": "Tribianny",
+  "address": "90 Bedford Street"
+}, {
+  "firstName": "Phoebe",
+  "lastName": "Buffay"
+}, {
+  "firstName": "Chandler",
+  "lastName": "Bing",
+  "address": "90 Bedford Street"
+}]

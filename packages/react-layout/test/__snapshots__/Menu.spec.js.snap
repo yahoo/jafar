@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu Should render - ok 1`] = `
+<WithStyles(ForwardRef(Menu))
+  PaperProps={
+    Object {
+      "style": Object {
+        "maxHeight": 216,
+        "width": 200,
+      },
+    }
+  }
+  id="options-menu"
+>
+  <WithStyles(ForwardRef(MenuItem))
+    key="Archive"
+    onClick={[Function]}
+  >
+    Archive
+  </WithStyles(ForwardRef(MenuItem))>
+</WithStyles(ForwardRef(Menu))>
+`;
+
+exports[`Menu Should render - with action that has disabled truthy - ok 1`] = `
+<WithStyles(ForwardRef(Menu))
+  PaperProps={
+    Object {
+      "style": Object {
+        "maxHeight": 216,
+        "width": 200,
+      },
+    }
+  }
+  id="options-menu"
+>
+  <WithStyles(ForwardRef(MenuItem))
+    aria-disabled={true}
+    disabled={true}
+    key="Archive"
+    onClick={[Function]}
+  >
+    Archive
+  </WithStyles(ForwardRef(MenuItem))>
+</WithStyles(ForwardRef(Menu))>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Should render - disabled truthy, render ok 1`] = `
+<WithStyles(ForwardRef(Button))
+  color="primary"
+  disabled={true}
+  onClick={[Function]}
+>
+  save
+</WithStyles(ForwardRef(Button))>
+`;
+
+exports[`Button Should render - ok 1`] = `
+<WithStyles(ForwardRef(Button))
+  color="primary"
+  onClick={[Function]}
+>
+  save
+</WithStyles(ForwardRef(Button))>
+`;
+
+exports[`Button Should render with custom button component 1`] = `
+<Component
+  label="save"
+  onClick={[Function]}
+>
+  save
+</Component>
+`;

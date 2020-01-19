@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form render when state.form defined correctly 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "actions": Object {
+        "changeContext": [Function],
+        "changeData": [Function],
+        "changeState": [Function],
+        "changeUi": [Function],
+        "changeValue": [Function],
+        "reset": [Function],
+        "submit": [Function],
+      },
+      "model": Object {
+        "id": "mockId",
+      },
+      "resources": Object {},
+    }
+  }
+>
+  <React.Fragment>
+    <div>
+      Mock Child
+    </div>
+  </React.Fragment>
+</Context.Provider>
+`;
+
+exports[`Form rendered and init correctly 1`] = `""`;

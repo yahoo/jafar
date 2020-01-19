@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render provided data 1`] = `
+<WithStyles(ForwardRef(FormControl))>
+  <WithStyles(ForwardRef(Input))
+    disabled={false}
+    error={false}
+    inputProps={
+      Object {
+        "maxLength": undefined,
+      }
+    }
+    onChange={[Function]}
+    placeholder="Enter Food"
+    type="text"
+    value="avocado"
+  />
+</WithStyles(ForwardRef(FormControl))>
+`;

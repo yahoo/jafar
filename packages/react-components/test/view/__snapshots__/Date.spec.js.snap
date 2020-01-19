@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Date /> should render provided data 1`] = `
+<div>
+  01/16/2020
+</div>
+`;

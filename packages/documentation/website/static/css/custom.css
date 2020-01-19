@@ -1,0 +1,189 @@
+/* your custom css. */
+
+body {
+  font-size: 14px;
+}
+.fixedHeaderContainer {
+  background: #464F56;  
+}
+
+.headerTitleWithLogo {
+  top: 1px;
+  font-weight: 500;
+}
+
+.logo {
+  margin-top: 9px;
+  width: 40px;
+  height: 40px !important;
+}
+
+.home-jafar-stand {
+  margin-top: 15px;
+  position: relative;
+  top: 345px;
+  left: -340px;
+  height: 190px;
+  z-index: 1;
+}
+
+.projectTitle {
+  color: #828C93;
+}
+
+.button {
+  color: #828C93;
+  border-color: #828C93;
+}
+
+.button:hover {
+  background: #828C93;
+}
+
+.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover, 
+.navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+  background: #464F56;
+}
+
+.mainContainer {
+  padding: 48px 0 0 0;
+}
+
+#homepage-components {
+  padding: 80px 0;
+  background-color: #f3f3f3;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 1023px) {
+  body, .navPusher, iframe {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .navPusher {
+    padding-top: 40px;
+    overflow-x: hidden;
+  }
+
+  .tocActive .onPageNav {
+    top: 88px;
+  }
+
+  .fixedHeaderContainer {
+    padding: 8px 0 0 0 !important;
+    min-height: 40px !important;
+    height: 40px;
+  }
+
+  header a {
+    min-width: 25px;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  header a img {
+    width: 25px !important;
+    margin: 0 !important;
+  }
+
+  header a h2 {
+    display: none !important;
+  }
+
+  .navigationWrapper {
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+  }
+
+  .navigationWrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slidingNav {
+    position: unset !important;
+    flex: 1;
+    display: flex; 
+  }
+
+  .slidingNav ul {
+    overflow-y: hidden;
+    top: 5px;
+    position: relative;
+  }
+
+  .slidingNav ul li a, .slidingNav ul li, .slidingNav ul, .slidingNav {
+    height: 30px !important; 
+  }
+
+  .slidingNav ul li:first-child a {
+    padding-left: 0px !important; 
+  }
+
+  .nav-site-internal {
+    flex: 1;
+    margin: -8px 0 -10px 10px !important;
+    background: transparent !important;
+  }
+
+  .home-jafar-stand {
+    display: none;
+  }
+
+  .pluginWrapper {
+    padding: 2px !important;
+  }
+
+  .projectTitle {
+    margin-top: 10px;
+  }
+
+  .projectTitle small {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .homeContainer .homeWrapper {
+    padding: 2em 20px;
+  }
+
+  .mainInner {
+    overflow-x: auto;
+    /* -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent); */
+  }
+
+  .user-and-highlights {
+    padding: 50px 20px !important;
+  }
+
+  .mainInner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .features {
+    min-width: 560px;
+    padding: 100px 20px 50px 20px !important;
+  }
+
+  .highlights {
+    justify-content: center;
+  }
+
+  .highlights div {
+    padding: 10px 0 !important;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (max-width: 1023px) {}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1500px) {}

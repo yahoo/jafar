@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options Should render - ok 1`] = `
+<div>
+  <WithStyles(ForwardRef(IconButton))
+    aria-haspopup="true"
+    aria-label="Options"
+    color="primary"
+    onClick={[Function]}
+  >
+    <DehazeIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <Menu
+    anchorEl={null}
+    onClose={[Function]}
+    open={false}
+    options={
+      Array [
+        Object {
+          "label": "Archive",
+          "onClick": [MockFunction],
+        },
+      ]
+    }
+    style={
+      Object {
+        "maxHeight": 216,
+        "width": 200,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Options Should render - with action that has disabled truthy - ok 1`] = `
+<div>
+  <WithStyles(ForwardRef(IconButton))
+    aria-haspopup="true"
+    aria-label="Options"
+    color="primary"
+    onClick={[Function]}
+  >
+    <DehazeIcon />
+  </WithStyles(ForwardRef(IconButton))>
+  <Menu
+    anchorEl={null}
+    onClose={[Function]}
+    open={false}
+    options={
+      Array [
+        Object {
+          "disabled": true,
+          "label": "Archive",
+          "onClick": [MockFunction],
+        },
+      ]
+    }
+    style={
+      Object {
+        "maxHeight": 216,
+        "width": 200,
+      }
+    }
+  />
+</div>
+`;

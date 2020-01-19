@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section Should render complex section boxes 1`] = `
+<div
+  id="job-information"
+>
+  <styled.div
+    level={1}
+  >
+    <styled.h3
+      level={1}
+    >
+      Job Information
+    </styled.h3>
+    <Box
+      boxes={
+        Array [
+          Object {
+            "boxes": Array [
+              Object {
+                "component": [Function],
+                "props": Object {
+                  "id": "firstName",
+                },
+              },
+              Object {
+                "component": [Function],
+                "props": Object {
+                  "id": "lastName",
+                },
+              },
+            ],
+            "direction": "column",
+          },
+          Object {
+            "boxes": Array [
+              Object {
+                "component": [Function],
+                "props": Object {
+                  "id": "address",
+                },
+              },
+            ],
+            "direction": "column",
+          },
+        ]
+      }
+      direction="row"
+      key="0"
+      props={Object {}}
+      style={Object {}}
+    />
+  </styled.div>
+</div>
+`;
+
+exports[`Section Should render section with only sub sections with level one 1`] = `
+<div
+  id="raw-data"
+>
+  <styled.div
+    level={1}
+  >
+    <styled.h3
+      level={1}
+    >
+      Raw Data
+    </styled.h3>
+    <Section
+      boxes={
+        Array [
+          Object {
+            "boxes": Array [
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "id",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "modifier",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+            ],
+            "direction": "row",
+          },
+        ]
+      }
+      id="raw-data-general"
+      key="raw-data-general"
+      level={1}
+      title="General"
+    />
+    <Section
+      boxes={
+        Array [
+          Object {
+            "boxes": Array [
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "creationDate",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "modificationDate",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+            ],
+            "direction": "row",
+          },
+        ]
+      }
+      id="raw-data-modification"
+      key="raw-data-modification"
+      level={1}
+      title="Modification"
+    />
+  </styled.div>
+</div>
+`;
+
+exports[`Section Should render section with sub sections 1`] = `
+<div
+  id="raw-data"
+>
+  <styled.div
+    level={1}
+  >
+    <styled.h3
+      level={1}
+    >
+      Raw Data
+    </styled.h3>
+    <Box
+      boxes={
+        Array [
+          Object {
+            "boxes": Array [
+              Object {
+                "component": [Function],
+                "props": Object {
+                  "id": "id",
+                },
+              },
+              Object {
+                "component": [Function],
+                "props": Object {
+                  "id": "modifier",
+                },
+              },
+            ],
+            "direction": "column",
+          },
+          Object {
+            "boxes": Array [
+              Object {
+                "component": [Function],
+                "props": Object {
+                  "id": "creationDate",
+                },
+              },
+              Object {
+                "component": [Function],
+                "props": Object {
+                  "id": "modificationDate",
+                },
+              },
+            ],
+            "direction": "column",
+          },
+        ]
+      }
+      direction="row"
+      key="0"
+      props={Object {}}
+      style={Object {}}
+    />
+    <Section
+      boxes={
+        Array [
+          Object {
+            "boxes": Array [
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "id",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "modifier",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+            ],
+            "direction": "row",
+          },
+        ]
+      }
+      id="raw-data-general"
+      key="raw-data-general"
+      level={2}
+      title="General"
+    />
+    <Section
+      boxes={
+        Array [
+          Object {
+            "boxes": Array [
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "creationDate",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+              Object {
+                "boxes": Array [
+                  Object {
+                    "component": [Function],
+                    "props": Object {
+                      "id": "modificationDate",
+                    },
+                  },
+                ],
+                "direction": "column",
+              },
+            ],
+            "direction": "row",
+          },
+        ]
+      }
+      id="raw-data-modification"
+      key="raw-data-modification"
+      level={2}
+      title="Modification"
+    />
+  </styled.div>
+</div>
+`;
+
+exports[`Section Should render simple section boxes - level one 1`] = `
+<div
+  id="job-information"
+>
+  <styled.div
+    level={1}
+  >
+    <styled.h3
+      level={1}
+    >
+      Job Information
+    </styled.h3>
+    <Box
+      boxes={
+        Array [
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "firstName",
+            },
+          },
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "lastName",
+            },
+          },
+        ]
+      }
+      direction="row"
+      key="0"
+      props={Object {}}
+      style={Object {}}
+    />
+  </styled.div>
+</div>
+`;
+
+exports[`Section Should render simple section boxes - level two 1`] = `
+<div
+  id="job-information"
+>
+  <styled.div
+    level={2}
+  >
+    <styled.h3
+      level={2}
+    >
+      Job Information
+    </styled.h3>
+    <Box
+      boxes={
+        Array [
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "firstName",
+            },
+          },
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "lastName",
+            },
+          },
+        ]
+      }
+      direction="row"
+      key="0"
+      props={Object {}}
+      style={Object {}}
+    />
+  </styled.div>
+</div>
+`;
+
+exports[`Section Should render simple section boxes without title 1`] = `
+<div
+  id="job-information"
+>
+  <styled.div
+    level={1}
+  >
+    <Box
+      boxes={
+        Array [
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "firstName",
+            },
+          },
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "lastName",
+            },
+          },
+        ]
+      }
+      direction="row"
+      key="0"
+      props={Object {}}
+      style={Object {}}
+    />
+  </styled.div>
+</div>
+`;
+
+exports[`Section Should render simple section with ref 1`] = `
+<Section
+  boxes={
+    Array [
+      Object {
+        "boxes": Array [
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "firstName",
+            },
+          },
+          Object {
+            "component": [Function],
+            "props": Object {
+              "id": "lastName",
+            },
+          },
+        ],
+        "direction": "row",
+      },
+    ]
+  }
+  id="job-information"
+  innerRef={null}
+  level={1}
+/>
+`;

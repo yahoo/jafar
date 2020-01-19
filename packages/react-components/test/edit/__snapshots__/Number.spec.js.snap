@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Number /> should render provided data 1`] = `
+<WithStyles(ForwardRef(Input))
+  disabled={false}
+  error={false}
+  inputProps={
+    Object {
+      "max": undefined,
+      "min": undefined,
+      "step": undefined,
+    }
+  }
+  onChange={[Function]}
+  placeholder="Enter Number"
+  type="number"
+  value={42}
+/>
+`;

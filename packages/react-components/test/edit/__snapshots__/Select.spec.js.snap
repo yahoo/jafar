@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> Should render provided data - disabled 1`] = `
+<StateManager
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  isClearable={true}
+  isDisabled={true}
+  isSearchable={false}
+  onChange={[Function]}
+  onInputChange={[Function]}
+  styles={
+    Object {
+      "clearIndicator": [Function],
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "menu": [Function],
+      "singleValue": [Function],
+      "valueContainer": [Function],
+    }
+  }
+  value={null}
+/>
+`;
+
+exports[`<Select /> Should render provided data - required 1`] = `
+<StateManager
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  isClearable={false}
+  isDisabled={false}
+  isSearchable={false}
+  onChange={[Function]}
+  onInputChange={[Function]}
+  styles={
+    Object {
+      "clearIndicator": [Function],
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "menu": [Function],
+      "singleValue": [Function],
+      "valueContainer": [Function],
+    }
+  }
+  value={null}
+/>
+`;
+
+exports[`<Select /> Should render provided data 1`] = `
+<StateManager
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  isClearable={true}
+  isDisabled={false}
+  isSearchable={false}
+  onChange={[Function]}
+  onInputChange={[Function]}
+  styles={
+    Object {
+      "clearIndicator": [Function],
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "menu": [Function],
+      "singleValue": [Function],
+      "valueContainer": [Function],
+    }
+  }
+  value={null}
+/>
+`;
