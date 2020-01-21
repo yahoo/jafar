@@ -74,7 +74,7 @@ class HomeSplash extends React.Component {
 class Index extends React.Component {
   render() {
     const { config: siteConfig, language = '' } = this.props;
-    const { baseUrl } = siteConfig;
+    const { baseUrl, users } = siteConfig;
     const pageUrl = page => `${baseUrl}${page}`;
 
     const Block = props => (
@@ -104,6 +104,7 @@ class Index extends React.Component {
       background: '#889CA9',
       borderRadius: '110px',
       padding: '10px 40px',
+      maxWidth: '1080px',
     };
 
     const styleWhoUses = {
@@ -111,15 +112,17 @@ class Index extends React.Component {
       fontWeight: '600',
       fontSize: '24px',
       width: '150px',
+      alignSelf: 'center',
     };
 
     const styleUsersWrapper = {
       display: 'flex',
       flexDirection: 'row',
+      flexWrap: 'wrap',
     };
 
     const styleUserLink = {
-      margin: '0 15px',
+      margin: '15px',
       display: 'flex',
       alignSelf: 'center',
     };
@@ -198,14 +201,15 @@ class Index extends React.Component {
           </div>
           <div className="user-and-highlights" style={styleBottomWrapper}>
             <div style={styleWhoUsesWrapper}>
-              <div style={styleWhoUses}>Who uses Jafar?</div>
+              <a href={`${baseUrl}users`} style={styleWhoUses}>Who uses Jafar?</a>
               <div style={styleUsersWrapper}>
-                <a style={styleUserLink} href="https://www.verizonmedia.com/">
-                  <img
-                    alt="Verizon Media"
-                    src={`${baseUrl}img/verizon-media.png`}
-                    style={{ width: '80px', height: '40px' }} />
-                </a>
+                {
+                  users
+                  .filter(user => user.pinned)
+                  .map((user, index) => <a key={index} style={styleUserLink} href={user.infoLink}>
+                    <img alt={user.caption} src={user.image} />
+                  </a>)
+                }
               </div>
             </div>
             <div class="highlights" style={styleCapibilities}>

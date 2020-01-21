@@ -1,7 +1,7 @@
 /* your custom css. */
 
 body {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .hosted-frame {
@@ -74,6 +74,10 @@ body {
 
 .nav-footer .copyright {
   text-align: left !important;
+}
+
+.showcaseSection {
+  margin-top: -80px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 1023px) {

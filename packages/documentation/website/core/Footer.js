@@ -55,8 +55,9 @@ class Footer extends React.Component {
           <div></div>
           <div>
             <h5>CONTRIBUTING</h5>
-            <a target="_blank" href="https://github.com/yahoo/jafar/blob/master/CODE-OF-CONDUCT.md">Code Of Conduct</a>
-            <a target="_blank" href="https://github.com/yahoo/jafar/blob/master/CONTRIBUTING.md">Contributing</a>
+            <a href={this.docUrl('code-of-conduct')}>Code Of Conduct</a>
+            <a href={this.docUrl('contributing-guide')}>Contributing Guide</a>
+            <a href={this.pageUrl('users')}>Users</a>
           </div>
           <div>
             <h5>CHANNELS</h5>

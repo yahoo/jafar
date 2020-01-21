@@ -5,18 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const baseUrl = `${process.env.PUBLIC_URL || ''}/`;
 
 // List of projects/orgs using your project for the users page.
-// const users = [
-//   {
-//     caption: 'User1',
-//     // You will need to prepend the image path with your baseUrl
-//     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-//     image: '/img/docusaurus.svg',
-//     infoLink: 'https://www.facebook.com',
-//     pinned: true,
-//   },
-// ];
+const users = require('./users.js');
 
 const FORM_DEMO_URL = `https://yahoo.github.io/jafar/react-form/index.html`;
 const COMPONENTS_DEMO_URL = `https://yahoo.github.io/jafar/react-components/index.html`;
@@ -26,7 +18,7 @@ const siteConfig = {
   title: 'Jafar',
   tagline: '!(Just another form application renderer)',
   url: 'https://yahoo.github.io/jafar',
-  baseUrl: `${process.env.PUBLIC_URL || ''}/`,
+  baseUrl,
   headerLinks: [
     { label: 'Docs', doc: 'introduction' },
     // { label: 'Help', page: 'help' },
@@ -44,7 +36,7 @@ const siteConfig = {
   projectName: 'jafar',
   organizationName: 'Verizon Media',
   // If you have users set above, you add it here:
-  // users,
+  users,
   // path to images for header/footer
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
