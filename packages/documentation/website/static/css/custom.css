@@ -59,6 +59,10 @@ body {
   background-color: #f3f3f3;
 }
 
+.nav-footer section {
+  padding: 0 40px;
+}
+
 .nav-footer .sitemap .nav-home {
   width: 120px;
 }
