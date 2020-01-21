@@ -3,6 +3,11 @@
 body {
   font-size: 14px;
 }
+
+.hosted-frame {
+  min-height: 100vh;
+}
+
 .fixedHeaderContainer {
   background: #464F56;  
 }
@@ -54,6 +59,18 @@ body {
   background-color: #f3f3f3;
 }
 
+.nav-footer .sitemap .nav-home {
+  width: 120px;
+}
+
+.nav-footer .sitemap .nav-home img {
+  position: relative;
+  left: -20px;
+}
+
+.nav-footer .copyright {
+  text-align: left !important;
+}
 
 @media only screen and (min-width: 0px) and (max-width: 1023px) {
   body, .navPusher, iframe {

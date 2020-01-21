@@ -24,50 +24,46 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="nav-footer" id="footer">
-        {/* <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
-            {this.props.config.footerIcon && (
-              <img
-                src={this.props.config.baseUrl + this.props.config.footerIcon}
-                alt={this.props.config.title}
-                width="66"
-                height="58"
-              />
-            )}
-          </a>
+        <section className="sitemap">
           <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('installation.html', this.props.language)}>
-              Getting Started
-            </a>
-            <a href={this.docUrl('overview.html', this.props.language)}>
-              Guides
-            </a>
+            <a target="_blank" href="https://www.verizonmedia.com/" className="nav-home">
+            <img
+              src={this.props.config.baseUrl + 'img/verizon-media-white.png'}
+              alt={this.props.config.title}
+              width="100"
+              height="58"
+            />
+            </a> 
+            <div className="copyright">{this.props.config.copyright}</div>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
-            <a
-              href="http://stackoverflow.com/questions/tagged/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
-            </a>
-            <a href="https://discordapp.com/">Project Chat</a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
+            <h5>DOCS</h5>
+            <a href={this.docUrl('introduction')}>Introduction</a>
+            <a href={this.docUrl('form-overview')}>Form Class</a>
+            <a href={this.docUrl('react-overview')}>React Form</a>
+            <a href={this.docUrl('react-components')}>React Components</a>
+            <a href={this.docUrl('react-layout')}>React Layout</a>
           </div>
           <div>
-            <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog/index.html`}>Blog</a>
-            <a href="https://github.com/yahoo/jafar">GitHub</a>
+            <h5>DEMOS</h5>
+            <a href={this.pageUrl('demo-react-form')}>React Form</a>
+            <a href={this.pageUrl('demo-react-components')}>React Components</a>
+            <a href={this.pageUrl('demo-react-layout')}>React Layout</a>
+          </div>
+        </section>
+        <section className="sitemap">
+          <div></div>
+          <div>
+            <h5>CONTRIBUTING</h5>
+            <a target="_blank" href="https://github.com/yahoo/jafar/blob/master/CODE-OF-CONDUCT.md">Code Of Conduct</a>
+            <a target="_blank" href="https://github.com/yahoo/jafar/blob/master/CONTRIBUTING.md">Contributing</a>
+          </div>
+          <div>
+            <h5>CHANNELS</h5>
+            {/* <a href={`${this.props.config.baseUrl}blog/index.html`}>Blog</a> */}
+ 
             <a
+              target="_blank"
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
@@ -77,10 +73,14 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               Star
             </a>
+            <a target="_blank" href="https://github.com/yahoo/jafar">GitHub</a>
+            <a target="_blank" href="https://stackoverflow.com/questions/tagged/jafar">Stack Overflow</a>
+            <a target="_blank" href="https://medium.com/search?q=jafar">Medium</a>
+            <a href={this.docUrl('videos')}>Videos</a>
           </div>
         </section>
 
-        <a
+        {/* <a
           href="https://code.facebook.com/projects/"
           target="_blank"
           rel="noreferrer noopener"
@@ -93,7 +93,7 @@ class Footer extends React.Component {
           />
         </a> */}
 
-        <section className="copyright">{this.props.config.copyright}</section>
+        {/* <section className="copyright">{this.props.config.copyright}</section> */}
 
       </footer>
     );
