@@ -90,7 +90,7 @@ class Index extends React.Component {
     );
 
     const styleBottomWrapper = {
-      background: '#90A6B4',
+      background: '#464f56',
       padding: '50px 0',
       alignItems: 'center',
       display: 'flex',
