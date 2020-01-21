@@ -20,6 +20,8 @@ make the code complicated, hard to maintain and hard to write to begin with.
 
 Jafar let developers build forms easily by defining a readable and intuitive form definition (model json & resources json) that represent the entire form lifescycle - such as fields and their corresponding data path, initial data, validators, dto conversions and more. It's based on a pure javascript, ui free form class which handles the form's definition, lifecycle and data manipulations. With the basic form class, any ui library (such as react, angular and vue) can easily use it to expose Form and Field components.
 
+<p align="left"><img width="40%" src="https://repository-images.githubusercontent.com/231425652/fb7b0480-3141-11ea-8092-c7a5b668f2fc"/></p>
+
 ### Highlights
 
 * Manage Complicated Forms
@@ -214,3 +216,5 @@ Please refer to the [CONTRIBUTING.md](https://github.com/yahoo/jafar/blob/master
 ## Licence 
 
 Jafar is [MIT licensed](https://github.com/yahoo/jafar/blob/master/LICENSE).
+
+<p align="center"><img width="100px" src="packages/documentation/website/static/img/jafar-standing.svg"/></p>
