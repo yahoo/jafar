@@ -152,13 +152,13 @@ You can still use <code>field.component.state</code> in that case as the initial
 <a href="https://yahoo.github.io/jafar/react-components/index.html">common components</a></p>
 <p>For instance:</p>
 <pre><code class="hljs">// <span class="hljs-keyword">import</span> <span class="hljs-keyword">input</span> <span class="hljs-type">text</span> component
-<span class="hljs-keyword">import</span> <span class="hljs-type">Text</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-components/edit/Text'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-type">Text</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-components/edit/Text'</span>
 
 // <span class="hljs-keyword">import</span> <span class="hljs-type">text</span> label component
-<span class="hljs-keyword">import</span> <span class="hljs-type">Text</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-components/view/Text'</span>
+<span class="hljs-keyword">import</span> <span class="hljs-type">Text</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-components/view/Text'</span>
 
 </code></pre>
-<p>We plan to keep <code>@jafar/react-component</code> as generic as possible. We also define all the params under state to be stringify (for example, we don't pass components or functions in the state object) - in order to keep our common components stateless to support persistency. In your project, if a custom jafar component needs a non-strigify data, you can:</p>
+<p>We plan to keep <code>@jafar-org/react-component</code> as generic as possible. We also define all the params under state to be stringify (for example, we don't pass components or functions in the state object) - in order to keep our common components stateless to support persistency. In your project, if a custom jafar component needs a non-strigify data, you can:</p>
 <ul>
 <li>Define a resourceId in the component state (i.e someField.component.state.resourceId = 'myExtraData').</li>
 <li>Define the resource under the resources object (i.e resources.myExtraData = () =&gt; {})</li>

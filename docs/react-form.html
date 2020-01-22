@@ -69,7 +69,7 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h2>
-<pre><code class="hljs css language-jsx"><span class="hljs-keyword">import</span> { Form, Field } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+<pre><code class="hljs css language-jsx"><span class="hljs-keyword">import</span> { Form, Field } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-form'</span>;
 <span class="hljs-keyword">import</span> SomeInputText <span class="hljs-keyword">from</span> <span class="hljs-string">'./my-components/Text.jsx'</span>;
 
 <span class="hljs-keyword">const</span> model = {
@@ -112,8 +112,8 @@
 <h2><a class="anchor" aria-hidden="true" id="context"></a><a href="#context" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context</h2>
 <p>Form provides a context object used by direct and non-direct children components.</p>
 <blockquote>
-<p><strong>Note:</strong> In <code>@jafar/react-form</code> - <code>context</code> refer to the data provided by the <code>Form</code> component object, which can be consumed by each
-underline component (i.e react's context feature). Whereas in <code>@jafar/form</code> <a href="context">context</a> refers to the app data which is stored in the model to
+<p><strong>Note:</strong> In <code>@jafar-org/react-form</code> - <code>context</code> refer to the data provided by the <code>Form</code> component object, which can be consumed by each
+underline component (i.e react's context feature). Whereas in <code>@jafar-org/form</code> <a href="context">context</a> refers to the app data which is stored in the model to
 serve the form's lifecycle handlers.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="context-object"></a><a href="#context-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context object</h3>
@@ -140,7 +140,7 @@ serve the form's lifecycle handlers.</p>
 <p>In order to use the Form context in child components, components first need to consume Form context.</p>
 <p>Example using class component:</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-form'</span>;
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ErrorsSummary</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   <span class="hljs-keyword">static</span> contextType = FormContext;
@@ -159,7 +159,7 @@ serve the form's lifecycle handlers.</p>
 </code></pre>
 <p>Example using functional component:</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React, { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-form'</span>;
 
 <span class="hljs-keyword">const</span> ErrorsSummary = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-keyword">const</span> context = useContext(FormContext);
@@ -186,7 +186,7 @@ use <code>this.context</code> to gain access to the form context.</p>
 <p>Example</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 <span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Button'</span>;
-<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+<span class="hljs-keyword">import</span> { FormContext } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-form'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SaveButton</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   <span class="hljs-keyword">static</span> contextType = FormContext;
@@ -236,7 +236,7 @@ use <code>this.context</code> to gain access to the form context.</p>
 <p>Instead of defining multiple custom inner components using form context (like the above SaveButton), you can use our <code>createForm</code> function. This function
 gets a form definition (model &amp; resources) and returns an HOC that gets your single component. Your component should define its context as the form context, and then the form context will be available in your component.</p>
 <p>Example</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> { Field, FormContext, createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> { Field, FormContext, createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-form'</span>;
 <span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Button'</span>;
 <span class="hljs-keyword">import</span> form <span class="hljs-keyword">from</span> <span class="hljs-string">'../form'</span>; <span class="hljs-comment">// object of { model, resources }</span>
 

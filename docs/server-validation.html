@@ -57,7 +57,7 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Server Validation</h1></header><article><div><span><p>Writing form validations 2 times - both in the client and server can be a huge headache - consuming duplicate type of work and time, usually write them in a different language, and the validations might not be consistence in both sides.</p>
 <p>Jafar allow you to do it only one time in a single place! Using a server Node.js you can expose an endpoint that validates the same form definition that was already defined to the client pages usage.</p>
 <p>Jafar separates the logical form from the ui Form component. The logical form is a pure javascript form
-class that can be used both from the Form component (for example <code>@jafar/react-form/Form</code> component uses it behind the scene)
+class that can be used both from the Form component (for example <code>@jafar-org/react-form/Form</code> component uses it behind the scene)
 as well as in a node server.</p>
 <p>By defining a form definition schema in a common package - and use in it both in the client page
 (using Form component that gets that model &amp; resources form definition as a props) as well as in a Node.js server - you reduce work duplication and time, consist all form related in one language support, and keep the validations synced in both client and server.</p>
@@ -66,7 +66,7 @@ as well as in a node server.</p>
 <p>In the Node.js server - all you need to do to preform server validation is:</p>
 <ol>
 <li>Expose a POST endpoint for validation - that gets the form's data from the body and the form name as a url parameter</li>
-<li>Require the javascript Form class from <code>@jafar/form</code></li>
+<li>Require the javascript Form class from <code>@jafar-org/form</code></li>
 <li>Require the specific form definition using the formName param from the forms definitions common package</li>
 <li>Apply the data to the form definition model</li>
 <li>Initialize the Form class with the model &amp; resources, and await for init to finish</li>
@@ -82,7 +82,7 @@ it in the server with the expected data (e.g get the logged-in user data from th
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="endpointsvalidatejs"></a><a href="#endpointsvalidatejs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>endpoints/validate.js</h3>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> clone = <span class="hljs-built_in">require</span>(<span class="hljs-string">'lodash/clone'</span>);
-<span class="hljs-keyword">const</span> Form = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@jafar/form'</span>).default;
+<span class="hljs-keyword">const</span> Form = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@jafar-org/form'</span>).default;
 <span class="hljs-keyword">const</span> handleError = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../handle-response'</span>).handleError;
 <span class="hljs-keyword">const</span> handleSuccess = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../handle-response'</span>).handleSuccess;
 
@@ -208,7 +208,7 @@ it in the server with the expected data (e.g get the logged-in user data from th
 server.listen(port, hostname, onServerStart);
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="formsuser"></a><a href="#formsuser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>forms/user</h3>
-<pre><code class="hljs css language-javascript">const inputText = require('@jafar/react-components/edit/Text').default;
+<pre><code class="hljs css language-javascript">const inputText = require('@jafar-org/react-components/edit/Text').default;
 
 const model = {
   fields = {
