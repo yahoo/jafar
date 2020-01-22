@@ -4,7 +4,7 @@
   */
 
 import React from 'react';
-import FormContext from '@jafar/react-form/context';
+import FormContext from '@jafar-org/react-form/context';
 import styled from 'styled-components';
 import { withTheme } from '@material-ui/core/styles';
 

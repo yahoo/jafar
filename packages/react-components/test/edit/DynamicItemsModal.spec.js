@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow, render } from 'enzyme';
-import { FormContext, Field } from '@jafar/react-form';
+import { FormContext, Field } from '@jafar-org/react-form';
 import InputText from '../../src/edit/Text';
 import DynamicItemsModal from '../../src/edit/DynamicItemsModal/index';
 

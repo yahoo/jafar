@@ -4,7 +4,7 @@
   */
 
 import React from 'react';
-import { FormContext, createForm } from '@jafar/react-form';
+import { FormContext, createForm } from '@jafar-org/react-form';
 import SaveIcon from '@material-ui/icons/Save';
 import ReactBreakpoints, { Media } from 'react-breakpoints';
 import Item from '../../../components/Item';

@@ -10,7 +10,7 @@ It will be updated during the form's lifecycle.
 - Define an [afterAction](hooks#afteraction) hook to get the updated form model after each action and store it in a local-storage. 
 
 ```javascript
-import { Actions } from '@jafar/form';
+import { Actions } from '@jafar-org/form';
 
 const localStorageKey = 'user-form';
 

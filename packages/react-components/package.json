@@ -1,5 +1,5 @@
 {
-  "name": "@jafar/react-components",
+  "name": "@jafar-org/react-components",
   "version": "1.0.0",
   "description": "React common components with unified api to be used in a Jafar form (using material components as an underline layer)",
   "repository": {
@@ -15,7 +15,7 @@
     "start": "npx styleguidist server",
     "build-package": "rm -rf dist/* && node ../../node_modules/@babel/cli/bin/babel.js  src --out-dir dist --copy-files && cp package.json ./dist && cp .npmrc ./dist",
     "build-website": "rm -rf ./build && npx styleguidist build && mv styleguide build",
-    "test": "node node_modules/@jafar/react-kit/scripts/test.js",
+    "test": "node node_modules/@jafar-org/react-kit/scripts/test.js",
     "coverage": "npm run test -- --coverage",
     "e2e": "echo no e2e tests yet",
     "lint": "node ../../node_modules/eslint/bin/eslint.js './src/**/*.{js,jsx,json}' --config .eslintrc.js",
@@ -33,7 +33,7 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@jafar/react-layout": "^1.0.0",
+    "@jafar-org/react-layout": "^1.0.0",
     "styled-components": "^4.1.3",
     "@material-ui/core": "^4.1.2",
     "@material-ui/icons": "^4.0.2",
@@ -44,8 +44,8 @@
     "react-select": "^3.0.8"
   },
   "devDependencies": {
-    "@jafar/react-kit": "^1.0.0",
-    "@jafar/react-form": "^1.0.0",
+    "@jafar-org/react-kit": "^1.0.0",
+    "@jafar-org/react-form": "^1.0.0",
     "react-styleguidist": "^9.0.5"
   },
   "keywords": [

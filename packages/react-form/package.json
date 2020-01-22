@@ -1,7 +1,7 @@
 {
-  "name": "@jafar/react-form",
+  "name": "@jafar-org/react-form",
   "version": "1.0.0",
-  "description": "React Form and Field Components, based on @jafar/form",
+  "description": "React Form and Field Components, based on @jafar-org/form",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",
   "repository": {
@@ -14,14 +14,14 @@
     "access": "public"
   },
   "scripts": {
-    "start": "node node_modules/@jafar/react-kit/scripts/start.js",
+    "start": "node node_modules/@jafar-org/react-kit/scripts/start.js",
     "build-package": "rm -rf dist/* && node ../../node_modules/@babel/cli/bin/babel.js  src/components --out-dir dist --copy-files && cp package.json ./dist && cp .npmrc ./dist",
-    "build-website": "node node_modules/@jafar/react-kit/scripts/build.js",
-    "test": "node node_modules/@jafar/react-kit/scripts/test.js",
+    "build-website": "node node_modules/@jafar-org/react-kit/scripts/build.js",
+    "test": "node node_modules/@jafar-org/react-kit/scripts/test.js",
     "coverage": "npm run test -- --coverage",
     "lint": "node ../../node_modules/eslint/bin/eslint.js './src/**/*.{js,jsx,json}' --config .eslintrc.js",
     "lint-fix": "npm run lint -- --fix",
-    "e2e": "node node_modules/@jafar/react-kit/scripts/e2e.js",
+    "e2e": "node node_modules/@jafar-org/react-kit/scripts/e2e.js",
     "ci-e2e": "PUBLIC_URL=http://localhost:3000 npm run build-website && ../../node_modules/start-server-and-test/src/bin/start.js 'serve -l 3000 -s build' http://localhost:3000/ e2e",
     "publish-package": "npm publish dist --access public",
     "deploy-website": "PUBLIC_URL=https://yahoo.github.io/jafar/react-form npm run build-website && gh-pages --dist build --dest react-form",
@@ -36,12 +36,12 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@jafar/form": "^1.0.0",
+    "@jafar-org/form": "^1.0.0",
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
-    "@jafar/react-kit": "^1.0.0",
-    "@jafar/react-components": "^1.0.0",
+    "@jafar-org/react-kit": "^1.0.0",
+    "@jafar-org/react-components": "^1.0.0",
     "prismjs": "^1.15.0",
     "raw-loader": "4.0.0",
     "react-json-view": "^1.19.1",

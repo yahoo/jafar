@@ -8,4 +8,4 @@
 
 // configure({ adapter: new Adapter() });
 
-import '@jafar/react-kit/config/setupTests';
+import '@jafar-org/react-kit/config/setupTests';

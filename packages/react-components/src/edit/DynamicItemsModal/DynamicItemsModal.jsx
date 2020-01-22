@@ -5,7 +5,7 @@
 
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Item from '@jafar/react-layout/Item';
+import Item from '@jafar-org/react-layout/Item';
 import { clone } from 'lodash';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Delete';
@@ -16,7 +16,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { Form, FormContext } from '@jafar/react-form';
+import { Form, FormContext } from '@jafar-org/react-form';
 import { propTypes, defaultProps } from '../props';
 import Styled from './DynamicItemsModal.Styles';
 

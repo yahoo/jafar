@@ -8,9 +8,9 @@ import React from 'react';
 import DemoMarkup from '../../components/DemoMarkup';
 
 const demo = `import React from 'react';
-import { FormContext, createForm } from '@jafar/react-form';
+import { FormContext, createForm } from '@jafar-org/react-form';
 import { iterateSections, getSectionComponentBoxes } from '../../../components/Section/utils';
-import Section from '@jafar/react-layout/Section';
+import Section from '@jafar-org/react-layout/Section';
 import sections from './sections';
 import form from './form';
 

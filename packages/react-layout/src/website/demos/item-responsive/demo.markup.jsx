@@ -10,7 +10,7 @@ import 'prismjs/themes/prism.css';
 import DemoMarkup from '../../components/DemoMarkup';
 
 const demo = `import React from 'react';
-import { FormContext, createForm } from '@jafar/react-form';
+import { FormContext, createForm } from '@jafar-org/react-form';
 import ReactBreakpoints, { Media } from 'react-breakpoints';
 import Item from '../../../components/Item';
 import SaveIcon from '@material-ui/icons/Save';

@@ -1,4 +1,4 @@
-import { Field } from '@jafar/react-form';
+import { Field } from '@jafar-org/react-form';
 
 const columnStyle = {
   width: '100%',

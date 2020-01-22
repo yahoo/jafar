@@ -1,4 +1,4 @@
-## @jafar/react-components
+## @jafar-org/react-components
 
 A collection of React-based components, implementing Jafar's interface for dynamically rendered components - in this case, extending material-ui components with Jafar's interface.
 

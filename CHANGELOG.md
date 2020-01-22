@@ -6,16 +6,16 @@ Changes that have landed in master but are not yet released.
 
 ### From
 
-* Add package `@jafar/form` 
+* Add package `@jafar-org/form` 
 
 ### React From
 
-* Add package `@jafar/react-form` 
+* Add package `@jafar-org/react-form` 
 
 ### React Components
 
-* Add package `@jafar/react-components` 
+* Add package `@jafar-org/react-components` 
 
 ### React Layout
 
-* Add package `@jafar/react-layout` 
+* Add package `@jafar-org/react-layout` 

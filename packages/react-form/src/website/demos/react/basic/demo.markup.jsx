@@ -8,7 +8,7 @@ import React from 'react';
 import DemoMarkup from '../../../components/DemoMarkup';
 
 const demo = `import React from 'react';
-import { Form, Field } from '@jafar/react-form';
+import { Form, Field } from '@jafar-org/react-form';
 import DataViewer from './custom-form-components/DataViewer';
 import SaveButton from './custom-form-components/SaveButton';
 import ResetButton from './custom-form-components/ResetButton';

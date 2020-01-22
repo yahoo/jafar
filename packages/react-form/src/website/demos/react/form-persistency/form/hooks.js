@@ -1,4 +1,4 @@
-import { Actions } from '@jafar/form';
+import { Actions } from '@jafar-org/form';
 
 const localStorageKey = 'user-form';
 
