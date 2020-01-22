@@ -129,8 +129,8 @@ Jafar is fully documented:
 
 ### Low Dependencies Number
 
-- `Form Class` - that defined in `@jafar/form` is only using `lodash` as a third-party dependency (it could have been implemented without any dependency but there is no need to reinvent the wheel).
-- `React Form Component` - that defined in `@jafar/react-form` is only using `@jafar/form` as a dependency.
+- `Form Class` - that defined in `@jafar-org/form` is only using `lodash` as a third-party dependency (it could have been implemented without any dependency but there is no need to reinvent the wheel).
+- `React Form Component` - that defined in `@jafar-org/react-form` is only using `@jafar-org/form` as a dependency.
 - `React Components and Layout` - using [React Material UI](https://material-ui.com/) as underline components.
 
 ### Small Package Size

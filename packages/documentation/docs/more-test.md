@@ -16,7 +16,7 @@ and if not to understand what need to be changed according to the given error.
 Example using jest:
 
 ```javascript
-import { createForm, verifyForm } from '@jafar/form';
+import { createForm, verifyForm } from '@jafar-org/form';
 import { model, resources, settings } from './form';
 
 expect.extend({
@@ -59,7 +59,7 @@ cover all users scenarios are working correctly (this can also be done via e2e).
 Example of test using jest:
 
 ```javascript
-import Form from '@jafar/form';
+import Form from '@jafar-org/form';
 
 // define user form
 const model = {
@@ -127,4 +127,4 @@ expect(form.fields.firstName.errors).toEqual([{
 ### E2E tests
 
 Add e2e tests to verify that your ui was loaded and perform some real user changes to verify it works correctly.
-We covered all `@jafar/react-form` [demos with e2e](https://github.com/yahoo/jafar/blob/master/packages/react-form/src/website/Root.e2e.js) using [puppeteer](https://github.com/GoogleChrome/puppeteer).
+We covered all `@jafar-org/react-form` [demos with e2e](https://github.com/yahoo/jafar/blob/master/packages/react-form/src/website/Root.e2e.js) using [puppeteer](https://github.com/GoogleChrome/puppeteer).

@@ -26,7 +26,7 @@ const resources = {
 
 Since the form model object is kept in the Form (class / ui library component), hooks can be used to gain access to the current model object in a specific lifecycle event. 
 
-> **Note:** For `@jafar/react-form` - hooks allow access to the form model object for non-child component, as supposed to child components that gain access using the form's context. The Form component can be located upper in the app's components tree to be supply access via context for more child components other than just the fields components.
+> **Note:** For `@jafar-org/react-form` - hooks allow access to the form model object for non-child component, as supposed to child components that gain access using the form's context. The Form component can be located upper in the app's components tree to be supply access via context for more child components other than just the fields components.
 Locating the Form component in a higher location can have both advantage and disadvantage. The advantage is that it's data is available for more child component, and disadvantage is that each time the Form is updated and its state is updated - then all child
 components are re-rendered and that can hurt performance. This could be improved by using shouldComponentUpdate for child components (like we did with the Field component that only re-renders when the data that it needs was changed). Using hooks to gain access to the form model also has disadvantage that you might keep the data you need also in your app state and thats a duplication of data. So keep in mind that in order to gain access to the form model object sometimes the Form component can be higher and then use the form's context in the child component, and sometimes it can be lower and then use hooks.
 

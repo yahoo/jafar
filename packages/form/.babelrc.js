@@ -1,1 +1,1 @@
-module.exports = require('@jafar/js-kit/config/babelrc.js');
+module.exports = require('@jafar-org/js-kit/config/babelrc.js');

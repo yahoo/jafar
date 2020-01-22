@@ -65,7 +65,7 @@ const resources = {
 After defining the form model and resources objects, define the Form and Field components in your JSX, and pass the model and resources to the Form component:
 
 ```jsx
-import { Form, Field } from '@jafar/react-form';
+import { Form, Field } from '@jafar-org/react-form';
 
 <Form model={model} resources={resources}>
   <h2>User Details</h2>

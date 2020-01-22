@@ -8,7 +8,7 @@ Management layout react components of `Item` and `List`, to use in your app. Wit
 you can define a list page for any entity in your system. `Item` component is used to define editable / viewable pages,
 such as - create / edit / details entities pages - that render sections. Each section render a set of dynamic components.
 
-In the demos we use [Jafar's Form and Field](react-form.html) components, but `@jafar/react-layout` packages does not depend on [@jafar/react-form](react-form.html). Any other component can be used in the sections. A combination of both `@jafar/react-form` and `@jafar/react-layout` can create a complete solution for management pages.
+In the demos we use [Jafar's Form and Field](react-form.html) components, but `@jafar-org/react-layout` packages does not depend on [@jafar-org/react-form](react-form.html). Any other component can be used in the sections. A combination of both `@jafar-org/react-form` and `@jafar-org/react-layout` can create a complete solution for management pages.
 
 > **Note:** You can create different form page templates using the same form definition - but using different [sections](react-layout#section) definition for each view / template. For example - for 'Video' entity you might want to show different layouts / fields for different users depending on their role / permissions in the system. See [entity template](entity-templates) usage.
 
@@ -24,7 +24,7 @@ and layout.
 #### Import
 
 ```javascript
-import Item from '@jafar/react-layout/Item'
+import Item from '@jafar-org/react-layout/Item'
 ```
 
 #### Props
@@ -40,7 +40,7 @@ import Item from '@jafar/react-layout/Item'
 #### Example
 
 ```javascript
-import Item from '@jafar/react-layout/Item';
+import Item from '@jafar-org/react-layout/Item';
 import sections from './sections';
 
 const item = {
@@ -94,7 +94,7 @@ const item = {
 sections.js:
 
 ```javascript
-import { Field } from '@jafar/react-form';
+import { Field } from '@jafar-org/react-form';
 
 const columnStyle = {
   width: '400px',
@@ -203,7 +203,7 @@ React Component that renders title and composition of components. Each section c
 #### Import
 
 ```javascript
-import Item from '@jafar/react-layout/Section'
+import Item from '@jafar-org/react-layout/Section'
 ```
 
 #### Props
@@ -223,7 +223,7 @@ or a dynamic component (by defining `component` and `props` props).
 #### Import
 
 ```javascript
-import Item from '@jafar/react-layout/Box'
+import Item from '@jafar-org/react-layout/Box'
 ```
 
 #### Props

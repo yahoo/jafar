@@ -110,14 +110,14 @@ We have a collection of common components with unified api that can be used, doc
 For instance:
 ```
 // import input text component
-import Text from '@jafar/react-components/edit/Text'
+import Text from '@jafar-org/react-components/edit/Text'
 
 // import text label component
-import Text from '@jafar/react-components/view/Text'
+import Text from '@jafar-org/react-components/view/Text'
 
 ```
 
-We plan to keep `@jafar/react-component` as generic as possible. We also define all the params under state to be stringify (for example, we don't pass components or functions in the state object) - in order to keep our common components stateless to support persistency. In your project, if a custom jafar component needs a non-strigify data, you can:
+We plan to keep `@jafar-org/react-component` as generic as possible. We also define all the params under state to be stringify (for example, we don't pass components or functions in the state object) - in order to keep our common components stateless to support persistency. In your project, if a custom jafar component needs a non-strigify data, you can:
   - Define a resourceId in the component state (i.e someField.component.state.resourceId = 'myExtraData').
   - Define the resource under the resources object (i.e resources.myExtraData = () => {})
   - Consume Jafar's context in the component, and get the resource from `context.resources[props.state.resourceId]`

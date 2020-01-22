@@ -9,7 +9,7 @@ the form data.
 
 ## Field Component
 
-`@jafar/react-form/Field` serves as a default field component. Its the result of `withContext(SomeFieldView)` hoc (that pass the underline field view component all the data that the field view needs to render) and a default `FieldView` component:
+`@jafar-org/react-form/Field` serves as a default field component. Its the result of `withContext(SomeFieldView)` hoc (that pass the underline field view component all the data that the field view needs to render) and a default `FieldView` component:
 
 ```javascript
 import withContext from './field-with-context';
@@ -31,7 +31,7 @@ export default withContext(FieldView);
 ### Usage Example
 
 ```javascript
-import { Form, Field } from '@jafar/react-form';
+import { Form, Field } from '@jafar-org/react-form';
 import SomeInputText from './my-components/Text.jsx';
 
 const model = {
@@ -110,7 +110,7 @@ Keep in mind that all fields are evaluated even without being rendered.
 For the following form definition:
 
 ```javascript
-import CheckboxCollection from '@jafar/react-components/edit/CheckboxCollection';
+import CheckboxCollection from '@jafar-org/react-components/edit/CheckboxCollection';
 
 const form = {
   id: 'user-form',
@@ -165,9 +165,9 @@ function or some of `getHeader`, `getBody` and `getFooter` class functions.
 
 Example
 ```javascript
-import CheckboxCollection from '@jafar/react-components/edit/CheckboxCollection';
-import Text from '@jafar/react-components/edit/Text';
-import { Form, withContext} from '@jafar/react-form';
+import CheckboxCollection from '@jafar-org/react-components/edit/CheckboxCollection';
+import Text from '@jafar-org/react-components/edit/Text';
+import { Form, withContext} from '@jafar-org/react-form';
 import CustomFieldView from '../views/CustomFieldView';
 
 // create field with custom field view

@@ -9,7 +9,7 @@ Writing form validations 2 times - both in the client and server can be a huge h
 Jafar allow you to do it only one time in a single place! Using a server Node.js you can expose an endpoint that validates the same form definition that was already defined to the client pages usage. 
 
 Jafar separates the logical form from the ui Form component. The logical form is a pure javascript form
-class that can be used both from the Form component (for example `@jafar/react-form/Form` component uses it behind the scene)
+class that can be used both from the Form component (for example `@jafar-org/react-form/Form` component uses it behind the scene)
 as well as in a node server. 
 
 By defining a form definition schema in a common package - and use in it both in the client page 
@@ -22,7 +22,7 @@ By defining a form definition schema in a common package - and use in it both in
 In the Node.js server - all you need to do to preform server validation is:
 
 1. Expose a POST endpoint for validation - that gets the form's data from the body and the form name as a url parameter
-1. Require the javascript Form class from `@jafar/form`
+1. Require the javascript Form class from `@jafar-org/form`
 1. Require the specific form definition using the formName param from the forms definitions common package
 1. Apply the data to the form definition model
 1. Initialize the Form class with the model & resources, and await for init to finish
@@ -41,7 +41,7 @@ it in the server with the expected data (e.g get the logged-in user data from th
 
 ```javascript
 const clone = require('lodash/clone');
-const Form = require('@jafar/form').default;
+const Form = require('@jafar-org/form').default;
 const handleError = require('../handle-response').handleError;
 const handleSuccess = require('../handle-response').handleSuccess;
 
@@ -176,7 +176,7 @@ server.listen(port, hostname, onServerStart);
 ### forms/user
 
 ```javascript
-const inputText = require('@jafar/react-components/edit/Text').default;
+const inputText = require('@jafar-org/react-components/edit/Text').default;
 
 const model = {
   fields = {

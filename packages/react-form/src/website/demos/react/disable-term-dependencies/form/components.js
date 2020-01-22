@@ -1,5 +1,5 @@
-import inputNumber from '@jafar/react-components/edit/Number';
-import dropdown from '@jafar/react-components/edit/Dropdown';
+import inputNumber from '@jafar-org/react-components/edit/Number';
+import dropdown from '@jafar-org/react-components/edit/Dropdown';
 
 export default {
   inputNumber,

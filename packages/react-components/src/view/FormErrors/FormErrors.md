@@ -4,8 +4,8 @@
 
 ```javascript
 const Text = require('../../edit/Text/index.js').default;
-const Form = require('@jafar/react-form/Form').default;
-const Field = require('@jafar/react-form/Field').default;
+const Form = require('@jafar-org/react-form/Form').default;
+const Field = require('@jafar-org/react-form/Field').default;
 
 const model = {
   id: 'simple',

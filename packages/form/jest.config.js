@@ -1,5 +1,5 @@
 const { defaultsDeep } = require('lodash');
-const base = require('@jafar/js-kit/config/jest.config.js');
+const base = require('@jafar-org/js-kit/config/jest.config.js');
 
 module.exports = defaultsDeep({
   coverageThreshold: {

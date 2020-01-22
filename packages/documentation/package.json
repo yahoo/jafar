@@ -1,5 +1,5 @@
 {
-  "name": "@jafar/documentation",
+  "name": "@jafar-org/documentation",
   "version": "1.0.0",
   "description": "Jafar documentation",
   "repository": {
@@ -21,7 +21,7 @@
     "pre-push": "lint-staged"
   },
   "devDependencies": {
-    "@jafar/react-kit": "^1.0.0",
+    "@jafar-org/react-kit": "^1.0.0",
     "filepath": "^1.1.0",
     "front-matter": "^2.3.0",
     "glob-promise": "^3.3.0",

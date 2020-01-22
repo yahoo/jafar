@@ -1,5 +1,5 @@
-import label from '@jafar/react-components/view/Text';
-import url from '@jafar/react-components/view/Url';
+import label from '@jafar-org/react-components/view/Text';
+import url from '@jafar-org/react-components/view/Url';
 
 export default {
   url,

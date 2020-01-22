@@ -1,5 +1,5 @@
 {
-  "name": "@jafar/js-kit",
+  "name": "@jafar-org/js-kit",
   "version": "1.0.0",
   "description": "Utils for developing javascript package. Should be installed in devDependencies",
   "repository": {

@@ -13,7 +13,7 @@ Jafar's Form class is initiated with a form definition - model & resources (json
 The following is a simple form class test example:
 
 ```javascript
-import Form from '@jafar/form';
+import Form from '@jafar-org/form';
 import UserService from './UserService';
 
 // define form model object that will be the initial state of the form

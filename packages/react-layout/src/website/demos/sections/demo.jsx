@@ -4,7 +4,7 @@
   */
 
 import React from 'react';
-import { FormContext, createForm } from '@jafar/react-form';
+import { FormContext, createForm } from '@jafar-org/react-form';
 import { getSectionComponentBoxes } from '../../../components/Section/utils';
 import Section from '../../../components/Section';
 import Styled from '../../components/StyledComponents';

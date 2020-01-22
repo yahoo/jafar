@@ -6,8 +6,8 @@
 import React from 'react';
 import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { FormContext, createForm } from '@jafar/react-form';
-import FormErrors from '@jafar/react-components/view/FormErrors';
+import { FormContext, createForm } from '@jafar-org/react-form';
+import FormErrors from '@jafar-org/react-components/view/FormErrors';
 import SaveIcon from '@material-ui/icons/Save';
 import { iterateSections, getSectionComponentBoxes } from '../../../components/Section/utils';
 import { iterateBoxes } from '../../../components/Box/utils';

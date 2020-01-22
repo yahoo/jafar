@@ -7,7 +7,7 @@ import React from 'react';
 import DemoMarkup from '../../../components/DemoMarkup';
 
 const demo = `import React from 'react';
-import { createForm, FormContext, createForm } from '@jafar/react-form';
+import { createForm, FormContext, createForm } from '@jafar-org/react-form';
 import ReactJson from 'react-json-view';
 import form from './form/index.js';
 
