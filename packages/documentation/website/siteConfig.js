@@ -26,12 +26,19 @@ const siteConfig = {
     { label: 'Form Demos', page: 'demo-react-form' },
     { label: 'Components Demos', page: 'demo-react-components' },
     { label: 'Layout Demos', page: 'demo-react-layout' },
+    { search: true },
     { label: 'GitHub', href: 'https://github.com/yahoo/jafar' },
   ],
   // urls to demos
   formDemoUrl: FORM_DEMO_URL,
   componentsDemoUrl: COMPONENTS_DEMO_URL,
   layoutDemoUrl: LAYOUT_DEMO_URL,
+  // search
+  algolia: {
+    apiKey: 'b58ed82626c77878eae08a098fb75bd5',
+    indexName: 'yahoo_jafar',
+    algoliaOptions: {},
+  },
   // Used for publishing and more
   projectName: 'jafar',
   organizationName: 'Verizon Media',

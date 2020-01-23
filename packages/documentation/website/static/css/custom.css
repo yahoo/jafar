@@ -155,6 +155,36 @@ body {
     background: transparent !important;
   }
 
+  .navSearchWrapper {
+    position: relative;
+    right: 0px;
+    top: 0px;
+    min-width: 120px;
+  }
+
+  .navigationWrapper {
+    -webkit-mask-image: none; 
+  }
+
+  .navSearchWrapper input {
+    height: 24px !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .navSearchWrapper .aa-dropdown-menu {
+    position: fixed!important;
+    top: 40px!important;
+    left: auto!important;
+    right: 1rem!important;
+    width: 600px;
+    max-width: calc(100% - 2rem);
+    max-height: calc(100% - 5rem);
+  }
+
+  .navSearchWrapper .aa-dropdown-menu .aa-dataset-1 {
+    background-color: #fff;
+  }
+
   .home-jafar-stand {
     display: none;
   }
