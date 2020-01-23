@@ -176,7 +176,8 @@ body {
     top: 40px!important;
     left: auto!important;
     right: 1rem!important;
-    width: 600px;
+    width: unset;
+    min-width: 280px;
     max-width: calc(100% - 2rem);
     max-height: calc(100% - 5rem);
   }
