@@ -1,5 +1,6 @@
 const baseUrl = `${process.env.PUBLIC_URL || ''}/`;
 
+// Please add your logo in alphabetical order of caption.
 const users = [
   {
     caption: 'Verizon Media',
