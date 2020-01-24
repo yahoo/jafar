@@ -1,4 +1,5 @@
-<h3>Represent a single select of any value</h3>
+<div class="component-description">Represent a single select of any value</div>
+<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/RadioGroup/RadioGroup.jsx">Source</a>
 
 <h4>Usage in jafar form</h4>
 

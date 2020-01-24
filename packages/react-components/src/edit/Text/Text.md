@@ -1,4 +1,5 @@
-<h3>Represent a string</h3>
+<div class="component-description">Represent a string value</div>
+<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Text/Text.jsx">Source</a>
 
 <h4>Usage in jafar form</h4>
 

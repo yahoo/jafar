@@ -7,13 +7,43 @@ body {
   width: 400px;
 }
 
+.component-src {
+  margin: 10px 0 40px 0 !important;
+  display: block;
+}
+
 h1[class*="rsg--heading"] {
-  margin-bottom:40px !important;
+  font-size: 38px;
+  margin-bottom: 40px !important;
+}
+
+h2[class*="rsg--heading"] {
+  font-size: 28px;
+}
+
+.sc-bdVaJa { /* jafar field */
+  margin: 0 !important;
+}
+
+[data-testid] {
+  margin-bottom: 70px !important;
+}
+
+.rsg--heading4-18 {
+  font-size: 14px !important;
 }
 
 [class*="rsg--preview-"] {
   padding: 0 !important;
   border: 0 !important;
+}
+
+[class*="rsg--pathline"] {
+  display: none;
+}
+
+[class*="rsg--tabs"] {
+  display: none;
 }
 
 [class*="rsg--sidebar-"] {
@@ -38,5 +68,5 @@ h1[class*="rsg--heading"] {
 }
 
 [class*="rsg--controls-"] {
-  margin-top:40px !important;
+  margin-top: 0px !important;
 }

@@ -1,4 +1,5 @@
-<h3>Represent value of any type</h3>
+<div class="component-description">Represent value of any type</div>
+<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Dropdown/Dropdown.jsx">Source</a>
 
 <h4>Usage in jafar form</h4>
 

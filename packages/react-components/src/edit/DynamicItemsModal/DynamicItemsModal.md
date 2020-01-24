@@ -1,4 +1,5 @@
-<h3>Represent array of objects. Can add / edit / remove items from the array</h3>
+<div class="component-description">Represent array of objects. Can add / edit / remove items from the array</div>
+<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/DynamicItemsModal/DynamicItemsModal.jsx">Source</a>
 
 <h4>Simple</h4>
 

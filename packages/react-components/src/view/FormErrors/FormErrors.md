@@ -1,4 +1,5 @@
-<h3>Represent a string</h3>
+<div class="component-description">Showing Jafar form's errors</div>
+<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/view/FormErrors/FormErrors.jsx">Source</a>
 
 <h4>Usage in jafar form</h4>
 
@@ -38,7 +39,9 @@ const resources = {
 
 <Form model={model} resources={resources}>
   <Field id='firstName' />
-  <FormErrors onClickField={fieldId => console.log(fieldId)} />
+  <div style={{ marginTop: '40px' }}>
+    <FormErrors onClickField={fieldId => console.log(fieldId)} />
+  </div>
 </Form>
 ```
 

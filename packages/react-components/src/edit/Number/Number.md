@@ -1,4 +1,5 @@
-<h3>Represent a number</h3>
+<div class="component-description">Represent a number</div>
+<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Number/Number.jsx">Source</a>
 
 <h4>Usage in jafar form</h4>
 

@@ -1,4 +1,5 @@
-<h3>Represent creation of dynamic items list</h3>
+<div class="component-description">Represent creation of dynamic items list</div>
+<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/CreatableMultiSelect/CreatableMultiSelect.jsx">Source</a>
 
 <h4>Usage in jafar form</h4>
 
