@@ -125,6 +125,10 @@ body {
     -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
   }
 
+  .navPusher .docMainWrapper.wrapper {
+    width: 100%;
+  }
+
   .navigationWrapper::-webkit-scrollbar {
     display: none;
   }
