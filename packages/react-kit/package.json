@@ -1,7 +1,7 @@
 {
   "name": "@jafar-org/react-kit",
   "version": "1.0.1",
-  "description": "React development environment utilities such as scripts and config files.",
+  "description": "React development environment utilities such as scripts and config files",
   "repository": {
     "type": "git",
     "url": "https://github.com/yahoo/jafar.git",
