@@ -5,11 +5,32 @@
 
 import React from 'react';
 import SelectInternal from 'react-select';
+import PropTypes from 'prop-types';
 import { customStyles } from '../Select/Select';
-import { defaultProps } from '../props';
 
+/**
+ * Represent a selection of a single item from async items list
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/AsyncSelect/AsyncSelect.jsx">AsyncSelect</a>
+ from '@jafar-org/react-components/edit/AsyncSelect'
+ */
 export default class AsyncSelect extends React.Component {
-  static defaultProps = Object.assign({}, defaultProps, {
+  static propTypes = {
+    value: PropTypes.any,
+    state: PropTypes.shape({
+      items: PropTypes.array,
+      placeholder: PropTypes.string,
+      searchQuery: PropTypes.string,
+      isLoading: PropTypes.bool,
+    }),
+    disabled: PropTypes.bool,
+    required: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+    onStateChange: PropTypes.func,
+  };
+
+  static defaultProps = {
     value: null, // fixes underline controlled VS uncontrolled issue when value turns to undefined 
     state: {
       items: [],
@@ -17,7 +38,9 @@ export default class AsyncSelect extends React.Component {
       searchQuery: '',
       isLoading: false,
     },
-  })
+    disabled: false,
+    required: false,
+  };
 
   render() {
     return (

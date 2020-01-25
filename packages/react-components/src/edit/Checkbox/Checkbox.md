@@ -1,5 +1,5 @@
-<div class="component-description">Represent a boolean value</div>
-<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Checkbox/Checkbox.jsx">Source</a>
+
+<h3>Examples</h3>
 
 <h4>Usage in jafar form</h4>
 

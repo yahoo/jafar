@@ -1,5 +1,4 @@
-<div class="component-description">Represent an array of any type</div>
-<a class="component-src" target="_blank" href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/CheckboxCollection/CheckboxCollection.jsx">Source</a>
+<h3>Examples</h3>
 
 <h4>Usage in jafar form</h4>
 

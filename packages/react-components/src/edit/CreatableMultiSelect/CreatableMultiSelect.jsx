@@ -6,17 +6,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SelectInternal from 'react-select/creatable';
-import { propTypes, defaultProps } from '../props';
 import { customStyles } from '../Select/Select';
 
+/**
+ * Represent creation of dynamic string array
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/CreatableMultiSelect/CreatableMultiSelect.jsx">
+ CreatableMultiSelect</a> from '@jafar-org/react-components/edit/CreatableMultiSelect'
+ */
 export default class CreatableMultiSelect extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
-    value: PropTypes.array,
-  })
+  static propTypes = {
+    value: PropTypes.arrayOf(PropTypes.string),
+    state: PropTypes.shape({
+      placeholder: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
-    state: {},
-  })
+  static defaultProps = {
+    value: [],
+    state: {
+      placeholder: '',
+    },
+    disabled: false,
+  };
 
   render() {
     const value = (this.props.value || []).map(item => { return { label: item, value: item }; });

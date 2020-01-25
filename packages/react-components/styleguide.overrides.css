@@ -7,11 +7,6 @@ body {
   width: 400px;
 }
 
-.component-src {
-  margin: 10px 0 40px 0 !important;
-  display: block;
-}
-
 h1[class*="rsg--heading"] {
   font-size: 38px;
   margin-bottom: 40px !important;
@@ -19,6 +14,11 @@ h1[class*="rsg--heading"] {
 
 h2[class*="rsg--heading"] {
   font-size: 28px;
+}
+
+h3[class*="rsg--heading"] {
+  margin: 40px 0;
+  font-size: 23px;
 }
 
 .sc-bdVaJa { /* jafar field */
@@ -42,10 +42,6 @@ h2[class*="rsg--heading"] {
   display: none;
 }
 
-[class*="rsg--tabs"] {
-  display: none;
-}
-
 [class*="rsg--sidebar-"] {
   background-color: #f9f9f9 !important;
 }
@@ -63,8 +59,13 @@ h2[class*="rsg--heading"] {
   color: #555 !important;
 }
 
-[class*="rsg--link-"] [class*="rsg--para-"] {
-  color: #f9970f;
+[class*="rsg--link-"] [class*="rsg--para-"],
+[class*="rsg--button"] {
+  color: #f9970f !important;
+}
+
+[class*="rsg--button"]:focus {
+  outline: none!important;
 }
 
 [class*="rsg--controls-"] {
