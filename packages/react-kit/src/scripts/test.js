@@ -19,13 +19,13 @@ const _configFactory = require('react-scripts/scripts/utils/createJestConfig');
 const configFactory = function() {
   const config = _configFactory.apply(this, arguments);
 
-  // match and collect coverage from root/test folder
-  config.collectCoverageFrom.push('test/**/*.{js,jsx}');
-  config.testMatch.push('<rootDir>/test/**/*.{spec,test}.{js,jsx}');
+  // match and collect coverage from root/src/test folder
+  config.testMatch.push('<rootDir>/src/test/**/*.{spec,test}.{js,jsx}');
+  config.collectCoverageFrom.push('src/**/*.{js,jsx}');
+  config.collectCoverageFrom.push('!src/test/**/*.{js,jsx}');
 
   // .e2e.js files should not be in coverage report
   config.collectCoverageFrom.push('!<rootDir>/src/**/*.e2e.js');
-  config.collectCoverageFrom.push('!<rootDir>/test/**/*.e2e.js');
 
   // run jest hook - each package can also update the jest config
   // for example - to update the threshold coverage

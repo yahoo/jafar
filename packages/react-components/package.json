@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "npx styleguidist server",
-    "build-package": "rm -rf dist/* && node ../../node_modules/@babel/cli/bin/babel.js  src --out-dir dist --copy-files && cp package.json ./dist && cp .npmrc ./dist",
+    "build-package": "rm -rf dist/* && node ../../node_modules/@babel/cli/bin/babel.js  src/components --out-dir dist --copy-files && cp package.json ./dist && cp .npmrc ./dist",
     "build-website": "rm -rf ./build && npx styleguidist build && mv styleguide build",
     "test": "node node_modules/@jafar-org/react-kit/scripts/test.js",
     "coverage": "npm run test -- --coverage",

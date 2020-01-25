@@ -5,7 +5,7 @@
 
  import React from 'react';
  import { shallow } from 'enzyme';
- import Item from '../src/components/Item';
+ import Item from '../components/Item';
  
  describe('Item', () => {
    let props;

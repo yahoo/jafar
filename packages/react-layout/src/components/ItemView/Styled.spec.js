@@ -5,8 +5,8 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Styled from './Styled';
 import 'jest-styled-components';
+import Styled from './Styled';
 
 describe('Styled', () => {
   describe('Title', () => {
