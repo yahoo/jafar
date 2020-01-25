@@ -6,22 +6,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SelectInternal from 'react-select';
-import { propTypes, defaultProps } from '../props';
 import { customStyles } from '../Select/Select';
 
+/**
+ * Represent a selection of multi items from async items list 
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/AsyncMultiSelect/AsyncMultiSelect.jsx">
+ AsyncMultiSelect</a>  from '@jafar-org/react-components/edit/AsyncMultiSelect'
+ */
 export default class AsyncMultiSelect extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
-    value: PropTypes.array,
-  })
+  static propTypes = {
+    value: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.any,
+    })),
+    state: PropTypes.shape({
+      items: PropTypes.arrayOf(PropTypes.shape({
+        label: PropTypes.string,
+        value: PropTypes.any,
+      })),
+      placeholder: PropTypes.string,
+      searchQuery: PropTypes.string,
+      isLoading: PropTypes.bool,
+      itemIdField: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+    onStateChange: PropTypes.func,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
+    value: [],
     state: {
       items: [],
       placeholder: 'Search...',
       searchQuery: '',
       isLoading: false,
     },
-  })
+    disabled: false,
+  };
 
   render() {
     // for value that is array of object we use itemIdField, cuz internal select should get value as string - 

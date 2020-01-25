@@ -2,7 +2,6 @@
 
 exports[`<Url /> should render provided data 1`] = `
 <Url
-  onStateChange={[Function]}
   state={
     Object {
       "label": "",

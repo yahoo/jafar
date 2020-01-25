@@ -5,21 +5,39 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { propTypes, defaultProps } from '../props';
 import InternalCheckboxCollection from './internal/CheckboxCollection';
 
+/**
+ * Represent an array of any type
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/CheckboxCollection/CheckboxCollection.jsx">
+ CheckboxCollection</a> from '@jafar-org/react-components/edit/CheckboxCollection'
+ */
 export default class CheckboxCollection extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.array,
-  })
+    state: PropTypes.shape({
+      items: PropTypes.array,
+      search: PropTypes.object,
+      inline: PropTypes.bool,
+    }),
+    disabled: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+    onStateChange: PropTypes.func,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: [],
     state: {
       items: [],
-      search: undefined,
+      search: {
+        value: '',
+      },
+      inline: false,
     },
-  })
+    disabled: false,
+  };
 
   render() {
     return (

@@ -7,19 +7,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CheckboxInternal from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a boolean value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Checkbox/Checkbox.jsx">Checkbox</a>
+ from '@jafar-org/react-components/edit/Checkbox'
+ */
 export default class Checkbox extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.bool,
-  })
+    state: PropTypes.shape({
+      label: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: false,
     state: {
       label: '',
     },
-  })
+    disabled: false,
+  };
 
   render() {
     return (

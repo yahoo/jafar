@@ -1,4 +1,4 @@
-<h3>Represent creation of dynamic items list</h3>
+<h3>Examples</h3>
 
 <h4>Usage in jafar form</h4>
 

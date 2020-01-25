@@ -6,16 +6,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '@material-ui/core/Input';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a string
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Password/Password.jsx">
+ Password</a> from '@jafar-org/react-components/edit/Password'
+ */
 export default class Password extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.string,
-  })
+    disabled: PropTypes.bool,
+    invalid: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: '',
-  });
+    disabled: false,
+    invalid: false,
+  };
 
   render() {
     return (

@@ -6,6 +6,7 @@
 import React from 'react';
 import FormContext from '@jafar-org/react-form/context';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { withTheme } from '@material-ui/core/styles';
 
 const defaultLabels = {
@@ -66,6 +67,13 @@ const mapFieldsErrors = (fields) => {
   return { required: requiredFields, invalid: invalidFields };
 };
 
+/**
+ * Showing Jafar form's errors
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/view/FormErrors/FormErrors.jsx">
+ FormErrors</a> from '@jafar-org/react-components/view/FormErrors'
+ */
 function FormErrors({ labels = defaultLabels, onClickField }) {
   const form = React.useContext(FormContext);
   const fields = mapFieldsErrors(form.model.fields);
@@ -77,5 +85,13 @@ function FormErrors({ labels = defaultLabels, onClickField }) {
     </Wrapper>
   );
 }
+
+FormErrors.propTypes = {
+  labels: PropTypes.shape({
+    required: PropTypes.string,
+    invalid: PropTypes.string,
+  }),
+  onClickField: PropTypes.func,
+};
 
 export default FormErrors;

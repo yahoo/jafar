@@ -8,28 +8,37 @@ import PropTypes from 'prop-types';
 import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import MuiRadioGroup from '@material-ui/core/RadioGroup';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a single select of any value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/RadioGroup/RadioGroup.jsx">
+ RadioGroup</a> from '@jafar-org/react-components/edit/RadioGroup'
+ */
 export default class RadioGroup extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.any,
     state: PropTypes.shape({
-      inline: PropTypes.bool,
       items: PropTypes.arrayOf(PropTypes.shape({
         label: PropTypes.string.isRequired,
         value: PropTypes.any.isRequired,
         disabled: PropTypes.bool,
       })).isRequired,
+      inline: PropTypes.bool,
     }),
-  });
+    disabled: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: '',
     state: {
-      inline: false,
       items: [],
+      inline: false,
     },
-  });
+    disabled: false,
+  };
 
   render() {
     return (

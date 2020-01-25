@@ -1,4 +1,4 @@
-<h3>Represent array of objects. Can add / edit / remove items from the array</h3>
+<h3>Examples</h3>
 
 <h4>Simple</h4>
 

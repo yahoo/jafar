@@ -8,20 +8,39 @@ import PropTypes from 'prop-types';
 import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a string value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Text/Text.jsx">
+ Text</a> from '@jafar-org/react-components/edit/Text'
+ */
 export default class Text extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.string,
-  })
+    state: PropTypes.shape({
+      placeholder: PropTypes.string,
+      multiline: PropTypes.bool,
+      rowsMax: PropTypes.number,
+      maxLength: PropTypes.number,
+    }),
+    disabled: PropTypes.bool,
+    invalid: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: '',
     state: {
       placeholder: '',
       multiline: false,
+      rowsMax: undefined,
+      maxLength: undefined,
     },
-  })
+    disabled: false,
+    invalid: false,
+  };
 
   render() {
     return (

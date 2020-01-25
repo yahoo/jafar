@@ -6,19 +6,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Input from '@material-ui/core/Input';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a string value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Url/Url.jsx">
+ Url</a> from '@jafar-org/react-components/edit/Url'
+ */
 export default class Url extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.string,
-  })
+    state: PropTypes.shape({
+      placeholder: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    invalid: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: '',
     state: {
       placeholder: '',
     },
-  });
+    disabled: false,
+    invalid: false,
+  };
 
   render() {
     return (

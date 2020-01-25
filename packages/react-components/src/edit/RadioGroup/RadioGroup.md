@@ -1,4 +1,4 @@
-<h3>Represent a single select of any value</h3>
+<h3>Examples</h3>
 
 <h4>Usage in jafar form</h4>
 

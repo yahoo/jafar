@@ -6,22 +6,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import dateformat from 'dateformat';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a Date() value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/view/Date/Date.jsx">
+ Date</a> from '@jafar-org/react-components/view/Date'
+ */
 export default class DateView extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.instanceOf(Date),
     state: PropTypes.shape({
       format: PropTypes.string,
     }),
-  })
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: undefined,
     state: {
       format: 'mm/dd/yyyy',
     },
-  })
+  };
 
   render() {
     return (<div>{dateformat(this.props.value, this.props.state.format)}</div>);

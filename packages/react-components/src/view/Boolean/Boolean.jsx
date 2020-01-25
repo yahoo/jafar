@@ -7,17 +7,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TrueIcon from '@material-ui/icons/CheckCircleOutline';
 import FalseIcon from '@material-ui/icons/NotInterested';
-import { propTypes, defaultProps } from '../props';
 import Styled from './StyledComponents';
 
+/**
+ * Represent a boolean value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/view/Boolean/Boolean.jsx">
+ Boolean</a> from '@jafar-org/react-components/view/Boolean'
+ */
 export default class Boolean extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.bool,
-  })
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: false,
-  })
+  };
 
   render() {
     const Icon = this.props.value ? TrueIcon : FalseIcon;

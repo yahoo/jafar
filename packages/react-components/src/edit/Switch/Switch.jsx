@@ -6,25 +6,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InternalSwitch from '@material-ui/core/Switch';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a boolean value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Switch/Switch.jsx">
+ Switch</a> from '@jafar-org/react-components/edit/Switch'
+ */
 export default class Switch extends React.Component {
- static propTypes = Object.assign({}, propTypes, {
-   value: PropTypes.bool,
- })
+  static propTypes = {
+    value: PropTypes.bool,
+    disabled: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
- static defaultProps = Object.assign({}, defaultProps, {
-   value: false,
- })
+  static defaultProps = {
+    value: false,
+    disabled: false,
+  };
 
- render() {
-   return (
-     <InternalSwitch
-       onChange={this.onValueChange}
-       checked={this.props.value}
-       disabled={this.props.disabled} />
-   );
- }
+  render() {
+    return (
+      <InternalSwitch
+        onChange={this.onValueChange}
+        checked={this.props.value}
+        disabled={this.props.disabled} />
+    );
+  }
  
  onValueChange = (e) => {
    this.props.onValueChange(e.target.checked);

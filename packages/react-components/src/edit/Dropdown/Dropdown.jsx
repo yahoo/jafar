@@ -8,23 +8,40 @@ import PropTypes from 'prop-types';
 import { isEqual } from 'lodash';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent value of any type
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Dropdown/Dropdown.jsx">
+ Dropdown</a> from '@jafar-org/react-components/edit/Dropdown'
+ */
 export default class Dropdown extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.any,
-  })
-
-  static defaultProps = Object.assign({}, defaultProps, {
-    value: undefined,
-    state: {
+    state: PropTypes.shape({
       items: PropTypes.arrayOf(PropTypes.shape({
         label: PropTypes.string.isRequired,
         value: PropTypes.any.isRequired,
       })).isRequired,
       clearText: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    invalid: PropTypes.bool,
+    required: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    value: undefined,
+    state: {
+      items: [],
+      clearText: 'None',
     },
-  })
+    disabled: false,
+    invalid: false,
+    required: false,
+  };
 
   getSelectedIndex() {
     const items = this.props.state.items || [];
@@ -51,7 +68,7 @@ export default class Dropdown extends React.Component {
         {
           !this.props.required
           && <MenuItem value="">
-            <em>{this.props.clearText || 'None'}</em>
+            <em>{this.props.clearText || Dropdown.defaultProps.state.clearText}</em>
           </MenuItem>
         }
         {this.props.state.items.map((item) => {

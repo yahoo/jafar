@@ -1,4 +1,4 @@
-<h3>Represent value of any type</h3>
+<h3>Examples</h3>
 
 <h4>Usage in jafar form</h4>
 

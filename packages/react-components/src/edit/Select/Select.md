@@ -1,4 +1,4 @@
-<h3>Represent a selection of a single item from fixed items list</h3>
+<h3>Examples</h3>
 
 <h4>Usage in jafar form</h4>
 
