@@ -17,7 +17,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { Form, FormContext } from '@jafar-org/react-form';
-import { propTypes, defaultProps } from '../props';
 import Styled from './DynamicItemsModal.Styles';
 
 const deafultLabels = {
@@ -27,10 +26,18 @@ const deafultLabels = {
   saveButtonLabel: 'Save',
   cancelButtonLabel: 'Cancel',
 };
+
+/**
+ * Represent array of objects. Can add / edit / remove items from the array
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/DynamicItemsModal/DynamicItemsModal.jsx">
+ DynamicItemsModal</a> from '@jafar-org/react-components/edit/DynamicItemsModal'
+ */
 class DynamicItemsModal extends React.Component {
   static contextType = FormContext;
 
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.array,
     state: PropTypes.shape({
       resourceId: PropTypes.string.isRequired,
@@ -40,11 +47,15 @@ class DynamicItemsModal extends React.Component {
       saveButtonLabel: PropTypes.string,
       cancelButtonLabel: PropTypes.string,
     }).isRequired,
-  });
+    onValueChange: PropTypes.func.isRequired,
+    onStateChange: PropTypes.func,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: [],
-  });
+    state: {
+    },
+  };
  
   constructor(props, context) {
     super(props);
