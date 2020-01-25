@@ -6,7 +6,7 @@
 import React from 'react';
 import SelectInternal from 'react-select';
 import { isEqual } from 'lodash';
-import { defaultProps } from '../props';
+import PropTypes from 'prop-types';
 
 export const styleOverrides = {
   control: {
@@ -67,15 +67,39 @@ export const customStyles = {
   }),
 };
 
+/**
+ * Represent a selection of a single item from fixed items list
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/Select/Select.jsx">
+ Select</a> from '@jafar-org/react-components/edit/Select'
+ */
 export default class Select extends React.Component {
-  static defaultProps = Object.assign({}, defaultProps, {
+  static propTypes = {
+    value: PropTypes.any,
+    state: PropTypes.shape({
+      items: PropTypes.array,
+      placeholder: PropTypes.string,
+      searchable: PropTypes.bool,
+      searchQuery: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    required: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+    onStateChange: PropTypes.func,
+  };
+
+  static defaultProps = {
+    value: undefined,
     state: {
       items: [],
       placeholder: 'Search',
       searchable: false,
       searchQuery: '',
     },
-  })
+    disabled: false,
+    required: false,
+  };
 
   render() {
     // null - fixes underline controlled VS uncontrolled issue when value turns to undefined
