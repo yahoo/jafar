@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import DateView from '../../src/view/Date';
+import DateView from '../../src/components/view/Date';
 
 describe('<Date />', () => {
   let component;

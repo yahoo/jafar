@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import SearchInput from '../../src/edit/CheckboxCollection/internal/SearchInput/index';
+import SearchInput from '../../src/components/edit/CheckboxCollection/internal/SearchInput';
 
 describe('<SearchInput />', () => {
   let component;
