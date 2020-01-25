@@ -8,20 +8,35 @@ import React from 'react';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, DatePicker as InternalDatePicker } from '@material-ui/pickers';
 import PropTypes from 'prop-types';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a Date object
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/DatePicker/DatePicker.jsx">
+ DatePicker</a> from '@jafar-org/react-components/edit/DatePicker'
+ */
 export default class DatePicker extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.instanceOf(Date),
-  })
+    state: PropTypes.shape({
+      format: PropTypes.string,
+      placeholder: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    invalid: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: null, // fixes underline controlled VS uncontrolled issue when value turns to undefined
     state: {
       format: 'MM/dd/yyyy',
       placeholder: '',
     },
-  })
+    disabled: false,
+    invalid: false,
+  };
 
   render() {
     return (

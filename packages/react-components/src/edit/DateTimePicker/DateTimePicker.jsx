@@ -8,19 +8,33 @@ import React from 'react';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, DateTimePicker as InternalDateTimePicker } from '@material-ui/pickers';
 import PropTypes from 'prop-types';
-import { propTypes, defaultProps } from '../props';
  
+/**
+ * Represent a Date object
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/DateTimePicker/DateTimePicker.jsx">
+ DateTimePicker</a> from '@jafar-org/react-components/edit/DateTimePicker'
+ */
 export default class DateTimePicker extends React.Component {
-   static propTypes = Object.assign({}, propTypes, {
-     value: PropTypes.instanceOf(Date),
-   })
- 
-   static defaultProps = Object.assign({}, defaultProps, {
-     value: null, // fixes underline controlled VS uncontrolled issue when value turns to undefined
-     state: {
-       format: 'MM/dd/yyyy hh:mm',
-     },
-   })
+  static propTypes = {
+    value: PropTypes.instanceOf(Date),
+    state: PropTypes.shape({
+      format: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    invalid: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    value: null, // fixes underline controlled VS uncontrolled issue when value turns to undefined
+    state: {
+      format: 'MM/dd/yyyy hh:mm',
+    },
+    disabled: false,
+    invalid: false,
+  };
  
    render() {
      return (
