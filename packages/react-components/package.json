@@ -44,8 +44,8 @@
     "react-select": "^3.0.8"
   },
   "devDependencies": {
-    "@jafar-org/react-kit": "^1.0.0",
     "@jafar-org/react-form": "^1.0.0",
+    "@jafar-org/react-kit": "1.0.1",
     "react-styleguidist": "^9.0.5"
   },
   "keywords": [
