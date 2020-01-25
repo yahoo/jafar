@@ -7,22 +7,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SelectInternal from 'react-select';
 import { isEqual } from 'lodash';
-import { propTypes, defaultProps } from '../props';
 import { customStyles } from '../Select/Select';
 
+/**
+ * Represent a selection of multi items from fixed items list
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/edit/MultiSelect/MultiSelect.jsx">
+ MultiSelect</a> from '@jafar-org/react-components/edit/MultiSelect'
+ */
 export default class MultiSelect extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.array,
-  })
+    state: PropTypes.shape({
+      items: PropTypes.array,
+      placeholder: PropTypes.string,
+      searchable: PropTypes.bool,
+      searchQuery: PropTypes.string,
+    }),
+    disabled: PropTypes.bool,
+    onValueChange: PropTypes.func.isRequired,
+    onStateChange: PropTypes.func,
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
+    value: [],
     state: {
       items: [],
       placeholder: 'Search',
       searchable: false,
       searchQuery: '',
     },
-  })
+    disabled: false,
+  };
 
   render() {
     // for value that is array of object we use itemIdField, cuz internal select should get value as string - 

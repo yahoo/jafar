@@ -36,22 +36,22 @@ export default class DateTimePicker extends React.Component {
     invalid: false,
   };
  
-   render() {
-     return (
-       <MuiPickersUtilsProvider utils={DateFnsUtils}>
-         <InternalDateTimePicker
-           autoOk={true}
-           clearable={true}
-           disableFuture={true}
-           format={this.props.state.format || DateTimePicker.defaultProps.state.format}
-           value={this.props.value}
-           disabled={this.props.disabled}
-           error={this.props.invalid}
-           onChange={this.onChange}
-         />
-       </MuiPickersUtilsProvider>
-     );
-   }
+  render() {
+    return (
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <InternalDateTimePicker
+          autoOk={true}
+          clearable={true}
+          disableFuture={true}
+          format={this.props.state.format || DateTimePicker.defaultProps.state.format}
+          value={this.props.value}
+          disabled={this.props.disabled}
+          error={this.props.invalid}
+          onChange={this.onChange}
+        />
+      </MuiPickersUtilsProvider>
+    );
+  }
  
    onChange = (value) => {
      this.props.onValueChange(value);
