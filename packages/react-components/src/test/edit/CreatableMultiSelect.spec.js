@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import CreatableMultiSelect from '../../edit/CreatableMultiSelect/index';
+import CreatableMultiSelect from '../../components/edit/CreatableMultiSelect/index';
 
 describe('<CreatableMultiSelect />', () => {
   let component;

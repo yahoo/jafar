@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import CheckboxCollection from '../../edit/CheckboxCollection/internal/CheckboxCollection/index';
+import CheckboxCollection from '../../components/edit/CheckboxCollection/internal/CheckboxCollection/index';
 
 describe('<CheckboxCollection />', () => {
   let component;

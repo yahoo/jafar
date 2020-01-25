@@ -5,7 +5,7 @@
  
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import Switch from '../../edit/Switch/index';
+import Switch from '../../components/edit/Switch/index';
 
 describe('<Switch />', () => {
   let component;

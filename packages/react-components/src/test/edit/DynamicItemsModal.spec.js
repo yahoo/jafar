@@ -6,8 +6,8 @@
 import React from 'react';
 import { mount, shallow, render } from 'enzyme';
 import { FormContext, Field } from '@jafar-org/react-form';
-import InputText from '../../edit/Text';
-import DynamicItemsModal from '../../edit/DynamicItemsModal/index';
+import InputText from '../../components/edit/Text';
+import DynamicItemsModal from '../../components/edit/DynamicItemsModal/index';
 
 describe('<DynamicItemsModal />', () => {
   let component;

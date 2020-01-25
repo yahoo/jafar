@@ -5,7 +5,7 @@
  
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import Url from '../../edit/Url/index';
+import Url from '../../components/edit/Url/index';
 
 describe('<Url />', () => {
   let component;

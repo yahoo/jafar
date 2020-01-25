@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import Password from '../../edit/Password/index';
+import Password from '../../components/edit/Password/index';
 
 describe('<Password />', () => {
   let component;

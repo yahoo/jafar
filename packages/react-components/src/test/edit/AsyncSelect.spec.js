@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import AsyncSelect from '../../edit/AsyncSelect/index';
+import AsyncSelect from '../../components/edit/AsyncSelect/index';
 
 describe('<AsyncSelect />', () => {
   let component;

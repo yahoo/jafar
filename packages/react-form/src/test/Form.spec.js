@@ -55,14 +55,14 @@ describe('Form', () => {
     const props = { context: { userId: '123' } };
     const state = { propsContext: { userId: '456' } };
     const result = Form.getDerivedStateFromProps(props, state);
-    expect(result).toEqual({ propsContext: props.context, needAction: 'changeContext'  });
+    expect(result).toEqual({ propsContext: props.context, needAction: 'changeContext' });
   });
 
   it('getDerivedStateFromProps - gets new data reference and return correct state changes', () => {
     const props = { data: { a: 'a' } };
     const state = { propsData: { b: 'b' } };
     const result = Form.getDerivedStateFromProps(props, state);
-    expect(result).toEqual({ propsData: props.data, needAction: 'changeData'  });
+    expect(result).toEqual({ propsData: props.data, needAction: 'changeData' });
   });
 
   it('componentDidMount - init form', () => {

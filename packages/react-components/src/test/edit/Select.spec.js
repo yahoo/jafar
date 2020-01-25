@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import Select from '../../edit/Select/index';
+import Select from '../../components/edit/Select/index';
 
 describe('<Select />', () => {
   let component;

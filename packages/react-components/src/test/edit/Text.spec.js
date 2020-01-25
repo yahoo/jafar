@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import Text from '../../edit/Text/index';
+import Text from '../../components/edit/Text/index';
 
 describe('<Text />', () => {
   let component;

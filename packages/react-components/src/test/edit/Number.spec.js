@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import Number from '../../edit/Number/index';
+import Number from '../../components/edit/Number/index';
 
 describe('<Number />', () => {
   let component;

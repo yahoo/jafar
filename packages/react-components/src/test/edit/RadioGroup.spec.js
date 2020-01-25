@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import RadioGroup from '../../edit/RadioGroup/index';
+import RadioGroup from '../../components/edit/RadioGroup/index';
 
 describe('<RadioGroup />', () => {
   let component;

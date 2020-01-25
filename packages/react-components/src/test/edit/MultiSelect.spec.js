@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import MultiSelect from '../../edit/MultiSelect/index';
+import MultiSelect from '../../components/edit/MultiSelect/index';
 
 describe('<MultiSelect />', () => {
   let component;
