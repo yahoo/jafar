@@ -5,16 +5,22 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a string value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/view/Text/Text.jsx">
+ Text</a> from '@jafar-org/react-components/view/Text'
+ */
 export default class Text extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.string,
-  })
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: '',
-  })
+  };
 
   render() {
     return (<div>{this.props.value}</div>);

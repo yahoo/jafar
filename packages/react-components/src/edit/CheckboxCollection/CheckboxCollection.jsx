@@ -19,7 +19,7 @@ export default class CheckboxCollection extends React.Component {
     value: PropTypes.array,
     state: PropTypes.shape({
       items: PropTypes.array,
-      search: PropTypes.string,
+      search: PropTypes.object,
       inline: PropTypes.bool,
     }),
     disabled: PropTypes.bool,
@@ -31,7 +31,9 @@ export default class CheckboxCollection extends React.Component {
     value: [],
     state: {
       items: [],
-      search: '',
+      search: {
+        value: '',
+      },
       inline: false,
     },
     disabled: false,

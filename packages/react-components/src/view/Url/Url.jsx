@@ -6,22 +6,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from '@material-ui/core/styles';
-import { propTypes, defaultProps } from '../props';
 import Styled from './StyledComponents';
 
+/**
+ * Represent a string value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/view/Url/Url.jsx">
+ Url</a> from '@jafar-org/react-components/view/Url'
+ */
 class Url extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.string,
-  })
+    state: PropTypes.shape({
+      label: PropTypes.string,
+      target: PropTypes.string,
+      maxLines: PropTypes.number,
+    }),
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: '',
     state: {
       label: '',
       target: '_blank',
       maxLines: undefined,
     },
-  })
+  };
 
   render() {
     const { theme } = this.props;

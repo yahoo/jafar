@@ -5,24 +5,30 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { propTypes, defaultProps } from '../props';
 
+/**
+ * Represent a number value
+ * 
+ * Import <a target="_blank" 
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/view/Number/Number.jsx">
+ Number</a> from '@jafar-org/react-components/view/Number'
+ */
 export default class Number extends React.Component {
-  static propTypes = Object.assign({}, propTypes, {
+  static propTypes = {
     value: PropTypes.number,
     state: PropTypes.shape({
       fixed: PropTypes.number,
       template: PropTypes.string,
     }),
-  })
+  };
 
-  static defaultProps = Object.assign({}, defaultProps, {
+  static defaultProps = {
     value: undefined,
     state: {
       fixed: undefined,
       template: undefined,
     },
-  })
+  };
 
   render() {
     const state = this.props.state;
