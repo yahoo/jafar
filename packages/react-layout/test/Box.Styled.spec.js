@@ -5,8 +5,8 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Styled from '../src/components/Box/Styled';
-import 'jest-styled-components';
+import Styled from '../components/Box/Styled';
+import './node_modules/jest-styled-components';
 
 describe('Styled', () => {
   describe('Row', () => {

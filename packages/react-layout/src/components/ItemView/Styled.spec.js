@@ -6,7 +6,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Styled from './Styled';
-import 'jest-styled-components';
+import '../../test/node_modules/jest-styled-components';
 
 describe('Styled', () => {
   describe('Title', () => {
