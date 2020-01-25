@@ -21,7 +21,7 @@
     "pre-push": "lint-staged"
   },
   "devDependencies": {
-    "@jafar-org/react-kit": "^1.0.1",
+    "@jafar-org/react-kit": "^1.0.0",
     "filepath": "^1.1.0",
     "front-matter": "^2.3.0",
     "glob-promise": "^3.3.0",
