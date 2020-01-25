@@ -26,14 +26,14 @@ export default class Switch extends React.Component {
     disabled: false,
   };
 
- render() {
-   return (
-     <InternalSwitch
-       onChange={this.onValueChange}
-       checked={this.props.value}
-       disabled={this.props.disabled} />
-   );
- }
+  render() {
+    return (
+      <InternalSwitch
+        onChange={this.onValueChange}
+        checked={this.props.value}
+        disabled={this.props.disabled} />
+    );
+  }
  
  onValueChange = (e) => {
    this.props.onValueChange(e.target.checked);

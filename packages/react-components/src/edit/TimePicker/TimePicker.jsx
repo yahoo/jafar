@@ -8,7 +8,6 @@ import React from 'react';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, TimePicker as InternalTimePicker } from '@material-ui/pickers';
 import PropTypes from 'prop-types';
-import { propTypes, defaultProps } from '../props';
  
 /**
  * Represent a Date object
@@ -30,29 +29,29 @@ export default class TimePicker extends React.Component {
 
   static defaultProps = {
     value: null, // fixes underline controlled VS uncontrolled issue when value turns to undefined
-     state: {
-       format: 'hh:mm a',
-     },
+    state: {
+      format: 'hh:mm a',
+    },
     disabled: false,
     invalid: false,
   };
  
-   render() {
-     return (
-       <MuiPickersUtilsProvider utils={DateFnsUtils}>
-         <InternalTimePicker
-           autoOk={true}
-           clearable={true}
-           disableFuture={true}
-           format={this.props.state.format || TimePicker.defaultProps.state.format}
-           value={this.props.value}
-           disabled={this.props.disabled}
-           error={this.props.invalid}
-           onChange={this.onChange}
-         />
-       </MuiPickersUtilsProvider>
-     );
-   }
+  render() {
+    return (
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <InternalTimePicker
+          autoOk={true}
+          clearable={true}
+          disableFuture={true}
+          format={this.props.state.format || TimePicker.defaultProps.state.format}
+          value={this.props.value}
+          disabled={this.props.disabled}
+          error={this.props.invalid}
+          onChange={this.onChange}
+        />
+      </MuiPickersUtilsProvider>
+    );
+  }
  
    onChange = (value) => {
      this.props.onValueChange(value);
