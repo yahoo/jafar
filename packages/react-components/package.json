@@ -21,7 +21,7 @@
     "lint": "node ../../node_modules/eslint/bin/eslint.js './src/**/*.{js,jsx,json}' --config .eslintrc.js",
     "lint-fix": "npm run lint -- --fix",
     "pre-push": "lint-staged",
-    "publish-package": "npm publish dist --access public",
+    "publish-package": "npm publish dist --access public || echo publish failed",
     "deploy-website": "PUBLIC_URL=https://yahoo.github.io/jafar/react-components npm run build-website && gh-pages --dist build --dest react-components",
     "watch-package": "npm-watch build-package"
   },

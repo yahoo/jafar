@@ -20,7 +20,7 @@
     "lint-fix": "npm run lint -- --fix",
     "pre-push": "lint-staged",
     "watch-package": "npm-watch build-package",
-    "publish-package": "npm publish dist --access public"
+    "publish-package": "npm publish dist --access public || echo publish failed"
   },
   "watch": {
     "build-package": "src/**/*.js"

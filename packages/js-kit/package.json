@@ -15,7 +15,7 @@
     "build-package": "rm -rf dist/* && node ../../node_modules/@babel/cli/bin/babel.js  src --out-dir dist --copy-files && cp package.json ./dist && cp .npmrc ./dist",
     "test": "echo test not needed",
     "lint": "echo lint not needed",
-    "publish-package": "npm publish dist --access public"
+    "publish-package": "npm publish dist --access public || echo publish failed"
   },
   "dependencies": {
     "@babel/cli": "^7.1.5",
