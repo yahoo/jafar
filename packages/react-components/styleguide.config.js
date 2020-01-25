@@ -22,11 +22,11 @@ module.exports = {
   },
   sections: [{
     name: 'Edit Components',
-    components: 'src/edit/**/[A-Z]*.jsx',
+    components: 'src/components/edit/**/[A-Z]*.jsx',
     ignore: '**/internal/**/*',
   }, {
     name: 'View Components',
-    components: 'src/view/**/[A-Z]*.jsx',
+    components: 'src/components/view/**/[A-Z]*.jsx',
     ignore: '**/internal/**/*',
   }],
   webpackConfig: configFactory('development'),
