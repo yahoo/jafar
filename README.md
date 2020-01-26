@@ -208,11 +208,6 @@ cd /jafar/packages/react-layout && npm start
 
 Please refer to the [CONTRIBUTING.md](https://github.com/yahoo/jafar/blob/master/CONTRIBUTING.md) file for information about how to get involved. We welcome issues, questions, and pull requests. Pull Requests are welcome.
 
-## Maintainers
-
-* 🐥 Gal Havivi: [galhavivi](https://github.com/galhavivi)
-* 🐦 Eran Shapira: [eranshapira](https://github.com/eranshapira)
-
 ## Licence 
 
 Jafar is [MIT licensed](https://github.com/yahoo/jafar/blob/master/LICENSE).
