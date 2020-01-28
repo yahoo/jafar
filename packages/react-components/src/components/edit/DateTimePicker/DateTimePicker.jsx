@@ -12,8 +12,8 @@ import PropTypes from 'prop-types';
 /**
  * Represent a Date object
  * 
- * Import <a target="_blank" 
- href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/DateTimePicker/DateTimePicker.jsx">
+ * Import <a target="_blank" href=
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/DateTimePicker/DateTimePicker.jsx">
  DateTimePicker</a> from '@jafar-org/react-components/edit/DateTimePicker'
  */
 export default class DateTimePicker extends React.Component {

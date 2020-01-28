@@ -30,8 +30,9 @@ const deafultLabels = {
 /**
  * Represent array of objects. Can add / edit / remove items from the array
  * 
- * Import <a target="_blank" 
- href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/DynamicItemsModal/DynamicItemsModal.jsx">
+ * Import <a target="_blank" href=
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/
+ DynamicItemsModal/DynamicItemsModal.jsx">
  DynamicItemsModal</a> from '@jafar-org/react-components/edit/DynamicItemsModal'
  */
 class DynamicItemsModal extends React.Component {

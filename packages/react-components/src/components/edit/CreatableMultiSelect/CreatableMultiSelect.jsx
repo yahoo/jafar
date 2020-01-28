@@ -12,7 +12,8 @@ import { customStyles } from '../Select/Select';
  * Represent creation of dynamic string array
  * 
  * Import <a target="_blank" href=
- "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/CreatableMultiSelect/CreatableMultiSelect.jsx">
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/
+ CreatableMultiSelect/CreatableMultiSelect.jsx">
  CreatableMultiSelect</a> from '@jafar-org/react-components/edit/CreatableMultiSelect'
  */
 export default class CreatableMultiSelect extends React.Component {
