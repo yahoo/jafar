@@ -37,7 +37,7 @@ import {
   Actions,
 } from './types';
 import {
-  changeAndEvaluateFieldComponentState,
+  setStateAndPrevStateToStore,
   evaluateFieldComponentState,
 } from './change-state';
 
@@ -167,14 +167,23 @@ const evaluateDependenciesChange = (formId, dependentFieldsId, dependencies = []
 
   if (result === null) return;
   const promises = [];
-
+ 
+  // the next order is important
+  // first update the state in the store - since value change also triggers stateChange that needs the updated state
   if (result.state) {
-    promises.push(dispatch(changeAndEvaluateFieldComponentState(formId, dependentFieldsId, result.state)));
+    // set new state in the form
+    setStateAndPrevStateToStore(formId, dependentFieldsId, result.state)(dispatch);
   }
+
+  // value change also triggers stateChange and evaluate field
   if (Object.keys(result).includes('value')) { // new value can be falsy value as well, like undefined, null, 0, false
     promises.push(formantAndChangeValue(formId, dependentFieldsId, result.value, dependencies)(dispatch, getState));
   } else {
-    promises.push(evaluateField(formId, dependentFieldsId)(dispatch, getState));
+    if (result.state) {
+      promises.push(evaluateFieldComponentState(formId, fieldId)(dispatch, getState));
+    }
+  
+    promises.push(evaluateField(formId, dependentFieldsId)(dispatch, getState));  
   }
 
   await Promise.all(promises);
