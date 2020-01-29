@@ -11,8 +11,8 @@ import { customStyles } from '../Select/Select';
 /**
  * Represent a selection of multi items from async items list 
  * 
- * Import <a target="_blank" 
- href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/AsyncMultiSelect/AsyncMultiSelect.jsx">
+ * Import <a target="_blank" href=
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/AsyncMultiSelect/AsyncMultiSelect.jsx">
  AsyncMultiSelect</a>  from '@jafar-org/react-components/edit/AsyncMultiSelect'
  */
 export default class AsyncMultiSelect extends React.Component {

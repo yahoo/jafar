@@ -56,6 +56,8 @@ Resources handler's arguments (or definition structure in general) might change 
 Since `verifyForm` function does not verify the resources handler's arguments data, Integration tests using Form class can help
 cover all users scenarios are working correctly (this can also be done via e2e).
 
+> **Note:** For `@jafar/react-form`, a mount to the `Form` component in a test can be done, followed by integration tests scenarios similar to the approach of the following example.
+
 Example of test using jest:
 
 ```javascript

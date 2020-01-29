@@ -21,7 +21,7 @@ h3[class*="rsg--heading"] {
   font-size: 23px;
 }
 
-.sc-bdVaJa { /* jafar field */
+.rsg--preview-38 .sc-bdVaJa { /* jafar field - should have better selector */
   margin: 0 !important;
 }
 

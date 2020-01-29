@@ -11,8 +11,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 /**
  * Represent a boolean value
  * 
- * Import <a target="_blank" 
- href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Checkbox/Checkbox.jsx">Checkbox</a>
+ * Import <a target="_blank" href=
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Checkbox/Checkbox.jsx">Checkbox</a>
  from '@jafar-org/react-components/edit/Checkbox'
  */
 export default class Checkbox extends React.Component {

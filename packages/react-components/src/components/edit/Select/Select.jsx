@@ -5,7 +5,7 @@
 
 import React from 'react';
 import SelectInternal from 'react-select';
-import { isEqual } from 'lodash';
+import { isEqual, noop } from 'lodash';
 import PropTypes from 'prop-types';
 
 export const styleOverrides = {
@@ -99,6 +99,7 @@ export default class Select extends React.Component {
     },
     disabled: false,
     required: false,
+    onStateChange: noop,
   };
 
   render() {

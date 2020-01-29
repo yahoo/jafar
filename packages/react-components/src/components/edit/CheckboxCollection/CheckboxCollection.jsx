@@ -10,8 +10,9 @@ import InternalCheckboxCollection from './internal/CheckboxCollection';
 /**
  * Represent an array of any type
  * 
- * Import <a target="_blank" 
- href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/CheckboxCollection/CheckboxCollection.jsx">
+ * Import <a target="_blank" href=
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/
+ CheckboxCollection/CheckboxCollection.jsx">
  CheckboxCollection</a> from '@jafar-org/react-components/edit/CheckboxCollection'
  */
 export default class CheckboxCollection extends React.Component {

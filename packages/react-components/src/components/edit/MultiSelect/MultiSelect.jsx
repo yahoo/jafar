@@ -6,7 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SelectInternal from 'react-select';
-import { isEqual } from 'lodash';
+import { isEqual, noop } from 'lodash';
 import { customStyles } from '../Select/Select';
 
 /**
@@ -39,6 +39,7 @@ export default class MultiSelect extends React.Component {
       searchQuery: '',
     },
     disabled: false,
+    onStateChange: noop,
   };
 
   render() {

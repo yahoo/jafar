@@ -11,8 +11,9 @@ import { customStyles } from '../Select/Select';
 /**
  * Represent a selection of a single item from async items list
  * 
- * Import <a target="_blank" 
- href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/AsyncSelect/AsyncSelect.jsx">AsyncSelect</a>
+ * Import <a target="_blank" href=
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/AsyncSelect/AsyncSelect.jsx">
+ AsyncSelect</a>
  from '@jafar-org/react-components/edit/AsyncSelect'
  */
 export default class AsyncSelect extends React.Component {
