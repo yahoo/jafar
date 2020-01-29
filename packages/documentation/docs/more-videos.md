@@ -6,7 +6,7 @@ sidebar_label: Videos
 
 ## Jafar Overview (VMG UI Summit - October 2019)
 
-<div style="width:784px">
+<div style="max-width:784px">
   <div>
     <div itemprop="video" itemscope itemtype="https://schema.org/VideoObject">
       <div id="5dcaad7a41aecf378e334593" class="vdb_player vdb_5dcaad7a41aecf378e3345935dca935eb0f8f704e10f1c04"  >    
