@@ -1020,6 +1020,37 @@ describe('Form', () => {
       });
       expect(form.invalid).toBeTruthy();
     });
+
+    it('field with exclude term and required=true, when its excluded - its should be keep required value', async () => {
+      const form = new Form();
+      simpleForm.model.data = { name: 'Custom' };
+      simpleForm.model.fields.lastName.required = true;
+      simpleForm.model.fields.lastName.dependencies = ['name'];
+      simpleForm.model.fields.lastName.excludeTerm = {
+        not: true,
+        name: 'equals',
+        args: { fieldId: 'name', value: 'Custom' }
+      },
+      await form.init(simpleForm.model, simpleForm.resources);
+      expect(form.fields.lastName.excluded).toBeFalsy();
+      expect(form.fields.lastName.required).toBeTruthy();
+      expect(form.fields.lastName.empty).toBeTruthy();
+      expect(form.fields.lastName.errors[0].name).toEqual('required');
+
+      // change value - to exclude the field
+      await form.changeValue('name', 'mock');
+      expect(form.fields.lastName.excluded).toBeTruthy();
+      expect(form.fields.lastName.required).toBeTruthy();
+      expect(form.fields.lastName.empty).toBeFalsy();
+      expect(form.fields.lastName.errors).toEqual([]);
+
+      // change value - to include the field
+      await form.changeValue('name', 'Custom');
+      expect(form.fields.lastName.excluded).toBeFalsy();
+      expect(form.fields.lastName.required).toBeTruthy();
+      expect(form.fields.lastName.empty).toBeTruthy();
+      expect(form.fields.lastName.errors[0].name).toEqual('required');
+    });    
   });
 
   describe('dirty', () => {

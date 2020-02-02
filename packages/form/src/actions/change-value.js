@@ -126,8 +126,10 @@ export const evaluateField = (formId, fieldId) => async (dispatch, getState) => 
 
   // if pass terms (exclude) - field is not part of the form - initiate its errors to empty array and disable to false
   if (exclude) {
-    // set field evaluation result - formId, fieldId, excluded, disabled, errors, dirty, required, empty, invalid
-    dispatch(setFieldEvaluation(formId, fieldId, exclude, false, false, false, false, false, []));
+    const field = form.model.fields[fieldId];
+
+    // set field evaluation result - formId, fieldId, excluded, disabled, dirty, required, empty, invalid, errors
+    dispatch(setFieldEvaluation(formId, fieldId, exclude, false, false, field.required, false, false, []));
     return;
   }
 
@@ -142,7 +144,7 @@ export const evaluateField = (formId, fieldId) => async (dispatch, getState) => 
     evaluateFieldComponentState(formId, fieldId)(dispatch, getState),
   ]);
 
-  // set field evaluation result - formId, fieldId, excluded, disabled, errors, dirty, required, empty, invalid
+  // set field evaluation result - formId, fieldId, excluded, disabled, dirty, required, empty, invalid, errors
   dispatch(setFieldEvaluation(formId, fieldId, exclude, results[0], results[1], results[2].required,
     results[2].empty, results[2].invalid, results[2].errors));
 };
