@@ -14,31 +14,17 @@ const JsonEditorWrapper = styled.div`
 `;
 
 /**
- * Represent a boolean value
+ * Represent a json value
  * 
  * Import <a target="_blank" href=
  "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/JsonEditor/JsonEditor.jsx">JsonEditor</a>
  from '@jafar-org/react-components/edit/JsonEditor'
  */
-export default ({ value = {}, state = {}, onValueChange }) => {
-  return (<JsonEditorWrapper>
-    <JsonInput 
-      placeholder={value} 
-      height={state.height || '130px'} 
-      theme="light_mitsuketa_tribute"
-      confirmGood={false}
-      onChange={(obj) => {
-        if (obj.error) return;
-        onValueChange(obj.jsObject) 
-      }} />
-  </JsonEditorWrapper>);
-};
-
 export default class JsonEditor extends React.Component {
   static propTypes = {
     value: PropTypes.object,
     state: PropTypes.shape({
-      label: PropTypes.string,
+      height: PropTypes.string,
     }),
     disabled: PropTypes.bool,
     onValueChange: PropTypes.func.isRequired,
@@ -47,7 +33,7 @@ export default class JsonEditor extends React.Component {
   static defaultProps = {
     value: {},
     state: {
-      label: '',
+      height: '130px',
     },
     disabled: false,
   };
@@ -55,8 +41,9 @@ export default class JsonEditor extends React.Component {
   render() {
     return (<JsonEditorWrapper>
       <JsonInput 
-        placeholder={value} 
-        height={state.height || '130px'} 
+        placeholder={this.props.value}
+        viewOnly={this.props.disabled}
+        height={this.props.state.height || JsonEditor.defaultProps.state.height} 
         theme="light_mitsuketa_tribute"
         confirmGood={false}
         onChange={this.onChange} />

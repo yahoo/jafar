@@ -11,17 +11,17 @@ const model = {
   id: 'simple',
   fields: {
     agreeToTerms: {
-      label: 'Agree to site Terms',
-      path: 'agreeToTerms',
+      label: 'Options',
+      path: 'options',
       component: {
-        name: 'Checkbox',
+        name: 'JsonEditor',
         state: {
-            label: 'I read the site terms and I agree to the terms',
+            height: '150px',
         }
       },
       required: true,
       validators: [{
-          name: 'mustAgree',
+          name: 'numberValues',
       }],
       disableTerm: {
           name: 'disableMe',
@@ -32,20 +32,20 @@ const model = {
     },
   },
   data: {
-      agreeToTerms: undefined,
+      options: undefined,
   },
 };
 
 const resources = {
   components: { 
-      Checkbox: {
-          renderer: Checkbox,
+      JsonEditor: {
+          renderer: JsonEditor,
       }, 
   },
   validators: {
-      mustAgree: {
-          func: props => props.value === true,
-          message: () => 'You must agree to the terms',
+      numberValues: {
+          func: props => !Object.values(props.value).find(x => NaN(x)),
+          message: () => 'All values must be numbers',
       },
   },
   terms: {
@@ -55,7 +55,7 @@ const resources = {
 };
 
 <Form model={model} resources={resources}>
-    <Field id='agreeToTerms' />
+    <Field id='options' />
 </Form>
 ```
 
@@ -63,30 +63,11 @@ const resources = {
 
 ```javascript
 initialState = { 
-    value: true,
+    value: { height: '20px', width: '20px' },
 };
 
-<Checkbox
+<JsonEditor
     value={state.value}
-    onValueChange={(value) => {
-        setState({ value });
-    }}
-/>
-```
-
-<h4>With label</h4>
-
-```javascript
-initialState = { 
-    value: true,
-    state: {
-        label: 'Click me',
-    }
-};
-
-<Checkbox
-    value={state.value}
-    state={state.state}
     onValueChange={(value) => {
         setState({ value });
     }}
@@ -100,7 +81,7 @@ initialState = {
     value: undefined,
 };
 
-<Checkbox
+<JsonEditor
     value={state.value}
     onValueChange={(value) => {
         setState({ value });
@@ -112,10 +93,10 @@ initialState = {
 
 ```javascript
 initialState = { 
-    value: true,
+    value: { height: '20px', width: '20px' },
 };
 
-<Checkbox
+<JsonEditor
     value={state.value}
     disabled={true}
     onValueChange={(value) => {
