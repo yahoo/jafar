@@ -4,6 +4,7 @@
   */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import JsonInput from 'react-json-editor-ajrm';
 import styled from 'styled-components';
 
@@ -17,7 +18,8 @@ const JsonEditorWrapper = styled.div`
  * Represent a json value
  * 
  * Import <a target="_blank" href=
- "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/JsonEditor/JsonEditor.jsx">JsonEditor</a>
+ "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/JsonEditor/JsonEditor.jsx">
+ JsonEditor</a>
  from '@jafar-org/react-components/edit/JsonEditor'
  */
 export default class JsonEditor extends React.Component {

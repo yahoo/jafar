@@ -10,7 +10,7 @@ const Field = require('@jafar-org/react-form/Field').default;
 const model = {
   id: 'simple',
   fields: {
-    agreeToTerms: {
+    options: {
       label: 'Options',
       path: 'options',
       component: {
@@ -44,7 +44,7 @@ const resources = {
   },
   validators: {
       numberValues: {
-          func: props => !Object.values(props.value).find(x => NaN(x)),
+          func: props => !Object.values(props.value).find(x => isNaN(x)),
           message: () => 'All values must be numbers',
       },
   },
