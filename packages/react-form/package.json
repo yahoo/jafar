@@ -1,6 +1,6 @@
 {
   "name": "@jafar-org/react-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Form and Field Components, based on @jafar-org/form",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",
