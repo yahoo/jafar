@@ -7,7 +7,7 @@ Changes that have landed in master but are not yet released.
 ### Form 
 
 * Improve dependenciesChange and add test case
-* Fix - when field excluded - keep required value
+* Fix - when field excluded, keep required value
 
 ### React Components
 
