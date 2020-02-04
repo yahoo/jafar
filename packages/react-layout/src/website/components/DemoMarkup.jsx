@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PrismCode from 'react-prism';
+import JSZip from 'jszip';
 import 'prismjs';
 import 'prismjs/themes/prism.css';
 import Styled from './StyledComponents';
@@ -13,22 +14,10 @@ export default class DemoMarkup extends React.Component {
   constructor(props) {
     super(props);
     this.formFolder = this.props.formFolder || 'form';
+    this.index = this.getFile(`${this.formFolder}/index`);
     this.fields = this.getFile(`${this.formFolder}/fields`);
     this.components = this.getFile(`${this.formFolder}/components`);
-    this.index = this.getFile(`${this.formFolder}/index`);
     this.data = this.props.data ? this.getFile(`${this.formFolder}/data`) : undefined;
-    this.stateChanges = this.props.stateChanges ? this.getFile(`${this.formFolder}/state-changes`) : undefined;
-    this.formatters = this.props.formatters ? this.getFile(`${this.formFolder}/formatters`) : undefined;
-    this.parsers = this.props.parsers ? this.getFile(`${this.formFolder}/parsers`) : undefined;
-    this.validators = this.props.validators ? this.getFile(`${this.formFolder}/validators`) : undefined;
-    this.excludeTerm = this.props.excludeTerm ? this.getFile(`${this.formFolder}/exclude-term`) : undefined;
-    this.dependenciesChanges = this.props.dependenciesChanges
-      ? this.getFile(`${this.formFolder}/dependecies-changes`) : undefined;
-    this.disableTerm = this.props.disableTerm ? this.getFile(`${this.formFolder}/disable-term`) : undefined;
-    this.hooks = this.props.hooks ? this.getFile(`${this.formFolder}/hooks`) : undefined;
-    this.mockService = this.props.mockService ? this.getFile(`${this.formFolder}/mock-service`) : undefined;
-    this.extraComponents = this.props.extraComponents ? this.props.extraComponents
-      .map(filePath => this.getFileByFullRelativePath(filePath)) : undefined;
     this.item = {
       sections: this.getFile('sections'),
       sectionsMobile: this.props.sectionsMobile ? this.getFile('sections-mobile') : undefined,
@@ -43,8 +32,38 @@ export default class DemoMarkup extends React.Component {
     return require(`!!raw-loader!../demos/${this.props.exampleName}/${filePath}.jsx`).default;
   }
 
+  download = () => {
+    const rootFolder = new JSZip();
+
+    // add form folder
+    const formFolder = rootFolder.folder(this.formFolder);
+    formFolder.file('index.js', this.index);
+    formFolder.file('fields.js', this.fields);
+    formFolder.file('components.js', this.components);
+    if (this.data) formFolder.file('data.js', this.data);
+
+    // add demo file
+    rootFolder.file('demo.jsx', this.props.demo);
+
+    // add sections files
+    rootFolder.file('sections.js', this.item.sections);
+    if (this.item.sectionsMobile) rootFolder.file('sections-mobile.js', this.item.sectionsMobile);
+
+    rootFolder.generateAsync({ type:'blob' }).then((content) => {
+      const href = window.URL.createObjectURL(content);
+      const link = document.createElement('a');
+      link.setAttribute('href', href);
+      link.setAttribute('download', `${this.props.exampleName}.zip`);
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+
   render() {
-    return (<div>
+    return (<Styled.DemoWrapper>
+      <Styled.DownloadDemo onClick={this.download}>Download</Styled.DownloadDemo>
       {
         !this.props.hideHtml
         && <div>
@@ -137,7 +156,6 @@ export default class DemoMarkup extends React.Component {
           <PrismCode className="language-javascript" component="pre">{this.mockService}</PrismCode>
         </div>
       }
-
-    </div >);
+    </Styled.DemoWrapper>);
   }
 }

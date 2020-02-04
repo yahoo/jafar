@@ -37,7 +37,7 @@ import {
   Actions,
 } from './types';
 import {
-  changeAndEvaluateFieldComponentState,
+  setStateAndPrevStateToStore,
   evaluateFieldComponentState,
 } from './change-state';
 
@@ -126,8 +126,10 @@ export const evaluateField = (formId, fieldId) => async (dispatch, getState) => 
 
   // if pass terms (exclude) - field is not part of the form - initiate its errors to empty array and disable to false
   if (exclude) {
-    // set field evaluation result - formId, fieldId, excluded, disabled, errors, dirty, required, empty, invalid
-    dispatch(setFieldEvaluation(formId, fieldId, exclude, false, false, false, false, false, []));
+    const field = form.model.fields[fieldId];
+
+    // set field evaluation result - formId, fieldId, excluded, disabled, dirty, required, empty, invalid, errors
+    dispatch(setFieldEvaluation(formId, fieldId, exclude, false, false, field.required, false, false, []));
     return;
   }
 
@@ -142,7 +144,7 @@ export const evaluateField = (formId, fieldId) => async (dispatch, getState) => 
     evaluateFieldComponentState(formId, fieldId)(dispatch, getState),
   ]);
 
-  // set field evaluation result - formId, fieldId, excluded, disabled, errors, dirty, required, empty, invalid
+  // set field evaluation result - formId, fieldId, excluded, disabled, dirty, required, empty, invalid, errors
   dispatch(setFieldEvaluation(formId, fieldId, exclude, results[0], results[1], results[2].required,
     results[2].empty, results[2].invalid, results[2].errors));
 };
@@ -168,12 +170,21 @@ const evaluateDependenciesChange = (formId, dependentFieldsId, dependencies = []
   if (result === null) return;
   const promises = [];
 
+  // the next order is important
+  // first update the state in the store - since value change also triggers stateChange that needs the updated state
   if (result.state) {
-    promises.push(dispatch(changeAndEvaluateFieldComponentState(formId, dependentFieldsId, result.state)));
+    // set new state in the form
+    setStateAndPrevStateToStore(formId, dependentFieldsId, result.state)(dispatch);
   }
+
+  // value change also triggers stateChange and evaluate field
   if (Object.keys(result).includes('value')) { // new value can be falsy value as well, like undefined, null, 0, false
     promises.push(formantAndChangeValue(formId, dependentFieldsId, result.value, dependencies)(dispatch, getState));
   } else {
+    if (result.state) {
+      promises.push(evaluateFieldComponentState(formId, dependentFieldsId)(dispatch, getState));
+    }
+
     promises.push(evaluateField(formId, dependentFieldsId)(dispatch, getState));
   }
 

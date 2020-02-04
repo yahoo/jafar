@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PrismCode from 'react-prism';
+import JSZip from 'jszip';
 import 'prismjs';
 import 'prismjs/themes/prism.css';
 import Styled from './StyledComponents';
@@ -13,9 +14,9 @@ export default class DemoMarkup extends React.Component {
   constructor(props) {
     super(props);
     this.formFolder = this.props.formFolder || 'form';
+    this.index = this.getFile('index');
     this.fields = this.getFile('fields');
     this.components = this.getFile('components');
-    this.index = this.getFile('index');
     this.data = this.props.data ? this.getFile('data') : undefined;
     this.conversions = this.props.conversions ? this.getFile('conversions') : undefined;
     this.validators = this.props.validators ? this.getFile('validators') : undefined;
@@ -35,8 +36,55 @@ export default class DemoMarkup extends React.Component {
     return require(`!!raw-loader!../demos/react/${this.props.exampleName}/${filePath}.jsx`).default;
   }
 
+  download = () => {
+    const rootFolder = new JSZip();
+
+    // add form folder
+    const formFolder = rootFolder.folder(this.formFolder);
+    formFolder.file('index.js', this.index);
+    formFolder.file('fields.js', this.fields);
+    formFolder.file('components.js', this.components);
+    if (this.data) formFolder.file('data.js', this.data);
+    if (this.conversions) formFolder.file('conversions.js', this.conversions);
+    if (this.validators) formFolder.file('validators.js', this.validators);
+    if (this.terms) formFolder.file('terms.js', this.terms);
+    if (this.dependenciesChanges) formFolder.file('dependenciesChanges.js', this.dependenciesChanges);
+    if (this.hooks) formFolder.file('hooks.js', this.hooks);
+    if (this.mockService) {
+      const mocksFolder = formFolder.folder('mocks');
+      mocksFolder.file('service.js', this.mockService);
+    }
+    if (this.extraComponents) {
+      this.props.extraComponents.forEach((filePath, index) => {
+        let file = filePath;
+        let containerFolder = rootFolder;
+        if (filePath.includes('/')) {
+          const arr = filePath.split('/');
+          file = arr[1];
+          containerFolder = rootFolder.folder(arr[0]);
+        }
+        containerFolder.file(`${file}.jsx`, this.extraComponents[index]);
+      });
+    }
+
+    // add demo file
+    rootFolder.file('demo.jsx', this.props.demo);
+
+    rootFolder.generateAsync({ type:'blob' }).then((content) => {
+      const href = window.URL.createObjectURL(content);
+      const link = document.createElement('a');
+      link.setAttribute('href', href);
+      link.setAttribute('download', `${this.props.exampleName}.zip`);
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+
   render() {
-    return (<div>
+    return (<Styled.DemoWrapper>
+      <Styled.DownloadDemo onClick={this.download}>Download</Styled.DownloadDemo>
       <Styled.H3>Form definition</Styled.H3>
       <p>{this.formFolder}/fields.js</p>
       <PrismCode className="language-javascript" component="pre">{this.fields}</PrismCode>
@@ -102,7 +150,6 @@ export default class DemoMarkup extends React.Component {
           }
         </div>
       }
-
-    </div >);
+    </Styled.DemoWrapper>);
   }
 }
