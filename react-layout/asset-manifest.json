@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "https://yahoo.github.io/jafar/react-layout/static/css/main.6ea54503.css",
-    "main.js": "https://yahoo.github.io/jafar/react-layout/static/js/main.e5157b51.js",
+    "main.js": "https://yahoo.github.io/jafar/react-layout/static/js/main.de460cd5.js",
     "main.css.map": "https://yahoo.github.io/jafar/react-layout/static/css/main.6ea54503.css.map",
-    "main.js.map": "https://yahoo.github.io/jafar/react-layout/static/js/main.e5157b51.js.map",
+    "main.js.map": "https://yahoo.github.io/jafar/react-layout/static/js/main.de460cd5.js.map",
     "index.html": "https://yahoo.github.io/jafar/react-layout/index.html",
-    "precache-manifest.930e7445700e71d90002be417db663bb.js": "https://yahoo.github.io/jafar/react-layout/precache-manifest.930e7445700e71d90002be417db663bb.js",
+    "precache-manifest.e18e01e75943c9b306db85a3d57a7e34.js": "https://yahoo.github.io/jafar/react-layout/precache-manifest.e18e01e75943c9b306db85a3d57a7e34.js",
     "service-worker.js": "https://yahoo.github.io/jafar/react-layout/service-worker.js",
-    "static/js/main.e5157b51.js.LICENSE": "https://yahoo.github.io/jafar/react-layout/static/js/main.e5157b51.js.LICENSE",
+    "static/js/main.de460cd5.js.LICENSE": "https://yahoo.github.io/jafar/react-layout/static/js/main.de460cd5.js.LICENSE",
     "static/media/jafar.svg": "https://yahoo.github.io/jafar/react-layout/static/media/jafar.1c1a5205.svg"
   },
   "entrypoints": [
     "static/css/main.6ea54503.css",
-    "static/js/main.e5157b51.js"
+    "static/js/main.de460cd5.js"
   ]
 }
