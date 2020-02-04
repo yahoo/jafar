@@ -94,11 +94,15 @@ export const evaluateFieldComponentState = (formId, fieldId, stateChangesStates 
   await changeAndEvaluateFieldComponentState(formId, fieldId, newState, stateChangesStates)(dispatch, getState);
 };
 
-export const changeAndEvaluateFieldComponentState = (formId, fieldId, state,
-  stateChangesStates = []) => async (dispatch, getState) => {
+export const setStateAndPrevStateToStore = (formId, fieldId, state, stateChangesStates = []) => (dispatch) => {
   // set new state in the form
   setStateToStore(formId, fieldId, state, stateChangesStates)(dispatch);
   dispatch(setFieldComponentPrevState(formId, fieldId));
+};
+
+const changeAndEvaluateFieldComponentState = (formId, fieldId, state,
+  stateChangesStates = []) => async (dispatch, getState) => {
+  setStateAndPrevStateToStore(formId, fieldId, state, stateChangesStates)(dispatch);
 
   await evaluateFieldComponentState(formId, fieldId, stateChangesStates)(dispatch, getState);
 };
