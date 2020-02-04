@@ -167,7 +167,7 @@ const evaluateDependenciesChange = (formId, dependentFieldsId, dependencies = []
 
   if (result === null) return;
   const promises = [];
- 
+
   // the next order is important
   // first update the state in the store - since value change also triggers stateChange that needs the updated state
   if (result.state) {
@@ -180,10 +180,10 @@ const evaluateDependenciesChange = (formId, dependentFieldsId, dependencies = []
     promises.push(formantAndChangeValue(formId, dependentFieldsId, result.value, dependencies)(dispatch, getState));
   } else {
     if (result.state) {
-      promises.push(evaluateFieldComponentState(formId, fieldId)(dispatch, getState));
+      promises.push(evaluateFieldComponentState(formId, dependentFieldsId)(dispatch, getState));
     }
-  
-    promises.push(evaluateField(formId, dependentFieldsId)(dispatch, getState));  
+
+    promises.push(evaluateField(formId, dependentFieldsId)(dispatch, getState));
   }
 
   await Promise.all(promises);
