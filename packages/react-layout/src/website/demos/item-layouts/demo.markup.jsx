@@ -48,7 +48,7 @@ class Demo extends React.Component {
           popover: {
             title: 'Handle Fields',
             open: () => this.context.model.invalid,
-            component: () => FormErrors,
+            component: FormErrors,
             props: { 
               onClickField: this.onClickInvalidField,
             },
