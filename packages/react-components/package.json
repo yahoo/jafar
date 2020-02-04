@@ -40,7 +40,7 @@
     "@material-ui/pickers": "^3.1.2",
     "date-fns": "^2.8.1",
     "dateformat": "^3.0.3",
-    "react-json-editor-ajrm": "2.5.9",
+    "react-json-editor-ajrm": "^2.5.9",
     "react-select": "^3.0.8",
     "styled-components": "^4.1.3"
   },
