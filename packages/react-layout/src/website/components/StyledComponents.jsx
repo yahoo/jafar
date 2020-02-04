@@ -202,6 +202,16 @@ const H2 = styled.h2`
   margin-top: 0px;
 `;
 
+const DemoWrapper = styled.div`
+  position: relative;
+`;
+
+const DownloadDemo = styled(A)`
+  position: absolute;
+  right: 0;
+  top: 0;
+`;
+
 export default {
   Root,
   Main,
@@ -228,4 +238,6 @@ export default {
   MainWrapper,
   HomeWrapper,
   H2,
+  DemoWrapper,
+  DownloadDemo,
 };
