@@ -1,6 +1,6 @@
 {
   "name": "@jafar-org/react-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Form and Field Components, based on @jafar-org/form",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",
@@ -42,6 +42,7 @@
   "devDependencies": {
     "@jafar-org/react-components": "^1.0.0",
     "@jafar-org/react-kit": "1.0.1",
+    "jszip": "^3.2.2",
     "prismjs": "^1.15.0",
     "raw-loader": "4.0.0",
     "react-json-view": "^1.19.1",

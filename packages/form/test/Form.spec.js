@@ -158,6 +158,44 @@ describe('Form', () => {
       expect(form.fields.city.component.value).toEqual('Tel Aviv');
     });
 
+    it('after dependenciesChange return both new value and state, stateChange uses new data value and view value of itself', async () => {
+      const form = new Form();
+      let values;
+      dependencyChangeWithParserFormatterForm.model.fields.address = {
+        path: 'address',
+        dependencies: ['city'],
+        dependenciesChange: ({ dependencies, prevDependencies }) => {
+          if (prevDependencies && (dependencies.city.value !== prevDependencies.city.value)) {
+            return {
+              value: dependencies.city.value,
+              state: { a: 1 },
+            }
+          }
+        },
+        component: { 
+          name: 'address',
+        },
+        parser: ({ value }) => value === 'Tel Aviv' ? 'TLV' : 'JRM',
+        formatter: ({ value }) => value === 'TLV' ? 'Tel Aviv' : 'Jerusalem',
+      };
+      dependencyChangeWithParserFormatterForm.resources.components.address = {
+        renderer: () => {},
+        stateChange: ({ value, componentValue }) => {
+          if (values) { // only after init
+            values.push(`${value} ${componentValue}`);
+          }
+        },
+      };
+      await form.init(dependencyChangeWithParserFormatterForm.model, dependencyChangeWithParserFormatterForm.resources);
+      values = [];
+      await form.changeValue('city', 'Tel Aviv');
+      await form.changeValue('city', 'Jerusalem');
+      expect(values).toEqual([
+        'TLV Tel Aviv',
+        'JRM Jerusalem',
+      ]);
+    });
+
     describe('mode cases - with boolean required', () => {
       it('field.validators = [‘uniqueName’], field.required = true, incoming value = empty', async () => {
         syncValidatorForm.model.fields.name.required = true;
@@ -1020,6 +1058,37 @@ describe('Form', () => {
       });
       expect(form.invalid).toBeTruthy();
     });
+
+    it('field with exclude term and required=true, when its excluded - its should be keep required value', async () => {
+      const form = new Form();
+      simpleForm.model.data = { name: 'Custom' };
+      simpleForm.model.fields.lastName.required = true;
+      simpleForm.model.fields.lastName.dependencies = ['name'];
+      simpleForm.model.fields.lastName.excludeTerm = {
+        not: true,
+        name: 'equals',
+        args: { fieldId: 'name', value: 'Custom' }
+      },
+      await form.init(simpleForm.model, simpleForm.resources);
+      expect(form.fields.lastName.excluded).toBeFalsy();
+      expect(form.fields.lastName.required).toBeTruthy();
+      expect(form.fields.lastName.empty).toBeTruthy();
+      expect(form.fields.lastName.errors[0].name).toEqual('required');
+
+      // change value - to exclude the field
+      await form.changeValue('name', 'mock');
+      expect(form.fields.lastName.excluded).toBeTruthy();
+      expect(form.fields.lastName.required).toBeTruthy();
+      expect(form.fields.lastName.empty).toBeFalsy();
+      expect(form.fields.lastName.errors).toEqual([]);
+
+      // change value - to include the field
+      await form.changeValue('name', 'Custom');
+      expect(form.fields.lastName.excluded).toBeFalsy();
+      expect(form.fields.lastName.required).toBeTruthy();
+      expect(form.fields.lastName.empty).toBeTruthy();
+      expect(form.fields.lastName.errors[0].name).toEqual('required');
+    });    
   });
 
   describe('dirty', () => {

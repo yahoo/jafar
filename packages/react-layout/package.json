@@ -1,6 +1,6 @@
 {
   "name": "@jafar-org/react-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Item, List and more Components, to create full entities pages such as create / edit/ details / list with the same UI/UX experience",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",
@@ -43,6 +43,7 @@
     "@jafar-org/react-components": "^1.0.0",
     "@jafar-org/react-form": "^1.0.0",
     "@jafar-org/react-kit": "1.0.1",
+    "jszip": "^3.2.2",
     "prismjs": "^1.15.0",
     "raw-loader": "4.0.0",
     "react-json-view": "^1.19.1",
