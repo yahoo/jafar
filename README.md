@@ -10,7 +10,6 @@ Jafar - not `Just another form application renderer`, a set of tools which imple
 * [Docs & Demos](#docs-&-demos)
 * [Run Demos Locally](#run-demos-locally)
 * [Contribute](#contribute)
-* [Maintainers](#maintainers)
 * [Licence](#licence)
 
 ## Background & Usage
@@ -182,12 +181,21 @@ Jafar's full docs and demos are [available here](https://yahoo.github.io/jafar).
 
 ## Run Demos Locally
 
-### React Form Demos
+### Clone repository
 
-First clone Jafar
 ```
 git clone https://github.com/yahoo/jafar.git
 ```
+
+### Install packages and link them
+
+```
+cd /jafar && npm run bootstrap
+```
+
+* Alternatively, run `npm install` in the desired sub-package (under `jafar/packages` folder) to install it without links.
+
+### Run react form demos
 
 To run react-form demos locally:
 ```
