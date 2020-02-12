@@ -46,7 +46,7 @@ export default class NestedList extends React.Component {
 
     return (!item.hide && <React.Fragment key={item.id}>
       <Styled.ListItem
-        id={item.id}
+        item-id={item.id}
         level={nestedLevel}
         button={true}
         component={!item.items || item.hideChildren ? Link : undefined}

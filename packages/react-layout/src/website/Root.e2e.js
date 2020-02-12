@@ -76,15 +76,15 @@ async function testHomepageNavigation(page) {
   expect(itemsBeforeOpen).toHaveLength(2);
 
   // verify child items not appear yet
-  let firstDemo = await page.$('[id="/item/layouts"][role="button"]');
+  let firstDemo = await page.$('[item-id="/item/layouts"][role="button"]');
   expect(firstDemo).toBeFalsy();
 
   // open parent item of "item"
-  await page.click('[id="/item"][role="button"]');
+  await page.click('[item-id="/item"][role="button"]');
   await page.waitFor(ANIMATION_DURATION);
 
   // verify its sub items appear on the screen
-  firstDemo = await page.$('[id="/item/layouts"][role="button"]');
+  firstDemo = await page.$('[item-id="/item/layouts"][role="button"]');
   expect(firstDemo).toBeTruthy();
 
   // verify that home is presented and not any example
@@ -94,7 +94,7 @@ async function testHomepageNavigation(page) {
   expect(home).toBeTruthy();
 
   // click first example item
-  await page.click('[id="/item/layouts"][role="button"]');
+  await page.click('[item-id="/item/layouts"][role="button"]');
 
   // verify that home is not presented and first example is presented
   demoContainer = await page.$('#example-container');
@@ -136,7 +136,7 @@ async function testReactDemos(page) {
 
 async function testParentDemos(page, parentItem) {
   // click on parent item - on left sidebar
-  const parentItemSelector = `#\\${parentItem.id}`;
+  const parentItemSelector = `[item-id="${parentItem.id}"]`;
   await page.click(parentItemSelector);
   await page.waitFor(ANIMATION_DURATION);
 
@@ -164,7 +164,7 @@ async function testDemos(page, demos) {
 
 async function testDemo(page, demoId, demoWait) {
   // click on the demo item om the left sidebar
-  const itemSelector = `#${demoId.replace(/\//g, '\\/')}`;
+  const itemSelector = `[item-id="${demoId.replace(/\//g, '\\/')}"]`;
   await page.click(itemSelector);
   // verify html tab
   let htmlTabContainer = await page.$('#example-html');
