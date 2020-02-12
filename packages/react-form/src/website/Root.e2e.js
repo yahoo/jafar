@@ -132,7 +132,7 @@ async function testReactDemos(page) {
   // run demos e2e
   await asyncForEach(menu.slice(1), async (parentItem) => {
     // open parent
-    const parentItemSelector = `#\\${parentItem.id}`;
+    const parentItemSelector = `[item-id="${parentItem.id}"]`;
     await page.click(parentItemSelector);
     await page.waitFor(ANIMATION_DURATION);
 
