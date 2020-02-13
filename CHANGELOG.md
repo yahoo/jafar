@@ -2,6 +2,18 @@
 
 Changes that have landed in master but are not yet released.
 
+### React Kit
+
+* fix vulnerability: "serialize-javascript": "^2.1.1"
+
+### React Form
+
+* demos website - fix scroll to selected left menu item
+
+### React Layout
+
+* demos website - fix scroll to selected left menu item
+
 ## v1.0.1 (February 4, 2020)
 
 ### Form 
