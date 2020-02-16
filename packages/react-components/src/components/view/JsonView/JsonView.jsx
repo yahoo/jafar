@@ -3,12 +3,12 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
- import React from 'react';
- import PropTypes from 'prop-types';
- import JsonInput from 'react-json-editor-ajrm';
- import styled from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
+import JsonInput from 'react-json-editor-ajrm';
+import styled from 'styled-components';
  
- const JsonViewWrapper = styled.div`
+const JsonViewWrapper = styled.div`
    [name="outer-box"], [name="container"] {
      width: 100% !important;
      height: 100% !important;
