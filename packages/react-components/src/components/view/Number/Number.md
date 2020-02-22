@@ -3,8 +3,8 @@
 <h4>Usage in jafar form</h4>
 
 ```javascript
-const Form = require('@jafar-org/react-form/Form').default;
-const Field = require('@jafar-org/react-form/Field').default;
+const Form = require('@jafar/react-form/Form').default;
+const Field = require('@jafar/react-form/Field').default;
 
 const model = {
   id: 'simple',

@@ -7,6 +7,6 @@ sidebar_label: Installation
 #### Installing Form Package
 
 ```
-npm install --save @jafar-org/form
+npm install --save @jafar/form
 ```
 

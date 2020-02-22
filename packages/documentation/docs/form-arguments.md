@@ -8,7 +8,7 @@ Form class initialized with 3 objects: required [model](#model), optional [resou
 [settings](#settings)
 
 ```
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 const model = { /*...*/ };
 const resources = { /*...*/ };

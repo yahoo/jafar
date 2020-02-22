@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/Number/Number.jsx">
- Number</a> from '@jafar-org/react-components/view/Number'
+ Number</a> from '@jafar/react-components/view/Number'
  */
 export default class Number extends React.Component {
   static propTypes = {

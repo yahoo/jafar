@@ -1,4 +1,4 @@
-import CreatableMultiSelect from '@jafar-org/react-components/edit/CreatableMultiSelect';
+import CreatableMultiSelect from '@jafar/react-components/edit/CreatableMultiSelect';
 
 export default {
   CreatableMultiSelect,

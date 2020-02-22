@@ -1,5 +1,5 @@
 {
-  "name": "@jafar-org/react-kit",
+  "name": "@jafar/react-kit",
   "version": "1.0.1",
   "description": "React development environment utilities such as scripts and config files",
   "repository": {
@@ -18,7 +18,7 @@
     "publish-package": "npm publish dist --access public || echo publish failed"
   },
   "dependencies": {
-    "@jafar-org/js-kit": "^1.0.0",
+    "@jafar/js-kit": "^1.0.0",
     "babel-plugin-styled-components": "^1.10.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",

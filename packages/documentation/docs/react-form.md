@@ -19,7 +19,7 @@ Form component gets as props form model object and resources object that will li
 ## Example
 
 ```jsx
-import { Form, Field } from '@jafar-org/react-form';
+import { Form, Field } from '@jafar/react-form';
 import SomeInputText from './my-components/Text.jsx';
 
 const model = {
@@ -64,8 +64,8 @@ const resources = {
 
 Form provides a context object used by direct and non-direct children components. 
 
-> **Note:** In `@jafar-org/react-form` - `context` refer to the data provided by the `Form` component object, which can be consumed by each
-underline component (i.e react's context feature). Whereas in `@jafar-org/form` [context](context) refers to the app data which is stored in the model to
+> **Note:** In `@jafar/react-form` - `context` refer to the data provided by the `Form` component object, which can be consumed by each
+underline component (i.e react's context feature). Whereas in `@jafar/form` [context](context) refers to the app data which is stored in the model to
 serve the form's lifecycle handlers.
 
 ### Context object 
@@ -97,7 +97,7 @@ Example using class component:
 
 ```javascript
 import React from 'react';
-import { FormContext } from '@jafar-org/react-form';
+import { FormContext } from '@jafar/react-form';
 
 class ErrorsSummary extends React.Component {
   static contextType = FormContext;
@@ -119,7 +119,7 @@ Example using functional component:
 
 ```javascript
 import React, { useContext } from 'react';
-import { FormContext } from '@jafar-org/react-form';
+import { FormContext } from '@jafar/react-form';
 
 const ErrorsSummary = () => {
   const context = useContext(FormContext);
@@ -150,7 +150,7 @@ Example
 ```javascript
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import { FormContext } from '@jafar-org/react-form';
+import { FormContext } from '@jafar/react-form';
 
 export default class SaveButton extends React.Component {
   static contextType = FormContext;
@@ -205,7 +205,7 @@ gets a form definition (model & resources) and returns an HOC that gets your sin
 
 Example
 ```javascript
-import { Field, FormContext, createForm } from '@jafar-org/react-form';
+import { Field, FormContext, createForm } from '@jafar/react-form';
 import Button from '@material-ui/core/Button';
 import form from '../form'; // object of { model, resources }
 

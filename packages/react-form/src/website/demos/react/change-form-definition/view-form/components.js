@@ -1,4 +1,4 @@
-import label from '@jafar-org/react-components/view/Text';
+import label from '@jafar/react-components/view/Text';
 
 export default {
   label,

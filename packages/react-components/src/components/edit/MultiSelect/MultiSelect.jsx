@@ -14,7 +14,7 @@ import { customStyles } from '../Select/Select';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/MultiSelect/MultiSelect.jsx">
- MultiSelect</a> from '@jafar-org/react-components/edit/MultiSelect'
+ MultiSelect</a> from '@jafar/react-components/edit/MultiSelect'
  */
 export default class MultiSelect extends React.Component {
   static propTypes = {

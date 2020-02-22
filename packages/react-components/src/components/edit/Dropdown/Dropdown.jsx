@@ -14,7 +14,7 @@ import MenuItem from '@material-ui/core/MenuItem';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Dropdown/Dropdown.jsx">
- Dropdown</a> from '@jafar-org/react-components/edit/Dropdown'
+ Dropdown</a> from '@jafar/react-components/edit/Dropdown'
  */
 export default class Dropdown extends React.Component {
   static propTypes = {

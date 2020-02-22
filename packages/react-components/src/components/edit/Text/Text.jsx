@@ -14,7 +14,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Text/Text.jsx">
- Text</a> from '@jafar-org/react-components/edit/Text'
+ Text</a> from '@jafar/react-components/edit/Text'
  */
 export default class Text extends React.Component {
   static propTypes = {

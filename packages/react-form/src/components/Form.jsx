@@ -5,7 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import JForm from '@jafar-org/form';
+import JForm from '@jafar/form';
 import FormContext from './context';
 
 export default class Form extends React.Component {

@@ -14,7 +14,7 @@ import MuiRadioGroup from '@material-ui/core/RadioGroup';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/RadioGroup/RadioGroup.jsx">
- RadioGroup</a> from '@jafar-org/react-components/edit/RadioGroup'
+ RadioGroup</a> from '@jafar/react-components/edit/RadioGroup'
  */
 export default class RadioGroup extends React.Component {
   static propTypes = {

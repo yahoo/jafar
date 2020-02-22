@@ -13,7 +13,7 @@ import InternalCheckboxCollection from './internal/CheckboxCollection';
  * Import <a target="_blank" href=
  "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/
  CheckboxCollection/CheckboxCollection.jsx">
- CheckboxCollection</a> from '@jafar-org/react-components/edit/CheckboxCollection'
+ CheckboxCollection</a> from '@jafar/react-components/edit/CheckboxCollection'
  */
 export default class CheckboxCollection extends React.Component {
   static propTypes = {

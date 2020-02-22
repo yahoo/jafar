@@ -43,19 +43,19 @@ Jafar let developers build forms easily by defining a readable and intuitive for
 
 Install form (javascript Form class)
 
-`npm install --save @jafar-org/form`
+`npm install --save @jafar/form`
 
 Install react-form (Form & Field components)
 
-`npm install --save @jafar-org/react-form`
+`npm install --save @jafar/react-form`
 
 Install react-components (Text, Number, Checkbox and more)
 
-`npm install --save @jafar-org/react-components`
+`npm install --save @jafar/react-components`
 
 Install react-layout (Item, Sections and more)
 
-`npm install --save @jafar-org/react-layout`
+`npm install --save @jafar/react-layout`
 
 ## Examples
 
@@ -64,7 +64,7 @@ The following is a simple `Form class` test example:
 ### Form class
 
 ```javascript
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 import UserService from './UserService';
 
 // define form model object that will be the initial state of the form
@@ -161,7 +161,7 @@ expect(success).toEqual(true);
 The following is a simple react `Form` & `Field` components (based on `Form class`) example:
 
 ```jsx
-import { Form, Field } from '@jafar-org/react-form';
+import { Form, Field } from '@jafar/react-form';
 
 const model = { /*...*/ };
 const resources = { /*...*/ };

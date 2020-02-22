@@ -13,7 +13,7 @@ import Styled from './StyledComponents';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/Url/Url.jsx">
- Url</a> from '@jafar-org/react-components/view/Url'
+ Url</a> from '@jafar/react-components/view/Url'
  */
 class Url extends React.Component {
   static propTypes = {

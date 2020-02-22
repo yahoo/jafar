@@ -14,7 +14,7 @@ import Styled from './StyledComponents';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/Boolean/Boolean.jsx">
- Boolean</a> from '@jafar-org/react-components/view/Boolean'
+ Boolean</a> from '@jafar/react-components/view/Boolean'
  */
 export default class Boolean extends React.Component {
   static propTypes = {

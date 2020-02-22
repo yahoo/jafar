@@ -7,12 +7,12 @@ import React from 'react';
 import DemoMarkup from '../../components/DemoMarkup';
 
 const demo = `import React from 'react';
-import { FormContext, createForm } from '@jafar-org/react-form';
-import { iterateSections, getSectionComponentBoxes } from '@jafar-org/react-layout/Section/utils';
-import { iterateBoxes } from '@jafar-org/react-layout/Box/utils';
+import { FormContext, createForm } from '@jafar/react-form';
+import { iterateSections, getSectionComponentBoxes } from '@jafar/react-layout/Section/utils';
+import { iterateBoxes } from '@jafar/react-layout/Box/utils';
 import SaveIcon from '@material-ui/icons/Save';
-import Item from '@jafar-org/react-layout/Item';
-import FormErrors from '@jafar-org/react-components/view/FormErrors';
+import Item from '@jafar/react-layout/Item';
+import FormErrors from '@jafar/react-components/view/FormErrors';
 import form from './form';
 import sections from './sections';
 

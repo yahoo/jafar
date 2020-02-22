@@ -12,7 +12,7 @@ import InternalSwitch from '@material-ui/core/Switch';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Switch/Switch.jsx">
- Switch</a> from '@jafar-org/react-components/edit/Switch'
+ Switch</a> from '@jafar/react-components/edit/Switch'
  */
 export default class Switch extends React.Component {
   static propTypes = {

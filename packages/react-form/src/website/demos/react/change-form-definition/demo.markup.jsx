@@ -7,7 +7,7 @@ import React from 'react';
 import DemoMarkup from '../../../components/DemoMarkup';
 
 const demo = `import React from 'react';
-import { Form, Field } from '@jafar-org/react-form';
+import { Form, Field } from '@jafar/react-form';
 import Button from '@material-ui/core/Button';
 import DataViewer from './custom-form-components/DataViewer';
 import formEdit from './edit-form';

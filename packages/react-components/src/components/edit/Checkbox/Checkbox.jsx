@@ -13,7 +13,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
  * 
  * Import <a target="_blank" href=
  "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Checkbox/Checkbox.jsx">Checkbox</a>
- from '@jafar-org/react-components/edit/Checkbox'
+ from '@jafar/react-components/edit/Checkbox'
  */
 export default class Checkbox extends React.Component {
   static propTypes = {

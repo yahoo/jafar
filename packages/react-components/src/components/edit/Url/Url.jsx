@@ -12,7 +12,7 @@ import Input from '@material-ui/core/Input';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Url/Url.jsx">
- Url</a> from '@jafar-org/react-components/edit/Url'
+ Url</a> from '@jafar/react-components/edit/Url'
  */
 export default class Url extends React.Component {
   static propTypes = {

@@ -72,7 +72,7 @@ export const customStyles = {
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Select/Select.jsx">
- Select</a> from '@jafar-org/react-components/edit/Select'
+ Select</a> from '@jafar/react-components/edit/Select'
  */
 export default class Select extends React.Component {
   static propTypes = {

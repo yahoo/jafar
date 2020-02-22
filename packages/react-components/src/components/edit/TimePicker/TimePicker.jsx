@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/TimePicker/TimePicker.jsx">
- TimePicker</a> from '@jafar-org/react-components/edit/TimePicker'
+ TimePicker</a> from '@jafar/react-components/edit/TimePicker'
  */
 export default class TimePicker extends React.Component {
   static propTypes = {
