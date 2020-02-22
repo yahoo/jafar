@@ -1,6 +1,6 @@
 {
   "name": "@jafar/react-layout",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Item, List and more Components, to create full entities pages such as create / edit/ details / list with the same UI/UX experience",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",
