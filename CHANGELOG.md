@@ -2,6 +2,8 @@
 
 Changes that have landed in master but are not yet released.
 
+## v1.0.2 (February 22, 2020)
+
 ### General
 
 * Rename packages scope from `jafar-org` to `jafar`
