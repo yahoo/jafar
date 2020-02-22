@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released.
 
+### General
+
+* Rename packages scope from `jafar-org` to `jafar`
+
 ### React Kit
 
 * Fix vulnerability: "serialize-javascript": "^2.1.1"
