@@ -57,7 +57,7 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Layout</h1></header><article><div><span><p>Management layout react components of <code>Item</code> and <code>List</code>, to use in your app. With <code>List</code> component
 you can define a list page for any entity in your system. <code>Item</code> component is used to define editable / viewable pages,
 such as - create / edit / details entities pages - that render sections. Each section render a set of dynamic components.</p>
-<p>In the demos we use <a href="react-form.html">Jafar's Form and Field</a> components, but <code>@jafar-org/react-layout</code> packages does not depend on <a href="react-form.html">@jafar-org/react-form</a>. Any other component can be used in the sections. A combination of both <code>@jafar-org/react-form</code> and <code>@jafar-org/react-layout</code> can create a complete solution for management pages.</p>
+<p>In the demos we use <a href="react-form.html">Jafar's Form and Field</a> components, but <code>@jafar/react-layout</code> packages does not depend on <a href="react-form.html">@jafar/react-form</a>. Any other component can be used in the sections. A combination of both <code>@jafar/react-form</code> and <code>@jafar/react-layout</code> can create a complete solution for management pages.</p>
 <blockquote>
 <p><strong>Note:</strong> You can create different form page templates using the same form definition - but using different <a href="react-layout#section">sections</a> definition for each view / template. For example - for 'Video' entity you might want to show different layouts / fields for different users depending on their role / permissions in the system. See <a href="entity-templates">entity template</a> usage.</p>
 </blockquote>
@@ -67,7 +67,7 @@ such as - create / edit / details entities pages - that render sections. Each se
 <p>React Component that render sections that contains dynamic components, as well as title, footer with actions, menu with actions
 and layout.</p>
 <h4><a class="anchor" aria-hidden="true" id="import"></a><a href="#import" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Import</h4>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-layout/Item'</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-layout/Item'</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h4>
 <table>
@@ -83,7 +83,7 @@ and layout.</p>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-layout/Item'</span>;
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-layout/Item'</span>;
 <span class="hljs-keyword">import</span> sections <span class="hljs-keyword">from</span> <span class="hljs-string">'./sections'</span>;
 
 <span class="hljs-keyword">const</span> item = {
@@ -134,7 +134,7 @@ and layout.</p>
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Item</span> {<span class="hljs-attr">...item</span>} /&gt;</span>
 </span></code></pre>
 <p>sections.js:</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> { Field } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-form'</span>;
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> { Field } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-form'</span>;
 
 <span class="hljs-keyword">const</span> columnStyle = {
   <span class="hljs-attr">width</span>: <span class="hljs-string">'400px'</span>,
@@ -249,7 +249,7 @@ and layout.</p>
 <h3><a class="anchor" aria-hidden="true" id="section"></a><a href="#section" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section</h3>
 <p>React Component that renders title and composition of components. Each section can contain sub sections as well.</p>
 <h4><a class="anchor" aria-hidden="true" id="import-1"></a><a href="#import-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Import</h4>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-layout/Section'</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-layout/Section'</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="props-1"></a><a href="#props-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h4>
 <table>
@@ -267,7 +267,7 @@ and layout.</p>
 <p>Box can be either flex box (by defining direction, boxes, style)
 or a dynamic component (by defining <code>component</code> and <code>props</code> props).</p>
 <h4><a class="anchor" aria-hidden="true" id="import-2"></a><a href="#import-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Import</h4>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar-org/react-layout/Box'</span>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> Item <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-layout/Box'</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="props-2"></a><a href="#props-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h4>
 <table>
