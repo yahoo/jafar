@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/Text/Text.jsx">
- Text</a> from '@jafar-org/react-components/view/Text'
+ Text</a> from '@jafar/react-components/view/Text'
  */
 export default class Text extends React.Component {
   static propTypes = {

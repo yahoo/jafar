@@ -50,7 +50,7 @@ If process.env.NODE_ENV is 'development' then the default is logLevels.DEBUG, ot
 Change log level using the following exposed `setLogLevel` function and `logLevels` enum:
 
 ```javascript
-import { setLogLevel, logLevels } from '@jafar-org/form';
+import { setLogLevel, logLevels } from '@jafar/form';
 
 setLogLevel(logLevels.DEBUG);
 ```

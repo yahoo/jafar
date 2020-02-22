@@ -1,4 +1,4 @@
-import checkboxCollection from '@jafar-org/react-components/edit/CheckboxCollection';
+import checkboxCollection from '@jafar/react-components/edit/CheckboxCollection';
 import mockService from './mocks/service';
 
 export default {

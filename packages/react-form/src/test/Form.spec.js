@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as JForm from '@jafar-org/form';
+import * as JForm from '@jafar/form';
 import { Form } from '../components';
 
 describe('Form', () => {

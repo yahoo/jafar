@@ -1,4 +1,4 @@
-import InputText from '@jafar-org/react-components/edit/Text';
+import InputText from '@jafar/react-components/edit/Text';
 
 export default {
   InputText,

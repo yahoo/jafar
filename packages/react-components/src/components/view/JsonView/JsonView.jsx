@@ -21,7 +21,7 @@ const JsonViewWrapper = styled.div`
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/JsonView/JsonView.jsx">
- JsonView</a> from '@jafar-org/react-components/view/JsonView'
+ JsonView</a> from '@jafar/react-components/view/JsonView'
  */
 export default class JsonView extends React.Component {
   static propTypes = {

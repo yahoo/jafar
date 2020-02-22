@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released.
 
+### General
+
+* Rename packages scope from `jafar-org` to `jafar`
+
 ### React Kit
 
 * Fix vulnerability: "serialize-javascript": "^2.1.1"
@@ -43,16 +47,16 @@ Changes that have landed in master but are not yet released.
 
 ### From
 
-* Add package `@jafar-org/form` 
+* Add package `@jafar/form` 
 
 ### React From
 
-* Add package `@jafar-org/react-form` 
+* Add package `@jafar/react-form` 
 
 ### React Components
 
-* Add package `@jafar-org/react-components` 
+* Add package `@jafar/react-components` 
 
 ### React Layout
 
-* Add package `@jafar-org/react-layout` 
+* Add package `@jafar/react-layout` 

@@ -5,10 +5,10 @@
 ```javascript
 const useContext = require('react').useState;
 const createContext = require('react').createContext;
-const JafarContext = require('@jafar-org/react-form/context').default;
+const JafarContext = require('@jafar/react-form/context').default;
 const InputText = require('../Text').default;
-const Form = require('@jafar-org/react-form/Form').default;
-const Field = require('@jafar-org/react-form/Field').default;
+const Form = require('@jafar/react-form/Form').default;
+const Field = require('@jafar/react-form/Field').default;
 
 // jafar form definition
 const employeeForm = {
@@ -114,11 +114,11 @@ const resources = {
 ```javascript
 const useContext = require('react').useState;
 const createContext = require('react').createContext;
-const JafarContext = require('@jafar-org/react-form/context').default;
+const JafarContext = require('@jafar/react-form/context').default;
 const InputText = require('../Text').default;
 const Select = require('../Select').default;
-const Form = require('@jafar-org/react-form/Form').default;
-const Field = require('@jafar-org/react-form/Field').default;
+const Form = require('@jafar/react-form/Form').default;
+const Field = require('@jafar/react-form/Field').default;
 
 const selectItems = {
   M: { value: 'M', label: 'Male'},

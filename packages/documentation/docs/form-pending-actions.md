@@ -97,7 +97,7 @@ const resources = {
 };
 ```
 
-Test using `@jafar-org/form` - javascript form class
+Test using `@jafar/form` - javascript form class
 
 ```
 /*

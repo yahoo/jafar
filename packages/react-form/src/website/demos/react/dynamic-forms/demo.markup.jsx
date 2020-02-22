@@ -7,7 +7,7 @@ import React from 'react';
 import DemoMarkup from '../../../components/DemoMarkup';
 
 const demo = `import React from 'react';
-import { createForm, FormContext, createForm } from '@jafar-org/react-form';
+import { createForm, FormContext, createForm } from '@jafar/react-form';
 import Button from '@material-ui/core/Button';
 import ReactJson from 'react-json-view';
 import form from './form/index.js';
@@ -43,7 +43,7 @@ import { clone, cloneDeep } from 'lodash';
 import { withStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
-import { createForm, FormContext, createForm } from '@jafar-org/react-form';
+import { createForm, FormContext, createForm } from '@jafar/react-form';
 import styled from 'styled-components';
 import employeeForm from './form';
 

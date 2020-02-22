@@ -168,8 +168,8 @@ export default {
 Aggregates all form's [components](component) into one object and export it.
 
 ```javascript
-import InputText from '@jafar-org/react-components/edit/Text';
-import Select from '@jafar-org/react-components/view/Select';
+import InputText from '@jafar/react-components/edit/Text';
+import Select from '@jafar/react-components/view/Select';
 import Friends from './Friends.js'; // custom component - exports object { renderer, stateChange }
 
 export default { 

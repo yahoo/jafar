@@ -5,7 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mapFieldToProps } from '@jafar-org/form';
+import { mapFieldToProps } from '@jafar/form';
 import FormContext from './context';
 
 const propTypes = {

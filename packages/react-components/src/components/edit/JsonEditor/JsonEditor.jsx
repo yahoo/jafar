@@ -20,7 +20,7 @@ const JsonEditorWrapper = styled.div`
  * Import <a target="_blank" href=
  "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/JsonEditor/JsonEditor.jsx">
  JsonEditor</a>
- from '@jafar-org/react-components/edit/JsonEditor'
+ from '@jafar/react-components/edit/JsonEditor'
  */
 export default class JsonEditor extends React.Component {
   static propTypes = {

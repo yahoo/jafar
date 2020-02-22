@@ -5,7 +5,7 @@
 
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Item from '@jafar-org/react-layout/Item';
+import Item from '@jafar/react-layout/Item';
 import { clone } from 'lodash';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Delete';
@@ -16,7 +16,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import { Form, FormContext } from '@jafar-org/react-form';
+import { Form, FormContext } from '@jafar/react-form';
 import Styled from './DynamicItemsModal.Styles';
 
 const deafultLabels = {
@@ -33,7 +33,7 @@ const deafultLabels = {
  * Import <a target="_blank" href=
  "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/
  DynamicItemsModal/DynamicItemsModal.jsx">
- DynamicItemsModal</a> from '@jafar-org/react-components/edit/DynamicItemsModal'
+ DynamicItemsModal</a> from '@jafar/react-components/edit/DynamicItemsModal'
  */
 class DynamicItemsModal extends React.Component {
   static contextType = FormContext;

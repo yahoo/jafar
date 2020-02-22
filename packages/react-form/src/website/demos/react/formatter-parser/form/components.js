@@ -1,4 +1,4 @@
-import inputNumber from '@jafar-org/react-components/edit/Number';
+import inputNumber from '@jafar/react-components/edit/Number';
 
 export default {
   inputNumber,

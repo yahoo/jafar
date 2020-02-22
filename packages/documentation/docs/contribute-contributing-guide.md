@@ -34,10 +34,10 @@ Some packages include a demo website, run `npm start` to see them and use them d
 
 #### Update Code
 
-Change the code in order to fullfil an issue needs. Keep in mind that Jafar is a `monorepo` - meaning a change in a specific package might affect other packages, or require other packages updates. For example - changing `@jafar-org/form` package, might affect or require additional change in `@jafar-org/react-form` package. See Jafar's [packages](https://yahoo.github.io/jafar/docs/packages.html) structure for more info.
+Change the code in order to fullfil an issue needs. Keep in mind that Jafar is a `monorepo` - meaning a change in a specific package might affect other packages, or require other packages updates. For example - changing `@jafar/form` package, might affect or require additional change in `@jafar/react-form` package. See Jafar's [packages](https://yahoo.github.io/jafar/docs/packages.html) structure for more info.
 
 - To test a change in one package on another package run `npm run build-package` on the changed package to update its dist folder which is linked to other packages that depend on it.
-- We try to keep `@jafar-org/react-component` as generic as possible. We also expect all the params under state to be stringify (for example, don't pass components or functions in the state object) - because we want our common components to be stateless and support persistency.
+- We try to keep `@jafar/react-component` as generic as possible. We also expect all the params under state to be stringify (for example, don't pass components or functions in the state object) - because we want our common components to be stateless and support persistency.
 
 #### Add Tests
 
@@ -49,9 +49,9 @@ We expect you to verify you change prior to submitting a pull:
 - Run `npm run lint` on each updated package, and fix lint issues (run `npm run lint-fix` to auto fix most of the issues).
 - Run `npm run coverage -- --watchAll` on each updated package, to run unit tests and verify coverage is not hurt. Under each package there is a `coverage` folder. Open coverage/lcov-report/index.html to view full coverage report.
 - On each updated package - if `e2e` script exists in package.json - Run `npm start` in one terminal tab, and then `npm run e2e` on another tab - to verify end to end tests.
-- Verify all potential affected packages e2e tests. For example - when changing `@jafar-org/form` - verify also `@jafar-org/react-form` and `@jafar-org/react-layout` e2e tests. Steps to verify:
-  - Update the `dist` folder of the changed package. For example run `npm run build-package` from `@jafar-org/react-form`.
-  - From the tested package (For example from `@jafar-org/react-form`) run `npm start` in one terminal tab, and then `npm run e2e` on another tab - to verify end to end tests.
+- Verify all potential affected packages e2e tests. For example - when changing `@jafar/form` - verify also `@jafar/react-form` and `@jafar/react-layout` e2e tests. Steps to verify:
+  - Update the `dist` folder of the changed package. For example run `npm run build-package` from `@jafar/react-form`.
+  - From the tested package (For example from `@jafar/react-form`) run `npm start` in one terminal tab, and then `npm run e2e` on another tab - to verify end to end tests.
 
 #### Submit Pull Request
 

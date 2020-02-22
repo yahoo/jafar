@@ -12,7 +12,7 @@ import Input from '@material-ui/core/Input';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Password/Password.jsx">
- Password</a> from '@jafar-org/react-components/edit/Password'
+ Password</a> from '@jafar/react-components/edit/Password'
  */
 export default class Password extends React.Component {
   static propTypes = {

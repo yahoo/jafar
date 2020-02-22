@@ -32,7 +32,7 @@ await myForm.init(model, resources, settings);
 #### Example
 
 ```javascript
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define user form
 const model = {
@@ -100,7 +100,7 @@ await myForm.changeValue('firstName', 'Monica');
 #### Example
 
 ```javascript
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define destination form
 const model = {
@@ -163,7 +163,7 @@ await myForm.changeData({ firstName: 'Janice', lastName: 'Litman-Goralnik' });
 #### Example
 
 ```javascript
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define user form
 const model = {
@@ -240,7 +240,7 @@ await myForm.changeState('hobbies', {
 
 ```javascript
 import InputDate from './my-components/InputDate';
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define user form
 const model = {
@@ -327,7 +327,7 @@ await myForm.changeUi('hobbies', ui);
 ```javascript
 import InputDate from './my-components/InputDate';
 import DatePicker from './my-components/DatePicker';
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define user form
 const model = {
@@ -387,7 +387,7 @@ await myForm.changeContext({ userId: '123', companyId: '456' });
 #### Example
 
 ```javascript
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define order form
 const model = {
@@ -467,7 +467,7 @@ Function has no args.
 
 ```javascript
 import MyService from './MyService';
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define user form
 const model = {
@@ -539,7 +539,7 @@ Delete internal form definition (model & resources).
 #### Example
 
 ```javascript
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define user form
 const model = {
@@ -589,7 +589,7 @@ Function has no args.
 
 ```javascript
 import MyService from './MyService';
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 // define user form
 const model = {

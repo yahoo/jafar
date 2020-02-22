@@ -1,1 +1,1 @@
-module.exports = require('@jafar-org/js-kit/config/lintstagedrc.js');
+module.exports = require('@jafar/js-kit/config/lintstagedrc.js');

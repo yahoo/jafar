@@ -12,7 +12,7 @@ import dateformat from 'dateformat';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/Date/Date.jsx">
- Date</a> from '@jafar-org/react-components/view/Date'
+ Date</a> from '@jafar/react-components/view/Date'
  */
 export default class DateView extends React.Component {
   static propTypes = {

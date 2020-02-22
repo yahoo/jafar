@@ -8,7 +8,7 @@ UI component for a field to use, such as DatePicker, Text, Number and and custom
 Component can be editable (like `Checkboxes`) or readonly (like `Label`).
 Each UI library can define a set of properties api which it will take data from the current form instance and 
 inject it to its Field's components (properties like the component value, if its disabled, required and more).
-For example, `@jafar-org/react-components` API is defined in [here](react-components.html).
+For example, `@jafar/react-components` API is defined in [here](react-components.html).
 
 ## Field Component
 

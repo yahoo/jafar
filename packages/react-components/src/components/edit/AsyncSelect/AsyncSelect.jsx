@@ -14,7 +14,7 @@ import { customStyles } from '../Select/Select';
  * Import <a target="_blank" href=
  "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/AsyncSelect/AsyncSelect.jsx">
  AsyncSelect</a>
- from '@jafar-org/react-components/edit/AsyncSelect'
+ from '@jafar/react-components/edit/AsyncSelect'
  */
 export default class AsyncSelect extends React.Component {
   static propTypes = {

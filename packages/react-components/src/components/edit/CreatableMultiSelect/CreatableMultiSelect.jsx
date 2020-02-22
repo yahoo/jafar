@@ -14,7 +14,7 @@ import { customStyles } from '../Select/Select';
  * Import <a target="_blank" href=
  "https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/
  CreatableMultiSelect/CreatableMultiSelect.jsx">
- CreatableMultiSelect</a> from '@jafar-org/react-components/edit/CreatableMultiSelect'
+ CreatableMultiSelect</a> from '@jafar/react-components/edit/CreatableMultiSelect'
  */
 export default class CreatableMultiSelect extends React.Component {
   static propTypes = {

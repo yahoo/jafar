@@ -12,7 +12,7 @@ import Input from '@material-ui/core/Input';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Number/Number.jsx">
- Number</a> from '@jafar-org/react-components/edit/Number'
+ Number</a> from '@jafar/react-components/edit/Number'
  */
 export default class Number extends React.Component {
   static propTypes = {

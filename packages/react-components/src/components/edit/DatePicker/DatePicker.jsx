@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/DatePicker/DatePicker.jsx">
- DatePicker</a> from '@jafar-org/react-components/edit/DatePicker'
+ DatePicker</a> from '@jafar/react-components/edit/DatePicker'
  */
 export default class DatePicker extends React.Component {
   static propTypes = {

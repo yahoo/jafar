@@ -467,7 +467,7 @@ Return `undefined` when form is valid or `errors object` ({ fieldId: [{ name, me
 
 ### Example
 ```
-import Form from '@jafar-org/form';
+import Form from '@jafar/form';
 
 const model = {
   // ...

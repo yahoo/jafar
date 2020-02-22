@@ -810,7 +810,7 @@ log level `logLevel` is not supported. Supported log levels are: `debug`, `warn`
 Example
 
 ```javascript
-import { setLogLevel } from '@jafar-org/core/logger';
+import { setLogLevel } from '@jafar/core/logger';
 
 setLogLevel('bla');
 ```
@@ -818,7 +818,7 @@ setLogLevel('bla');
 Solution
 
 ```javascript
-import { setLogLevel, logLevels } from '@jafar-org/core/logger';
+import { setLogLevel, logLevels } from '@jafar/core/logger';
 
 setLogLevel(logLevels.DEBUG);
 ```

@@ -4,7 +4,7 @@
   */
 
 import React from 'react';
-import FormContext from '@jafar-org/react-form/context';
+import FormContext from '@jafar/react-form/context';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { withTheme } from '@material-ui/core/styles';
@@ -72,7 +72,7 @@ const mapFieldsErrors = (fields) => {
  * 
  * Import <a target="_blank" 
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/FormErrors/FormErrors.jsx">
- FormErrors</a> from '@jafar-org/react-components/view/FormErrors'
+ FormErrors</a> from '@jafar/react-components/view/FormErrors'
  */
 function FormErrors({ labels = defaultLabels, onClickField }) {
   const form = React.useContext(FormContext);
