@@ -6,7 +6,7 @@ Changes that have landed in master but are not yet released
 
 ### General
 
-* Update Jafar dependencies to ^1.0.3
+* Update Jafar dependencies to 1.0.3
 
 ## v1.0.2 (February 22, 2020)
 
