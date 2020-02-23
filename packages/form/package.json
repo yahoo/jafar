@@ -1,6 +1,6 @@
 {
   "name": "@jafar/form",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Javascript Form Class",
   "main": "src/index.js",
   "repository": {
@@ -30,7 +30,7 @@
     "dateformat": "^3.0.3"
   },
   "devDependencies": {
-    "@jafar/js-kit": "^1.0.0"
+    "@jafar/js-kit": "^1.0.3"
   },
   "keywords": [
     "jafar",
