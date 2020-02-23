@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@date-io/date-fns": "^1.3.12",
-    "@jafar/react-layout": "^1.0.0",
+    "@jafar/react-layout": "^1.0.3",
     "@material-ui/core": "^4.1.2",
     "@material-ui/icons": "^4.0.2",
     "@material-ui/pickers": "^3.1.2",
@@ -45,8 +45,8 @@
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
-    "@jafar/react-form": "^1.0.0",
-    "@jafar/react-kit": "1.0.1",
+    "@jafar/react-form": "^1.0.3",
+    "@jafar/react-kit": "^1.0.3",
     "react-styleguidist": "^9.0.5"
   },
   "keywords": [

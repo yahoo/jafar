@@ -30,7 +30,7 @@
     "dateformat": "^3.0.3"
   },
   "devDependencies": {
-    "@jafar/js-kit": "^1.0.0"
+    "@jafar/js-kit": "^1.0.3"
   },
   "keywords": [
     "jafar",
