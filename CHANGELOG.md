@@ -6,7 +6,7 @@ Changes that have landed in master but are not yet released
 
 ### React Kit
 
-* Upgrade react-scripts to 3.4.0
+* Upgrade `react-scripts` to 3.4.0
 
 ## v1.0.3 (February 23, 2020)
 
