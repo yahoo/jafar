@@ -1,7 +1,8 @@
 {
   "name": "@jafar/react-form",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Form and Field Components, based on @jafar/form",
+  "license": "MIT",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",
   "repository": {
@@ -36,12 +37,12 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@jafar/form": "^1.0.3",
+    "@jafar/form": "^1.0.4",
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
-    "@jafar/react-components": "^1.0.3",
-    "@jafar/react-kit": "^1.0.3",
+    "@jafar/react-components": "^1.0.4",
+    "@jafar/react-kit": "^1.0.4",
     "jszip": "^3.2.2",
     "prismjs": "^1.15.0",
     "raw-loader": "4.0.0",

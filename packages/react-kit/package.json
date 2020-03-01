@@ -1,7 +1,8 @@
 {
   "name": "@jafar/react-kit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React development environment utilities such as scripts and config files",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/yahoo/jafar.git",
@@ -18,7 +19,7 @@
     "publish-package": "npm publish dist --access public || echo publish failed"
   },
   "dependencies": {
-    "@jafar/js-kit": "^1.0.3",
+    "@jafar/js-kit": "^1.0.4",
     "babel-plugin-styled-components": "^1.10.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
@@ -29,7 +30,7 @@
     "puppeteer": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.3.0",
+    "react-scripts": "^3.4.0",
     "serialize-javascript": "^2.1.2",
     "start-server-and-test": "^1.9.1",
     "styled-components": "^4.1.3"

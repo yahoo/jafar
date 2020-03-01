@@ -2,11 +2,17 @@
 
 Changes that have landed in master but are not yet released
 
+## v1.0.4 (February 24, 2020)
+
+### React Kit
+
+* Upgrade `react-scripts` to 3.4.0
+
 ## v1.0.3 (February 23, 2020)
 
 ### General
 
-* Update Jafar dependencies to 1.0.3
+* Upgrade Jafar dependencies to 1.0.3
 
 ## v1.0.2 (February 22, 2020)
 
