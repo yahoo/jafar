@@ -2,6 +2,7 @@
   "name": "@jafar/react-form",
   "version": "1.0.4",
   "description": "React Form and Field Components, based on @jafar/form",
+  "license": "MIT",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",
   "repository": {

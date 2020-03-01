@@ -2,6 +2,7 @@
   "name": "@jafar/documentation",
   "version": "1.0.4",
   "description": "Jafar documentation",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/yahoo/jafar"

@@ -2,6 +2,7 @@
   "name": "@jafar/form",
   "version": "1.0.4",
   "description": "Javascript Form Class",
+  "license": "MIT",
   "main": "src/index.js",
   "repository": {
     "type": "git",
