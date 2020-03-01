@@ -1,6 +1,7 @@
 {
   "name": "@jafar/react-components",
   "version": "1.0.4",
+  "license": "MIT",
   "description": "React common components with unified api to be used in a Jafar form (using material components as an underline layer)",
   "repository": {
     "type": "git",
