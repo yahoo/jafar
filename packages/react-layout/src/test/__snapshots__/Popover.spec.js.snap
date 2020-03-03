@@ -4,6 +4,7 @@ exports[`Popover Should render - ok 1`] = `
 <ForwardRef(Popper)
   anchorEl={<div />}
   className="makeStyles-popper-1"
+  disablePortal={true}
   id="My Id"
   modifiers={
     Object {

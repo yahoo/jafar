@@ -11,7 +11,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   popper: {
     top: '-10px !important',
-    zIndex: 20,
     '&[x-placement*="bottom"] $arrow': {
       top: 0,
       left: 0,
@@ -115,6 +114,7 @@ export default function Popover(props) {
       anchorEl={props.targetRef.current}
       placement="top"
       className={classes.popper}
+      disablePortal={true}
       modifiers={modifiers}>
       <span className={classes.arrow} ref={setArrowRef} />
       <Paper className={classes.paper}>
