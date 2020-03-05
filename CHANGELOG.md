@@ -2,6 +2,14 @@
 
 Changes that have landed in master but are not yet released
 
+### General
+
+* Add license field to all packages 
+
+### React Layout
+
+* Footer popover - placement in parent container instead of body
+
 ## v1.0.4 (February 24, 2020)
 
 ### React Kit
