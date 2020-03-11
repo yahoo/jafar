@@ -1,0 +1,61 @@
+{
+  "name": "@jafar/react-editor",
+  "version": "1.0.4",
+  "description": "Create jafar form model using a simple UI",
+  "license": "MIT",
+  "main": "src/website/app.js",
+  "homepage": "http://localhost:3000/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yahoo/jafar.git",
+    "directory": "packages/react-editor"
+  },
+  "publishConfig": {
+    "directory": "dist",
+    "access": "public"
+  },
+  "scripts": {
+    "start": "node node_modules/@jafar/react-kit/scripts/start.js",
+    "build-package": "rm -rf dist/* && node ../../node_modules/@babel/cli/bin/babel.js  src/components --out-dir dist --copy-files && cp package.json ./dist && cp .npmrc ./dist",
+    "build-website": "node node_modules/@jafar/react-kit/scripts/build.js",
+    "test": "node node_modules/@jafar/react-kit/scripts/test.js",
+    "coverage": "npm run test -- --coverage",
+    "lint": "node ../../node_modules/eslint/bin/eslint.js './src/**/*.{js,jsx,json}' --config .eslintrc.js",
+    "lint-fix": "npm run lint -- --fix",
+    "e2e": "node node_modules/@jafar/react-kit/scripts/e2e.js",
+    "ci-e2e": "PUBLIC_URL=http://localhost:3000 npm run build-website && ../../node_modules/start-server-and-test/src/bin/start.js 'serve -l 3000 -s build' http://localhost:3000/ e2e",
+    "publish-package": "npm publish dist --access public || echo publish failed",
+    "deploy-website": "PUBLIC_URL=https://yahoo.github.io/jafar/react-editor npm run build-website && gh-pages --dist build --dest react-editor",
+    "watch-package": "npm-watch build-package",
+    "pre-push": "lint-staged"
+  },
+  "watch": {
+    "build-package": "src/components/**/*.js"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@jafar/react-components": "^1.0.4",
+    "@jafar/react-form": "^1.0.4",
+    "@jafar/react-layout": "^1.0.4",
+    "jszip": "^3.2.2"
+  },
+  "devDependencies": {
+    "@jafar/react-kit": "^1.0.4",
+    "react-router-dom": "^5.1.2"
+  },
+  "keywords": [
+    "jafar",
+    "components",
+    "form",
+    "react",
+    "dev",
+    "development",
+    "javascript",
+    "verizon",
+    "ui",
+    "editor"
+  ]
+}

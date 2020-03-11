@@ -1,0 +1,16 @@
+.DS_Store
+
+.idea
+.vscode
+
+/node_modules
+/dist
+/build
+/coverage
+/latest
+/e2e_logs
+/.happypack
+/tarball
+npm-debug.log*
+
+/plato-reports
