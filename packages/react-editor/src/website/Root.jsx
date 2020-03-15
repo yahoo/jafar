@@ -26,13 +26,15 @@ const theme = createMuiTheme({
 });
 
 const Root = () => {
+  const basename = process.env.PUBLIC_URL ? '/jafar/react-editor' : '';
+  
   return ( 
-    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+    <BrowserRouter basename={basename}>
       <StylesProvider generateClassName={generateClassName}>
         <ThemeProvider theme={theme}>
           <Styled.GlobalStyle />
           <Styled.Header>
-            <Styled.InternalLink id="logo" to={'/'}>
+            <Styled.InternalLink id="logo" to="/">
               <Styled.Logo src={require('./jafar.svg')} />
               <Styled.LogoText>Jafar | React Editor</Styled.LogoText>
             </Styled.InternalLink>
@@ -43,9 +45,9 @@ const Root = () => {
           </Styled.Header>
           <Styled.Main id="jafar-react-editor-demos">
             <Switch>
-              <Route exact={true} path={`/`}><Redirect to={`/form/`} /></Route>
-              <Route exact={true} path={`/form/:formId`} component={FormEdit} />
-              <Route exact={true} path={`/form/`} render={FormList} />
+              <Route exact={true} path="/"><Redirect to="/form/" /></Route>
+              <Route exact={true} path="/form/:formId" component={FormEdit} />
+              <Route exact={true} path="/form/" render={FormList} />
             </Switch>
           </Styled.Main>
         </ThemeProvider>
