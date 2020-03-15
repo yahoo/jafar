@@ -34,7 +34,7 @@ export default withTheme(({ value = [], state = {}, onValueChange, onStateChange
       newState.validatorsStates[index] = getInitialState();
     });
     onStateChange(newState);
-  }, [onStateChange, state, value]);
+  }, []);
 
   if (!state.validatorsStates) {
     return (null);

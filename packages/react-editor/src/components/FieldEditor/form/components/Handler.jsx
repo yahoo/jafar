@@ -47,7 +47,7 @@ export default ({ value = {}, state = {}, invalid, onValueChange, onStateChange 
     const selectValue = isCustom ? 'CUSTOM' : value.name;
     const customValue = isCustom ? value.name : undefined;
     onStateChange({ ...state, selectValue, customValue, argsChecked: !!value[argsName] });
-  }, [argsName, onStateChange, state, value]);
+  }, []);
 
   if (!Object.keys(state).includes('selectValue')) {  
     return (null);
