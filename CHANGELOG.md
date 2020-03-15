@@ -10,6 +10,10 @@ Changes that have landed in master but are not yet released
 
 * Footer popover - placement in parent container instead of body
 
+### React Editor
+
+* Add package `react-editor` - demo website to create form configuration using a simple UI
+
 ## v1.0.4 (February 24, 2020)
 
 ### React Kit

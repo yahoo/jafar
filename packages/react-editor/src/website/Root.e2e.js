@@ -208,11 +208,4 @@ async function testCreateNewForm(page) {
   // click remove form
 
   // verify form is not in the list anymore
-
-
-
-
-
-
-
 }
