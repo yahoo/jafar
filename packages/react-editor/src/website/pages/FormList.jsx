@@ -156,9 +156,9 @@ const FormList = ({ history }) => {
     <FormListWrapper id="form-list">
       <h1>Forms</h1>
       <p>
-        We created a simple UI Form Editor - which you can use to create the form model configuration, to help you get started. 
+        We created a simple UI Form Editor - which you can use to create the form <Link href="https://yahoo.github.io/jafar/docs/arguments.html#model">model configuration</Link>, to help you get started. 
         These form configurations demos are saved on local storage.
-        You can create form models, and download them (you might need to supply resources such as actual components
+        You can create form models, and download them (you might need to supply <Link href="https://yahoo.github.io/jafar/docs/arguments.html#resources">resources</Link> such as actual components
         if defined prior to use it in the Form class / component). In addition you can clone the repo and
         change / adapt the Form Editor to your system's needs (located in the "react-editor" package).
       </p>
