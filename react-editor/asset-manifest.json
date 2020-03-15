@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "https://yahoo.github.io/jafar/react-editor/static/js/main.f2c9adfe.js",
-    "main.js.map": "https://yahoo.github.io/jafar/react-editor/static/js/main.f2c9adfe.js.map",
+    "main.js": "https://yahoo.github.io/jafar/react-editor/static/js/main.f95b746e.js",
+    "main.js.map": "https://yahoo.github.io/jafar/react-editor/static/js/main.f95b746e.js.map",
     "index.html": "https://yahoo.github.io/jafar/react-editor/index.html",
-    "precache-manifest.b9cf5bb38629c85f05b8b969438c310c.js": "https://yahoo.github.io/jafar/react-editor/precache-manifest.b9cf5bb38629c85f05b8b969438c310c.js",
+    "precache-manifest.3e9741959c3d31929bb0f068f59b139b.js": "https://yahoo.github.io/jafar/react-editor/precache-manifest.3e9741959c3d31929bb0f068f59b139b.js",
     "service-worker.js": "https://yahoo.github.io/jafar/react-editor/service-worker.js",
-    "static/js/main.f2c9adfe.js.LICENSE.txt": "https://yahoo.github.io/jafar/react-editor/static/js/main.f2c9adfe.js.LICENSE.txt",
+    "static/js/main.f95b746e.js.LICENSE.txt": "https://yahoo.github.io/jafar/react-editor/static/js/main.f95b746e.js.LICENSE.txt",
     "static/media/jafar.svg": "https://yahoo.github.io/jafar/react-editor/static/media/jafar.1c1a5205.svg"
   },
   "entrypoints": [
-    "static/js/main.f2c9adfe.js"
+    "static/js/main.f95b746e.js"
   ]
 }
