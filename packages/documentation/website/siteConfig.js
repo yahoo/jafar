@@ -13,6 +13,7 @@ const users = require('./users.js');
 const FORM_DEMO_URL = `https://yahoo.github.io/jafar/react-form/index.html`;
 const COMPONENTS_DEMO_URL = `https://yahoo.github.io/jafar/react-components/index.html`;
 const LAYOUT_DEMO_URL = `https://yahoo.github.io/jafar/react-layout/index.html`;
+const EDITOR_DEMO_URL = `https://yahoo.github.io/jafar/react-editor/index.html`;
 
 const siteConfig = {
   title: 'Jafar',
@@ -26,6 +27,7 @@ const siteConfig = {
     { label: 'Form Demos', page: 'demo-react-form' },
     { label: 'Components Demos', page: 'demo-react-components' },
     { label: 'Layout Demos', page: 'demo-react-layout' },
+    { label: 'Editor', page: 'demo-react-editor' },
     { search: true },
     { label: 'GitHub', href: 'https://github.com/yahoo/jafar' },
   ],
@@ -33,6 +35,7 @@ const siteConfig = {
   formDemoUrl: FORM_DEMO_URL,
   componentsDemoUrl: COMPONENTS_DEMO_URL,
   layoutDemoUrl: LAYOUT_DEMO_URL,
+  editorDemoUrl: EDITOR_DEMO_URL,
   // search
   algolia: {
     apiKey: 'b58ed82626c77878eae08a098fb75bd5',
