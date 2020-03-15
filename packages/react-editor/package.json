@@ -24,7 +24,6 @@
     "lint-fix": "npm run lint -- --fix",
     "e2e": "node node_modules/@jafar/react-kit/scripts/e2e.js",
     "ci-e2e": "PUBLIC_URL=http://localhost:3000 npm run build-website && ../../node_modules/start-server-and-test/src/bin/start.js 'serve -l 3000 -s build' http://localhost:3000/ e2e",
-    "publish-package": "npm publish dist --access public || echo publish failed",
     "deploy-website": "PUBLIC_URL=https://yahoo.github.io/jafar/react-editor npm run build-website && gh-pages --dist build --dest react-editor",
     "watch-package": "npm-watch build-package",
     "pre-push": "lint-staged"
