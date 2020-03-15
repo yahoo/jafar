@@ -7,7 +7,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGenerateClassName, StylesProvider, ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Styled from './Styled';
 import FormEdit from './pages/FormEdit';
 import FormList from './pages/FormList';
@@ -26,10 +26,8 @@ const theme = createMuiTheme({
 });
 
 const Root = () => {
-  const basename = process.env.PUBLIC_URL ? '/jafar/react-editor' : '';
-  
   return ( 
-    <BrowserRouter basename={basename}>
+    <HashRouter basename="/">
       <StylesProvider generateClassName={generateClassName}>
         <ThemeProvider theme={theme}>
           <Styled.GlobalStyle />
@@ -52,7 +50,7 @@ const Root = () => {
           </Styled.Main>
         </ThemeProvider>
       </StylesProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
