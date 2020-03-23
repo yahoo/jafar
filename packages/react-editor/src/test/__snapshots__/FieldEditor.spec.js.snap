@@ -1890,7 +1890,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                     </ForwardRef>
                                                   </span>
                                                   <NoSsr>
-                                                    <WithStyles(undefined)
+                                                    <WithStyles(memo)
                                                       center={true}
                                                     >
                                                       <ForwardRef(TouchRipple)
@@ -1917,7 +1917,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           />
                                                         </span>
                                                       </ForwardRef(TouchRipple)>
-                                                    </WithStyles(undefined)>
+                                                    </WithStyles(memo)>
                                                   </NoSsr>
                                                 </button>
                                               </ForwardRef(ButtonBase)>
@@ -2205,7 +2205,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           Basic
                                                         </span>
                                                         <NoSsr>
-                                                          <WithStyles(undefined)
+                                                          <WithStyles(memo)
                                                             center={false}
                                                           >
                                                             <ForwardRef(TouchRipple)
@@ -2232,7 +2232,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                                 />
                                                               </span>
                                                             </ForwardRef(TouchRipple)>
-                                                          </WithStyles(undefined)>
+                                                          </WithStyles(memo)>
                                                         </NoSsr>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
@@ -2321,7 +2321,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           Validations
                                                         </span>
                                                         <NoSsr>
-                                                          <WithStyles(undefined)
+                                                          <WithStyles(memo)
                                                             center={false}
                                                           >
                                                             <ForwardRef(TouchRipple)
@@ -2348,7 +2348,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                                 />
                                                               </span>
                                                             </ForwardRef(TouchRipple)>
-                                                          </WithStyles(undefined)>
+                                                          </WithStyles(memo)>
                                                         </NoSsr>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
@@ -2437,7 +2437,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           Terms
                                                         </span>
                                                         <NoSsr>
-                                                          <WithStyles(undefined)
+                                                          <WithStyles(memo)
                                                             center={false}
                                                           >
                                                             <ForwardRef(TouchRipple)
@@ -2464,7 +2464,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                                 />
                                                               </span>
                                                             </ForwardRef(TouchRipple)>
-                                                          </WithStyles(undefined)>
+                                                          </WithStyles(memo)>
                                                         </NoSsr>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
@@ -2553,7 +2553,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           UI
                                                         </span>
                                                         <NoSsr>
-                                                          <WithStyles(undefined)
+                                                          <WithStyles(memo)
                                                             center={false}
                                                           >
                                                             <ForwardRef(TouchRipple)
@@ -2580,7 +2580,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                                 />
                                                               </span>
                                                             </ForwardRef(TouchRipple)>
-                                                          </WithStyles(undefined)>
+                                                          </WithStyles(memo)>
                                                         </NoSsr>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
@@ -5465,7 +5465,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           Cancel
                                                         </span>
                                                         <NoSsr>
-                                                          <WithStyles(undefined)
+                                                          <WithStyles(memo)
                                                             center={false}
                                                           >
                                                             <ForwardRef(TouchRipple)
@@ -5492,7 +5492,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                                 />
                                                               </span>
                                                             </ForwardRef(TouchRipple)>
-                                                          </WithStyles(undefined)>
+                                                          </WithStyles(memo)>
                                                         </NoSsr>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
@@ -5688,7 +5688,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           Save
                                                         </span>
                                                         <NoSsr>
-                                                          <WithStyles(undefined)
+                                                          <WithStyles(memo)
                                                             center={false}
                                                           >
                                                             <ForwardRef(TouchRipple)
@@ -5715,7 +5715,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                                 />
                                                               </span>
                                                             </ForwardRef(TouchRipple)>
-                                                          </WithStyles(undefined)>
+                                                          </WithStyles(memo)>
                                                         </NoSsr>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>

@@ -20,7 +20,7 @@ const Grid = ({ columns, data, headerActions, rowActions }) => {
         columns.map((column, index) => (<Styled.Cell key={index}>{column.label}</Styled.Cell>))
       }
       {
-        rowActions && <Styled.Cell minWidth="50px"></Styled.Cell>
+        rowActions && <Styled.Cell minWidth="50px" />
       }
     </Styled.HeaderRow>
     <Styled.Body>

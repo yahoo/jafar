@@ -36,6 +36,7 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
+    "@jafar/form": "^1.0.4",
     "@jafar/react-components": "^1.0.4",
     "@jafar/react-form": "^1.0.4",
     "@jafar/react-layout": "^1.0.4",
