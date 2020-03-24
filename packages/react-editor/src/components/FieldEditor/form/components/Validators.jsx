@@ -34,7 +34,7 @@ export default withTheme(({ value = [], state = {}, onValueChange, onStateChange
       newState.validatorsStates[index] = getInitialState();
     });
     onStateChange(newState);
-  }, []);
+  }, []); // eslint-disable-line
 
   if (!state.validatorsStates) {
     return (null);
