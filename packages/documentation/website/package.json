@@ -10,8 +10,5 @@
   },
   "devDependencies": {
     "docusaurus": "^1.14.3"
-  },
-  "dependencies": {
-    "react-live": "^1.12.0"
   }
 }
