@@ -317,8 +317,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
       }
     }
   >
-    <styled.div>
+    <styled.div
+      aria-label="form-editor"
+    >
       <StyledComponent
+        aria-label="form-editor"
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
@@ -350,6 +353,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
         forwardedRef={null}
       >
         <div
+          aria-label="form-editor"
           className="sc-fMiknA djaRiq"
         >
           <Form
