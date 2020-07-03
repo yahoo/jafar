@@ -1875,10 +1875,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                           }
                                                         >
                                                           <svg
-                                                            aria-hidden="true"
+                                                            aria-hidden={true}
                                                             className="MuiSvgIcon-root"
                                                             focusable="false"
-                                                            role="presentation"
                                                             viewBox="0 0 24 24"
                                                           >
                                                             <path
@@ -1889,36 +1888,34 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                       </WithStyles(ForwardRef(SvgIcon))>
                                                     </ForwardRef>
                                                   </span>
-                                                  <NoSsr>
-                                                    <WithStyles(memo)
+                                                  <WithStyles(memo)
+                                                    center={true}
+                                                  >
+                                                    <ForwardRef(TouchRipple)
                                                       center={true}
-                                                    >
-                                                      <ForwardRef(TouchRipple)
-                                                        center={true}
-                                                        classes={
-                                                          Object {
-                                                            "child": "MuiTouchRipple-child",
-                                                            "childLeaving": "MuiTouchRipple-childLeaving",
-                                                            "childPulsate": "MuiTouchRipple-childPulsate",
-                                                            "ripple": "MuiTouchRipple-ripple",
-                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                            "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                            "root": "MuiTouchRipple-root",
-                                                          }
+                                                      classes={
+                                                        Object {
+                                                          "child": "MuiTouchRipple-child",
+                                                          "childLeaving": "MuiTouchRipple-childLeaving",
+                                                          "childPulsate": "MuiTouchRipple-childPulsate",
+                                                          "ripple": "MuiTouchRipple-ripple",
+                                                          "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                          "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                          "root": "MuiTouchRipple-root",
                                                         }
+                                                      }
+                                                    >
+                                                      <span
+                                                        className="MuiTouchRipple-root"
                                                       >
-                                                        <span
-                                                          className="MuiTouchRipple-root"
-                                                        >
-                                                          <TransitionGroup
-                                                            childFactory={[Function]}
-                                                            component={null}
-                                                            exit={true}
-                                                          />
-                                                        </span>
-                                                      </ForwardRef(TouchRipple)>
-                                                    </WithStyles(memo)>
-                                                  </NoSsr>
+                                                        <TransitionGroup
+                                                          childFactory={[Function]}
+                                                          component={null}
+                                                          exit={true}
+                                                        />
+                                                      </span>
+                                                    </ForwardRef(TouchRipple)>
+                                                  </WithStyles(memo)>
                                                 </button>
                                               </ForwardRef(ButtonBase)>
                                             </WithStyles(ForwardRef(ButtonBase))>
@@ -2106,7 +2103,6 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                         value="basic"
                                       >
                                         <div
-                                          aria-label="Tabs"
                                           className="MuiTabs-root"
                                         >
                                           <div
@@ -2120,7 +2116,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                             }
                                           >
                                             <div
+                                              aria-label="Tabs"
                                               className="MuiTabs-flexContainer"
+                                              onKeyDown={[Function]}
                                               role="tablist"
                                             >
                                               <WithStyles(ForwardRef(Tab))
@@ -2162,7 +2160,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                     disabled={false}
                                                     focusRipple={true}
                                                     onClick={[Function]}
+                                                    onFocus={[Function]}
                                                     role="tab"
+                                                    tabIndex={0}
                                                   >
                                                     <ForwardRef(ButtonBase)
                                                       aria-selected={true}
@@ -2177,7 +2177,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                       disabled={false}
                                                       focusRipple={true}
                                                       onClick={[Function]}
+                                                      onFocus={[Function]}
                                                       role="tab"
+                                                      tabIndex={0}
                                                     >
                                                       <button
                                                         aria-selected={true}
@@ -2204,36 +2206,34 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         >
                                                           Basic
                                                         </span>
-                                                        <NoSsr>
-                                                          <WithStyles(memo)
+                                                        <WithStyles(memo)
+                                                          center={false}
+                                                        >
+                                                          <ForwardRef(TouchRipple)
                                                             center={false}
-                                                          >
-                                                            <ForwardRef(TouchRipple)
-                                                              center={false}
-                                                              classes={
-                                                                Object {
-                                                                  "child": "MuiTouchRipple-child",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                  "ripple": "MuiTouchRipple-ripple",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                  "root": "MuiTouchRipple-root",
-                                                                }
+                                                            classes={
+                                                              Object {
+                                                                "child": "MuiTouchRipple-child",
+                                                                "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                "ripple": "MuiTouchRipple-ripple",
+                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                "root": "MuiTouchRipple-root",
                                                               }
+                                                            }
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root"
                                                             >
-                                                              <span
-                                                                className="MuiTouchRipple-root"
-                                                              >
-                                                                <TransitionGroup
-                                                                  childFactory={[Function]}
-                                                                  component={null}
-                                                                  exit={true}
-                                                                />
-                                                              </span>
-                                                            </ForwardRef(TouchRipple)>
-                                                          </WithStyles(memo)>
-                                                        </NoSsr>
+                                                              <TransitionGroup
+                                                                childFactory={[Function]}
+                                                                component={null}
+                                                                exit={true}
+                                                              />
+                                                            </span>
+                                                          </ForwardRef(TouchRipple)>
+                                                        </WithStyles(memo)>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
                                                   </WithStyles(ForwardRef(ButtonBase))>
@@ -2278,7 +2278,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                     disabled={false}
                                                     focusRipple={true}
                                                     onClick={[Function]}
+                                                    onFocus={[Function]}
                                                     role="tab"
+                                                    tabIndex={-1}
                                                   >
                                                     <ForwardRef(ButtonBase)
                                                       aria-selected={false}
@@ -2293,7 +2295,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                       disabled={false}
                                                       focusRipple={true}
                                                       onClick={[Function]}
+                                                      onFocus={[Function]}
                                                       role="tab"
+                                                      tabIndex={-1}
                                                     >
                                                       <button
                                                         aria-selected={false}
@@ -2312,7 +2316,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         onTouchMove={[Function]}
                                                         onTouchStart={[Function]}
                                                         role="tab"
-                                                        tabIndex={0}
+                                                        tabIndex={-1}
                                                         type="button"
                                                       >
                                                         <span
@@ -2320,36 +2324,34 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         >
                                                           Validations
                                                         </span>
-                                                        <NoSsr>
-                                                          <WithStyles(memo)
+                                                        <WithStyles(memo)
+                                                          center={false}
+                                                        >
+                                                          <ForwardRef(TouchRipple)
                                                             center={false}
-                                                          >
-                                                            <ForwardRef(TouchRipple)
-                                                              center={false}
-                                                              classes={
-                                                                Object {
-                                                                  "child": "MuiTouchRipple-child",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                  "ripple": "MuiTouchRipple-ripple",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                  "root": "MuiTouchRipple-root",
-                                                                }
+                                                            classes={
+                                                              Object {
+                                                                "child": "MuiTouchRipple-child",
+                                                                "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                "ripple": "MuiTouchRipple-ripple",
+                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                "root": "MuiTouchRipple-root",
                                                               }
+                                                            }
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root"
                                                             >
-                                                              <span
-                                                                className="MuiTouchRipple-root"
-                                                              >
-                                                                <TransitionGroup
-                                                                  childFactory={[Function]}
-                                                                  component={null}
-                                                                  exit={true}
-                                                                />
-                                                              </span>
-                                                            </ForwardRef(TouchRipple)>
-                                                          </WithStyles(memo)>
-                                                        </NoSsr>
+                                                              <TransitionGroup
+                                                                childFactory={[Function]}
+                                                                component={null}
+                                                                exit={true}
+                                                              />
+                                                            </span>
+                                                          </ForwardRef(TouchRipple)>
+                                                        </WithStyles(memo)>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
                                                   </WithStyles(ForwardRef(ButtonBase))>
@@ -2394,7 +2396,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                     disabled={false}
                                                     focusRipple={true}
                                                     onClick={[Function]}
+                                                    onFocus={[Function]}
                                                     role="tab"
+                                                    tabIndex={-1}
                                                   >
                                                     <ForwardRef(ButtonBase)
                                                       aria-selected={false}
@@ -2409,7 +2413,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                       disabled={false}
                                                       focusRipple={true}
                                                       onClick={[Function]}
+                                                      onFocus={[Function]}
                                                       role="tab"
+                                                      tabIndex={-1}
                                                     >
                                                       <button
                                                         aria-selected={false}
@@ -2428,7 +2434,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         onTouchMove={[Function]}
                                                         onTouchStart={[Function]}
                                                         role="tab"
-                                                        tabIndex={0}
+                                                        tabIndex={-1}
                                                         type="button"
                                                       >
                                                         <span
@@ -2436,36 +2442,34 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         >
                                                           Terms
                                                         </span>
-                                                        <NoSsr>
-                                                          <WithStyles(memo)
+                                                        <WithStyles(memo)
+                                                          center={false}
+                                                        >
+                                                          <ForwardRef(TouchRipple)
                                                             center={false}
-                                                          >
-                                                            <ForwardRef(TouchRipple)
-                                                              center={false}
-                                                              classes={
-                                                                Object {
-                                                                  "child": "MuiTouchRipple-child",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                  "ripple": "MuiTouchRipple-ripple",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                  "root": "MuiTouchRipple-root",
-                                                                }
+                                                            classes={
+                                                              Object {
+                                                                "child": "MuiTouchRipple-child",
+                                                                "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                "ripple": "MuiTouchRipple-ripple",
+                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                "root": "MuiTouchRipple-root",
                                                               }
+                                                            }
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root"
                                                             >
-                                                              <span
-                                                                className="MuiTouchRipple-root"
-                                                              >
-                                                                <TransitionGroup
-                                                                  childFactory={[Function]}
-                                                                  component={null}
-                                                                  exit={true}
-                                                                />
-                                                              </span>
-                                                            </ForwardRef(TouchRipple)>
-                                                          </WithStyles(memo)>
-                                                        </NoSsr>
+                                                              <TransitionGroup
+                                                                childFactory={[Function]}
+                                                                component={null}
+                                                                exit={true}
+                                                              />
+                                                            </span>
+                                                          </ForwardRef(TouchRipple)>
+                                                        </WithStyles(memo)>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
                                                   </WithStyles(ForwardRef(ButtonBase))>
@@ -2510,7 +2514,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                     disabled={false}
                                                     focusRipple={true}
                                                     onClick={[Function]}
+                                                    onFocus={[Function]}
                                                     role="tab"
+                                                    tabIndex={-1}
                                                   >
                                                     <ForwardRef(ButtonBase)
                                                       aria-selected={false}
@@ -2525,7 +2531,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                       disabled={false}
                                                       focusRipple={true}
                                                       onClick={[Function]}
+                                                      onFocus={[Function]}
                                                       role="tab"
+                                                      tabIndex={-1}
                                                     >
                                                       <button
                                                         aria-selected={false}
@@ -2544,7 +2552,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         onTouchMove={[Function]}
                                                         onTouchStart={[Function]}
                                                         role="tab"
-                                                        tabIndex={0}
+                                                        tabIndex={-1}
                                                         type="button"
                                                       >
                                                         <span
@@ -2552,36 +2560,34 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         >
                                                           UI
                                                         </span>
-                                                        <NoSsr>
-                                                          <WithStyles(memo)
+                                                        <WithStyles(memo)
+                                                          center={false}
+                                                        >
+                                                          <ForwardRef(TouchRipple)
                                                             center={false}
-                                                          >
-                                                            <ForwardRef(TouchRipple)
-                                                              center={false}
-                                                              classes={
-                                                                Object {
-                                                                  "child": "MuiTouchRipple-child",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                  "ripple": "MuiTouchRipple-ripple",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                  "root": "MuiTouchRipple-root",
-                                                                }
+                                                            classes={
+                                                              Object {
+                                                                "child": "MuiTouchRipple-child",
+                                                                "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                "ripple": "MuiTouchRipple-ripple",
+                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                "root": "MuiTouchRipple-root",
                                                               }
+                                                            }
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root"
                                                             >
-                                                              <span
-                                                                className="MuiTouchRipple-root"
-                                                              >
-                                                                <TransitionGroup
-                                                                  childFactory={[Function]}
-                                                                  component={null}
-                                                                  exit={true}
-                                                                />
-                                                              </span>
-                                                            </ForwardRef(TouchRipple)>
-                                                          </WithStyles(memo)>
-                                                        </NoSsr>
+                                                              <TransitionGroup
+                                                                childFactory={[Function]}
+                                                                component={null}
+                                                                exit={true}
+                                                              />
+                                                            </span>
+                                                          </ForwardRef(TouchRipple)>
+                                                        </WithStyles(memo)>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
                                                   </WithStyles(ForwardRef(ButtonBase))>
@@ -2603,10 +2609,10 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                 className="MuiTabs-indicator"
                                                 classes={
                                                   Object {
-                                                    "colorPrimary": "PrivateTabIndicator-colorPrimary-48",
-                                                    "colorSecondary": "PrivateTabIndicator-colorSecondary-49",
-                                                    "root": "PrivateTabIndicator-root-47",
-                                                    "vertical": "PrivateTabIndicator-vertical-50",
+                                                    "colorPrimary": "PrivateTabIndicator-colorPrimary-2",
+                                                    "colorSecondary": "PrivateTabIndicator-colorSecondary-3",
+                                                    "root": "PrivateTabIndicator-root-1",
+                                                    "vertical": "PrivateTabIndicator-vertical-4",
                                                   }
                                                 }
                                                 color="primary"
@@ -2619,7 +2625,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                 }
                                               >
                                                 <span
-                                                  className="PrivateTabIndicator-root-47 PrivateTabIndicator-colorPrimary-48 MuiTabs-indicator"
+                                                  className="PrivateTabIndicator-root-1 PrivateTabIndicator-colorPrimary-2 MuiTabs-indicator"
                                                   style={
                                                     Object {
                                                       "left": 0,
@@ -5464,36 +5470,34 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         >
                                                           Cancel
                                                         </span>
-                                                        <NoSsr>
-                                                          <WithStyles(memo)
+                                                        <WithStyles(memo)
+                                                          center={false}
+                                                        >
+                                                          <ForwardRef(TouchRipple)
                                                             center={false}
-                                                          >
-                                                            <ForwardRef(TouchRipple)
-                                                              center={false}
-                                                              classes={
-                                                                Object {
-                                                                  "child": "MuiTouchRipple-child",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                  "ripple": "MuiTouchRipple-ripple",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                  "root": "MuiTouchRipple-root",
-                                                                }
+                                                            classes={
+                                                              Object {
+                                                                "child": "MuiTouchRipple-child",
+                                                                "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                "ripple": "MuiTouchRipple-ripple",
+                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                "root": "MuiTouchRipple-root",
                                                               }
+                                                            }
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root"
                                                             >
-                                                              <span
-                                                                className="MuiTouchRipple-root"
-                                                              >
-                                                                <TransitionGroup
-                                                                  childFactory={[Function]}
-                                                                  component={null}
-                                                                  exit={true}
-                                                                />
-                                                              </span>
-                                                            </ForwardRef(TouchRipple)>
-                                                          </WithStyles(memo)>
-                                                        </NoSsr>
+                                                              <TransitionGroup
+                                                                childFactory={[Function]}
+                                                                component={null}
+                                                                exit={true}
+                                                              />
+                                                            </span>
+                                                          </ForwardRef(TouchRipple)>
+                                                        </WithStyles(memo)>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
                                                   </WithStyles(ForwardRef(ButtonBase))>
@@ -5687,36 +5691,34 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                                         >
                                                           Save
                                                         </span>
-                                                        <NoSsr>
-                                                          <WithStyles(memo)
+                                                        <WithStyles(memo)
+                                                          center={false}
+                                                        >
+                                                          <ForwardRef(TouchRipple)
                                                             center={false}
-                                                          >
-                                                            <ForwardRef(TouchRipple)
-                                                              center={false}
-                                                              classes={
-                                                                Object {
-                                                                  "child": "MuiTouchRipple-child",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate",
-                                                                  "ripple": "MuiTouchRipple-ripple",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible",
-                                                                  "root": "MuiTouchRipple-root",
-                                                                }
+                                                            classes={
+                                                              Object {
+                                                                "child": "MuiTouchRipple-child",
+                                                                "childLeaving": "MuiTouchRipple-childLeaving",
+                                                                "childPulsate": "MuiTouchRipple-childPulsate",
+                                                                "ripple": "MuiTouchRipple-ripple",
+                                                                "ripplePulsate": "MuiTouchRipple-ripplePulsate",
+                                                                "rippleVisible": "MuiTouchRipple-rippleVisible",
+                                                                "root": "MuiTouchRipple-root",
                                                               }
+                                                            }
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root"
                                                             >
-                                                              <span
-                                                                className="MuiTouchRipple-root"
-                                                              >
-                                                                <TransitionGroup
-                                                                  childFactory={[Function]}
-                                                                  component={null}
-                                                                  exit={true}
-                                                                />
-                                                              </span>
-                                                            </ForwardRef(TouchRipple)>
-                                                          </WithStyles(memo)>
-                                                        </NoSsr>
+                                                              <TransitionGroup
+                                                                childFactory={[Function]}
+                                                                component={null}
+                                                                exit={true}
+                                                              />
+                                                            </span>
+                                                          </ForwardRef(TouchRipple)>
+                                                        </WithStyles(memo)>
                                                       </button>
                                                     </ForwardRef(ButtonBase)>
                                                   </WithStyles(ForwardRef(ButtonBase))>
