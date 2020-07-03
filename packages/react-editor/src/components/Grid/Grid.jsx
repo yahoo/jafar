@@ -8,8 +8,8 @@ import ActionsMenu from '../ActionsMenu';
 import * as Styled from './Styled';
 
 const Grid = ({ columns, data, headerActions, rowActions }) => {  
-  return (<div>
-    <Styled.HeaderMenu>
+  return (<div aria-label="grid">
+    <Styled.HeaderMenu aria-label="grid-header-menu">
       {
         headerActions.map((action, index) => (<Styled.HeaderButton key={index} variant={action.variant || 'contained'} 
           color="primary" onClick={action.onClick}>{action.label}</Styled.HeaderButton>))
@@ -23,9 +23,9 @@ const Grid = ({ columns, data, headerActions, rowActions }) => {
         rowActions && <Styled.Cell minWidth="50px" />
       }
     </Styled.HeaderRow>
-    <Styled.Body>
+    <Styled.Body aria-label="grid-body">
       {
-        data.map((row, index) => (<Styled.Row key={index}>
+        data.map((row, index) => (<Styled.Row key={index} aria-label="grid-row">
           {
             columns.map((column, index2) => (<Styled.Cell key={index2}>{column.content(row)}</Styled.Cell>))
           }

@@ -17,15 +17,15 @@ const browsers = [];
 const selectors = {
   root: '#jafar-react-editor-demos',
   formListWrapper: '#form-list',
-  formsGridRows: '[aria-label="Forms Grid"] [class*="Styled__Body"] [class*="Styled__Row"]',
-  formsGridCreateButton: '[aria-label="Forms Grid"] [class*="Styled__HeaderMenu"] button:nth-child(2)',
-  formsGridInitButton: '[aria-label="Forms Grid"] [class*="Styled__HeaderMenu"] button:nth-child(1)',
-  formEditorWrapper: '[class*="FormEditor"]',
+  formsGridRows: '[aria-label="grid"] [aria-label="grid-row"]',
+  formsGridCreateButton: '[aria-label="grid"] [aria-label="grid-header-menu"] button:nth-child(2)',
+  formsGridInitButton: '[aria-label="grid"] [aria-label="grid-header-menu"] button:nth-child(1)',
+  formEditorWrapper: '[aria-label="form-editor"]',
   formDataEditor: '[id="data"]',
   saveButton: '[aria-label="Footer"] button[button-type="primary"]',
-  addFieldButton: '[id="fields"] [class*="Styled__HeaderMenu"] button',
-  fieldEditorWrapper: '[class*="Styled__FieldEditorWrapper"]',
-  fieldsGridRows: '[id="fields"] [class*="Styled__Body"] [class*="Styled__Row"]',
+  addFieldButton: '[id="fields"] [aria-label="grid-header-menu"] button',
+  fieldEditorWrapper: '[aria-label="field-editor"]',
+  fieldsGridRows: '[id="fields"] [aria-label="grid-row"]',
 };
 
 describe('Demos e2e', () => {

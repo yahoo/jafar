@@ -106,7 +106,7 @@ const Fields = ({ value = {}, onValueChange }) => {
   
   return (<div>
     {
-      editingField && <Styled.FieldEditorWrapper><FieldEditor 
+      editingField && <Styled.FieldEditorWrapper aria-label="field-editor"><FieldEditor 
         formId={parentModel.id} 
         fieldId={editingField.fieldId} 
         field={editingField.field} 

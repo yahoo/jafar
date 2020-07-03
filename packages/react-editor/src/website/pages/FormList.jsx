@@ -164,7 +164,7 @@ const FormList = ({ history }) => {
         if defined prior to use it in the Form class / component). In addition you can clone the repo and
         change / adapt the Form Editor to your system's needs (located in the "react-editor" package).
       </p>
-      <div aria-label="Forms Grid">
+      <div>
         <Grid        
           columns={columns}
           data={data}

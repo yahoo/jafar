@@ -28,7 +28,7 @@ const FormEditor = ({ form = {}, formIds = [], onCancel, onSave }) => {
     context: { formIds: formIds.filter(id => id !== formId) }, 
   });
 
-  return (<FormEditorWrapper>
+  return (<FormEditorWrapper aria-label="form-editor">
     <Form model={model} resources={resources}>
       <BaseItem 
         title={title} 
