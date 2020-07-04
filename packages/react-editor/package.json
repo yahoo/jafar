@@ -1,6 +1,6 @@
 {
   "name": "@jafar/react-editor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Create jafar form model using a simple UI",
   "license": "MIT",
   "main": "src/website/app.js",
@@ -36,10 +36,10 @@
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@jafar/form": "^1.0.4",
-    "@jafar/react-components": "^1.0.4",
-    "@jafar/react-form": "^1.0.4",
-    "@jafar/react-layout": "^1.0.4",
+    "@jafar/form": "^1.0.5",
+    "@jafar/react-components": "^1.0.5",
+    "@jafar/react-form": "^1.0.5",
+    "@jafar/react-layout": "^1.0.5",
     "jszip": "^3.2.2"
   },
   "devDependencies": {
