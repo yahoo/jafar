@@ -42,7 +42,8 @@ export default class JsonEditor extends React.Component {
 
   render() {
     return (<JsonEditorWrapper>
-      <JsonInput 
+      <JsonInput
+        locale="English"
         placeholder={this.props.value}
         viewOnly={this.props.disabled}
         height={this.props.state.height || JsonEditor.defaultProps.state.height} 

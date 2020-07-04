@@ -5,6 +5,7 @@ exports[`<JsonView /> should render provided data 1`] = `
   <JSONInput
     confirmGood={false}
     height="130px"
+    locale="English"
     placeholder={
       Object {
         "name": "Rachel",
