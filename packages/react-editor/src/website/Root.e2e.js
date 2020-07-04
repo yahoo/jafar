@@ -26,10 +26,13 @@ const selectors = {
   formEditorWrapper: '[aria-label="form-editor"]',
   formDataEditor: '[id="data"]',
   saveButton: '[aria-label="Footer"] button[button-type="primary"]',
+  cancelButton: '[aria-label="Footer"] button[button-type="tertiary"]',
   addFieldButton: '[id="fields"] [aria-label="grid-header-menu"] button',
   fieldEditorWrapper: '[aria-label="field-editor"]',
   fieldsGridRows: '[id="fields"] [aria-label="grid-row"]',
   addValidator: 'div[id="validators"] [aria-label="add-validator"]',
+  rowActionsButton: 'button[aria-label="actions"]',
+  rowActionsMenu: '[role="presentation"]',
 };
 
 describe('Demos e2e', () => {
@@ -167,11 +170,22 @@ async function testCreateNewForm(page) {
   await saveFormAndVerifyRows(page, 2);
 
   // click on edit that form
+  await page.click(`${selectors.formsGridRows}:nth-child(2) ${selectors.rowActionsButton}`);
+  await page.waitFor(ANIMATION_DURATION);
+  await page.click(`${selectors.rowActionsMenu}:last-child li:nth-child(1)`);
+  await page.waitFor(JAFAR_LIFECYCLE);
+
+  // click show json
+  await page.click(selectors.optionsMenuButton);
+  await page.click(selectors.showJsonMenuItem);
 
   // verify its data there
+  await verifyJsonView(page, expectedFormJson);
 
   // click cancel
-
+  await page.click(selectors.cancelButton);
+  await page.waitFor(JAFAR_LIFECYCLE);
+  
   // click remove form
 
   // verify form is not in the list anymore
