@@ -1,6 +1,6 @@
 ## Unreleased
 
-Changes that have landed in master but are not yet released.
+Changes that have landed in master but are not yet released
 
 ### General
 
