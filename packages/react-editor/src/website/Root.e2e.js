@@ -202,10 +202,7 @@ async function testCreateFieldFirstName(page) {
   await verifyJsonView(page, expectedFieldJson);
 
   // enter field path
-  await textFieldTypeText(page, 'path', 'firstName');
-  await page.waitFor(JAFAR_LIFECYCLE);
-  expectedFieldJson.path = 'firstName';
-  await verifyJsonView(page, expectedFieldJson);
+  await fillTextField(page, 'path', 'firstName', expectedFieldJson);
 
   // save field
   await page.waitFor(JAFAR_LIFECYCLE);
@@ -241,8 +238,7 @@ async function testCreateFieldLastName(page) {
   await fillTextField(page, 'path', 'lastName', expectedFieldJson);
 
   // verify field dependenciesChange not exists
-  const dependenciesChangeField = await page.$(`div[id="dependenciesChange"]`);
-  expect(dependenciesChangeField).toBeFalsy();
+  await verifyFieldMissing(page, 'dependenciesChange');
 
   // enter field dependencies - open dropdown
   await selectFromDropdown(page, 'dependencies', 1);
@@ -251,9 +247,7 @@ async function testCreateFieldLastName(page) {
   await verifyJsonView(page, expectedFieldJson);
 
   // enter field dependenciesChange
-  await fillHandler(page, 'dependenciesChange', 1);
-  expectedFieldJson.dependenciesChange = { name: 'someCustomName', args: { a: 'b' } };
-  await verifyJsonView(page, expectedFieldJson);
+  await fillHandlerAndVerify(page, 'dependenciesChange', expectedFieldJson);
 
   // click field required
   await page.click(`div[id="required"] input`);
@@ -288,12 +282,17 @@ async function testCreateFieldLastName(page) {
   await fillTextField(page, 'description', 'Enter Last Name', expectedFieldJson);
 
   // verify formatter and parser are excluded
+  await verifyFieldMissing(page, 'formatter');
+  await verifyFieldMissing(page, 'parser');
 
   // add component
+  await fillHandlerAndVerify(page, 'component', expectedFieldJson, 'state');
 
-  // verify formatter and parser are included
+  // add formatter
+  await fillHandlerAndVerify(page, 'formatter', expectedFieldJson);
 
-  // add formatter and parser
+  // add parser
+  await fillHandlerAndVerify(page, 'parser', expectedFieldJson);
 
   // click show json
 
@@ -306,10 +305,21 @@ async function testCreateFieldLastName(page) {
   return expectedFieldJson;
 }
 
+async function verifyFieldMissing(page, id) {
+  const field = await page.$(`div[id="${id}"]`);
+  expect(field).toBeFalsy();
+}
+
 async function fillTextField(page, id, text, expectedFieldJson) {
   await textFieldTypeText(page, id, text);
   await page.waitFor(JAFAR_LIFECYCLE);
   expectedFieldJson[id] = text;
+  await verifyJsonView(page, expectedFieldJson);
+}
+
+async function fillHandlerAndVerify(page, id, expectedFieldJson, argsName = 'args') {
+  await fillHandler(page, id, 1);
+  expectedFieldJson[id] = { name: 'someCustomName', [argsName]: { a: 'b' } };
   await verifyJsonView(page, expectedFieldJson);
 }
 
