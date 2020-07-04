@@ -83,7 +83,7 @@ const ConditionalTerm = ({ value = defaultConditionalTerm, onValueChange }) => {
       />
       </SubTermWrapper>))
     }
-    <AddButton onClick={addTerm}>+ Add term</AddButton>
+    <AddButton aria-label="add-term" onClick={addTerm}>+ Add term</AddButton>
   </TermWrapper>);
 };
 

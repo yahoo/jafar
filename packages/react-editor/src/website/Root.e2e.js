@@ -238,10 +238,7 @@ async function testCreateFieldLastName(page) {
   await verifyJsonView(page, expectedFieldJson);
 
   // enter field path
-  await textFieldTypeText(page, 'path', 'lastName');
-  await page.waitFor(JAFAR_LIFECYCLE);
-  expectedFieldJson.path = 'lastName';
-  await verifyJsonView(page, expectedFieldJson);
+  await fillTextField(page, 'path', 'lastName', expectedFieldJson);
 
   // verify field dependenciesChange not exists
   const dependenciesChangeField = await page.$(`div[id="dependenciesChange"]`);
@@ -276,14 +273,19 @@ async function testCreateFieldLastName(page) {
   await verifyJsonView(page, expectedFieldJson);
 
   // add disabled term
+  await fillTerm(page, 'disableTerm', expectedFieldJson);
 
   // add exclude term
+  await fillTerm(page, 'excludeTerm', expectedFieldJson);
 
   // add require term
+  await fillTerm(page, 'requireTerm', expectedFieldJson);
 
-  // add label
-
-  // add description
+  // enter field label
+  await fillTextField(page, 'label', 'Last Name', expectedFieldJson);
+  
+  // enter field description
+  await fillTextField(page, 'description', 'Enter Last Name', expectedFieldJson);
 
   // verify formatter and parser are excluded
 
@@ -304,6 +306,13 @@ async function testCreateFieldLastName(page) {
   return expectedFieldJson;
 }
 
+async function fillTextField(page, id, text, expectedFieldJson) {
+  await textFieldTypeText(page, id, text);
+  await page.waitFor(JAFAR_LIFECYCLE);
+  expectedFieldJson[id] = text;
+  await verifyJsonView(page, expectedFieldJson);
+}
+
 async function fillHandler(page, id, child, selector = '') {
   await selectFromDropdown(page, id, child, selector);
   if (child === 1) { // first child is 'custom'
@@ -311,9 +320,38 @@ async function fillHandler(page, id, child, selector = '') {
     'someCustomName');
   }
   // add args
-  const toggle = await page.$(`div[id="${id}"] ${selector} [class="MuiSwitch-root"]`);
-  await clickOnElementAtPosition(page, toggle, 3, 3);
+  await addArgs(page, id, selector);
+}
+
+async function fillTerm(page, id, expectedFieldJson) {
+  // select conditional term
+  await selectFromDropdown(page, id, 1);
+  // click not
+  await page.click(`div[id="${id}"] input[type="checkbox"]`);
+  // select and
+  await selectFromDropdown(page, id, 2, '[aria-label="Field Component"] > div > div:nth-child(2)');
+  // click add terms
+  await page.click(`div[id="${id}"] [aria-label="add-term"]`);
+  // select 'equals'
+  const selector = '[aria-label="Field Component"] > div > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2)';
+  await selectFromDropdown(page, id, 3, selector);
+  // add args
+  // await addArgs(page, id, selector);
   await page.waitFor(JAFAR_LIFECYCLE);
+
+  expectedFieldJson[id] = {
+    not: true,
+    operator: 'and',
+    terms: [{ name: 'equals' }],
+  };
+  await verifyJsonView(page, expectedFieldJson);
+}
+
+async function addArgs(page, id, selector) {
+  // turn switch on
+  const toggle = await page.$(`div[id="${id}"] ${selector} [class="MuiSwitch-root"]`);
+  await clickOnElementAtPosition(page, toggle, 5, 5);
+  // add args in the box
   await jsonEditorTypeText(page, `${selectors.fieldEditorWrapper} div[id="${id}"] ${selector} [name="outer-box"]`, '{ "a": "b"');
   await page.waitFor(JAFAR_LIFECYCLE);
 }
