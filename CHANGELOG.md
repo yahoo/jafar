@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### React Editor
+
+* Fix - edit field should render all its validators when editing saved field
+
 ## v1.0.5 (July 4, 2020)
 
 ### General
