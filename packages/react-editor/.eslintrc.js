@@ -1,0 +1,1 @@
+module.exports = require('@jafar/react-kit/config/eslintrc.js');
