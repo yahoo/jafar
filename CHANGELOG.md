@@ -2,6 +2,8 @@
 
 Changes that have landed in master but are not yet released
 
+## v1.0.5 (July 4, 2020)
+
 ### General
 
 * Add license field to all packages 
