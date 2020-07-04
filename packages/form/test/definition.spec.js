@@ -76,6 +76,16 @@ describe('Definition', () => {
       model.invalid = true;
       model.dirty = true;
       const expectedFields = cloneDeep(model.fields);
+      Object.assign(expectedFields.name, {
+        dirty: false,
+        required: true,
+        disabled: false,
+        excluded: false,
+        invalid: false,
+        empty: false,
+        formatter: model.fields.name.formatter,
+        parser: model.fields.name.parser,
+      });
       Object.assign(expectedFields.lastName, {
         disabled: false,
         excluded: false,
@@ -87,14 +97,6 @@ describe('Definition', () => {
         component: undefined,
         formatter: undefined,
         parser: undefined,
-      });
-      Object.assign(expectedFields.name, {
-        dirty: false,
-        required: false,
-        invalid: false,
-        empty: false,
-        formatter: model.fields.name.formatter,
-        parser: model.fields.name.parser,
       });
       Object.assign(expectedFields.name.component, { state: {}, prevState: undefined });
 
@@ -134,6 +136,35 @@ describe('Definition', () => {
       });
     });
 
+    it('return expected form - field excluded / disabled / required when terms provided', () => {
+      const term = { name: 'equals', args: { fieldId: 'lastName', value: 'green' } };
+      model.fields.name.excluded = undefined;
+      model.fields.name.excludeTerm = term;
+      model.fields.name.disabled = undefined;
+      model.fields.name.disableTerm = term;
+      model.fields.name.required = undefined;
+      model.fields.name.requireTerm = term;
+      // verify model
+      const { model: newModel } = createForm(model, resources);
+      expect(newModel.fields.name.excluded).toEqual(true);
+      expect(newModel.fields.name.disabled).toEqual(true);
+      expect(newModel.fields.name.required).toEqual(true);
+    });
+
+    it('return expected form - field excluded / disabled / required when excluded / disabled / required provided', () => {
+      const term = { name: 'equals', args: { fieldId: 'lastName', value: 'green' } };
+      model.fields.name.excluded = true;
+      model.fields.name.excludeTerm = term;
+      model.fields.name.disabled = false;
+      model.fields.name.disableTerm = term;
+      model.fields.name.required = false;
+      model.fields.name.requireTerm = term;
+      // verify model
+      const { model: newModel } = createForm(model, resources);
+      expect(newModel.fields.name.excluded).toEqual(true);
+      expect(newModel.fields.name.disabled).toEqual(false);
+      expect(newModel.fields.name.required).toEqual(false);
+    });
     it('return expected field persistent data', () => {
       const expectedField = cloneDeep(model.fields.lastName);
       const errors = [{ name: 'a', message: 'b' }];

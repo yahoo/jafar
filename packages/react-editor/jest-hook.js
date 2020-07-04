@@ -14,7 +14,7 @@ module.exports = (config) => {
   config.coverageThreshold = config.coverageThreshold || {};
   config.coverageThreshold.global = {
     lines: 42,
-    branches: 34,
+    branches: 33,
     functions: 21,
     statements: 41,
   };
