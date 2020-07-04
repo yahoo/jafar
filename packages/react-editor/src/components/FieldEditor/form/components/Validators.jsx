@@ -32,6 +32,14 @@ export default withTheme(({ value = [], state = {}, onValueChange, onStateChange
     const newState = { ...state, validatorsStates: [] };
     value.forEach((validator, index) => {
       newState.validatorsStates[index] = getInitialState();
+
+      const isCustom = validator.name && !newState.validatorsStates[index].options.includes(validator.name);
+      const selectValue = isCustom ? 'CUSTOM' : validator.name;
+      const customValue = isCustom ? validator.name : undefined;
+      newState.validatorsStates[index] = { 
+        ...newState.validatorsStates[index], 
+        selectValue, customValue, argsChecked: !!validator.args,
+      };
     });
     onStateChange(newState);
   }, []); // eslint-disable-line
