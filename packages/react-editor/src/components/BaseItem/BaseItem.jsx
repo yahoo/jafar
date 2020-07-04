@@ -95,7 +95,7 @@ export default class BaseItem extends React.Component {
     <Item {...this.item} selected={this.state.selected} />
     {
       this.state.showJson &&
-      <Styled.JsonViewWrapper>
+      <Styled.JsonViewWrapper aria-label="json-view" value={JSON.stringify(this.context.model.data)}>
         <JsonView value={this.context.model.data} />
       </Styled.JsonViewWrapper>
     }

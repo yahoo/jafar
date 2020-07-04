@@ -80,6 +80,6 @@ export default withTheme(({ value = [], state = {}, onValueChange, onStateChange
       />
       </ValidatorWrapper>))
     }
-    <AddButton onClick={addValidator}>+ Add validator</AddButton>
+    <AddButton aria-label="add-validator" onClick={addValidator}>+ Add validator</AddButton>
   </div>);
 });
