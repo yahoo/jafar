@@ -290,7 +290,6 @@ exports[`<CheckboxCollection /> should render provided data checkboxes with sear
   <WithStyles(SearchInput)
     disabled={false}
     onChange={[Function]}
-    onSearch={[Function]}
     placeholder="Search"
     value="geller"
   />
