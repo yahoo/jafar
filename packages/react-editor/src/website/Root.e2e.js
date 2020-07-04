@@ -85,12 +85,6 @@ async function openTabPageOnBrowser(browser) {
   return page;
 }
 
-async function verifyJsonView(page, expectedJson) {
-  const jsonString = await page.$eval(selectors.jsonView, e => e.getAttribute('value'));
-  const json = JSON.parse(jsonString);
-  expect(json).toEqual(expectedJson);
-}
-
 async function testCreateNewForm(page) {
   await page.waitFor(ANIMATION_DURATION);
 
@@ -181,14 +175,12 @@ async function testCreateNewForm(page) {
 
   // verify its data there
   await verifyJsonView(page, expectedFormJson);
+}
 
-  // click cancel
-  await page.click(selectors.cancelButton);
-  await page.waitFor(JAFAR_LIFECYCLE);
-  
-  // click remove form
-
-  // verify form is not in the list anymore
+async function verifyJsonView(page, expectedJson) {
+  const jsonString = await page.$eval(selectors.jsonView, e => e.getAttribute('value'));
+  const json = JSON.parse(jsonString);
+  expect(json).toEqual(expectedJson);
 }
 
 async function testCreateFieldFirstName(page) {
@@ -322,7 +314,7 @@ async function fillHandler(page, id, child, selector = '') {
   await selectFromDropdown(page, id, child, selector);
   if (child === 1) { // first child is 'custom'
     await inputTypeText(page, `${selectors.fieldEditorWrapper} div[id="${id}"] ${selector} input[placeholder="Custom name"]`, 
-    'someCustomName');
+      'someCustomName');
   }
   // add args
   await addArgs(page, id, selector);

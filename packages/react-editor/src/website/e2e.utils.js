@@ -45,10 +45,10 @@ export async function jsonEditorTypeText(page, wrapperSelector, text) {
   await page.evaluate((selector) => { document.querySelector(selector).blur(); }, selector);
 }
 
-export async function clickOnElementAtPosition(page,elem, x = null, y = null) {
+export async function clickOnElementAtPosition(page, elem, x = null, y = null) {
   const rect = await page.evaluate(el => {
     const { top, left, width, height } = el.getBoundingClientRect();
-    return { top, left, width,  height };
+    return { top, left, width, height };
   }, elem);
 
   // Use given position or default to center
