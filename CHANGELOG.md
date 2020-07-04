@@ -10,7 +10,7 @@ Changes that have landed in master but are not yet released
 
 ### Form
 
-* Fix - when term supplied without indicator (such as excludeTerm and excluded), indicator first true until calculated
+* Fix - when term supplied without indicator (e.g excludeTerm and excluded), indicator first true until calculated
 
 * Fix - remove evaluate state changes from init field - its already evaluated in 'evaluateField'
 
