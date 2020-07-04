@@ -205,14 +205,7 @@ async function testCreateFieldFirstName(page) {
   await fillTextField(page, 'path', 'firstName', expectedFieldJson);
 
   // save field
-  await page.waitFor(JAFAR_LIFECYCLE);
-  const saveButton = await page.$(`${selectors.fieldEditorWrapper} ${selectors.saveButton}`);
-  await saveButton.click();
-  await page.waitFor(JAFAR_LIFECYCLE);
-
-  // verify field in the list of fields
-  const fieldsGridRows = await page.$$(selectors.fieldsGridRows);
-  expect(fieldsGridRows).toHaveLength(1);
+  await saveFieldAndVerifyRows(page, 1);
 
   return expectedFieldJson;
 }
@@ -294,13 +287,8 @@ async function testCreateFieldLastName(page) {
   // add parser
   await fillHandlerAndVerify(page, 'parser', expectedFieldJson);
 
-  // click show json
-
-  // verify show json
-
-  // click save field
-
-  // verify 2 fields in the list of fields
+  // save field
+  await saveFieldAndVerifyRows(page, 2);
 
   return expectedFieldJson;
 }
@@ -364,4 +352,16 @@ async function addArgs(page, id, selector) {
   // add args in the box
   await jsonEditorTypeText(page, `${selectors.fieldEditorWrapper} div[id="${id}"] ${selector} [name="outer-box"]`, '{ "a": "b"');
   await page.waitFor(JAFAR_LIFECYCLE);
+}
+
+async function saveFieldAndVerifyRows(page, rows) {
+  // save field
+  await page.waitFor(JAFAR_LIFECYCLE);
+  const saveButton = await page.$(`${selectors.fieldEditorWrapper} ${selectors.saveButton}`);
+  await saveButton.click();
+  await page.waitFor(JAFAR_LIFECYCLE);
+
+  // verify field in the list of fields
+  const fieldsGridRows = await page.$$(selectors.fieldsGridRows);
+  expect(fieldsGridRows).toHaveLength(rows);
 }
