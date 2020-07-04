@@ -94,10 +94,8 @@ export const evaluateForm = formId => async (dispatch, getState) => {
 const initField = (formId, fieldId) => async (dispatch, getState) => {
   // parallel - handle field (format, evaluate, state changes) and handle dependencies changes
   await Promise.all([
-    // evaluate field - exclude term, disable term, validations and dirty
+    // evaluate field - exclude term, disable term, validations and dirty, component state
     evaluateField(formId, fieldId)(dispatch, getState),
-    // run component state change
-    evaluateFieldComponentState(formId, fieldId)(dispatch, getState),
     // run dependencies changes
     evaluateDependentFields(fieldId, formId)(dispatch, getState),
   ]);

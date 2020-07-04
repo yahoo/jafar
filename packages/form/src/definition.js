@@ -50,13 +50,14 @@ function createModel(initialModel) {
     processing: false,
   };
 
-  // by default put excluded on false - when the field calc the exclude term on init it will update it
+  // if config supplied excluded - use it (on persistent form), otherwise - if config supplied excludeTerm
+  // put field with excluded true, until it excluded will be calculated on init.
   Object.values(result.fields).forEach((field) => {
     Object.assign(field, {
-      excluded: isUndefined(field.excluded) ? false : field.excluded,
-      disabled: isUndefined(field.disabled) ? false : field.disabled,
+      excluded: isUndefined(field.excluded) ? !isUndefined(field.excludeTerm) : field.excluded,
+      disabled: isUndefined(field.disabled) ? !isUndefined(field.disableTerm) : field.disabled,
+      required: isUndefined(field.required) ? !isUndefined(field.requireTerm) : field.required,
       dirty: isUndefined(field.dirty) ? false : field.dirty,
-      required: isUndefined(field.required) ? false : field.required,
       empty: isUndefined(field.empty) ? false : field.empty,
       invalid: isUndefined(field.invalid) ? false : field.invalid,
       errors: field.errors || [],
