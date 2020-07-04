@@ -15,3 +15,7 @@ For common components demonstrations to use with react form please visit [react 
 ## React Layout
 
 For layout demonstrations please visit [react layout demos](/demo-react-layout.html).
+
+## React Editor
+
+For a simple online form editor please visit [react editor](/demo-react-editor.html).
