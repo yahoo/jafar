@@ -159,19 +159,12 @@ async function testCreateNewForm(page) {
 
   // add field last name
   const lastNameField = await testCreateFieldLastName(page);
-  // expectedFormJson.model.fields[lastNameField.id] = lastNameField;
-  // delete expectedFormJson.model.fields[lastNameField.id].id;
-  // await verifyJsonView(page, expectedFormJson);
-
-
-
-  // click show json
-
-  // verify form json
+  expectedFormJson.model.fields[lastNameField.id] = lastNameField;
+  delete expectedFormJson.model.fields[lastNameField.id].id;
+  await verifyJsonView(page, expectedFormJson);
 
   // save form
-
-  // verify form is in the list of forms
+  await saveFormAndVerifyRows(page, 2);
 
   // click on edit that form
 
@@ -355,13 +348,21 @@ async function addArgs(page, id, selector) {
 }
 
 async function saveFieldAndVerifyRows(page, rows) {
+  await saveAndVerifyRows(page, rows, selectors.fieldEditorWrapper, selectors.fieldsGridRows);
+}
+
+async function saveFormAndVerifyRows(page, rows) {
+  await saveAndVerifyRows(page, rows, '', selectors.formsGridRows);
+}
+
+async function saveAndVerifyRows(page, rows, wrapperSelector, rowsSelector) {
   // save field
   await page.waitFor(JAFAR_LIFECYCLE);
-  const saveButton = await page.$(`${selectors.fieldEditorWrapper} ${selectors.saveButton}`);
+  const saveButton = await page.$(`${wrapperSelector} ${selectors.saveButton}`);
   await saveButton.click();
   await page.waitFor(JAFAR_LIFECYCLE);
 
   // verify field in the list of fields
-  const fieldsGridRows = await page.$$(selectors.fieldsGridRows);
-  expect(fieldsGridRows).toHaveLength(rows);
+  const gridRows = await page.$$(rowsSelector);
+  expect(gridRows).toHaveLength(rows);
 }
