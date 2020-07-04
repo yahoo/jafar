@@ -32,9 +32,6 @@ import {
   evaluateField,
   evaluateDependentFields,
 } from './change-value';
-import {
-  evaluateFieldComponentState,
-} from './change-state';
 
 
 export default function init(model, resources, settings) {
