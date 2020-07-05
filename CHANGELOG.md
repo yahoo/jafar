@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### Form
+
+* Add - support for updater function for changeState and changeValue actions
+
 ### React Editor
 
 * Fix - edit field should render all its validators when editing saved field
