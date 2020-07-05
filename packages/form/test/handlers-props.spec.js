@@ -4,8 +4,8 @@
   */
 
 import {
-  getFieldTermsProps, getFieldComponentStateChangesProps, getFieldValidatorMessageProps,
-  getFieldValidatorFuncProps, getFieldDependenciesChangeProps,
+  getFieldEvaluateValueProps, getFieldEvaluateStateProps, getFieldTermsProps, getFieldComponentStateChangesProps,
+  getFieldValidatorMessageProps, getFieldValidatorFuncProps, getFieldDependenciesChangeProps,
   getFieldComponentFormatterProps, getFieldComponentParserProps, getBeforeAfterActionHookProps,
   getIsEmptyProps, getEmptyMessageProps, getSubmitProps, getValidateFormProps, getToDtoProps, getFromDtoProps,
 } from '../src/handlers-props';
@@ -48,6 +48,20 @@ describe('Handlers Props', () => {
     expectedLast = {
       id: 'lastName', value: 'Green', dependencies: { name: { value: 'Rachel' } }, context: { userId: '123' },
     };
+  });
+
+  describe('getFieldEvaluateStateProps', () => {
+    it('return correct props', () => {
+      const result = getFieldEvaluateStateProps('name', model);
+      expect(result).toEqual({ state: model.fields.name.component.state });
+    });
+  });
+
+  describe('getFieldEvaluateValueProps', () => {
+    it('return correct props', () => {
+      const result = getFieldEvaluateValueProps('name', model);
+      expect(result).toEqual({ value: model.fields.name.component.value });
+    });
   });
 
   describe('getSubmitProps', () => {

@@ -5,7 +5,7 @@
 
 import {
  isFormInvalid, isFormDirty, isFieldDirty, evaluateTerm, validateField, getDependentFieldsIds, getDependenciesChangeResult,
- getFieldComponentStateChanges, getFieldFormattedValue, getFieldParsedValue, getFormErrors,
+ getFieldComponentStateChanges, getFieldFormattedValue, getFieldParsedValue, getFormErrors, evaluateValue,  evaluateState,
 } from '../src/utils';
 
 describe('utils', () => {
@@ -80,6 +80,52 @@ describe('utils', () => {
         lastNameParser: { func: props => props.value.slice(10) }, // remove 'Formatted ' prefix
       },
     };
+  });
+
+  describe('evaluateValue', () => {
+    it('value is object', () => {
+      model.fields.name.component.value = 1;
+      const valueObj = 2;
+      const result = evaluateValue('name', model, valueObj);
+      expect(result).toEqual(valueObj);
+    });
+   
+    it('value is undefined', () => {
+      model.fields.name.component.value = 1;
+      const valueObj = undefined;
+      const result = evaluateValue('name', model, valueObj);
+      expect(result).toEqual(valueObj);
+    });
+
+    it('value is function', () => {
+      model.fields.name.component.value = 1;
+      const valueUpdater = ({ value }) => (value + 1);
+      const result = evaluateValue('name', model, valueUpdater);
+      expect(result).toEqual(2);
+    });
+  });
+
+  describe('evaluateState', () => {
+    it('state is object', () => {
+      model.fields.name.component.state = { num: 1 };
+      const stateObj = { num: 2 };
+      const result = evaluateState('name', model, stateObj);
+      expect(result).toEqual(stateObj);
+    });
+   
+    it('state is undefined', () => {
+      model.fields.name.component.state = { num: 1 };
+      const stateObj = undefined;
+      const result = evaluateState('name', model, stateObj);
+      expect(result).toEqual(stateObj);
+    });
+
+    it('state is function', () => {
+      model.fields.name.component.state = { num: 1 };
+      const stateUpdater = ({ state }) => ({ num: state.num + 1 });
+      const result = evaluateState('name', model, stateUpdater);
+      expect(result).toEqual({ num: 2 });
+    });
   });
 
   describe('isFormDirty', () => {
