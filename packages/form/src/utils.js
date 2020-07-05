@@ -27,13 +27,11 @@ import hooks from './hooks';
 
 const isPromise = result => result && isFunction(result.then);
 
-export const evaluateValue = (fieldId, model, value) => {
-  return isFunction(value) ? value(getFieldEvaluateValueProps(fieldId, model)) : value;
-}
+export const evaluateValue = (fieldId, model, value) => (isFunction(value)
+  ? value(getFieldEvaluateValueProps(fieldId, model)) : value);
 
-export const evaluateState = (fieldId, model, state) => {
-  return isFunction(state) ? state(getFieldEvaluateStateProps(fieldId, model)) : state;
-}
+export const evaluateState = (fieldId, model, state) => (isFunction(state)
+  ? state(getFieldEvaluateStateProps(fieldId, model)) : state);
 
 export const isFieldDirty = (fieldId, model) => {
   if (!model.initializedData) return false;

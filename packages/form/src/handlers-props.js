@@ -13,7 +13,7 @@ export function getFieldEvaluateStateProps(id, model) {
   const field = model.fields[id];
   const props = { state: field.component.state };
   return props;
-};
+}
 
 /*
 props:
@@ -23,7 +23,7 @@ export function getFieldEvaluateValueProps(id, model) {
   const field = model.fields[id];
   const props = { value: field.component.value };
   return props;
-};
+}
 
 /*
 props:

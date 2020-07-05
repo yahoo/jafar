@@ -32,7 +32,7 @@ let debouncedChangeState;
 export default function changeState(formId, fieldId, state) {
   return (dispatch, getState) => new Promise((resolve) => {
     const stateChangesStates = [];
-    
+
     const { model, settings } = getState().forms[formId];
 
     state = evaluateState(fieldId, model, state);

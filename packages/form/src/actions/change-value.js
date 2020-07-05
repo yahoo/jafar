@@ -54,7 +54,7 @@ export default function changeValue(formId, fieldId, value) {
 
     const { model, settings } = getState().forms[formId];
 
-    if (!verifyValidValue(fieldId, model, value , resolve)) return;
+    if (!verifyValidValue(fieldId, model, value, resolve)) return;
 
     value = evaluateValue(fieldId, model, value);
 
@@ -71,7 +71,7 @@ export default function changeValue(formId, fieldId, value) {
   });
 }
 
-const verifyValidValue = (fieldId, model, value , resolve) => {
+const verifyValidValue = (fieldId, model, value, resolve) => {
   if (isFunction(value) && !model.fields[fieldId].component) {
     const ERROR_PREFIX = 'changeValue -';
     const error = createError(ERROR_PREFIX, errors.CHANGE_VALUE_UPDATER_NOT_SUPPORTED, { model, fieldId }, []);
@@ -80,7 +80,7 @@ const verifyValidValue = (fieldId, model, value , resolve) => {
     return false;
   }
   return true;
-}
+};
 
 const setViewValueToStore = (formId, fieldId, value, dependencies = []) => (dispatch, getState) => {
   const { model } = getState().forms[formId];
