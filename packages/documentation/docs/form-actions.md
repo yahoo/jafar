@@ -83,7 +83,10 @@ await myForm.changeValue('firstName', 'Monica');
 | Name          | Type          | Description |
 | ------------- |-------------| ------------|
 | fieldId | required string | Field id to apply the change on |
-| value | any | New value |
+| value | any / function | New value or an updater function which returns a new value |
+
+> **Note:** `updater function` is only supported when field defines a component (meant for rare UI cases). 
+
 
 #### Lifecycle
 
@@ -97,7 +100,7 @@ await myForm.changeValue('firstName', 'Monica');
 
 ![custom-field-view](assets/action-change-field-value-v1.0.0.png)
 
-#### Example
+#### Example - value is any
 
 ```javascript
 import Form from '@jafar/form';
@@ -136,11 +139,58 @@ expect(form.fields.city.disabled).toBeFalsy();
 
 // change field country value
 const newValue = 'Spain';
-form.changeValue('country', newValue);
+await form.changeValue('country', newValue);
 
 // verify form after the change
 expect(form.data.country).toEqual(newValue);
 expect(form.fields.city.disabled).toBeTruthy();
+```
+
+#### Example - value is an updater function
+
+When updating field's value from multiple places at the same time, based on a specific point in time store value - one place can override other place's value changes (for example if a field is using a component that uses some underline components and each underline
+component is calling change value on init).
+Using - updater function, one can return an updated value object based on the current value (view value) that exists in Jafar's store.
+
+```javascript
+import Dimensions from './my-components/Dimensions';
+import Form from '@jafar/form';
+
+// define user form
+const model = {
+  id: 'user-form',
+  fields: {
+    size: {
+      path: 'size',
+      component: {
+        name: 'Dimensions',
+      },
+    },
+  },
+  data: {
+    size: { x: 1, y: 1 },
+  }
+};
+
+const resources = {
+  components: {
+    Dimensions: { renderer: Dimensions },
+  },
+};
+
+// create user form
+const form = new Form();
+await form.init(model, resources);
+
+// change size field value - mock change from multiple places
+const promise1 = form.changeValue('size', ({ value }) => ({ x: value.x + 1, y: value.y + 1 }));
+const promise2 = form.changeValue('size', ({ value }) => ({ x: value.x + 1, y: value.y + 1 }));
+
+await Promise.all([promise1, promise2]);
+
+// verify form after the change
+expect(form.fields.size.component.value).toEqual({ x: 3, y: 3 }); // view value
+expect(form.data.size).toEqual({ x: 3, y: 3 }); // data value
 ```
 
 ## changeData
@@ -223,7 +273,7 @@ await myForm.changeState('hobbies', {
 | Name          | Type          | Description |
 | ------------- |-------------| ------------|
 | fieldId | required string | Field id to apply the change on |
-| state | object | New component state object |
+| state | object / function | New component state object, or an updater function which returns a new component state object |
 
 #### Lifecycle
 
@@ -236,7 +286,7 @@ await myForm.changeState('hobbies', {
 > **Note:** `stateChange` can create recursive set states, so make sure you always define an exit case that returns an undefined value.
 
 
-#### Example
+#### Example - state is an object
 
 ```javascript
 import InputDate from './my-components/InputDate';
@@ -270,10 +320,57 @@ await form.init(model, resources);
 
 // change birthDate field state
 const newState = { format: 'MMMM dd, yyyy' };
-form.changeState('birthDate', newState);
+await form.changeState('birthDate', newState);
 
 // verify form after the change
 expect(form.fields.birthDate.component.state).toEqual(newState);
+```
+
+#### Example - state is an updater function
+
+When updating field's state object from multiple places at the same time, based on a specific point in time store state object - one place can override other place's state changes (for example if a field is using a component that uses some underline components and each underline
+component is calling change state on init).
+Using - updater function, one can return an updated state object based on the current state that exists in Jafar's store.
+
+```javascript
+import Dimensions from './my-components/Dimensions';
+import Form from '@jafar/form';
+
+// define user form
+const model = {
+  id: 'user-form',
+  fields: {
+    size: {
+      path: 'size',
+      component: {
+        name: 'Dimensions',
+        state: {
+          x: 1,
+          y: 1,
+        },
+      },
+    },
+  },
+};
+
+const resources = {
+  components: {
+    Dimensions: { renderer: Dimensions },
+  },
+};
+
+// create user form
+const form = new Form();
+await form.init(model, resources);
+
+// change size field state - mock change from multiple places
+const promise1 = form.changeState('size', ({ state }) => ({ x: state.x + 1, y: state.y + 1 }));
+const promise2 = form.changeState('size', ({ state }) => ({ x: state.x + 1, y: state.y + 1 }));
+
+await Promise.all([promise1, promise2]);
+
+// verify form after the change
+expect(form.fields.size.component.state).toEqual({ x: 3, y: 3 });
 ```
 
 ## changeUi
