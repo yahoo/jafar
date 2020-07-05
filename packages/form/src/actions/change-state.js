@@ -8,6 +8,7 @@ import {
   isEqual,
 } from 'lodash';
 import {
+  evaluateState,
   getFieldComponentStateChanges,
 } from '../utils';
 import {
@@ -32,12 +33,14 @@ export default function changeState(formId, fieldId, state) {
   return (dispatch, getState) => new Promise((resolve) => {
     const stateChangesStates = [];
 
+    const { model, settings } = getState().forms[formId];
+
+    state = evaluateState(fieldId, model, state);
+
     // set component state in the form
     setStateToStore(formId, fieldId, state, stateChangesStates)(dispatch);
 
     addCachedDebounceResolve(formId, fieldId, 'state', resolve);
-
-    const { settings } = getState().forms[formId];
 
     debouncedChangeState = debouncedChangeState || debounce(debounceFunc, settings.changeStateDebounceWait,
       { maxWait: settings.changeStateDebounceMaxWait });

@@ -6,11 +6,14 @@
 import {
   debounce,
   isEqual,
+  isFunction,
 } from 'lodash';
 import {
-  throwError, errors,
+  throwError, errors, createError,
 } from '../errors';
+import log from '../log';
 import {
+  evaluateValue,
   isFieldDirty,
   evaluateTerm,
   validateField,
@@ -49,12 +52,16 @@ export default function changeValue(formId, fieldId, value) {
   return (dispatch, getState) => new Promise((resolve) => {
     const dependencies = [];
 
+    const { model, settings } = getState().forms[formId];
+
+    if (!verifyValidValue(fieldId, model, value, resolve)) return;
+
+    value = evaluateValue(fieldId, model, value);
+
     // set value to form
     setViewValueToStore(formId, fieldId, value, dependencies)(dispatch, getState);
 
     addCachedDebounceResolve(formId, fieldId, 'value', resolve);
-
-    const { settings } = getState().forms[formId];
 
     // evaluate field and run field dependencies
     debouncedChangeValue = debouncedChangeValue || debounce(debounceFunc, settings.changeValueDebounceWait,
@@ -63,6 +70,17 @@ export default function changeValue(formId, fieldId, value) {
     debouncedChangeValue(resolve, dispatch, getState, formId, fieldId, value, dependencies);
   });
 }
+
+const verifyValidValue = (fieldId, model, value, resolve) => {
+  if (isFunction(value) && !model.fields[fieldId].component) {
+    const ERROR_PREFIX = 'changeValue -';
+    const error = createError(ERROR_PREFIX, errors.CHANGE_VALUE_UPDATER_NOT_SUPPORTED, { model, fieldId }, []);
+    log.error(error);
+    resolve();
+    return false;
+  }
+  return true;
+};
 
 const setViewValueToStore = (formId, fieldId, value, dependencies = []) => (dispatch, getState) => {
   const { model } = getState().forms[formId];

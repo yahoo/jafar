@@ -115,6 +115,10 @@ export const errors = {
     message: (fieldId, formId, maxChangeValueLoops, dependenciesStr) => `field "${fieldId}" of form "${formId}" has `
     + `reached maximum circular dependencies loops (${maxChangeValueLoops}): ${dependenciesStr}`,
   },
+  CHANGE_VALUE_UPDATER_NOT_SUPPORTED: {
+    code: 'CHANGE_VALUE_UPDATER_NOT_SUPPORTED',
+    message: () => `changeValue using updater function is not supported for a field without a component`,
+  },
   INVALID_LOG_LEVEL: {
     code: 'INVALID_LOG_LEVEL',
     message: logLevel => `log level "${logLevel}" is not supported. `

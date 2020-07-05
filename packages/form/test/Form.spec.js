@@ -123,6 +123,42 @@ describe('Form', () => {
       });
     });
 
+    it('using updater function - with component value - changed ok', async () => {
+      const form = new Form();
+      simpleForm.model.fields.name.component = {
+        name: 'inputText',
+        value: 1,
+      };
+      simpleForm.model.data.name = 1;
+      simpleForm.resources.components = {
+        inputText: { renderer: noop },
+      };
+
+      await form.init(simpleForm.model, simpleForm.resources);
+      expect(form.pendingActions).toEqual([]);
+      const promise1 = form.changeValue('name', ({ value }) => (value + 1));
+      const promise2 = form.changeValue('name', ({ value }) => (value + 1));
+      await Promise.all([promise1, promise2]);
+      expect(form.fields.name.component.value).toEqual(3);
+      expect(form.data.name).toEqual(3);
+      expect(form.pendingActions).toEqual([]);
+    });
+
+    it('using updater function - without a component definition - throws error', async () => {
+      const form = new Form();
+      delete simpleForm.model.fields.name.component;
+      simpleForm.model.data.name = 1;
+      let error;
+      log.error  = (err) => { error = err; };
+      await form.init(simpleForm.model, simpleForm.resources);
+      expect(form.pendingActions).toEqual([]);
+      await form.changeValue('name', ({ value }) => (value + 1));
+      expect(error.code).toEqual(errors.CHANGE_VALUE_UPDATER_NOT_SUPPORTED.code);
+      expect(form.fields.name.component).toEqual(undefined);
+      expect(form.data.name).toEqual(1);
+      expect(form.pendingActions).toEqual([]);
+    });
+
     it('should resolve after dependency change', async () => {
       const form = new Form();
       await form.init(dependencyChangeForm.model, dependencyChangeForm.resources);
@@ -608,6 +644,27 @@ describe('Form', () => {
       expect(form.pendingActions).toEqual([]);
       await form.changeState('name', { mockState: 'mockState' });
       expect(form.fields.name.component.state).toEqual({ mockState: 'mockState' });
+      expect(form.pendingActions).toEqual([]);
+    });
+
+    it('using updater function - changed ok', async () => {
+      const form = new Form();
+      simpleForm.model.fields.name.component = {
+        name: 'inputText',
+        state: {
+          num: 1,
+        },
+      };
+      simpleForm.resources.components = {
+        inputText: { renderer: noop },
+      };
+
+      await form.init(simpleForm.model, simpleForm.resources);
+      expect(form.pendingActions).toEqual([]);
+      const promise1 = form.changeState('name', ({ state }) => ({ num: state.num + 1 }));
+      const promise2 = form.changeState('name', ({ state }) => ({ num: state.num + 1 }));
+      await Promise.all([promise1, promise2]);
+      expect(form.fields.name.component.state).toEqual({ num: 3 });
       expect(form.pendingActions).toEqual([]);
     });
 

@@ -7,6 +7,26 @@ import { get } from 'lodash';
 
 /*
 props:
+  state,
+*/
+export function getFieldEvaluateStateProps(id, model) {
+  const field = model.fields[id];
+  const props = { state: field.component.state };
+  return props;
+}
+
+/*
+props:
+  value, // view value
+*/
+export function getFieldEvaluateValueProps(id, model) {
+  const field = model.fields[id];
+  const props = { value: field.component.value };
+  return props;
+}
+
+/*
+props:
   data, // app data - data returned from hook fromDto
   context
 */
