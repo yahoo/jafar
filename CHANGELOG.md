@@ -2,6 +2,8 @@
 
 Changes that have landed in master but are not yet released
 
+## v1.0.6 (July 5, 2020)
+
 ### Form
 
 * Add - support for updater function for changeState and changeValue actions
