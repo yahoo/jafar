@@ -127,7 +127,7 @@ export const errors = {
     code: 'INVALID_LOG_LEVEL',
     message: logLevel => `log level "${logLevel}" is not supported. `
       + `Supported log levels are: "debug" / "warn" / "error" / "none"`,
-  }, 
+  },
   ACTION_FAILED: {
     code: 'ACTION_FAILED',
     message: type => `action "${type}" failed`,

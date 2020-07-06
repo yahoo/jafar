@@ -12,7 +12,7 @@ import DemoMarkup from '../../components/DemoMarkup';
 const demo = `import React from 'react';
 import { FormContext, createForm } from '@jafar/react-form';
 import ReactBreakpoints, { Media } from 'react-breakpoints';
-import Item from '../../../components/Item';
+import Item from '@jafar/react-layout/Item';
 import SaveIcon from '@material-ui/icons/Save';
 import form from './form';
 import sections from './sections';
