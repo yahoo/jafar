@@ -9,7 +9,7 @@ import DemoMarkup from '../../components/DemoMarkup';
 
 const demo = `import React from 'react';
 import { FormContext, createForm } from '@jafar/react-form';
-import { iterateSections, getSectionComponentBoxes } from '../../../components/Section/utils';
+import { iterateSections, getSectionComponentBoxes } from '@jafar/react-layout/Section/utils';
 import Section from '@jafar/react-layout/Section';
 import sections from './sections';
 import form from './form';
