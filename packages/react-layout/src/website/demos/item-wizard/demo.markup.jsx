@@ -11,7 +11,6 @@ import { FormContext, createForm } from '@jafar/react-form';
 import FormErrors from '@jafar/react-components/view/FormErrors';
 import { iterateBoxes } from '@jafar/react-layout/Box/utils';
 import ItemView from '@jafar/react-layout/ItemView';
-import Styled from '../../components/StyledComponents';
 import sections from './sections';
 import form from './form';
 
@@ -114,7 +113,7 @@ const Demo = () => {
     },
   };
 
-  return (<Styled.ItemWrapper><ItemView {...item} /></Styled.ItemWrapper>);
+  return (<ItemView {...item} />);
 }
 
 export default createForm(form)(Demo);`;
