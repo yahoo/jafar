@@ -105,6 +105,10 @@ export const errors = {
     code: 'INVALID_SETTING',
     message: (settingName, expected) => `setting "${settingName}" is invalid. Expected to be ${expected}`,
   },
+  INVALID_SUBMIT: {
+    code: 'INVALID_SUBMIT',
+    message: () => 'can\'t perform submit when form is invalid',
+  },
   CIRCULAR_DEPENDENCIES: {
     code: 'CIRCULAR_DEPENDENCIES',
     message: (fieldId, formId, dependenciesStr) => `field "${fieldId}" of form "${formId}" defined circular dependencies: `
@@ -117,17 +121,13 @@ export const errors = {
   },
   CHANGE_VALUE_UPDATER_NOT_SUPPORTED: {
     code: 'CHANGE_VALUE_UPDATER_NOT_SUPPORTED',
-    message: () => `changeValue using updater function is not supported for a field without a component`,
+    message: () => `calling changeValue action with an updater function is not supported for a field without a component`,
   },
   INVALID_LOG_LEVEL: {
     code: 'INVALID_LOG_LEVEL',
     message: logLevel => `log level "${logLevel}" is not supported. `
       + `Supported log levels are: "debug" / "warn" / "error" / "none"`,
-  },
-  INVALID_SUBMIT: {
-    code: 'INVALID_SUBMIT',
-    message: () => 'can\'t perform submit when form is invalid',
-  },
+  }, 
   ACTION_FAILED: {
     code: 'ACTION_FAILED',
     message: type => `action "${type}" failed`,
