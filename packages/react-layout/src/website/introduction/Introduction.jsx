@@ -17,6 +17,8 @@ export default () => (<Styled.HomeWrapper id="home">
           How to create a form with page layout (such as create / edit / details pages)?</Styled.A></li>
         <li><Styled.A href="#/item/responsive">
           How to create a form with responsive page layout (such as create / edit / details responsive pages)?</Styled.A></li>
+        <li><Styled.A href="#/item/wizard">
+          How to create a wizard form?</Styled.A></li>
         <li><Styled.A href="#/item/sections">
           How to create a form with sections?</Styled.A></li>
       </ul>
