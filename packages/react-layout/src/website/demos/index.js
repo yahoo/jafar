@@ -4,11 +4,13 @@
   */
 
 import itemLayouts from './item-layouts';
+import itemWizard from './item-wizard';
 import itemResponsive from './item-responsive';
 import sections from './sections';
 
 export default {
   itemLayouts,
+  itemWizard,
   itemResponsive,
   sections,
 };

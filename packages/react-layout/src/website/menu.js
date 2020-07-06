@@ -23,6 +23,7 @@ export default [{
   items: [
     getSubItem('item', 'layouts', 'item-layouts', 'Layouts', [docs.overview, docs.item]),
     getSubItem('item', 'responsive', 'item-responsive', 'Responsive', [docs.overview, docs.item]),
+    getSubItem('item', 'wizard', 'item-wizard', 'Wizard', [docs.overview]),
     getSubItem('item', 'sections', 'sections', 'Sections', [docs.overview, docs.section]),
   ],
 }];

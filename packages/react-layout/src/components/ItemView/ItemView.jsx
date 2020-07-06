@@ -20,6 +20,7 @@ export default class ItemView extends React.Component {
       items: PropTypes.arrayOf(PropTypes.shape({
         value: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
+        disabled: PropTypes.bool,
       })).isRequired,
       value: PropTypes.string,
       onChange: PropTypes.func,
@@ -53,7 +54,8 @@ export default class ItemView extends React.Component {
                 onChange={this.props.tabs.onChange}
                 indicatorColor="primary"
                 textColor="primary">
-                { this.props.tabs.items.map(item => <Tab key={item.value} value={item.value} label={item.label} />) }
+                { this.props.tabs.items.map(item => (<Tab key={item.value} value={item.value} label={item.label}
+                  disabled={item.disabled} />)) }
               </Tabs>
             </Styled.TabsWrapper>
           }
