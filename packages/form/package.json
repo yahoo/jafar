@@ -1,6 +1,6 @@
 {
   "name": "@jafar/form",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Javascript Form Class",
   "license": "MIT",
   "main": "src/index.js",
@@ -31,7 +31,7 @@
     "dateformat": "^3.0.3"
   },
   "devDependencies": {
-    "@jafar/js-kit": "^1.0.4"
+    "@jafar/js-kit": "^1.0.6"
   },
   "keywords": [
     "jafar",

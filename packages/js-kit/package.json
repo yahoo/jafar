@@ -1,6 +1,6 @@
 {
   "name": "@jafar/js-kit",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Utils for developing javascript package. Should be installed in devDependencies",
   "license": "MIT",
   "repository": {

@@ -6,7 +6,7 @@
       "invalid", "errors", "processing", "pending-actions", "hooks", "term", "log", "error-codes", "actions", "definition-shorthand"],
     "Advanced Usages": ["grid-usage", "persistency", "undo-redo", "replay", "track", "server-validation", "entity-templates", "folder-structure"],
     "React Form": ["react-installation", "react-overview", "react-form", "react-field", "react-components", "react-layout", "react-demos"],
-    "More Info": ["test", "packages", "why-jafar", "videos", "channels", "credits"],
-    "Contribute": ["code-of-conduct", "contributing-guide"]
+    "More Info": ["test", "packages", "why-jafar", "videos", "channels"],
+    "Contribute": ["code-of-conduct", "contributing-guide", "contributors"]
   }
 }

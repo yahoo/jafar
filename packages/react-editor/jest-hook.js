@@ -13,10 +13,10 @@ module.exports = (config) => {
       '!<rootDir>/src/setupTests.js']);
   config.coverageThreshold = config.coverageThreshold || {};
   config.coverageThreshold.global = {
-    lines: 42,
-    branches: 34,
+    lines: 38,
+    branches: 25,
     functions: 21,
-    statements: 41,
+    statements: 37,
   };
   config.moduleNameMapper = Object.assign(config.moduleNameMapper || {}, { // for the markups jsx
     '^.+/form/.+.js$': mockRequire,

@@ -1,6 +1,6 @@
 {
   "name": "@jafar/react-components",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "license": "MIT",
   "description": "React common components with unified api to be used in a Jafar form (using material components as an underline layer)",
   "repository": {
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@date-io/date-fns": "^1.3.12",
-    "@jafar/react-layout": "^1.0.4",
+    "@jafar/react-layout": "^1.0.6",
     "@material-ui/core": "^4.1.2",
     "@material-ui/icons": "^4.0.2",
     "@material-ui/pickers": "^3.1.2",
@@ -46,8 +46,8 @@
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
-    "@jafar/react-form": "^1.0.4",
-    "@jafar/react-kit": "^1.0.4",
+    "@jafar/react-form": "^1.0.6",
+    "@jafar/react-kit": "^1.0.6",
     "react-styleguidist": "^9.0.5"
   },
   "keywords": [

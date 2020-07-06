@@ -216,6 +216,7 @@ const resources = {
   }
 };
 ```
+
 ## REDUNDANT_CONVERSION
 
 field `fieldId` defined a `conversionName` named `name` in the model without defining a component. [More info](formatter-parser)
@@ -607,7 +608,7 @@ const settings = {
 }
 ```
 
-## INVALID_INVALID_SUBMIT
+## INVALID_SUBMIT
 
 can't perform submit when form is invalid. [More info](actions#submitformid)
 
@@ -803,6 +804,71 @@ const resources = {
 };
 ```
 
+## CHANGE_VALUE_UPDATER_NOT_SUPPORTED
+
+calling `changeValue` action with an updater function is not supported for a field without a component. [More info](actions#changevalue)
+
+Example
+
+```javascript
+import Form from '@jafar/form';
+
+// define user form
+const model = {
+  id: 'user-form',
+  fields: {
+    size: { // size field is missing a component
+      path: 'size',
+    },
+  },
+  data: {
+    size: { x: 1, y: 1 },
+  }
+};
+
+// create user form
+const form = new Form();
+await form.init(model, resources);
+
+// change size field value - with an updater function
+await form.changeValue('size', ({ value }) => ({ x: value.x + 1, y: value.y + 1 }));
+```
+
+Solution
+
+```javascript
+import Form from '@jafar/form';
+
+// define user form
+const model = {
+  id: 'user-form',
+  fields: {
+    size: {
+      path: 'size',
+      component: { // add a component to the field
+        name: 'Dimensions',
+      },
+    },
+  },
+  data: {
+    size: { x: 1, y: 1 },
+  }
+};
+
+const resources = {
+  components: {
+    Dimensions: { renderer: Dimensions },
+  },
+};
+
+// create user form
+const form = new Form();
+await form.init(model, resources);
+
+// change size field value - with an updater function
+await form.changeValue('size', ({ value }) => ({ x: value.x + 1, y: value.y + 1 }));
+```
+
 ## INVALID_LOG_LEVEL
 
 log level `logLevel` is not supported. Supported log levels are: `debug`, `warn`, `error` and `none`. [More info](log)
@@ -821,4 +887,75 @@ Solution
 import { setLogLevel, logLevels } from '@jafar/core/logger';
 
 setLogLevel(logLevels.DEBUG);
+```
+
+## ACTION_FAILED
+
+action `name` failed. An action fails due to an exception which occurs in one of the supplied resources handlers
+such as: validators, terms, conversions, dependenciesChanges, stateChange and hooks.
+Look on the sub error for more info. Try to debug your custom handler's code, or verify that parameters
+passed to build-in validators are correct with same expected type. [More info](actions).
+
+Example
+
+```javascript
+import Form from '@jafar/form';
+
+// define user form
+const model = {
+  id: 'user-form',
+  fields: {
+    children: {
+      path: 'children',
+      validators: [{ name: 'aboveAge', args: { age: 14 } }],
+    },
+  },
+};
+
+const resources = {
+  validators: {
+    aboveAge: {
+      func: ({ value, args }) => {
+        return !value.find(x => x.age < args.age); // this with cause an exception when value is undefined
+      },
+      message: () => 'All children must be above 14.',
+    },
+  },
+};
+
+// create user form
+const form = new Form();
+await form.init(model, resources);
+```
+
+Solution
+
+```javascript
+import Form from '@jafar/form';
+
+// define user form
+const model = {
+  id: 'user-form',
+  fields: {
+    children: {
+      path: 'children',
+      validators: [{ name: 'aboveAge', args: { age: 14 } }],
+    },
+  },
+};
+
+const resources = {
+  validators: {
+    aboveAge: {
+      func: ({ value = [], args }) => { // define a default empty array for the expected value
+        return !value.find(x => x.age < args.age); 
+      },
+      message: () => 'All children must be above 14.',
+    },
+  },
+};
+
+// create user form
+const form = new Form();
+await form.init(model, resources);
 ```

@@ -52,14 +52,16 @@ export default withTheme(({ value = [], state = {}, onValueChange, onStateChange
   };
 
   const onValidatorStateChange = (validatorState, index) => {
-    const newState = { ...state };
-    newState.validatorsStates = [...newState.validatorsStates];
-    if (!validatorState) {
-      newState.validatorsStates.splice(index, 1);
-    } else {
-      newState.validatorsStates[index] = validatorState;
-    }
-    onStateChange(newState);
+    onStateChange(({ state }) => {
+      const newState = { ...state };
+      newState.validatorsStates = [...newState.validatorsStates];
+      if (!validatorState) {
+        newState.validatorsStates.splice(index, 1);
+      } else {
+        newState.validatorsStates[index] = validatorState;
+      }
+      return newState;
+    });
   };
 
   const addValidator = () => {

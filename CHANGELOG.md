@@ -2,9 +2,27 @@
 
 Changes that have landed in master but are not yet released
 
+## v1.0.6 (July 5, 2020)
+
+### Form
+
+* Add - support for updater function for changeState and changeValue actions
+
+### React Editor
+
+* Fix - edit field should render all its validators when editing saved field
+
+## v1.0.5 (July 4, 2020)
+
 ### General
 
 * Add license field to all packages 
+
+### Form
+
+* Fix - when term supplied without indicator (e.g excludeTerm and excluded), indicator first true until calculated
+
+* Fix - remove evaluate state changes from init field - its already evaluated in 'evaluateField'
 
 ### React Layout
 

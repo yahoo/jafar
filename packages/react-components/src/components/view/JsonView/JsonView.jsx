@@ -40,7 +40,8 @@ export default class JsonView extends React.Component {
 
   render() {
     return (<JsonViewWrapper>
-      <JsonInput 
+      <JsonInput
+        locale="English"
         placeholder={this.props.value}
         viewOnly={true}
         height={this.props.state.height || JsonView.defaultProps.state.height} 

@@ -29,8 +29,8 @@ For more info please view [stateful component](component#stateful-component) and
 | empty | boolean | If true, component indicates empty |
 | required | boolean | If true, component indicates required |
 | invalid | boolean | If true, component indicates invalid. (For example, apply red border styling for component) |
-| onValueChange | function | A function that propagates a new value to be changed in the form |
-| onStateChange | function | A function that propagates a new ui state to be changed in the form |
+| onValueChange | function | A function that propagates a new value to be changed in the form. Function's arg is a value or an updater function as described in [changeValue action](actions#changevalue) |
+| onStateChange | function | A function that propagates a new ui state to be changed in the form. Function's arg is a state object or an updater function as described in [changeState action](actions#changestate) |
 
 ## Example
 
