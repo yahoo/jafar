@@ -18,9 +18,9 @@ Design vector created by [freepik - www.freepik.com](https://www.freepik.com/fre
 * [Eran Shapira](https://github.com/eranshapira)
 * Assaf Shilo
 * Sharon Amram
-* Doron Kilzi
-* Omri Zisovitch
-* Hagai Reuveni
+* [Doron Kilzi](https://github.com/doronkilzi)
+* [Omri Zisovitch](https://github.com/ziso)
+* [Hagai Reuveni](https://github.com/hagai-reuveni)
 
 ## Contributors
 
@@ -31,8 +31,8 @@ Help us in any way - such as ideas for features, pointing out bugs, creating prs
 * [Eran Shapira](https://github.com/eranshapira)
 * Assaf Shilo
 * Sharon Amram
-* Doron Kilzi
-* Omri Zisovitch
-* Hagai Reuveni
+* [Doron Kilzi](https://github.com/doronkilzi)
+* [Omri Zisovitch](https://github.com/ziso)
+* [Hagai Reuveni](https://github.com/hagai-reuveni)
 * Keren Shemesh
 * [Wang Larry](https://github.com/WangLarry)
