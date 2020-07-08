@@ -1,6 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FormErrors /> should render provided data 1`] = `
+exports[`<FormErrors /> should render all invalid fields 1`] = `
+<styled.div>
+  <Fields
+    fields={
+      Array [
+        Object {
+          "error": Object {
+            "message": "Field Required",
+            "name": "required",
+          },
+          "id": "firstName",
+          "label": "First Name",
+        },
+        Object {
+          "error": Object {
+            "message": "Field Required",
+            "name": "required",
+          },
+          "id": "lastName",
+          "label": "Last Name",
+        },
+      ]
+    }
+    isFirst={true}
+    onClickField={[Function]}
+    title="Required"
+  />
+  <Fields
+    fields={Array []}
+    onClickField={[Function]}
+    title="Invalid"
+  />
+</styled.div>
+`;
+
+exports[`<FormErrors /> should render some invalid fields 1`] = `
 <styled.div>
   <Fields
     fields={
