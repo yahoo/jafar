@@ -26,18 +26,31 @@ describe('<FormErrors />', () => {
               message: 'Field Required',
             }],
           },
+          lastName: {
+            label: 'Last Name',
+            errors: [{
+              name: 'required',
+              message: 'Field Required',
+            }],
+          },
         },
         invalid: true,
       },
     };
     jest.spyOn(React, 'useContext').mockImplementation(() => context);
-    component = shallow(getComponent());
+    
   });
-  it('should render provided data', () => {
+  it('should render all invalid fields', () => {
+    component = shallow(getComponent());
     expect(component).toMatchSnapshot();
   });
 
-  function getComponent() {
-    return (<FormErrors onClickField={() => {}} />);
+  it('should render some invalid fields', () => {
+    component = shallow(getComponent(['firstName']));
+    expect(component).toMatchSnapshot();
+  });
+
+  function getComponent(fields) {
+    return (<FormErrors onClickField={() => {}} fields={fields} />);
   }
 });

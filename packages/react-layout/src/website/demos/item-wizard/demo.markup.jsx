@@ -80,7 +80,8 @@ const Demo = () => {
         targetRef: refs.button,
         open: () => isSectionInvalid,
         component: FormErrors,
-        props: { 
+        props: {
+          fields: getSectionFieldsIds(sections[step]),
           onClickField: scrollToField,
         },
       },
