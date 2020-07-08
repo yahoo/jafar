@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid Should render grid 1`] = `
-<StyledComponent
+<styled.div
   elements={
     Array [
       Object {
@@ -42,42 +42,28 @@ exports[`Grid Should render grid 1`] = `
       },
     ]
   }
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "sc-bdVaJa",
-        "isStatic": false,
-        "rules": Array [
-          "
-  display: grid;
-  grid-template-areas: ",
-          [Function],
-          ";
-
-  ",
-          [Function],
-          "
-",
-        ],
-      },
-      "displayName": "styled.div",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "sc-bdVaJa",
-      "target": "div",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
   templateAreas={
     Array [
       "firstName lastName .",
       "personalId address .",
     ]
   }
-/>
+>
+  <Field
+    id="firstName"
+    key="0"
+  />
+  <Field
+    id="lastName"
+    key="1"
+  />
+  <Field
+    id="personalId"
+    key="2"
+  />
+  <Field
+    id="address"
+    key="3"
+  />
+</styled.div>
 `;
