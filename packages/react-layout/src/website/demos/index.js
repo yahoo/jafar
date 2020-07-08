@@ -7,10 +7,12 @@ import itemLayouts from './item-layouts';
 import itemWizard from './item-wizard';
 import itemResponsive from './item-responsive';
 import sections from './sections';
+import sectionsGrid from './sections-grid';
 
 export default {
   itemLayouts,
   itemWizard,
   itemResponsive,
   sections,
+  sectionsGrid,
 };

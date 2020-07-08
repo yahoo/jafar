@@ -5,6 +5,15 @@
 
 import styled from 'styled-components';
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-areas: ${props => props.grid.templateAreas.map(row => `"${row}"`).join(' ')};
+
+  ${props => props.grid.elements
+    .map(element => `${element.selector} { grid-area: ${element.gridArea}; ${element.style || ''} }`)
+    .join(' ')}
+`;
+
 const Wrapper = styled.div`
   padding: ${props => (props.level === 1 ? '0 50px 40px 50px' : '0')};
   border-bottom: ${props => (props.level === 1 && props.showBorder ? '1px solid #d8d8d8' : 'none')};
@@ -37,6 +46,7 @@ const SmallTitle = styled.h3`
 
 export default {
   Wrapper,
+  Grid,
   Title,
   SmallWrapper,
   SmallTitle,

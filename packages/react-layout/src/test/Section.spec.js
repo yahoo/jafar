@@ -25,6 +25,20 @@ describe('Section', () => {
     expect(component).toMatchSnapshot();
   });
 
+  it('Should render section with grid', () => {
+    const section = {
+      id: 'job-information',
+      title: 'Job Information',
+      level: 1,
+      grid: getGrid([
+        'firstName lastName .',
+        'personalId address .',
+      ]),
+    };
+    const component = shallow(getComponent(section));
+    expect(component).toMatchSnapshot();
+  });
+
   it('Should render simple section boxes without title', () => {
     const section = {
       id: 'job-information',
@@ -175,5 +189,19 @@ describe('Section', () => {
 
   function getComponentsBoxes(fields) {
     return fields.map(id => ({ component: Field, props: { id } }));
+  }
+
+  function getGrid(templateAreas) {
+    const fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+    return {
+      templateAreas,
+      elements: fieldIds.map(id => ({ 
+        selector: `#${id}`, 
+        gridArea: id, 
+        component: Field, 
+        props: { id },
+        style: 'width: 350px;',
+      })),
+    };
   }
 });

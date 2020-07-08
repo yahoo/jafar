@@ -11,7 +11,7 @@ export default function () {
     <React.Fragment>
       <Styled.P>
         Section component usage - render section title and composition of any components (such as Field) -
-        using boxes configuration.
+        using css grid configuration.
         Each section can contain sub sections (such as the bellow 'Raw Data' section).
       </Styled.P>
     </React.Fragment>);
