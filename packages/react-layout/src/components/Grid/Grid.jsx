@@ -3,6 +3,7 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
+import React from 'react';
 import styled from 'styled-components';
 
 const Grid = styled.div`
@@ -14,4 +15,11 @@ const Grid = styled.div`
     .join(' ')}
 `;
 
-export default Grid;
+export default ({ templateAreas, elements }) => (<Grid templateAreas={templateAreas} elements={elements}>
+  {
+    elements.map((element, index) => {
+      const GenericComponent = element.component;
+      return <GenericComponent key={index} {...element.props} />;
+    })
+  }
+</Grid>);

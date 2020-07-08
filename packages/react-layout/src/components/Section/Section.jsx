@@ -47,14 +47,7 @@ export class Section extends React.Component {
           this.props.title && <Title level={this.props.level}>{this.props.title}</Title>
         }
         {
-          this.props.grid && <Grid templateAreas={this.props.grid.templateAreas} elements={this.props.grid.elements}>
-            {
-              this.props.grid.elements.map((element, index) => {
-                const GenericComponent = element.component;
-                return <GenericComponent key={index} {...element.props} />;
-              })
-            }
-          </Grid> 
+          this.props.grid && <Grid templateAreas={this.props.grid.templateAreas} elements={this.props.grid.elements} />
         }
         {
           this.props.boxes.map((box, index) => (<Box key={index} { ...box } />))
