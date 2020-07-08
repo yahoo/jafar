@@ -50,19 +50,21 @@ const Fields = ({
   { fields.map(field => (<FieldLink key={field.id} onClick={() => { onClickField(field.id); }}>{field.label}</FieldLink>)) }
 </div>);
 
-const mapFieldsErrors = (fields) => {
+const mapFieldsErrors = (fields, fieldIds) => {
   const requiredFields = [];
   const invalidFields = [];
 
-  Object.keys(fields).forEach((fieldId) => {
-    const field = fields[fieldId];
-    const required = field.errors.find(err => err.name === 'required');
-    if (required) {
-      requiredFields.push({ id: fieldId, label: field.label, error: required });
-    } else if (field.errors.length) {
-      invalidFields.push({ id: fieldId, label: field.label, error: field.errors[0] });
-    }
-  });
+  Object.keys(fields)
+    .filter(fieldId => !fieldIds || fieldIds.includes(fieldId))
+    .forEach((fieldId) => {
+      const field = fields[fieldId];
+      const required = field.errors.find(err => err.name === 'required');
+      if (required) {
+        requiredFields.push({ id: fieldId, label: field.label, error: required });
+      } else if (field.errors.length) {
+        invalidFields.push({ id: fieldId, label: field.label, error: field.errors[0] });
+      }
+    });
 
   return { required: requiredFields, invalid: invalidFields };
 };
@@ -74,14 +76,14 @@ const mapFieldsErrors = (fields) => {
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/view/FormErrors/FormErrors.jsx">
  FormErrors</a> from '@jafar/react-components/view/FormErrors'
  */
-function FormErrors({ labels = defaultLabels, onClickField }) {
+function FormErrors({ labels = defaultLabels, onClickField, fields }) {
   const form = React.useContext(FormContext);
-  const fields = mapFieldsErrors(form.model.fields);
+  const invalidFields = mapFieldsErrors(form.model.fields, fields);
 
   return (
     <Wrapper>
-      <Fields fields={fields.required} title={labels.required} onClickField={onClickField} isFirst={true} />
-      <Fields fields={fields.invalid} title={labels.invalid} onClickField={onClickField} />
+      <Fields fields={invalidFields.required} title={labels.required} onClickField={onClickField} isFirst={true} />
+      <Fields fields={invalidFields.invalid} title={labels.invalid} onClickField={onClickField} />
     </Wrapper>
   );
 }
@@ -92,6 +94,7 @@ FormErrors.propTypes = {
     invalid: PropTypes.string,
   }),
   onClickField: PropTypes.func,
+  fields: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default FormErrors;
