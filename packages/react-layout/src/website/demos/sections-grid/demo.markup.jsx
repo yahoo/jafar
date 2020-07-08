@@ -9,7 +9,6 @@ import DemoMarkup from '../../components/DemoMarkup';
 
 const demo = `import React from 'react';
 import { FormContext, createForm } from '@jafar/react-form';
-import { iterateSections, getSectionComponentBoxes } from '@jafar/react-layout/Section/utils';
 import Section from '@jafar/react-layout/Section';
 import sections from './sections';
 import form from './form';
@@ -31,12 +30,12 @@ class Demo extends React.Component {
     }
 
     return (
-      <React.Fragment>
+      <Styled.ItemWrapper>
         {
           filteredSections.map((section, index) => (<Section key={section.id} {...section}
             showBorder={ index < sections.length - 1 } />))
         }
-      </React.Fragment>);
+      </Styled.ItemWrapper>);
   }
 }
 
@@ -52,10 +51,9 @@ function filterEmptySections(sections = [], context) {
 }
 
 function shouldExcludeSection(section, context) {
-  const boxes = getSectionComponentBoxes(section);
-  const fieldIds = boxes.map(box => box.props.id);
+  const fieldIds = section.grid.elements.map(x => x.props.id);
   const excluded = fieldIds
-    .reduce((excluded, fieldId) => excluded && context.form.fields[fieldId].excluded, true);
+    .reduce((excluded, fieldId) => excluded && context.model.fields[fieldId].excluded, true);
   return excluded;
 }
 
@@ -63,5 +61,5 @@ export default createForm(form)(Demo);
 `;
 
 export default function markup() {
-  return (<DemoMarkup exampleName="sections" data={true} demo={demo} />);
+  return (<DemoMarkup exampleName="sections-grid" data={true} demo={demo} />);
 }
