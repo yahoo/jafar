@@ -18,22 +18,22 @@ export default [{
   id: 'personal-information',
   title: 'Personal Information',
   grid: getGrid([
-    'firstName lastName .',
-    'personalId address .',
+    'firstName    lastName  .',
+    'personalId   address   .',
   ]),
 }, {
   id: 'job-information',
   title: 'Job Information',
   grid: getGrid([
-    'department level .',
-    'benefits . .',
+    'level       benefits    .',
+    'department  benefits    .',
   ]),
 }, {
   id: 'raw-data',
   title: 'Raw Data',
   grid: getGrid([
-    'id creationDate .',
-    'modifier modificationDate .',
+    'id         creationDate       .',
+    'modifier   modificationDate   .',
   ]),
   sections: [{
     id: 'raw-data-general',
