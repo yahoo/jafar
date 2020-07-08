@@ -67,51 +67,51 @@ exports[`Section Should render section with grid 1`] = `
       Job Information
     </styled.h3>
     <styled.div
-      grid={
-        Object {
-          "elements": Array [
-            Object {
-              "component": [Function],
-              "gridArea": "firstName",
-              "props": Object {
-                "id": "firstName",
-              },
-              "selector": "#firstName",
-              "style": "width: 350px;",
+      elements={
+        Array [
+          Object {
+            "component": [Function],
+            "gridArea": "firstName",
+            "props": Object {
+              "id": "firstName",
             },
-            Object {
-              "component": [Function],
-              "gridArea": "lastName",
-              "props": Object {
-                "id": "lastName",
-              },
-              "selector": "#lastName",
-              "style": "width: 350px;",
+            "selector": "#firstName",
+            "style": "width: 350px;",
+          },
+          Object {
+            "component": [Function],
+            "gridArea": "lastName",
+            "props": Object {
+              "id": "lastName",
             },
-            Object {
-              "component": [Function],
-              "gridArea": "personalId",
-              "props": Object {
-                "id": "personalId",
-              },
-              "selector": "#personalId",
-              "style": "width: 350px;",
+            "selector": "#lastName",
+            "style": "width: 350px;",
+          },
+          Object {
+            "component": [Function],
+            "gridArea": "personalId",
+            "props": Object {
+              "id": "personalId",
             },
-            Object {
-              "component": [Function],
-              "gridArea": "address",
-              "props": Object {
-                "id": "address",
-              },
-              "selector": "#address",
-              "style": "width: 350px;",
+            "selector": "#personalId",
+            "style": "width: 350px;",
+          },
+          Object {
+            "component": [Function],
+            "gridArea": "address",
+            "props": Object {
+              "id": "address",
             },
-          ],
-          "templateAreas": Array [
-            "firstName lastName .",
-            "personalId address .",
-          ],
-        }
+            "selector": "#address",
+            "style": "width: 350px;",
+          },
+        ]
+      }
+      templateAreas={
+        Array [
+          "firstName lastName .",
+          "personalId address .",
+        ]
       }
     >
       <Field

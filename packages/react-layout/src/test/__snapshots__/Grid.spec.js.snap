@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid Should render grid 1`] = `
+<StyledComponent
+  elements={
+    Array [
+      Object {
+        "component": [Function],
+        "gridArea": "firstName",
+        "props": Object {
+          "id": "firstName",
+        },
+        "selector": "#firstName",
+        "style": "width: 350px;",
+      },
+      Object {
+        "component": [Function],
+        "gridArea": "lastName",
+        "props": Object {
+          "id": "lastName",
+        },
+        "selector": "#lastName",
+        "style": "width: 350px;",
+      },
+      Object {
+        "component": [Function],
+        "gridArea": "personalId",
+        "props": Object {
+          "id": "personalId",
+        },
+        "selector": "#personalId",
+        "style": "width: 350px;",
+      },
+      Object {
+        "component": [Function],
+        "gridArea": "address",
+        "props": Object {
+          "id": "address",
+        },
+        "selector": "#address",
+        "style": "width: 350px;",
+      },
+    ]
+  }
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  display: grid;
+  grid-template-areas: ",
+          [Function],
+          ";
+
+  ",
+          [Function],
+          "
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  templateAreas={
+    Array [
+      "firstName lastName .",
+      "personalId address .",
+    ]
+  }
+/>
+`;

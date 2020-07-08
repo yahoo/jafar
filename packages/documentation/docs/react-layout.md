@@ -91,7 +91,63 @@ const item = {
 <Item {...item} />
 ```
 
-sections.js:
+sections.js - Using css grid example:
+
+```javascript
+import { Field } from '@jafar/react-form';
+
+const getGrid = (templateAreas) => {
+  const fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  return {
+    templateAreas,
+    elements: fieldIds.map(id => ({ 
+      selector: `#${id}`, 
+      gridArea: id, 
+      component: Field, 
+      props: { id },
+      style: 'width: 350px;',
+    })),
+  };
+};
+
+export default [{
+  id: 'personal-information',
+  title: 'Personal Information',
+  grid: getGrid([
+    'firstName lastName .',
+    'personalId address .',
+  ]),
+}, {
+  id: 'job-information',
+  title: 'Job Information',
+  grid: getGrid([
+    'department level .',
+    'benefits . .',
+  ]),
+}, {
+  id: 'raw-data',
+  title: 'Raw Data',
+  grid: getGrid([
+    'id creationDate .',
+    'modifier modificationDate .',
+  ]),
+  sections: [{
+    id: 'raw-data-general',
+    title: 'General',
+    grid: getGrid([
+      'id modifier .',
+    ]),
+  }, {
+    id: 'raw-data-modification',
+    title: 'Modification',
+    grid: getGrid([
+      'creationDate modificationDate .',
+    ]),
+  }],
+}];
+```
+
+sections.js - Using boxes example:
 
 ```javascript
 import { Field } from '@jafar/react-form';
@@ -198,7 +254,9 @@ export default [{
 
 ### Section
 
-React Component that renders title and composition of components. Each section can contain sub sections as well.
+React Component that renders title and composition of components. 
+Each composition of components can be defined using [boxes](react-layout#box) configuration or [css grid](react-layout#grid) configuration.
+Each section can contain sub sections as well.
 
 #### Import
 
@@ -212,8 +270,27 @@ import Item from '@jafar/react-layout/Section'
 | ------------- |-------------| ------------|
 | id | required string | Id of the section |
 | title | string | Title the section |
+| grid | object | Object contain the data defined in [Grid](react-layout.html#grid) |
 | boxes | object array | Each object can contain the data defined in [Box](react-layout.html#box) |
 | sections | object array | Sub sections, each object can contain the data defined in [Section](react-layout.html#sections) |
+
+### Grid
+
+Component represent css grid.
+
+#### Import
+
+```javascript
+import Item from '@jafar/react-layout/Grid'
+```
+
+#### Props
+
+| Name          | Type          | Description |
+| ------------- |-------------| ------------|
+| elements | required object array | Each object contains selector, gridArea, component, props, style |
+| templateAreas | required string array | Represent `grid-template-areas` property in css grid |
+
 
 ### Box
 

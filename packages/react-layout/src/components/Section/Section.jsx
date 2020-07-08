@@ -6,6 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '../Box';
+import Grid from '../Grid';
 import Styled from './Styled';
 
 const SectionShape = {
@@ -46,14 +47,14 @@ export class Section extends React.Component {
           this.props.title && <Title level={this.props.level}>{this.props.title}</Title>
         }
         {
-          this.props.grid && <Styled.Grid grid={this.props.grid}>
+          this.props.grid && <Grid templateAreas={this.props.grid.templateAreas} elements={this.props.grid.elements}>
             {
               this.props.grid.elements.map((element, index) => {
                 const GenericComponent = element.component;
                 return <GenericComponent key={index} {...element.props} />;
               })
             }
-          </Styled.Grid> 
+          </Grid> 
         }
         {
           this.props.boxes.map((box, index) => (<Box key={index} { ...box } />))

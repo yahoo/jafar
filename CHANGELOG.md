@@ -4,7 +4,9 @@ Changes that have landed in master but are not yet released
 
 ### React Layout
 
-* Add - wizard demo
+* Add - wizard demo. [Issue 46](https://github.com/yahoo/jafar/issues/46)
+
+* Add - sections by grid css config. [Issue 62](https://github.com/yahoo/jafar/issues/62)
 
 ## v1.0.6 (July 5, 2020)
 
