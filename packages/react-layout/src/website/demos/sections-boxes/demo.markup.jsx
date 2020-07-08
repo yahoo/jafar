@@ -63,5 +63,5 @@ export default createForm(form)(Demo);
 `;
 
 export default function markup() {
-  return (<DemoMarkup exampleName="sections" data={true} demo={demo} />);
+  return (<DemoMarkup exampleName="sections-boxes" data={true} demo={demo} />);
 }
