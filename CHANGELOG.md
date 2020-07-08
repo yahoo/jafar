@@ -2,6 +2,8 @@
 
 Changes that have landed in master but are not yet released
 
+## v1.0.7 (July 8, 2020)
+
 ### React Layout
 
 * Add - wizard demo. [Issue 46](https://github.com/yahoo/jafar/issues/46)
