@@ -6,6 +6,10 @@ Changes that have landed in master but are not yet released
 
 * Add - wizard demo
 
+### Documentation
+
+* Fix - demos broken links. [Issue 59](https://github.com/yahoo/jafar/issues/59)
+
 ## v1.0.6 (July 5, 2020)
 
 ### Form
