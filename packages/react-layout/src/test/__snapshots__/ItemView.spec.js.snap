@@ -3,11 +3,9 @@
 exports[`ItemView Should render - ok 1`] = `
 <styled.div>
   <styled.div>
-    <styled.h3
-      hasTabs={true}
-    >
+    <styled.div>
       Employee
-    </styled.h3>
+    </styled.div>
     <styled.div>
       <Options
         options={Array []}
@@ -34,6 +32,7 @@ exports[`ItemView Should render - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
+      size={4}
     />
   </styled.div>
   <Footer
@@ -58,6 +57,7 @@ exports[`ItemView Should render header options only - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
+      size={4}
     />
   </styled.div>
   <Footer
@@ -70,11 +70,9 @@ exports[`ItemView Should render header options only - ok 1`] = `
 exports[`ItemView Should render without footer - ok 1`] = `
 <styled.div>
   <styled.div>
-    <styled.h3
-      hasTabs={true}
-    >
+    <styled.div>
       Employee
-    </styled.h3>
+    </styled.div>
     <styled.div>
       <Options
         options={Array []}
@@ -101,6 +99,7 @@ exports[`ItemView Should render without footer - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
+      size={4}
     />
   </styled.div>
 </styled.div>
@@ -109,11 +108,9 @@ exports[`ItemView Should render without footer - ok 1`] = `
 exports[`ItemView Should render without options - ok 1`] = `
 <styled.div>
   <styled.div>
-    <styled.h3
-      hasTabs={true}
-    >
+    <styled.div>
       Employee
-    </styled.h3>
+    </styled.div>
     <styled.div>
       <WithStyles(ForwardRef(Tabs))
         aria-label="Tabs"
@@ -135,6 +132,7 @@ exports[`ItemView Should render without options - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
+      size={4}
     />
   </styled.div>
   <Footer
@@ -147,11 +145,9 @@ exports[`ItemView Should render without options - ok 1`] = `
 exports[`ItemView Should render without tabs - ok 1`] = `
 <styled.div>
   <styled.div>
-    <styled.h3
-      hasTabs={false}
-    >
+    <styled.div>
       Employee
-    </styled.h3>
+    </styled.div>
     <styled.div>
       <Options
         options={Array []}
@@ -164,6 +160,7 @@ exports[`ItemView Should render without tabs - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
+      size={4}
     />
   </styled.div>
   <Footer
@@ -202,6 +199,7 @@ exports[`ItemView Should render without title - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
+      size={4}
     />
   </styled.div>
   <Footer

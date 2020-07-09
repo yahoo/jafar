@@ -3,13 +3,10 @@
 exports[`Section Should render complex section boxes 1`] = `
 <styled.div
   id="job-information"
-  level={1}
 >
-  <styled.h2
-    level={1}
-  >
+  <styled.div>
     Job Information
-  </styled.h2>
+  </styled.div>
   <Box
     boxes={
       Array [
@@ -54,13 +51,10 @@ exports[`Section Should render complex section boxes 1`] = `
 exports[`Section Should render section with grid 1`] = `
 <styled.div
   id="job-information"
-  level={1}
 >
-  <styled.h2
-    level={1}
-  >
+  <styled.div>
     Job Information
-  </styled.h2>
+  </styled.div>
   <_default
     elements={
       Array [
@@ -115,13 +109,10 @@ exports[`Section Should render section with grid 1`] = `
 exports[`Section Should render section with only sub sections with level one 1`] = `
 <styled.div
   id="raw-data"
-  level={1}
 >
-  <styled.h2
-    level={1}
-  >
+  <styled.div>
     Raw Data
-  </styled.h2>
+  </styled.div>
   <Section
     boxes={
       Array [
@@ -157,7 +148,7 @@ exports[`Section Should render section with only sub sections with level one 1`]
     id="raw-data-general"
     key="raw-data-general"
     level={1}
-    size="large"
+    size={4}
     title="General"
   />
   <Section
@@ -195,7 +186,7 @@ exports[`Section Should render section with only sub sections with level one 1`]
     id="raw-data-modification"
     key="raw-data-modification"
     level={1}
-    size="large"
+    size={4}
     title="Modification"
   />
 </styled.div>
@@ -204,13 +195,10 @@ exports[`Section Should render section with only sub sections with level one 1`]
 exports[`Section Should render section with sub sections 1`] = `
 <styled.div
   id="raw-data"
-  level={1}
 >
-  <styled.h2
-    level={1}
-  >
+  <styled.div>
     Raw Data
-  </styled.h2>
+  </styled.div>
   <Box
     boxes={
       Array [
@@ -290,7 +278,7 @@ exports[`Section Should render section with sub sections 1`] = `
     id="raw-data-general"
     key="raw-data-general"
     level={2}
-    size="large"
+    size={4}
     title="General"
   />
   <Section
@@ -328,7 +316,7 @@ exports[`Section Should render section with sub sections 1`] = `
     id="raw-data-modification"
     key="raw-data-modification"
     level={2}
-    size="large"
+    size={4}
     title="Modification"
   />
 </styled.div>
@@ -337,13 +325,10 @@ exports[`Section Should render section with sub sections 1`] = `
 exports[`Section Should render simple section boxes - level one 1`] = `
 <styled.div
   id="job-information"
-  level={1}
 >
-  <styled.h2
-    level={1}
-  >
+  <styled.div>
     Job Information
-  </styled.h2>
+  </styled.div>
   <Box
     boxes={
       Array [
@@ -372,13 +357,10 @@ exports[`Section Should render simple section boxes - level one 1`] = `
 exports[`Section Should render simple section boxes - level two 1`] = `
 <styled.div
   id="job-information"
-  level={2}
 >
-  <styled.h2
-    level={2}
-  >
+  <styled.div>
     Job Information
-  </styled.h2>
+  </styled.div>
   <Box
     boxes={
       Array [
@@ -407,7 +389,6 @@ exports[`Section Should render simple section boxes - level two 1`] = `
 exports[`Section Should render simple section boxes without title 1`] = `
 <styled.div
   id="job-information"
-  level={1}
 >
   <Box
     boxes={
@@ -460,6 +441,6 @@ exports[`Section Should render simple section with ref 1`] = `
   id="job-information"
   innerRef={null}
   level={1}
-  size="large"
+  size={4}
 />
 `;

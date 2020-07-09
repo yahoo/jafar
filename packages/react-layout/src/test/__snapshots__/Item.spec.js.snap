@@ -28,6 +28,7 @@ exports[`Item Should render - ok 1`] = `
       "current": null,
     }
   }
+  size={4}
   tabs={
     Object {
       "items": Array [
@@ -58,6 +59,7 @@ exports[`Item Should render with layout mobile - ok 1`] = `
       },
     ]
   }
+  size={1}
   title="Employee"
 />
 `;
@@ -81,7 +83,7 @@ exports[`Item Should render with layout tabs - ok 1`] = `
         "ref": Object {
           "current": null,
         },
-        "title": "General",
+        "title": undefined,
       },
     ]
   }
@@ -90,6 +92,7 @@ exports[`Item Should render with layout tabs - ok 1`] = `
       "current": null,
     }
   }
+  size={4}
   tabs={
     Object {
       "items": Array [
@@ -164,6 +167,7 @@ exports[`Item Should render with mainActions - popover - ok 1`] = `
       "current": null,
     }
   }
+  size={4}
   tabs={
     Object {
       "items": Array [
@@ -208,6 +212,7 @@ exports[`Item Should render without layout - ok 1`] = `
       "current": null,
     }
   }
+  size={4}
   title="Employee"
 />
 `;
@@ -235,6 +240,7 @@ exports[`Item Should render without mainActions - ok 1`] = `
       "current": null,
     }
   }
+  size={4}
   tabs={
     Object {
       "items": Array [
@@ -274,6 +280,7 @@ exports[`Item Should render without optionsActions - ok 1`] = `
       "current": null,
     }
   }
+  size={4}
   tabs={
     Object {
       "items": Array [
@@ -318,6 +325,7 @@ exports[`Item Should render without title - ok 1`] = `
       "current": null,
     }
   }
+  size={4}
   tabs={
     Object {
       "items": Array [
@@ -361,6 +369,7 @@ exports[`Item getDerivedStateFromProps - selected defined 1`] = `
       "current": null,
     }
   }
+  size={4}
   tabs={
     Object {
       "items": Array [
