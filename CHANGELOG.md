@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### React Layout
+
+* Add - size support. [Issue 67](https://github.com/yahoo/jafar/issues/67)
+
 ## v1.0.7 (July 8, 2020)
 
 ### React Layout
