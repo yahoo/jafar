@@ -10,18 +10,18 @@ import 'jest-styled-components';
 
 describe('Styled', () => {
   [
-    { size: 1, level: 1 },
-    { size: 1, level: 2 },
-    { size: 2, level: 1 },
-    { size: 2, level: 2 },
-    { size: 3, level: 1 },
-    { size: 3, level: 2 },
-    { size: 4, level: 1 },
-    { size: 4, level: 2 },
+    { size: 1, root: true },
+    { size: 1, root: false },
+    { size: 2, root: true },
+    { size: 2, root: false },
+    { size: 3, root: true },
+    { size: 3, root: false },
+    { size: 4, root: true },
+    { size: 4, root: false },
   ]
-    .forEach(({ size, level }) => {
-      describe(`size: ${size}, level: ${level}`, () => {
-        const Styled = Style(size, level);
+    .forEach(({ size, root }) => {
+      describe(`size: ${size}, root: ${root}`, () => {
+        const Styled = Style(size, root);
   
         it('Wrapper', () => {
           const tree = renderer.create(<Styled.Wrapper />).toJSON();

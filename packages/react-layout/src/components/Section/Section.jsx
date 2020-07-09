@@ -24,7 +24,7 @@ const SectionShape = {
   }),
   boxes: PropTypes.arrayOf(PropTypes.object),
   size: PropTypes.number,
-  level: PropTypes.oneOf([1, 2]),
+  root: PropTypes.bool,
 };
 SectionShape.sections = PropTypes.arrayOf(PropTypes.shape(SectionShape));
 
@@ -33,12 +33,12 @@ export class Section extends React.Component {
 
   static defaultProps = {
     size: 4,
-    level: 1,
+    root: true,
     boxes: [],
   };
 
   render() {
-    const { Wrapper, Title } = Styled(this.props.size, this.props.level);
+    const { Wrapper, Title } = Styled(this.props.size, this.props.root);
 
     return (<Wrapper ref={this.props.innerRef} id={this.props.id}>
       {
@@ -52,7 +52,7 @@ export class Section extends React.Component {
       }
       {
         (this.props.sections || []).length > 0 && this.props.sections.map(section => (<Section
-          key={section.id} size={this.props.size} level={section.level || this.props.level + 1} {...section} />))
+          key={section.id} size={this.props.size - 1} root={false} {...section} />))
       }
     </Wrapper>);
   }

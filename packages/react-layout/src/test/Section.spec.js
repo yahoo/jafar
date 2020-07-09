@@ -19,7 +19,6 @@ describe('Section', () => {
         direction: 'row',
         boxes: getComponentsBoxes(['firstName', 'lastName']),
       }],
-      level: 1,
     };
     const component = shallow(<SectionWithRef {...section} />);
     expect(component).toMatchSnapshot();
@@ -29,7 +28,6 @@ describe('Section', () => {
     const section = {
       id: 'job-information',
       title: 'Job Information',
-      level: 1,
       grid: getGrid([
         'firstName lastName .',
         'personalId address .',
@@ -46,13 +44,12 @@ describe('Section', () => {
         direction: 'row',
         boxes: getComponentsBoxes(['firstName', 'lastName']),
       }],
-      level: 1,
     };
     const component = shallow(getComponent(section));
     expect(component).toMatchSnapshot();
   });
 
-  it('Should render simple section boxes - level one', () => {
+  it('Should render simple section boxes - root', () => {
     const section = {
       id: 'job-information',
       title: 'Job Information',
@@ -60,13 +57,12 @@ describe('Section', () => {
         direction: 'row',
         boxes: getComponentsBoxes(['firstName', 'lastName']),
       }],
-      level: 1,
     };
     const component = shallow(getComponent(section));
     expect(component).toMatchSnapshot();
   });
 
-  it('Should render simple section boxes - level two', () => {
+  it('Should render simple section boxes - not root', () => {
     const section = {
       id: 'job-information',
       title: 'Job Information',
@@ -74,7 +70,7 @@ describe('Section', () => {
         direction: 'row',
         boxes: getComponentsBoxes(['firstName', 'lastName']),
       }],
-      level: 2,
+      root: false,
     };
     const component = shallow(getComponent(section));
     expect(component).toMatchSnapshot();
@@ -145,7 +141,7 @@ describe('Section', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('Should render section with only sub sections with level one', () => {
+  it('Should render section with only sub sections with root', () => {
     const section = {
       id: 'raw-data',
       title: 'Raw Data',
@@ -162,7 +158,6 @@ describe('Section', () => {
             boxes: getComponentsBoxes(['modifier']),
           }],
         }],
-        level: 1,
       }, {
         id: 'raw-data-modification',
         title: 'Modification',
@@ -176,7 +171,6 @@ describe('Section', () => {
             boxes: getComponentsBoxes(['modificationDate']),
           }],
         }],
-        level: 1,
       }],
     };
     const component = shallow(getComponent(section));

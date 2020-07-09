@@ -1,37 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled size: 1, level: 1 Title 1`] = `
-.c0 {
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  padding-bottom: 20px;
-  margin: 0;
-}
-
-<div
-  className="c0"
-/>
-`;
-
-exports[`Styled size: 1, level: 1 Wrapper 1`] = `
-.c0 {
-  padding: 26px 20px 10px 20px;
-  border-bottom: 1px solid #d8d8d8;
-}
-
-.c0:last-child {
-  border-bottom: none;
-}
-
-<div
-  className="c0"
-/>
-`;
-
-exports[`Styled size: 1, level: 2 Title 1`] = `
+exports[`Styled size: 1, root: false Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
@@ -47,7 +16,7 @@ exports[`Styled size: 1, level: 2 Title 1`] = `
 />
 `;
 
-exports[`Styled size: 1, level: 2 Wrapper 1`] = `
+exports[`Styled size: 1, root: false Wrapper 1`] = `
 .c0 {
   padding: 0;
   border-bottom: none;
@@ -62,14 +31,14 @@ exports[`Styled size: 1, level: 2 Wrapper 1`] = `
 />
 `;
 
-exports[`Styled size: 2, level: 1 Title 1`] = `
+exports[`Styled size: 1, root: true Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   margin: 0;
 }
 
@@ -78,9 +47,9 @@ exports[`Styled size: 2, level: 1 Title 1`] = `
 />
 `;
 
-exports[`Styled size: 2, level: 1 Wrapper 1`] = `
+exports[`Styled size: 1, root: true Wrapper 1`] = `
 .c0 {
-  padding: 34px 30px 20px 30px;
+  padding: 26px 20px 10px 20px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -93,7 +62,7 @@ exports[`Styled size: 2, level: 1 Wrapper 1`] = `
 />
 `;
 
-exports[`Styled size: 2, level: 2 Title 1`] = `
+exports[`Styled size: 2, root: false Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
@@ -109,7 +78,7 @@ exports[`Styled size: 2, level: 2 Title 1`] = `
 />
 `;
 
-exports[`Styled size: 2, level: 2 Wrapper 1`] = `
+exports[`Styled size: 2, root: false Wrapper 1`] = `
 .c0 {
   padding: 0;
   border-bottom: none;
@@ -124,14 +93,14 @@ exports[`Styled size: 2, level: 2 Wrapper 1`] = `
 />
 `;
 
-exports[`Styled size: 3, level: 1 Title 1`] = `
+exports[`Styled size: 2, root: true Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   margin: 0;
 }
 
@@ -140,9 +109,9 @@ exports[`Styled size: 3, level: 1 Title 1`] = `
 />
 `;
 
-exports[`Styled size: 3, level: 1 Wrapper 1`] = `
+exports[`Styled size: 2, root: true Wrapper 1`] = `
 .c0 {
-  padding: 42px 40px 30px 40px;
+  padding: 34px 30px 20px 30px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -155,7 +124,7 @@ exports[`Styled size: 3, level: 1 Wrapper 1`] = `
 />
 `;
 
-exports[`Styled size: 3, level: 2 Title 1`] = `
+exports[`Styled size: 3, root: false Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
@@ -171,7 +140,7 @@ exports[`Styled size: 3, level: 2 Title 1`] = `
 />
 `;
 
-exports[`Styled size: 3, level: 2 Wrapper 1`] = `
+exports[`Styled size: 3, root: false Wrapper 1`] = `
 .c0 {
   padding: 0;
   border-bottom: none;
@@ -186,14 +155,14 @@ exports[`Styled size: 3, level: 2 Wrapper 1`] = `
 />
 `;
 
-exports[`Styled size: 4, level: 1 Title 1`] = `
+exports[`Styled size: 3, root: true Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   margin: 0;
 }
 
@@ -202,9 +171,9 @@ exports[`Styled size: 4, level: 1 Title 1`] = `
 />
 `;
 
-exports[`Styled size: 4, level: 1 Wrapper 1`] = `
+exports[`Styled size: 3, root: true Wrapper 1`] = `
 .c0 {
-  padding: 50px 50px 40px 50px;
+  padding: 42px 40px 30px 40px;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -217,7 +186,7 @@ exports[`Styled size: 4, level: 1 Wrapper 1`] = `
 />
 `;
 
-exports[`Styled size: 4, level: 2 Title 1`] = `
+exports[`Styled size: 4, root: false Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
@@ -233,10 +202,41 @@ exports[`Styled size: 4, level: 2 Title 1`] = `
 />
 `;
 
-exports[`Styled size: 4, level: 2 Wrapper 1`] = `
+exports[`Styled size: 4, root: false Wrapper 1`] = `
 .c0 {
   padding: 0;
   border-bottom: none;
+}
+
+.c0:last-child {
+  border-bottom: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4, root: true Title 1`] = `
+.c0 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 500;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4, root: true Wrapper 1`] = `
+.c0 {
+  padding: 50px 50px 40px 50px;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .c0:last-child {
