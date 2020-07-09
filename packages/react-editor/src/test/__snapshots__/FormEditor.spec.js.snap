@@ -954,29 +954,26 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                               "id": "model",
                               "ref": Object {
                                 "current": <div
+                                  class="sc-dnqmqq psgzJ"
                                   id="model"
                                 >
-                                  <div
-                                    class="sc-dnqmqq jkcDWH"
+                                  <h3
+                                    class="sc-iwsKbI gaRpVe"
                                   >
-                                    <h3
-                                      class="sc-iwsKbI gaRpVe"
-                                    >
-                                      Model
-                                    </h3>
+                                    Model
+                                  </h3>
+                                  <div
+                                    class="sc-bZQynM bwibdY"
+                                    width="100%"
+                                  >
+                                    <div
+                                      class="sc-bZQynM clIlZD"
+                                      width="400px"
+                                    />
                                     <div
                                       class="sc-bZQynM bwibdY"
                                       width="100%"
-                                    >
-                                      <div
-                                        class="sc-bZQynM clIlZD"
-                                        width="400px"
-                                      />
-                                      <div
-                                        class="sc-bZQynM bwibdY"
-                                        width="100%"
-                                      />
-                                    </div>
+                                    />
                                   </div>
                                 </div>,
                               },
@@ -1037,72 +1034,8 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                               "id": "settings",
                               "ref": Object {
                                 "current": <div
+                                  class="sc-dnqmqq psgzJ"
                                   id="settings"
-                                >
-                                  <div
-                                    class="sc-dnqmqq cJrQwH"
-                                  >
-                                    <h3
-                                      class="sc-iwsKbI gaRpVe"
-                                    >
-                                      Settings
-                                    </h3>
-                                    <div
-                                      class="sc-gzVnrw jKdxIN"
-                                    >
-                                      <div
-                                        class="sc-bZQynM clIlZD"
-                                        width="400px"
-                                      />
-                                      <div
-                                        class="sc-bZQynM clIlZD"
-                                        width="400px"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>,
-                              },
-                              "title": "Settings",
-                            },
-                          ]
-                        }
-                        sectionsRef={
-                          Object {
-                            "current": <div
-                              aria-label="Sections"
-                              class="sc-kGXeez kaTjty"
-                            >
-                              <div
-                                id="model"
-                              >
-                                <div
-                                  class="sc-dnqmqq jkcDWH"
-                                >
-                                  <h3
-                                    class="sc-iwsKbI gaRpVe"
-                                  >
-                                    Model
-                                  </h3>
-                                  <div
-                                    class="sc-bZQynM bwibdY"
-                                    width="100%"
-                                  >
-                                    <div
-                                      class="sc-bZQynM clIlZD"
-                                      width="400px"
-                                    />
-                                    <div
-                                      class="sc-bZQynM bwibdY"
-                                      width="100%"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                id="settings"
-                              >
-                                <div
-                                  class="sc-dnqmqq cJrQwH"
                                 >
                                   <h3
                                     class="sc-iwsKbI gaRpVe"
@@ -1121,6 +1054,61 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       width="400px"
                                     />
                                   </div>
+                                </div>,
+                              },
+                              "title": "Settings",
+                            },
+                          ]
+                        }
+                        sectionsRef={
+                          Object {
+                            "current": <div
+                              aria-label="Sections"
+                              class="sc-kGXeez eRBpYu"
+                            >
+                              <div
+                                class="sc-dnqmqq psgzJ"
+                                id="model"
+                              >
+                                <h3
+                                  class="sc-iwsKbI gaRpVe"
+                                >
+                                  Model
+                                </h3>
+                                <div
+                                  class="sc-bZQynM bwibdY"
+                                  width="100%"
+                                >
+                                  <div
+                                    class="sc-bZQynM clIlZD"
+                                    width="400px"
+                                  />
+                                  <div
+                                    class="sc-bZQynM bwibdY"
+                                    width="100%"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="sc-dnqmqq psgzJ"
+                                id="settings"
+                              >
+                                <h3
+                                  class="sc-iwsKbI gaRpVe"
+                                >
+                                  Settings
+                                </h3>
+                                <div
+                                  class="sc-gzVnrw jKdxIN"
+                                >
+                                  <div
+                                    class="sc-bZQynM clIlZD"
+                                    width="400px"
+                                  />
+                                  <div
+                                    class="sc-bZQynM clIlZD"
+                                    width="400px"
+                                  />
                                 </div>
                               </div>
                             </div>,
@@ -1153,15 +1141,15 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-jzJRlG",
                                   "isStatic": false,
-                                  "lastClassName": "ftinWd",
+                                  "lastClassName": "fSPMWM",
                                   "rules": Array [
                                     "
-  color: #3d3d3d;
-  background-color: #fff;
-  height:100%;
-  display: flex;
-  flex-direction: column;
-",
+    color: #3d3d3d;
+    background-color: #fff;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+  ",
                                   ],
                                 },
                                 "displayName": "styled.div",
@@ -1177,7 +1165,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                             forwardedRef={null}
                           >
                             <div
-                              className="sc-jzJRlG ftinWd"
+                              className="sc-jzJRlG fSPMWM"
                             >
                               <styled.div>
                                 <StyledComponent
@@ -1188,16 +1176,16 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-cSHVUG",
                                         "isStatic": false,
-                                        "lastClassName": "gURCT",
+                                        "lastClassName": "iKyJud",
                                         "rules": Array [
                                           "
-  flex: 0 0 auto;
-  padding: 0 50px;
-  border-bottom: 3px solid #e1e1e1;
-  position: relative;
-  min-height: 48px;
-  position: relative;
-",
+    flex: 0 0 auto;
+    padding: 0 50px;
+    border-bottom: 3px solid #e1e1e1;
+    position: relative;
+    min-height: 48px;
+    position: relative;
+  ",
                                         ],
                                       },
                                       "displayName": "styled.div",
@@ -1213,7 +1201,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="sc-cSHVUG gURCT"
+                                    className="sc-cSHVUG iKyJud"
                                   >
                                     <styled.h3
                                       hasTabs={true}
@@ -1226,16 +1214,16 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-chPdSV",
                                               "isStatic": false,
-                                              "lastClassName": "cLywfT",
+                                              "lastClassName": "exIrrj",
                                               "rules": Array [
                                                 "
-  font-size: 28px;
-  font-weight: 500;
-  margin: 0;
-  padding: ",
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    padding: ",
                                                 [Function],
                                                 ";
-",
+  ",
                                               ],
                                             },
                                             "displayName": "styled.h3",
@@ -1252,7 +1240,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         hasTabs={true}
                                       >
                                         <h3
-                                          className="sc-chPdSV cLywfT"
+                                          className="sc-chPdSV exIrrj"
                                         >
                                           Form - new
                                         </h3>
@@ -1267,13 +1255,13 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kAzzGY",
                                               "isStatic": false,
-                                              "lastClassName": "eIVGdU",
+                                              "lastClassName": "etYhcl",
                                               "rules": Array [
                                                 "
-  position: absolute;
-  right: 15px;
-  bottom: 0;
-",
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+  ",
                                               ],
                                             },
                                             "displayName": "styled.div",
@@ -1289,7 +1277,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         forwardedRef={null}
                                       >
                                         <div
-                                          className="sc-kAzzGY eIVGdU"
+                                          className="sc-kAzzGY etYhcl"
                                         >
                                           <Options
                                             options={
@@ -1568,13 +1556,13 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kgoBCf",
                                               "isStatic": false,
-                                              "lastClassName": "hpTduF",
+                                              "lastClassName": "ejpLAT",
                                               "rules": Array [
                                                 "
-  position: relative;
-  top: 3px;
-  left: -10px;
-",
+    position: relative;
+    top: 3px;
+    left: -10px;
+  ",
                                               ],
                                             },
                                             "displayName": "styled.div",
@@ -1590,7 +1578,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         forwardedRef={null}
                                       >
                                         <div
-                                          className="sc-kgoBCf hpTduF"
+                                          className="sc-kgoBCf ejpLAT"
                                         >
                                           <WithStyles(ForwardRef(Tabs))
                                             aria-label="Tabs"
@@ -1940,12 +1928,12 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kGXeez",
                                         "isStatic": false,
-                                        "lastClassName": "kaTjty",
+                                        "lastClassName": "eRBpYu",
                                         "rules": Array [
                                           "
-  flex-grow: 1;
-  overflow-y: auto;
-",
+    flex-grow: 1;
+    overflow-y: auto;
+  ",
                                         ],
                                       },
                                       "displayName": "styled.div",
@@ -1962,57 +1950,51 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                     Object {
                                       "current": <div
                                         aria-label="Sections"
-                                        class="sc-kGXeez kaTjty"
+                                        class="sc-kGXeez eRBpYu"
                                       >
                                         <div
+                                          class="sc-dnqmqq psgzJ"
                                           id="model"
                                         >
-                                          <div
-                                            class="sc-dnqmqq jkcDWH"
+                                          <h3
+                                            class="sc-iwsKbI gaRpVe"
                                           >
-                                            <h3
-                                              class="sc-iwsKbI gaRpVe"
-                                            >
-                                              Model
-                                            </h3>
+                                            Model
+                                          </h3>
+                                          <div
+                                            class="sc-bZQynM bwibdY"
+                                            width="100%"
+                                          >
+                                            <div
+                                              class="sc-bZQynM clIlZD"
+                                              width="400px"
+                                            />
                                             <div
                                               class="sc-bZQynM bwibdY"
                                               width="100%"
-                                            >
-                                              <div
-                                                class="sc-bZQynM clIlZD"
-                                                width="400px"
-                                              />
-                                              <div
-                                                class="sc-bZQynM bwibdY"
-                                                width="100%"
-                                              />
-                                            </div>
+                                            />
                                           </div>
                                         </div>
                                         <div
+                                          class="sc-dnqmqq psgzJ"
                                           id="settings"
                                         >
-                                          <div
-                                            class="sc-dnqmqq cJrQwH"
+                                          <h3
+                                            class="sc-iwsKbI gaRpVe"
                                           >
-                                            <h3
-                                              class="sc-iwsKbI gaRpVe"
-                                            >
-                                              Settings
-                                            </h3>
+                                            Settings
+                                          </h3>
+                                          <div
+                                            class="sc-gzVnrw jKdxIN"
+                                          >
                                             <div
-                                              class="sc-gzVnrw jKdxIN"
-                                            >
-                                              <div
-                                                class="sc-bZQynM clIlZD"
-                                                width="400px"
-                                              />
-                                              <div
-                                                class="sc-bZQynM clIlZD"
-                                                width="400px"
-                                              />
-                                            </div>
+                                              class="sc-bZQynM clIlZD"
+                                              width="400px"
+                                            />
+                                            <div
+                                              class="sc-bZQynM clIlZD"
+                                              width="400px"
+                                            />
                                           </div>
                                         </div>
                                       </div>,
@@ -2021,7 +2003,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                 >
                                   <div
                                     aria-label="Sections"
-                                    className="sc-kGXeez kaTjty"
+                                    className="sc-kGXeez eRBpYu"
                                   >
                                     <ForwardRef
                                       boxes={
@@ -2080,7 +2062,6 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       }
                                       id="model"
                                       key="model"
-                                      showBorder={true}
                                       title="Model"
                                     >
                                       <Section
@@ -2142,83 +2123,215 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         innerRef={
                                           Object {
                                             "current": <div
+                                              class="sc-dnqmqq psgzJ"
                                               id="model"
                                             >
-                                              <div
-                                                class="sc-dnqmqq jkcDWH"
+                                              <h3
+                                                class="sc-iwsKbI gaRpVe"
                                               >
-                                                <h3
-                                                  class="sc-iwsKbI gaRpVe"
-                                                >
-                                                  Model
-                                                </h3>
+                                                Model
+                                              </h3>
+                                              <div
+                                                class="sc-bZQynM bwibdY"
+                                                width="100%"
+                                              >
+                                                <div
+                                                  class="sc-bZQynM clIlZD"
+                                                  width="400px"
+                                                />
                                                 <div
                                                   class="sc-bZQynM bwibdY"
                                                   width="100%"
-                                                >
-                                                  <div
-                                                    class="sc-bZQynM clIlZD"
-                                                    width="400px"
-                                                  />
-                                                  <div
-                                                    class="sc-bZQynM bwibdY"
-                                                    width="100%"
-                                                  />
-                                                </div>
+                                                />
                                               </div>
                                             </div>,
                                           }
                                         }
                                         level={1}
-                                        showBorder={true}
                                         title="Model"
                                       >
-                                        <div
+                                        <styled.div
                                           id="model"
+                                          level={1}
                                         >
-                                          <styled.div
-                                            level={1}
-                                            showBorder={true}
-                                          >
-                                            <StyledComponent
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-dnqmqq",
-                                                    "isStatic": false,
-                                                    "lastClassName": "cJrQwH",
-                                                    "rules": Array [
-                                                      "
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-dnqmqq",
+                                                  "isStatic": false,
+                                                  "lastClassName": "psgzJ",
+                                                  "rules": Array [
+                                                    "
   padding: ",
-                                                      [Function],
-                                                      ";
+                                                    [Function],
+                                                    ";
   border-bottom: ",
-                                                      [Function],
-                                                      ";
+                                                    [Function],
+                                                    ";
+  &:last-child {
+    border-bottom: none;
+  }
 ",
-                                                    ],
-                                                  },
-                                                  "displayName": "styled.div",
-                                                  "foldedComponentIds": Array [],
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-dnqmqq",
-                                                  "target": "div",
-                                                  "toString": [Function],
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
+                                                  ],
+                                                },
+                                                "displayName": "styled.div",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-dnqmqq",
+                                                "target": "div",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
                                               }
-                                              forwardedRef={null}
-                                              level={1}
-                                              showBorder={true}
+                                            }
+                                            forwardedRef={
+                                              Object {
+                                                "current": <div
+                                                  class="sc-dnqmqq psgzJ"
+                                                  id="model"
+                                                >
+                                                  <h3
+                                                    class="sc-iwsKbI gaRpVe"
+                                                  >
+                                                    Model
+                                                  </h3>
+                                                  <div
+                                                    class="sc-bZQynM bwibdY"
+                                                    width="100%"
+                                                  >
+                                                    <div
+                                                      class="sc-bZQynM clIlZD"
+                                                      width="400px"
+                                                    />
+                                                    <div
+                                                      class="sc-bZQynM bwibdY"
+                                                      width="100%"
+                                                    />
+                                                  </div>
+                                                </div>,
+                                              }
+                                            }
+                                            id="model"
+                                            level={1}
+                                          >
+                                            <div
+                                              className="sc-dnqmqq psgzJ"
+                                              id="model"
                                             >
-                                              <div
-                                                className="sc-dnqmqq jkcDWH"
+                                              <styled.h3
+                                                level={1}
                                               >
-                                                <styled.h3
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-iwsKbI",
+                                                        "isStatic": false,
+                                                        "lastClassName": "gaRpVe",
+                                                        "rules": Array [
+                                                          "
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: ",
+                                                          [Function],
+                                                          ";
+  font-weight: ",
+                                                          [Function],
+                                                          ";
+  padding: ",
+                                                          [Function],
+                                                          ";
+  margin: 0;
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.h3",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-iwsKbI",
+                                                      "target": "h3",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
                                                   level={1}
+                                                >
+                                                  <h3
+                                                    className="sc-iwsKbI gaRpVe"
+                                                  >
+                                                    Model
+                                                  </h3>
+                                                </StyledComponent>
+                                              </styled.h3>
+                                              <Box
+                                                boxes={
+                                                  Array [
+                                                    Object {
+                                                      "boxes": Array [
+                                                        Object {
+                                                          "component": [Function],
+                                                          "props": Object {
+                                                            "id": "id",
+                                                          },
+                                                        },
+                                                      ],
+                                                      "direction": "column",
+                                                      "style": Object {
+                                                        "margin": "0 30px 0 0",
+                                                        "maxWidth": "400px",
+                                                        "width": "400px",
+                                                      },
+                                                    },
+                                                    Object {
+                                                      "boxes": Array [
+                                                        Object {
+                                                          "component": [Function],
+                                                          "props": Object {
+                                                            "id": "fields",
+                                                          },
+                                                        },
+                                                        Object {
+                                                          "component": [Function],
+                                                          "props": Object {
+                                                            "id": "data",
+                                                          },
+                                                        },
+                                                      ],
+                                                      "direction": "column",
+                                                      "style": Object {
+                                                        "margin": "0 30px 0 0",
+                                                        "maxWidth": "100%",
+                                                        "minWidth": "400px",
+                                                        "width": "100%",
+                                                      },
+                                                    },
+                                                  ]
+                                                }
+                                                direction="column"
+                                                key="0"
+                                                props={Object {}}
+                                                style={
+                                                  Object {
+                                                    "margin": "0 30px 0 0",
+                                                    "maxWidth": "100%",
+                                                    "minWidth": "400px",
+                                                    "width": "100%",
+                                                  }
+                                                }
+                                              >
+                                                <styled.div
+                                                  margin="0 30px 0 0"
+                                                  maxWidth="100%"
+                                                  minWidth="400px"
+                                                  width="100%"
                                                 >
                                                   <StyledComponent
                                                     forwardedComponent={
@@ -2226,417 +2339,307 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-iwsKbI",
+                                                          "componentId": "sc-bZQynM",
                                                           "isStatic": false,
-                                                          "lastClassName": "gaRpVe",
+                                                          "lastClassName": "clIlZD",
                                                           "rules": Array [
                                                             "
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ",
+  display: flex;
+  flex-direction: column;
+  width: ",
                                                             [Function],
                                                             ";
-  font-weight: ",
+  max-width: ",
                                                             [Function],
                                                             ";
-  padding: ",
+  margin: ",
                                                             [Function],
                                                             ";
-  margin: 0;
 ",
                                                           ],
                                                         },
-                                                        "displayName": "styled.h3",
+                                                        "displayName": "styled.div",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-iwsKbI",
-                                                        "target": "h3",
+                                                        "styledComponentId": "sc-bZQynM",
+                                                        "target": "div",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
                                                         "withComponent": [Function],
                                                       }
                                                     }
                                                     forwardedRef={null}
-                                                    level={1}
-                                                  >
-                                                    <h3
-                                                      className="sc-iwsKbI gaRpVe"
-                                                    >
-                                                      Model
-                                                    </h3>
-                                                  </StyledComponent>
-                                                </styled.h3>
-                                                <Box
-                                                  boxes={
-                                                    Array [
-                                                      Object {
-                                                        "boxes": Array [
-                                                          Object {
-                                                            "component": [Function],
-                                                            "props": Object {
-                                                              "id": "id",
-                                                            },
-                                                          },
-                                                        ],
-                                                        "direction": "column",
-                                                        "style": Object {
-                                                          "margin": "0 30px 0 0",
-                                                          "maxWidth": "400px",
-                                                          "width": "400px",
-                                                        },
-                                                      },
-                                                      Object {
-                                                        "boxes": Array [
-                                                          Object {
-                                                            "component": [Function],
-                                                            "props": Object {
-                                                              "id": "fields",
-                                                            },
-                                                          },
-                                                          Object {
-                                                            "component": [Function],
-                                                            "props": Object {
-                                                              "id": "data",
-                                                            },
-                                                          },
-                                                        ],
-                                                        "direction": "column",
-                                                        "style": Object {
-                                                          "margin": "0 30px 0 0",
-                                                          "maxWidth": "100%",
-                                                          "minWidth": "400px",
-                                                          "width": "100%",
-                                                        },
-                                                      },
-                                                    ]
-                                                  }
-                                                  direction="column"
-                                                  key="0"
-                                                  props={Object {}}
-                                                  style={
-                                                    Object {
-                                                      "margin": "0 30px 0 0",
-                                                      "maxWidth": "100%",
-                                                      "minWidth": "400px",
-                                                      "width": "100%",
-                                                    }
-                                                  }
-                                                >
-                                                  <styled.div
                                                     margin="0 30px 0 0"
                                                     maxWidth="100%"
                                                     minWidth="400px"
                                                     width="100%"
                                                   >
-                                                    <StyledComponent
-                                                      forwardedComponent={
-                                                        Object {
-                                                          "$$typeof": Symbol(react.forward_ref),
-                                                          "attrs": Array [],
-                                                          "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-bZQynM",
-                                                            "isStatic": false,
-                                                            "lastClassName": "clIlZD",
-                                                            "rules": Array [
-                                                              "
+                                                    <div
+                                                      className="sc-bZQynM bwibdY"
+                                                      width="100%"
+                                                    >
+                                                      <Box
+                                                        boxes={
+                                                          Array [
+                                                            Object {
+                                                              "component": [Function],
+                                                              "props": Object {
+                                                                "id": "id",
+                                                              },
+                                                            },
+                                                          ]
+                                                        }
+                                                        direction="column"
+                                                        key="0"
+                                                        props={Object {}}
+                                                        style={
+                                                          Object {
+                                                            "margin": "0 30px 0 0",
+                                                            "maxWidth": "400px",
+                                                            "width": "400px",
+                                                          }
+                                                        }
+                                                      >
+                                                        <styled.div
+                                                          margin="0 30px 0 0"
+                                                          maxWidth="400px"
+                                                          width="400px"
+                                                        >
+                                                          <StyledComponent
+                                                            forwardedComponent={
+                                                              Object {
+                                                                "$$typeof": Symbol(react.forward_ref),
+                                                                "attrs": Array [],
+                                                                "componentStyle": ComponentStyle {
+                                                                  "componentId": "sc-bZQynM",
+                                                                  "isStatic": false,
+                                                                  "lastClassName": "clIlZD",
+                                                                  "rules": Array [
+                                                                    "
   display: flex;
   flex-direction: column;
   width: ",
-                                                              [Function],
-                                                              ";
+                                                                    [Function],
+                                                                    ";
   max-width: ",
-                                                              [Function],
-                                                              ";
+                                                                    [Function],
+                                                                    ";
   margin: ",
-                                                              [Function],
-                                                              ";
+                                                                    [Function],
+                                                                    ";
 ",
-                                                            ],
-                                                          },
-                                                          "displayName": "styled.div",
-                                                          "foldedComponentIds": Array [],
-                                                          "render": [Function],
-                                                          "styledComponentId": "sc-bZQynM",
-                                                          "target": "div",
-                                                          "toString": [Function],
-                                                          "warnTooManyClasses": [Function],
-                                                          "withComponent": [Function],
-                                                        }
-                                                      }
-                                                      forwardedRef={null}
-                                                      margin="0 30px 0 0"
-                                                      maxWidth="100%"
-                                                      minWidth="400px"
-                                                      width="100%"
-                                                    >
-                                                      <div
-                                                        className="sc-bZQynM bwibdY"
-                                                        width="100%"
-                                                      >
-                                                        <Box
-                                                          boxes={
-                                                            Array [
-                                                              Object {
-                                                                "component": [Function],
-                                                                "props": Object {
-                                                                  "id": "id",
+                                                                  ],
                                                                 },
-                                                              },
-                                                            ]
-                                                          }
-                                                          direction="column"
-                                                          key="0"
-                                                          props={Object {}}
-                                                          style={
-                                                            Object {
-                                                              "margin": "0 30px 0 0",
-                                                              "maxWidth": "400px",
-                                                              "width": "400px",
+                                                                "displayName": "styled.div",
+                                                                "foldedComponentIds": Array [],
+                                                                "render": [Function],
+                                                                "styledComponentId": "sc-bZQynM",
+                                                                "target": "div",
+                                                                "toString": [Function],
+                                                                "warnTooManyClasses": [Function],
+                                                                "withComponent": [Function],
+                                                              }
                                                             }
-                                                          }
-                                                        >
-                                                          <styled.div
+                                                            forwardedRef={null}
                                                             margin="0 30px 0 0"
                                                             maxWidth="400px"
                                                             width="400px"
                                                           >
-                                                            <StyledComponent
-                                                              forwardedComponent={
-                                                                Object {
-                                                                  "$$typeof": Symbol(react.forward_ref),
-                                                                  "attrs": Array [],
-                                                                  "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-bZQynM",
-                                                                    "isStatic": false,
-                                                                    "lastClassName": "clIlZD",
-                                                                    "rules": Array [
-                                                                      "
+                                                            <div
+                                                              className="sc-bZQynM clIlZD"
+                                                              width="400px"
+                                                            >
+                                                              <Box
+                                                                boxes={Array []}
+                                                                component={[Function]}
+                                                                direction="column"
+                                                                key="0"
+                                                                props={
+                                                                  Object {
+                                                                    "id": "id",
+                                                                  }
+                                                                }
+                                                                style={Object {}}
+                                                              >
+                                                                <Field
+                                                                  id="id"
+                                                                >
+                                                                  <FieldView
+                                                                    description=""
+                                                                    dirty={false}
+                                                                    disabled={false}
+                                                                    empty={false}
+                                                                    errors={Array []}
+                                                                    excluded={true}
+                                                                    id="id"
+                                                                    invalid={false}
+                                                                    label=""
+                                                                    onStateChange={[Function]}
+                                                                    onValueChange={[Function]}
+                                                                    required={false}
+                                                                    state={Object {}}
+                                                                  />
+                                                                </Field>
+                                                              </Box>
+                                                            </div>
+                                                          </StyledComponent>
+                                                        </styled.div>
+                                                      </Box>
+                                                      <Box
+                                                        boxes={
+                                                          Array [
+                                                            Object {
+                                                              "component": [Function],
+                                                              "props": Object {
+                                                                "id": "fields",
+                                                              },
+                                                            },
+                                                            Object {
+                                                              "component": [Function],
+                                                              "props": Object {
+                                                                "id": "data",
+                                                              },
+                                                            },
+                                                          ]
+                                                        }
+                                                        direction="column"
+                                                        key="1"
+                                                        props={Object {}}
+                                                        style={
+                                                          Object {
+                                                            "margin": "0 30px 0 0",
+                                                            "maxWidth": "100%",
+                                                            "minWidth": "400px",
+                                                            "width": "100%",
+                                                          }
+                                                        }
+                                                      >
+                                                        <styled.div
+                                                          margin="0 30px 0 0"
+                                                          maxWidth="100%"
+                                                          minWidth="400px"
+                                                          width="100%"
+                                                        >
+                                                          <StyledComponent
+                                                            forwardedComponent={
+                                                              Object {
+                                                                "$$typeof": Symbol(react.forward_ref),
+                                                                "attrs": Array [],
+                                                                "componentStyle": ComponentStyle {
+                                                                  "componentId": "sc-bZQynM",
+                                                                  "isStatic": false,
+                                                                  "lastClassName": "clIlZD",
+                                                                  "rules": Array [
+                                                                    "
   display: flex;
   flex-direction: column;
   width: ",
-                                                                      [Function],
-                                                                      ";
+                                                                    [Function],
+                                                                    ";
   max-width: ",
-                                                                      [Function],
-                                                                      ";
+                                                                    [Function],
+                                                                    ";
   margin: ",
-                                                                      [Function],
-                                                                      ";
+                                                                    [Function],
+                                                                    ";
 ",
-                                                                    ],
-                                                                  },
-                                                                  "displayName": "styled.div",
-                                                                  "foldedComponentIds": Array [],
-                                                                  "render": [Function],
-                                                                  "styledComponentId": "sc-bZQynM",
-                                                                  "target": "div",
-                                                                  "toString": [Function],
-                                                                  "warnTooManyClasses": [Function],
-                                                                  "withComponent": [Function],
-                                                                }
+                                                                  ],
+                                                                },
+                                                                "displayName": "styled.div",
+                                                                "foldedComponentIds": Array [],
+                                                                "render": [Function],
+                                                                "styledComponentId": "sc-bZQynM",
+                                                                "target": "div",
+                                                                "toString": [Function],
+                                                                "warnTooManyClasses": [Function],
+                                                                "withComponent": [Function],
                                                               }
-                                                              forwardedRef={null}
-                                                              margin="0 30px 0 0"
-                                                              maxWidth="400px"
-                                                              width="400px"
-                                                            >
-                                                              <div
-                                                                className="sc-bZQynM clIlZD"
-                                                                width="400px"
-                                                              >
-                                                                <Box
-                                                                  boxes={Array []}
-                                                                  component={[Function]}
-                                                                  direction="column"
-                                                                  key="0"
-                                                                  props={
-                                                                    Object {
-                                                                      "id": "id",
-                                                                    }
-                                                                  }
-                                                                  style={Object {}}
-                                                                >
-                                                                  <Field
-                                                                    id="id"
-                                                                  >
-                                                                    <FieldView
-                                                                      description=""
-                                                                      dirty={false}
-                                                                      disabled={false}
-                                                                      empty={false}
-                                                                      errors={Array []}
-                                                                      excluded={true}
-                                                                      id="id"
-                                                                      invalid={false}
-                                                                      label=""
-                                                                      onStateChange={[Function]}
-                                                                      onValueChange={[Function]}
-                                                                      required={false}
-                                                                      state={Object {}}
-                                                                    />
-                                                                  </Field>
-                                                                </Box>
-                                                              </div>
-                                                            </StyledComponent>
-                                                          </styled.div>
-                                                        </Box>
-                                                        <Box
-                                                          boxes={
-                                                            Array [
-                                                              Object {
-                                                                "component": [Function],
-                                                                "props": Object {
-                                                                  "id": "fields",
-                                                                },
-                                                              },
-                                                              Object {
-                                                                "component": [Function],
-                                                                "props": Object {
-                                                                  "id": "data",
-                                                                },
-                                                              },
-                                                            ]
-                                                          }
-                                                          direction="column"
-                                                          key="1"
-                                                          props={Object {}}
-                                                          style={
-                                                            Object {
-                                                              "margin": "0 30px 0 0",
-                                                              "maxWidth": "100%",
-                                                              "minWidth": "400px",
-                                                              "width": "100%",
                                                             }
-                                                          }
-                                                        >
-                                                          <styled.div
+                                                            forwardedRef={null}
                                                             margin="0 30px 0 0"
                                                             maxWidth="100%"
                                                             minWidth="400px"
                                                             width="100%"
                                                           >
-                                                            <StyledComponent
-                                                              forwardedComponent={
-                                                                Object {
-                                                                  "$$typeof": Symbol(react.forward_ref),
-                                                                  "attrs": Array [],
-                                                                  "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-bZQynM",
-                                                                    "isStatic": false,
-                                                                    "lastClassName": "clIlZD",
-                                                                    "rules": Array [
-                                                                      "
-  display: flex;
-  flex-direction: column;
-  width: ",
-                                                                      [Function],
-                                                                      ";
-  max-width: ",
-                                                                      [Function],
-                                                                      ";
-  margin: ",
-                                                                      [Function],
-                                                                      ";
-",
-                                                                    ],
-                                                                  },
-                                                                  "displayName": "styled.div",
-                                                                  "foldedComponentIds": Array [],
-                                                                  "render": [Function],
-                                                                  "styledComponentId": "sc-bZQynM",
-                                                                  "target": "div",
-                                                                  "toString": [Function],
-                                                                  "warnTooManyClasses": [Function],
-                                                                  "withComponent": [Function],
-                                                                }
-                                                              }
-                                                              forwardedRef={null}
-                                                              margin="0 30px 0 0"
-                                                              maxWidth="100%"
-                                                              minWidth="400px"
+                                                            <div
+                                                              className="sc-bZQynM bwibdY"
                                                               width="100%"
                                                             >
-                                                              <div
-                                                                className="sc-bZQynM bwibdY"
-                                                                width="100%"
+                                                              <Box
+                                                                boxes={Array []}
+                                                                component={[Function]}
+                                                                direction="column"
+                                                                key="0"
+                                                                props={
+                                                                  Object {
+                                                                    "id": "fields",
+                                                                  }
+                                                                }
+                                                                style={Object {}}
                                                               >
-                                                                <Box
-                                                                  boxes={Array []}
-                                                                  component={[Function]}
-                                                                  direction="column"
-                                                                  key="0"
-                                                                  props={
-                                                                    Object {
-                                                                      "id": "fields",
-                                                                    }
-                                                                  }
-                                                                  style={Object {}}
+                                                                <Field
+                                                                  id="fields"
                                                                 >
-                                                                  <Field
+                                                                  <FieldView
+                                                                    description=""
+                                                                    dirty={false}
+                                                                    disabled={false}
+                                                                    empty={false}
+                                                                    errors={Array []}
+                                                                    excluded={true}
                                                                     id="fields"
-                                                                  >
-                                                                    <FieldView
-                                                                      description=""
-                                                                      dirty={false}
-                                                                      disabled={false}
-                                                                      empty={false}
-                                                                      errors={Array []}
-                                                                      excluded={true}
-                                                                      id="fields"
-                                                                      invalid={false}
-                                                                      label=""
-                                                                      onStateChange={[Function]}
-                                                                      onValueChange={[Function]}
-                                                                      required={false}
-                                                                      state={Object {}}
-                                                                    />
-                                                                  </Field>
-                                                                </Box>
-                                                                <Box
-                                                                  boxes={Array []}
-                                                                  component={[Function]}
-                                                                  direction="column"
-                                                                  key="1"
-                                                                  props={
-                                                                    Object {
-                                                                      "id": "data",
-                                                                    }
+                                                                    invalid={false}
+                                                                    label=""
+                                                                    onStateChange={[Function]}
+                                                                    onValueChange={[Function]}
+                                                                    required={false}
+                                                                    state={Object {}}
+                                                                  />
+                                                                </Field>
+                                                              </Box>
+                                                              <Box
+                                                                boxes={Array []}
+                                                                component={[Function]}
+                                                                direction="column"
+                                                                key="1"
+                                                                props={
+                                                                  Object {
+                                                                    "id": "data",
                                                                   }
-                                                                  style={Object {}}
+                                                                }
+                                                                style={Object {}}
+                                                              >
+                                                                <Field
+                                                                  id="data"
                                                                 >
-                                                                  <Field
+                                                                  <FieldView
+                                                                    description=""
+                                                                    dirty={false}
+                                                                    disabled={false}
+                                                                    empty={false}
+                                                                    errors={Array []}
+                                                                    excluded={true}
                                                                     id="data"
-                                                                  >
-                                                                    <FieldView
-                                                                      description=""
-                                                                      dirty={false}
-                                                                      disabled={false}
-                                                                      empty={false}
-                                                                      errors={Array []}
-                                                                      excluded={true}
-                                                                      id="data"
-                                                                      invalid={false}
-                                                                      label=""
-                                                                      onStateChange={[Function]}
-                                                                      onValueChange={[Function]}
-                                                                      required={false}
-                                                                      state={Object {}}
-                                                                    />
-                                                                  </Field>
-                                                                </Box>
-                                                              </div>
-                                                            </StyledComponent>
-                                                          </styled.div>
-                                                        </Box>
-                                                      </div>
-                                                    </StyledComponent>
-                                                  </styled.div>
-                                                </Box>
-                                              </div>
-                                            </StyledComponent>
-                                          </styled.div>
-                                        </div>
+                                                                    invalid={false}
+                                                                    label=""
+                                                                    onStateChange={[Function]}
+                                                                    onValueChange={[Function]}
+                                                                    required={false}
+                                                                    state={Object {}}
+                                                                  />
+                                                                </Field>
+                                                              </Box>
+                                                            </div>
+                                                          </StyledComponent>
+                                                        </styled.div>
+                                                      </Box>
+                                                    </div>
+                                                  </StyledComponent>
+                                                </styled.div>
+                                              </Box>
+                                            </div>
+                                          </StyledComponent>
+                                        </styled.div>
                                       </Section>
                                     </ForwardRef>
                                     <ForwardRef
@@ -2695,7 +2698,6 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       }
                                       id="settings"
                                       key="settings"
-                                      showBorder={false}
                                       title="Settings"
                                     >
                                       <Section
@@ -2756,514 +2758,535 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         innerRef={
                                           Object {
                                             "current": <div
+                                              class="sc-dnqmqq psgzJ"
                                               id="settings"
                                             >
-                                              <div
-                                                class="sc-dnqmqq cJrQwH"
+                                              <h3
+                                                class="sc-iwsKbI gaRpVe"
                                               >
-                                                <h3
-                                                  class="sc-iwsKbI gaRpVe"
-                                                >
-                                                  Settings
-                                                </h3>
+                                                Settings
+                                              </h3>
+                                              <div
+                                                class="sc-gzVnrw jKdxIN"
+                                              >
                                                 <div
-                                                  class="sc-gzVnrw jKdxIN"
-                                                >
-                                                  <div
-                                                    class="sc-bZQynM clIlZD"
-                                                    width="400px"
-                                                  />
-                                                  <div
-                                                    class="sc-bZQynM clIlZD"
-                                                    width="400px"
-                                                  />
-                                                </div>
+                                                  class="sc-bZQynM clIlZD"
+                                                  width="400px"
+                                                />
+                                                <div
+                                                  class="sc-bZQynM clIlZD"
+                                                  width="400px"
+                                                />
                                               </div>
                                             </div>,
                                           }
                                         }
                                         level={1}
-                                        showBorder={false}
                                         title="Settings"
                                       >
-                                        <div
+                                        <styled.div
                                           id="settings"
+                                          level={1}
                                         >
-                                          <styled.div
-                                            level={1}
-                                            showBorder={false}
-                                          >
-                                            <StyledComponent
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-dnqmqq",
-                                                    "isStatic": false,
-                                                    "lastClassName": "cJrQwH",
-                                                    "rules": Array [
-                                                      "
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-dnqmqq",
+                                                  "isStatic": false,
+                                                  "lastClassName": "psgzJ",
+                                                  "rules": Array [
+                                                    "
   padding: ",
-                                                      [Function],
-                                                      ";
+                                                    [Function],
+                                                    ";
   border-bottom: ",
-                                                      [Function],
-                                                      ";
+                                                    [Function],
+                                                    ";
+  &:last-child {
+    border-bottom: none;
+  }
 ",
-                                                    ],
-                                                  },
-                                                  "displayName": "styled.div",
-                                                  "foldedComponentIds": Array [],
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-dnqmqq",
-                                                  "target": "div",
-                                                  "toString": [Function],
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
+                                                  ],
+                                                },
+                                                "displayName": "styled.div",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-dnqmqq",
+                                                "target": "div",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
                                               }
-                                              forwardedRef={null}
-                                              level={1}
-                                              showBorder={false}
+                                            }
+                                            forwardedRef={
+                                              Object {
+                                                "current": <div
+                                                  class="sc-dnqmqq psgzJ"
+                                                  id="settings"
+                                                >
+                                                  <h3
+                                                    class="sc-iwsKbI gaRpVe"
+                                                  >
+                                                    Settings
+                                                  </h3>
+                                                  <div
+                                                    class="sc-gzVnrw jKdxIN"
+                                                  >
+                                                    <div
+                                                      class="sc-bZQynM clIlZD"
+                                                      width="400px"
+                                                    />
+                                                    <div
+                                                      class="sc-bZQynM clIlZD"
+                                                      width="400px"
+                                                    />
+                                                  </div>
+                                                </div>,
+                                              }
+                                            }
+                                            id="settings"
+                                            level={1}
+                                          >
+                                            <div
+                                              className="sc-dnqmqq psgzJ"
+                                              id="settings"
                                             >
-                                              <div
-                                                className="sc-dnqmqq cJrQwH"
+                                              <styled.h3
+                                                level={1}
                                               >
-                                                <styled.h3
+                                                <StyledComponent
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-iwsKbI",
+                                                        "isStatic": false,
+                                                        "lastClassName": "gaRpVe",
+                                                        "rules": Array [
+                                                          "
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: ",
+                                                          [Function],
+                                                          ";
+  font-weight: ",
+                                                          [Function],
+                                                          ";
+  padding: ",
+                                                          [Function],
+                                                          ";
+  margin: 0;
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.h3",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-iwsKbI",
+                                                      "target": "h3",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
                                                   level={1}
                                                 >
+                                                  <h3
+                                                    className="sc-iwsKbI gaRpVe"
+                                                  >
+                                                    Settings
+                                                  </h3>
+                                                </StyledComponent>
+                                              </styled.h3>
+                                              <Box
+                                                boxes={
+                                                  Array [
+                                                    Object {
+                                                      "boxes": Array [
+                                                        Object {
+                                                          "component": [Function],
+                                                          "props": Object {
+                                                            "id": "changeValueDebounceWait",
+                                                          },
+                                                        },
+                                                        Object {
+                                                          "component": [Function],
+                                                          "props": Object {
+                                                            "id": "changeValueDebounceMaxWait",
+                                                          },
+                                                        },
+                                                      ],
+                                                      "direction": "column",
+                                                      "style": Object {
+                                                        "margin": "0 30px 0 0",
+                                                        "maxWidth": "400px",
+                                                        "width": "400px",
+                                                      },
+                                                    },
+                                                    Object {
+                                                      "boxes": Array [
+                                                        Object {
+                                                          "component": [Function],
+                                                          "props": Object {
+                                                            "id": "changeStateDebounceWait",
+                                                          },
+                                                        },
+                                                        Object {
+                                                          "component": [Function],
+                                                          "props": Object {
+                                                            "id": "changeStateDebounceMaxWait",
+                                                          },
+                                                        },
+                                                      ],
+                                                      "direction": "column",
+                                                      "style": Object {
+                                                        "margin": "0 30px 0 0",
+                                                        "maxWidth": "400px",
+                                                        "width": "400px",
+                                                      },
+                                                    },
+                                                  ]
+                                                }
+                                                direction="row"
+                                                key="0"
+                                                props={Object {}}
+                                                style={Object {}}
+                                              >
+                                                <styled.div>
                                                   <StyledComponent
                                                     forwardedComponent={
                                                       Object {
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-iwsKbI",
+                                                          "componentId": "sc-gzVnrw",
                                                           "isStatic": false,
-                                                          "lastClassName": "gaRpVe",
+                                                          "lastClassName": "jKdxIN",
                                                           "rules": Array [
                                                             "
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ",
-                                                            [Function],
-                                                            ";
-  font-weight: ",
-                                                            [Function],
-                                                            ";
-  padding: ",
-                                                            [Function],
-                                                            ";
-  margin: 0;
+  display: flex;
+  flex-direction: row;
 ",
                                                           ],
                                                         },
-                                                        "displayName": "styled.h3",
+                                                        "displayName": "styled.div",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-iwsKbI",
-                                                        "target": "h3",
+                                                        "styledComponentId": "sc-gzVnrw",
+                                                        "target": "div",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
                                                         "withComponent": [Function],
                                                       }
                                                     }
                                                     forwardedRef={null}
-                                                    level={1}
                                                   >
-                                                    <h3
-                                                      className="sc-iwsKbI gaRpVe"
+                                                    <div
+                                                      className="sc-gzVnrw jKdxIN"
                                                     >
-                                                      Settings
-                                                    </h3>
-                                                  </StyledComponent>
-                                                </styled.h3>
-                                                <Box
-                                                  boxes={
-                                                    Array [
-                                                      Object {
-                                                        "boxes": Array [
-                                                          Object {
-                                                            "component": [Function],
-                                                            "props": Object {
-                                                              "id": "changeValueDebounceWait",
+                                                      <Box
+                                                        boxes={
+                                                          Array [
+                                                            Object {
+                                                              "component": [Function],
+                                                              "props": Object {
+                                                                "id": "changeValueDebounceWait",
+                                                              },
                                                             },
-                                                          },
-                                                          Object {
-                                                            "component": [Function],
-                                                            "props": Object {
-                                                              "id": "changeValueDebounceMaxWait",
+                                                            Object {
+                                                              "component": [Function],
+                                                              "props": Object {
+                                                                "id": "changeValueDebounceMaxWait",
+                                                              },
                                                             },
-                                                          },
-                                                        ],
-                                                        "direction": "column",
-                                                        "style": Object {
-                                                          "margin": "0 30px 0 0",
-                                                          "maxWidth": "400px",
-                                                          "width": "400px",
-                                                        },
-                                                      },
-                                                      Object {
-                                                        "boxes": Array [
-                                                          Object {
-                                                            "component": [Function],
-                                                            "props": Object {
-                                                              "id": "changeStateDebounceWait",
-                                                            },
-                                                          },
-                                                          Object {
-                                                            "component": [Function],
-                                                            "props": Object {
-                                                              "id": "changeStateDebounceMaxWait",
-                                                            },
-                                                          },
-                                                        ],
-                                                        "direction": "column",
-                                                        "style": Object {
-                                                          "margin": "0 30px 0 0",
-                                                          "maxWidth": "400px",
-                                                          "width": "400px",
-                                                        },
-                                                      },
-                                                    ]
-                                                  }
-                                                  direction="row"
-                                                  key="0"
-                                                  props={Object {}}
-                                                  style={Object {}}
-                                                >
-                                                  <styled.div>
-                                                    <StyledComponent
-                                                      forwardedComponent={
-                                                        Object {
-                                                          "$$typeof": Symbol(react.forward_ref),
-                                                          "attrs": Array [],
-                                                          "componentStyle": ComponentStyle {
-                                                            "componentId": "sc-gzVnrw",
-                                                            "isStatic": false,
-                                                            "lastClassName": "jKdxIN",
-                                                            "rules": Array [
-                                                              "
-  display: flex;
-  flex-direction: row;
-",
-                                                            ],
-                                                          },
-                                                          "displayName": "styled.div",
-                                                          "foldedComponentIds": Array [],
-                                                          "render": [Function],
-                                                          "styledComponentId": "sc-gzVnrw",
-                                                          "target": "div",
-                                                          "toString": [Function],
-                                                          "warnTooManyClasses": [Function],
-                                                          "withComponent": [Function],
+                                                          ]
                                                         }
-                                                      }
-                                                      forwardedRef={null}
-                                                    >
-                                                      <div
-                                                        className="sc-gzVnrw jKdxIN"
+                                                        direction="column"
+                                                        key="0"
+                                                        props={Object {}}
+                                                        style={
+                                                          Object {
+                                                            "margin": "0 30px 0 0",
+                                                            "maxWidth": "400px",
+                                                            "width": "400px",
+                                                          }
+                                                        }
                                                       >
-                                                        <Box
-                                                          boxes={
-                                                            Array [
-                                                              Object {
-                                                                "component": [Function],
-                                                                "props": Object {
-                                                                  "id": "changeValueDebounceWait",
-                                                                },
-                                                              },
-                                                              Object {
-                                                                "component": [Function],
-                                                                "props": Object {
-                                                                  "id": "changeValueDebounceMaxWait",
-                                                                },
-                                                              },
-                                                            ]
-                                                          }
-                                                          direction="column"
-                                                          key="0"
-                                                          props={Object {}}
-                                                          style={
-                                                            Object {
-                                                              "margin": "0 30px 0 0",
-                                                              "maxWidth": "400px",
-                                                              "width": "400px",
-                                                            }
-                                                          }
+                                                        <styled.div
+                                                          margin="0 30px 0 0"
+                                                          maxWidth="400px"
+                                                          width="400px"
                                                         >
-                                                          <styled.div
+                                                          <StyledComponent
+                                                            forwardedComponent={
+                                                              Object {
+                                                                "$$typeof": Symbol(react.forward_ref),
+                                                                "attrs": Array [],
+                                                                "componentStyle": ComponentStyle {
+                                                                  "componentId": "sc-bZQynM",
+                                                                  "isStatic": false,
+                                                                  "lastClassName": "clIlZD",
+                                                                  "rules": Array [
+                                                                    "
+  display: flex;
+  flex-direction: column;
+  width: ",
+                                                                    [Function],
+                                                                    ";
+  max-width: ",
+                                                                    [Function],
+                                                                    ";
+  margin: ",
+                                                                    [Function],
+                                                                    ";
+",
+                                                                  ],
+                                                                },
+                                                                "displayName": "styled.div",
+                                                                "foldedComponentIds": Array [],
+                                                                "render": [Function],
+                                                                "styledComponentId": "sc-bZQynM",
+                                                                "target": "div",
+                                                                "toString": [Function],
+                                                                "warnTooManyClasses": [Function],
+                                                                "withComponent": [Function],
+                                                              }
+                                                            }
+                                                            forwardedRef={null}
                                                             margin="0 30px 0 0"
                                                             maxWidth="400px"
                                                             width="400px"
                                                           >
-                                                            <StyledComponent
-                                                              forwardedComponent={
-                                                                Object {
-                                                                  "$$typeof": Symbol(react.forward_ref),
-                                                                  "attrs": Array [],
-                                                                  "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-bZQynM",
-                                                                    "isStatic": false,
-                                                                    "lastClassName": "clIlZD",
-                                                                    "rules": Array [
-                                                                      "
-  display: flex;
-  flex-direction: column;
-  width: ",
-                                                                      [Function],
-                                                                      ";
-  max-width: ",
-                                                                      [Function],
-                                                                      ";
-  margin: ",
-                                                                      [Function],
-                                                                      ";
-",
-                                                                    ],
-                                                                  },
-                                                                  "displayName": "styled.div",
-                                                                  "foldedComponentIds": Array [],
-                                                                  "render": [Function],
-                                                                  "styledComponentId": "sc-bZQynM",
-                                                                  "target": "div",
-                                                                  "toString": [Function],
-                                                                  "warnTooManyClasses": [Function],
-                                                                  "withComponent": [Function],
-                                                                }
-                                                              }
-                                                              forwardedRef={null}
-                                                              margin="0 30px 0 0"
-                                                              maxWidth="400px"
+                                                            <div
+                                                              className="sc-bZQynM clIlZD"
                                                               width="400px"
                                                             >
-                                                              <div
-                                                                className="sc-bZQynM clIlZD"
-                                                                width="400px"
-                                                              >
-                                                                <Box
-                                                                  boxes={Array []}
-                                                                  component={[Function]}
-                                                                  direction="column"
-                                                                  key="0"
-                                                                  props={
-                                                                    Object {
-                                                                      "id": "changeValueDebounceWait",
-                                                                    }
+                                                              <Box
+                                                                boxes={Array []}
+                                                                component={[Function]}
+                                                                direction="column"
+                                                                key="0"
+                                                                props={
+                                                                  Object {
+                                                                    "id": "changeValueDebounceWait",
                                                                   }
-                                                                  style={Object {}}
+                                                                }
+                                                                style={Object {}}
+                                                              >
+                                                                <Field
+                                                                  id="changeValueDebounceWait"
                                                                 >
-                                                                  <Field
+                                                                  <FieldView
+                                                                    description=""
+                                                                    dirty={false}
+                                                                    disabled={false}
+                                                                    empty={false}
+                                                                    errors={Array []}
+                                                                    excluded={true}
                                                                     id="changeValueDebounceWait"
-                                                                  >
-                                                                    <FieldView
-                                                                      description=""
-                                                                      dirty={false}
-                                                                      disabled={false}
-                                                                      empty={false}
-                                                                      errors={Array []}
-                                                                      excluded={true}
-                                                                      id="changeValueDebounceWait"
-                                                                      invalid={false}
-                                                                      label=""
-                                                                      onStateChange={[Function]}
-                                                                      onValueChange={[Function]}
-                                                                      required={false}
-                                                                      state={Object {}}
-                                                                    />
-                                                                  </Field>
-                                                                </Box>
-                                                                <Box
-                                                                  boxes={Array []}
-                                                                  component={[Function]}
-                                                                  direction="column"
-                                                                  key="1"
-                                                                  props={
-                                                                    Object {
-                                                                      "id": "changeValueDebounceMaxWait",
-                                                                    }
+                                                                    invalid={false}
+                                                                    label=""
+                                                                    onStateChange={[Function]}
+                                                                    onValueChange={[Function]}
+                                                                    required={false}
+                                                                    state={Object {}}
+                                                                  />
+                                                                </Field>
+                                                              </Box>
+                                                              <Box
+                                                                boxes={Array []}
+                                                                component={[Function]}
+                                                                direction="column"
+                                                                key="1"
+                                                                props={
+                                                                  Object {
+                                                                    "id": "changeValueDebounceMaxWait",
                                                                   }
-                                                                  style={Object {}}
+                                                                }
+                                                                style={Object {}}
+                                                              >
+                                                                <Field
+                                                                  id="changeValueDebounceMaxWait"
                                                                 >
-                                                                  <Field
+                                                                  <FieldView
+                                                                    description=""
+                                                                    dirty={false}
+                                                                    disabled={false}
+                                                                    empty={false}
+                                                                    errors={Array []}
+                                                                    excluded={true}
                                                                     id="changeValueDebounceMaxWait"
-                                                                  >
-                                                                    <FieldView
-                                                                      description=""
-                                                                      dirty={false}
-                                                                      disabled={false}
-                                                                      empty={false}
-                                                                      errors={Array []}
-                                                                      excluded={true}
-                                                                      id="changeValueDebounceMaxWait"
-                                                                      invalid={false}
-                                                                      label=""
-                                                                      onStateChange={[Function]}
-                                                                      onValueChange={[Function]}
-                                                                      required={false}
-                                                                      state={Object {}}
-                                                                    />
-                                                                  </Field>
-                                                                </Box>
-                                                              </div>
-                                                            </StyledComponent>
-                                                          </styled.div>
-                                                        </Box>
-                                                        <Box
-                                                          boxes={
-                                                            Array [
-                                                              Object {
-                                                                "component": [Function],
-                                                                "props": Object {
-                                                                  "id": "changeStateDebounceWait",
-                                                                },
-                                                              },
-                                                              Object {
-                                                                "component": [Function],
-                                                                "props": Object {
-                                                                  "id": "changeStateDebounceMaxWait",
-                                                                },
-                                                              },
-                                                            ]
-                                                          }
-                                                          direction="column"
-                                                          key="1"
-                                                          props={Object {}}
-                                                          style={
+                                                                    invalid={false}
+                                                                    label=""
+                                                                    onStateChange={[Function]}
+                                                                    onValueChange={[Function]}
+                                                                    required={false}
+                                                                    state={Object {}}
+                                                                  />
+                                                                </Field>
+                                                              </Box>
+                                                            </div>
+                                                          </StyledComponent>
+                                                        </styled.div>
+                                                      </Box>
+                                                      <Box
+                                                        boxes={
+                                                          Array [
                                                             Object {
-                                                              "margin": "0 30px 0 0",
-                                                              "maxWidth": "400px",
-                                                              "width": "400px",
-                                                            }
+                                                              "component": [Function],
+                                                              "props": Object {
+                                                                "id": "changeStateDebounceWait",
+                                                              },
+                                                            },
+                                                            Object {
+                                                              "component": [Function],
+                                                              "props": Object {
+                                                                "id": "changeStateDebounceMaxWait",
+                                                              },
+                                                            },
+                                                          ]
+                                                        }
+                                                        direction="column"
+                                                        key="1"
+                                                        props={Object {}}
+                                                        style={
+                                                          Object {
+                                                            "margin": "0 30px 0 0",
+                                                            "maxWidth": "400px",
+                                                            "width": "400px",
                                                           }
+                                                        }
+                                                      >
+                                                        <styled.div
+                                                          margin="0 30px 0 0"
+                                                          maxWidth="400px"
+                                                          width="400px"
                                                         >
-                                                          <styled.div
+                                                          <StyledComponent
+                                                            forwardedComponent={
+                                                              Object {
+                                                                "$$typeof": Symbol(react.forward_ref),
+                                                                "attrs": Array [],
+                                                                "componentStyle": ComponentStyle {
+                                                                  "componentId": "sc-bZQynM",
+                                                                  "isStatic": false,
+                                                                  "lastClassName": "clIlZD",
+                                                                  "rules": Array [
+                                                                    "
+  display: flex;
+  flex-direction: column;
+  width: ",
+                                                                    [Function],
+                                                                    ";
+  max-width: ",
+                                                                    [Function],
+                                                                    ";
+  margin: ",
+                                                                    [Function],
+                                                                    ";
+",
+                                                                  ],
+                                                                },
+                                                                "displayName": "styled.div",
+                                                                "foldedComponentIds": Array [],
+                                                                "render": [Function],
+                                                                "styledComponentId": "sc-bZQynM",
+                                                                "target": "div",
+                                                                "toString": [Function],
+                                                                "warnTooManyClasses": [Function],
+                                                                "withComponent": [Function],
+                                                              }
+                                                            }
+                                                            forwardedRef={null}
                                                             margin="0 30px 0 0"
                                                             maxWidth="400px"
                                                             width="400px"
                                                           >
-                                                            <StyledComponent
-                                                              forwardedComponent={
-                                                                Object {
-                                                                  "$$typeof": Symbol(react.forward_ref),
-                                                                  "attrs": Array [],
-                                                                  "componentStyle": ComponentStyle {
-                                                                    "componentId": "sc-bZQynM",
-                                                                    "isStatic": false,
-                                                                    "lastClassName": "clIlZD",
-                                                                    "rules": Array [
-                                                                      "
-  display: flex;
-  flex-direction: column;
-  width: ",
-                                                                      [Function],
-                                                                      ";
-  max-width: ",
-                                                                      [Function],
-                                                                      ";
-  margin: ",
-                                                                      [Function],
-                                                                      ";
-",
-                                                                    ],
-                                                                  },
-                                                                  "displayName": "styled.div",
-                                                                  "foldedComponentIds": Array [],
-                                                                  "render": [Function],
-                                                                  "styledComponentId": "sc-bZQynM",
-                                                                  "target": "div",
-                                                                  "toString": [Function],
-                                                                  "warnTooManyClasses": [Function],
-                                                                  "withComponent": [Function],
-                                                                }
-                                                              }
-                                                              forwardedRef={null}
-                                                              margin="0 30px 0 0"
-                                                              maxWidth="400px"
+                                                            <div
+                                                              className="sc-bZQynM clIlZD"
                                                               width="400px"
                                                             >
-                                                              <div
-                                                                className="sc-bZQynM clIlZD"
-                                                                width="400px"
+                                                              <Box
+                                                                boxes={Array []}
+                                                                component={[Function]}
+                                                                direction="column"
+                                                                key="0"
+                                                                props={
+                                                                  Object {
+                                                                    "id": "changeStateDebounceWait",
+                                                                  }
+                                                                }
+                                                                style={Object {}}
                                                               >
-                                                                <Box
-                                                                  boxes={Array []}
-                                                                  component={[Function]}
-                                                                  direction="column"
-                                                                  key="0"
-                                                                  props={
-                                                                    Object {
-                                                                      "id": "changeStateDebounceWait",
-                                                                    }
-                                                                  }
-                                                                  style={Object {}}
+                                                                <Field
+                                                                  id="changeStateDebounceWait"
                                                                 >
-                                                                  <Field
+                                                                  <FieldView
+                                                                    description=""
+                                                                    dirty={false}
+                                                                    disabled={false}
+                                                                    empty={false}
+                                                                    errors={Array []}
+                                                                    excluded={true}
                                                                     id="changeStateDebounceWait"
-                                                                  >
-                                                                    <FieldView
-                                                                      description=""
-                                                                      dirty={false}
-                                                                      disabled={false}
-                                                                      empty={false}
-                                                                      errors={Array []}
-                                                                      excluded={true}
-                                                                      id="changeStateDebounceWait"
-                                                                      invalid={false}
-                                                                      label=""
-                                                                      onStateChange={[Function]}
-                                                                      onValueChange={[Function]}
-                                                                      required={false}
-                                                                      state={Object {}}
-                                                                    />
-                                                                  </Field>
-                                                                </Box>
-                                                                <Box
-                                                                  boxes={Array []}
-                                                                  component={[Function]}
-                                                                  direction="column"
-                                                                  key="1"
-                                                                  props={
-                                                                    Object {
-                                                                      "id": "changeStateDebounceMaxWait",
-                                                                    }
+                                                                    invalid={false}
+                                                                    label=""
+                                                                    onStateChange={[Function]}
+                                                                    onValueChange={[Function]}
+                                                                    required={false}
+                                                                    state={Object {}}
+                                                                  />
+                                                                </Field>
+                                                              </Box>
+                                                              <Box
+                                                                boxes={Array []}
+                                                                component={[Function]}
+                                                                direction="column"
+                                                                key="1"
+                                                                props={
+                                                                  Object {
+                                                                    "id": "changeStateDebounceMaxWait",
                                                                   }
-                                                                  style={Object {}}
+                                                                }
+                                                                style={Object {}}
+                                                              >
+                                                                <Field
+                                                                  id="changeStateDebounceMaxWait"
                                                                 >
-                                                                  <Field
+                                                                  <FieldView
+                                                                    description=""
+                                                                    dirty={false}
+                                                                    disabled={false}
+                                                                    empty={false}
+                                                                    errors={Array []}
+                                                                    excluded={true}
                                                                     id="changeStateDebounceMaxWait"
-                                                                  >
-                                                                    <FieldView
-                                                                      description=""
-                                                                      dirty={false}
-                                                                      disabled={false}
-                                                                      empty={false}
-                                                                      errors={Array []}
-                                                                      excluded={true}
-                                                                      id="changeStateDebounceMaxWait"
-                                                                      invalid={false}
-                                                                      label=""
-                                                                      onStateChange={[Function]}
-                                                                      onValueChange={[Function]}
-                                                                      required={false}
-                                                                      state={Object {}}
-                                                                    />
-                                                                  </Field>
-                                                                </Box>
-                                                              </div>
-                                                            </StyledComponent>
-                                                          </styled.div>
-                                                        </Box>
-                                                      </div>
-                                                    </StyledComponent>
-                                                  </styled.div>
-                                                </Box>
-                                              </div>
-                                            </StyledComponent>
-                                          </styled.div>
-                                        </div>
+                                                                    invalid={false}
+                                                                    label=""
+                                                                    onStateChange={[Function]}
+                                                                    onValueChange={[Function]}
+                                                                    required={false}
+                                                                    state={Object {}}
+                                                                  />
+                                                                </Field>
+                                                              </Box>
+                                                            </div>
+                                                          </StyledComponent>
+                                                        </styled.div>
+                                                      </Box>
+                                                    </div>
+                                                  </StyledComponent>
+                                                </styled.div>
+                                              </Box>
+                                            </div>
+                                          </StyledComponent>
+                                        </styled.div>
                                       </Section>
                                     </ForwardRef>
                                   </div>
