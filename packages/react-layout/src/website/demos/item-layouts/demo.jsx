@@ -78,7 +78,7 @@ class Demo extends React.Component {
     return (
       <React.Fragment>
         <div id="layout-select" style={{ marginBottom: '40px' }}>
-          Layout:
+          <span style={{ width: '60px', display: 'inline-block' }}>Layout:</span>
           {['scroll', 'tabs', 'mobile', 'undefined'].map(layout => (
             <FormControlLabel
               key={layout}
@@ -90,7 +90,7 @@ class Demo extends React.Component {
             />))}
         </div>
         <div id="size-select" style={{ marginBottom: '40px' }}>
-          Size:
+          <span style={{ width: '60px', display: 'inline-block' }}>Size:</span>
           {[4, 3, 2, 1].map(size => (
             <FormControlLabel
               key={size}
