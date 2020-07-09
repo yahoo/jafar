@@ -5,9 +5,9 @@ exports[`Styled size: 1, root: false Title 1`] = `
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
   margin: 0;
 }
 
@@ -38,7 +38,7 @@ exports[`Styled size: 1, root: true Title 1`] = `
   color: inherit;
   font-size: 16px;
   font-weight: 500;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
   margin: 0;
 }
 
@@ -67,7 +67,7 @@ exports[`Styled size: 2, root: false Title 1`] = `
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   padding-bottom: 30px;
   margin: 0;
@@ -129,7 +129,7 @@ exports[`Styled size: 3, root: false Title 1`] = `
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   padding-bottom: 40px;
   margin: 0;
@@ -191,7 +191,7 @@ exports[`Styled size: 4, root: false Title 1`] = `
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
   padding-bottom: 50px;
   margin: 0;

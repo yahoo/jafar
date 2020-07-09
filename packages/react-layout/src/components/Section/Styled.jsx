@@ -8,7 +8,9 @@ import styled from 'styled-components';
 const sectionSizeCache = {};
 
 export default (size, root) => {
+  size = Math.max(size, 0);
   const key = `${size},${root}`;
+
   if (!sectionSizeCache[key]) {
     sectionSizeCache[key] = {
       Wrapper: styled.div`
@@ -22,12 +24,13 @@ export default (size, root) => {
         text-transform: uppercase;
         line-height: 1.1;
         color: inherit;
-        font-size: ${() => (12 + (2 * size) + (root ? 2 : 0))}px;
+        font-size: ${() => (14 + (2 * size))}px;
         font-weight: ${() => root ? '500' : '400' };
-        padding-bottom: ${() => ((size * 10) + 10)}px;
+        padding-bottom: ${() => (Math.max((size * 10) + 10, 24))}px;
         margin: 0;
       `,
     };
   }
   return sectionSizeCache[key];
 };
+
