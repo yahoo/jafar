@@ -66,8 +66,7 @@ function MobileItemView(props) {
     }
     <Styled.Sections aria-label="Sections">
       {
-        props.sections.map((section, index) => (<Section key={section.id} {...section}
-          showBorder={ index < props.sections.length - 1 } smallLayout={true} />))
+        props.sections.map((section, index) => (<Section key={section.id} {...section} smallLayout={true} />))
       }
     </Styled.Sections>
     <div id="menu-anchor" ref={menuRef} />

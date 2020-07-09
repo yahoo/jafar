@@ -7,7 +7,10 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   padding: ${props => (props.level === 1 ? '0 50px 40px 50px' : '0')};
-  border-bottom: ${props => (props.level === 1 && props.showBorder ? '1px solid #d8d8d8' : 'none')};
+  border-bottom: ${props => (props.level === 1 ? '1px solid #d8d8d8' : 'none')};
+  &:last-child {
+    border-bottom: none;
+  }
 `;
 
 const Title = styled.h3`
@@ -22,7 +25,10 @@ const Title = styled.h3`
 
 const SmallWrapper = styled.div`
   padding: ${props => (props.level === 1 ? '0 20px 10px 20px' : '0')};
-  border-bottom: ${props => (props.level === 1 && props.showBorder ? '1px solid #d8d8d8' : 'none')};
+  border-bottom: ${props => (props.level === 1 ? '1px solid #d8d8d8' : 'none')};
+  &:last-child {
+    border-bottom: none;
+  }
 `;
 
 const SmallTitle = styled.h3`

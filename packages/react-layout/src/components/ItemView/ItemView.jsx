@@ -1,4 +1,3 @@
-
 /**
   * Copyright 2020, Verizon Media
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
@@ -63,8 +62,7 @@ export default class ItemView extends React.Component {
       }
       <Styled.Sections aria-label="Sections" ref={this.props.sectionsRef}>
         {
-          this.props.sections.map((section, index) => (<Section key={section.id} {...section}
-            showBorder={ index < this.props.sections.length - 1 } />))
+          this.props.sections.map((section, index) => (<Section key={section.id} {...section} />))
         }
       </Styled.Sections>
       {

@@ -24,7 +24,6 @@ const SectionShape = {
   }),
   boxes: PropTypes.arrayOf(PropTypes.object),
   level: PropTypes.oneOf([1, 2]),
-  showBorder: PropTypes.bool,
   smallLayout: PropTypes.bool,
 };
 SectionShape.sections = PropTypes.arrayOf(PropTypes.shape(SectionShape));
@@ -41,23 +40,21 @@ export class Section extends React.Component {
     const Wrapper = this.props.smallLayout ? Styled.SmallWrapper : Styled.Wrapper;
     const Title = this.props.smallLayout ? Styled.SmallTitle : Styled.Title;
 
-    return (<div ref={this.props.innerRef} id={this.props.id}>
-      <Wrapper level={this.props.level} showBorder={this.props.showBorder}>
-        {
-          this.props.title && <Title level={this.props.level}>{this.props.title}</Title>
-        }
-        {
-          this.props.grid && <Grid templateAreas={this.props.grid.templateAreas} elements={this.props.grid.elements} />
-        }
-        {
-          this.props.boxes.map((box, index) => (<Box key={index} { ...box } />))
-        }
-        {
-          (this.props.sections || []).length > 0 && this.props.sections.map(section => (<Section
-            key={section.id} {...section} level={section.level || this.props.level + 1} />))
-        }
-      </Wrapper>
-    </div>);
+    return (<Wrapper ref={this.props.innerRef} id={this.props.id} level={this.props.level}>
+      {
+        this.props.title && <Title level={this.props.level}>{this.props.title}</Title>
+      }
+      {
+        this.props.grid && <Grid templateAreas={this.props.grid.templateAreas} elements={this.props.grid.elements} />
+      }
+      {
+        this.props.boxes.map((box, index) => (<Box key={index} { ...box } />))
+      }
+      {
+        (this.props.sections || []).length > 0 && this.props.sections.map(section => (<Section
+          key={section.id} {...section} level={section.level || this.props.level + 1} />))
+      }
+    </Wrapper>);
   }
 }
 

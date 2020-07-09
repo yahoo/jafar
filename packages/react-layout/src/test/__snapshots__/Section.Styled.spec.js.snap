@@ -35,6 +35,10 @@ exports[`Styled SmallTitle Should render with level two 1`] = `
 exports[`Styled SmallWrapper Should render with level one 1`] = `
 .c0 {
   padding: 0 20px 10px 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c0:last-child {
   border-bottom: none;
 }
 
@@ -46,6 +50,10 @@ exports[`Styled SmallWrapper Should render with level one 1`] = `
 exports[`Styled SmallWrapper Should render with level two 1`] = `
 .c0 {
   padding: 0;
+  border-bottom: none;
+}
+
+.c0:last-child {
   border-bottom: none;
 }
 
@@ -89,6 +97,10 @@ exports[`Styled Title Should render with level two 1`] = `
 exports[`Styled Wrapper Should render with level one 1`] = `
 .c0 {
   padding: 0 50px 40px 50px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c0:last-child {
   border-bottom: none;
 }
 
@@ -100,6 +112,10 @@ exports[`Styled Wrapper Should render with level one 1`] = `
 exports[`Styled Wrapper Should render with level two 1`] = `
 .c0 {
   padding: 0;
+  border-bottom: none;
+}
+
+.c0:last-child {
   border-bottom: none;
 }
 

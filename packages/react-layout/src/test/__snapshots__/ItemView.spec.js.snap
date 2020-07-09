@@ -34,7 +34,6 @@ exports[`ItemView Should render - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
-      showBorder={false}
     />
   </styled.div>
   <Footer
@@ -59,7 +58,6 @@ exports[`ItemView Should render header options only - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
-      showBorder={false}
     />
   </styled.div>
   <Footer
@@ -103,7 +101,6 @@ exports[`ItemView Should render without footer - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
-      showBorder={false}
     />
   </styled.div>
 </styled.div>
@@ -138,7 +135,6 @@ exports[`ItemView Should render without options - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
-      showBorder={false}
     />
   </styled.div>
   <Footer
@@ -168,7 +164,6 @@ exports[`ItemView Should render without tabs - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
-      showBorder={false}
     />
   </styled.div>
   <Footer
@@ -207,7 +202,6 @@ exports[`ItemView Should render without title - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
-      showBorder={false}
     />
   </styled.div>
   <Footer

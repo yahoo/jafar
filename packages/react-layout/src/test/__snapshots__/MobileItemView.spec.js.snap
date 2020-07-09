@@ -64,7 +64,6 @@ exports[`MobileItemView Should render - ok 1`] = `
     <ForwardRef
       id="general"
       key="general"
-      showBorder={false}
       smallLayout={true}
       title="General"
     />
