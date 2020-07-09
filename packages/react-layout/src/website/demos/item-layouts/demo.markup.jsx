@@ -78,10 +78,6 @@ class Demo extends React.Component {
     return (<Item {...this.state.item} layout={this.state.item.layout === 'undefined' ? undefined : this.state.item.layout} />);
   }
 
-  handleChangeLayout = (e) => this.setState({ item: { ...this.state.item, layout: e.target.value } });
-
-  handleChangeSize = (e) => this.setState({ item: { ...this.state.item, size: Number(e.target.value) } });
-
   onClickField = (fieldId) => {
     this.setState({
       item: {
