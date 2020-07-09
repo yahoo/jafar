@@ -29,7 +29,7 @@ class Demo extends React.Component {
       item: {
         title: 'Employee',
         layout: 'scroll',
-        size: 'large',
+        size: 4,
         sections,
         mainActions: [{
           label: 'Cancel',
@@ -75,39 +75,12 @@ class Demo extends React.Component {
   }
 
   render() {
-    return (
-      <React.Fragment>
-        <div id="layout-select" style={{ marginBottom: '40px' }}>
-          {['scroll', 'tabs', 'mobile', 'undefined'].map(layout => (
-            <FormControlLabel
-              key={layout}
-              value={layout}
-              aria-checked={this.state.item.layout === layout}
-              control={<Radio color="primary" checked={this.state.item.layout === layout} onChange={this.handleChangeLayout} />}
-              label={layout}
-              labelPlacement="end"
-            />))}
-        </div>
-        <div id="size-select" style={{ marginBottom: '40px' }}>
-          {['large', 'medium', 'small'].map(size => (
-            <FormControlLabel
-              key={size}
-              value={size}
-              aria-checked={this.state.item.size === size}
-              control={<Radio color="primary" checked={this.state.item.size === size} onChange={this.handleChangeSize} />}
-              label={size}
-              labelPlacement="end"
-            />))}
-        </div>
-        <Styled.ItemWrapper>
-          <Item {...this.state.item} layout={this.state.item.layout === 'undefined' ? undefined : this.state.item.layout} />
-        </Styled.ItemWrapper>
-      </React.Fragment>);
+    return (<Item {...this.state.item} layout={this.state.item.layout === 'undefined' ? undefined : this.state.item.layout} />);
   }
 
   handleChangeLayout = (e) => this.setState({ item: { ...this.state.item, layout: e.target.value } });
 
-  handleChangeSize = (e) => this.setState({ item: { ...this.state.item, size: e.target.value } });
+  handleChangeSize = (e) => this.setState({ item: { ...this.state.item, size: Number(e.target.value) } });
 
   onClickField = (fieldId) => {
     this.setState({
