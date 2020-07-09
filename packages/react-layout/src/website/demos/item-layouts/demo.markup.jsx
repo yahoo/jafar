@@ -75,7 +75,7 @@ class Demo extends React.Component {
   }
 
   render() {
-    return (<Item {...this.state.item} layout={this.state.item.layout === 'undefined' ? undefined : this.state.item.layout} />);
+    return (<Item {...this.state.item} />);
   }
 
   onClickField = (fieldId) => {
