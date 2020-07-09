@@ -44,6 +44,7 @@ const employeeForm = {
 
 // jafar-layout item
 const employeeFormLayout = { 
+  size: 1,
   sections: [{ 
       id: 'AddEmployee', 
       boxes: [{
@@ -180,7 +181,7 @@ const employeeForm = {
 
 // jafar-layout item
 const employeeFormLayout = {
-  layout: 'tabs',
+  size: 1,
   sections: [{ 
       id: 'basic', 
       title: 'Basic',

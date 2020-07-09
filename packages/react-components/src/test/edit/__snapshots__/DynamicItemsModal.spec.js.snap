@@ -7,9 +7,9 @@ exports[`<DynamicItemsModal /> component functions render itemsDisplay 1`] = `
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "sc-eNQAEJ",
+        "componentId": "sc-gqjmRU",
         "isStatic": false,
-        "lastClassName": "fWUxsp",
+        "lastClassName": "jbSsaT",
         "rules": Array [
           "
 	list-style: none;
@@ -22,7 +22,7 @@ exports[`<DynamicItemsModal /> component functions render itemsDisplay 1`] = `
       "displayName": "styled.ul",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "styledComponentId": "sc-eNQAEJ",
+      "styledComponentId": "sc-gqjmRU",
       "target": "ul",
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -75,7 +75,7 @@ exports[`<DynamicItemsModal /> component functions render itemsDisplay 1`] = `
 exports[`<DynamicItemsModal /> should render provided data 1`] = `
 <div>
   <ul
-    class="sc-eNQAEJ fWUxsp"
+    class="sc-gqjmRU jbSsaT"
   />
   <button
     class="MuiButtonBase-root MuiFab-root MuiFab-sizeSmall MuiFab-primary"
@@ -98,7 +98,7 @@ exports[`<DynamicItemsModal /> should render provided data 1`] = `
     </span>
   </button>
   <span
-    class="sc-iAyFgw gFVFFS"
+    class="sc-jzJRlG hfSEMm"
   >
     Add New
   </span>

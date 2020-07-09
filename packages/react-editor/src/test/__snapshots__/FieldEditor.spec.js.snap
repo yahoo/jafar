@@ -830,9 +830,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iAyFgw",
+                  "componentId": "sc-jzJRlG",
                   "isStatic": false,
-                  "lastClassName": "hgwOjX",
+                  "lastClassName": "hziaNZ",
                   "rules": Array [
                     "
   flex: 1;
@@ -849,7 +849,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iAyFgw",
+                "styledComponentId": "sc-jzJRlG",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -859,7 +859,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
             forwardedRef={null}
           >
             <div
-              className="sc-iAyFgw hgwOjX"
+              className="sc-jzJRlG hziaNZ"
             >
               <Item
                 layout="scroll"
@@ -1245,14 +1245,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                         "id": "basic",
                         "ref": Object {
                           "current": <div
-                            class="sc-dnqmqq psgzJ"
+                            class="sc-cvbbAY gqWCjA"
                             id="basic"
                           >
-                            <h3
-                              class="sc-iwsKbI gaRpVe"
+                            <div
+                              class="sc-jWBwVP axmDW"
                             >
                               Basic
-                            </h3>
+                            </div>
                             <div
                               class="sc-gzVnrw jKdxIN"
                             >
@@ -1312,14 +1312,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                         "id": "validations",
                         "ref": Object {
                           "current": <div
-                            class="sc-dnqmqq psgzJ"
+                            class="sc-cvbbAY gqWCjA"
                             id="validations"
                           >
-                            <h3
-                              class="sc-iwsKbI gaRpVe"
+                            <div
+                              class="sc-jWBwVP axmDW"
                             >
                               Validations
-                            </h3>
+                            </div>
                             <div
                               class="sc-gzVnrw jKdxIN"
                             >
@@ -1375,14 +1375,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                         "id": "terms",
                         "ref": Object {
                           "current": <div
-                            class="sc-dnqmqq psgzJ"
+                            class="sc-cvbbAY gqWCjA"
                             id="terms"
                           >
-                            <h3
-                              class="sc-iwsKbI gaRpVe"
+                            <div
+                              class="sc-jWBwVP axmDW"
                             >
                               Terms
-                            </h3>
+                            </div>
                             <div
                               class="sc-gzVnrw jKdxIN"
                             >
@@ -1456,14 +1456,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                         "id": "ui",
                         "ref": Object {
                           "current": <div
-                            class="sc-dnqmqq psgzJ"
+                            class="sc-cvbbAY gqWCjA"
                             id="ui"
                           >
-                            <h3
-                              class="sc-iwsKbI gaRpVe"
+                            <div
+                              class="sc-jWBwVP axmDW"
                             >
                               UI
-                            </h3>
+                            </div>
                             <div
                               class="sc-gzVnrw jKdxIN"
                             >
@@ -1486,17 +1486,17 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                     Object {
                       "current": <div
                         aria-label="Sections"
-                        class="sc-kGXeez eRBpYu"
+                        class="sc-eHgmQL kmrsFJ"
                       >
                         <div
-                          class="sc-dnqmqq psgzJ"
+                          class="sc-cvbbAY gqWCjA"
                           id="basic"
                         >
-                          <h3
-                            class="sc-iwsKbI gaRpVe"
+                          <div
+                            class="sc-jWBwVP axmDW"
                           >
                             Basic
-                          </h3>
+                          </div>
                           <div
                             class="sc-gzVnrw jKdxIN"
                           >
@@ -1511,14 +1511,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                           </div>
                         </div>
                         <div
-                          class="sc-dnqmqq psgzJ"
+                          class="sc-cvbbAY gqWCjA"
                           id="validations"
                         >
-                          <h3
-                            class="sc-iwsKbI gaRpVe"
+                          <div
+                            class="sc-jWBwVP axmDW"
                           >
                             Validations
-                          </h3>
+                          </div>
                           <div
                             class="sc-gzVnrw jKdxIN"
                           >
@@ -1533,14 +1533,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                           </div>
                         </div>
                         <div
-                          class="sc-dnqmqq psgzJ"
+                          class="sc-cvbbAY gqWCjA"
                           id="terms"
                         >
-                          <h3
-                            class="sc-iwsKbI gaRpVe"
+                          <div
+                            class="sc-jWBwVP axmDW"
                           >
                             Terms
-                          </h3>
+                          </div>
                           <div
                             class="sc-gzVnrw jKdxIN"
                           >
@@ -1551,14 +1551,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                           </div>
                         </div>
                         <div
-                          class="sc-dnqmqq psgzJ"
+                          class="sc-cvbbAY gqWCjA"
                           id="ui"
                         >
-                          <h3
-                            class="sc-iwsKbI gaRpVe"
+                          <div
+                            class="sc-jWBwVP axmDW"
                           >
                             UI
-                          </h3>
+                          </div>
                           <div
                             class="sc-gzVnrw jKdxIN"
                           >
@@ -1575,6 +1575,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                       </div>,
                     }
                   }
+                  size={4}
                   tabs={
                     Object {
                       "items": Array [
@@ -1608,23 +1609,23 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-jzJRlG",
+                            "componentId": "sc-hMqMXs",
                             "isStatic": false,
-                            "lastClassName": "fSPMWM",
+                            "lastClassName": "bGKsSx",
                             "rules": Array [
                               "
-    color: #3d3d3d;
-    background-color: #fff;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-  ",
+        color: #3d3d3d;
+        background-color: #fff;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+      ",
                             ],
                           },
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-jzJRlG",
+                          "styledComponentId": "sc-hMqMXs",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1634,7 +1635,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                       forwardedRef={null}
                     >
                       <div
-                        className="sc-jzJRlG fSPMWM"
+                        className="sc-hMqMXs bGKsSx"
                       >
                         <styled.div>
                           <StyledComponent
@@ -1643,24 +1644,26 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-cSHVUG",
+                                  "componentId": "sc-kEYyzF",
                                   "isStatic": false,
-                                  "lastClassName": "iKyJud",
+                                  "lastClassName": "kwPSzH",
                                   "rules": Array [
                                     "
-    flex: 0 0 auto;
-    padding: 0 50px;
-    border-bottom: 3px solid #e1e1e1;
-    position: relative;
-    min-height: 48px;
-    position: relative;
-  ",
+        flex: 0 0 auto;
+        padding: 0 ",
+                                    [Function],
+                                    "px;
+        border-bottom: 3px solid #e1e1e1;
+        position: relative;
+        min-height: 48px;
+        position: relative;
+      ",
                                   ],
                                 },
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-cSHVUG",
+                                "styledComponentId": "sc-kEYyzF",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -1670,51 +1673,8 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                             forwardedRef={null}
                           >
                             <div
-                              className="sc-cSHVUG iKyJud"
+                              className="sc-kEYyzF kwPSzH"
                             >
-                              <styled.h3
-                                hasTabs={true}
-                              >
-                                <StyledComponent
-                                  forwardedComponent={
-                                    Object {
-                                      "$$typeof": Symbol(react.forward_ref),
-                                      "attrs": Array [],
-                                      "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
-                                        "isStatic": false,
-                                        "lastClassName": "exIrrj",
-                                        "rules": Array [
-                                          "
-    font-size: 28px;
-    font-weight: 500;
-    margin: 0;
-    padding: ",
-                                          [Function],
-                                          ";
-  ",
-                                        ],
-                                      },
-                                      "displayName": "styled.h3",
-                                      "foldedComponentIds": Array [],
-                                      "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
-                                      "target": "h3",
-                                      "toString": [Function],
-                                      "warnTooManyClasses": [Function],
-                                      "withComponent": [Function],
-                                    }
-                                  }
-                                  forwardedRef={null}
-                                  hasTabs={true}
-                                >
-                                  <h3
-                                    className="sc-chPdSV exIrrj"
-                                  >
-                                    Field - new / new
-                                  </h3>
-                                </StyledComponent>
-                              </styled.h3>
                               <styled.div>
                                 <StyledComponent
                                   forwardedComponent={
@@ -1722,21 +1682,26 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kAzzGY",
+                                        "componentId": "sc-iAyFgw",
                                         "isStatic": false,
-                                        "lastClassName": "etYhcl",
+                                        "lastClassName": "kwWvzo",
                                         "rules": Array [
                                           "
-    position: absolute;
-    right: 15px;
-    bottom: 0;
-  ",
+        font-size: ",
+                                          [Function],
+                                          "px;
+        font-weight: 500;
+        margin: 0;
+        padding: ",
+                                          [Function],
+                                          ";
+      ",
                                         ],
                                       },
                                       "displayName": "styled.div",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kAzzGY",
+                                      "styledComponentId": "sc-iAyFgw",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -1746,7 +1711,44 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="sc-kAzzGY etYhcl"
+                                    className="sc-iAyFgw kwWvzo"
+                                  >
+                                    Field - new / new
+                                  </div>
+                                </StyledComponent>
+                              </styled.div>
+                              <styled.div>
+                                <StyledComponent
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-kkGfuU",
+                                        "isStatic": false,
+                                        "lastClassName": "gVIBnE",
+                                        "rules": Array [
+                                          "
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+      ",
+                                        ],
+                                      },
+                                      "displayName": "styled.div",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-kkGfuU",
+                                      "target": "div",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
+                                  }
+                                  forwardedRef={null}
+                                >
+                                  <div
+                                    className="sc-kkGfuU gVIBnE"
                                   >
                                     <Options
                                       options={
@@ -2023,21 +2025,21 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kgoBCf",
+                                        "componentId": "sc-hSdWYo",
                                         "isStatic": false,
-                                        "lastClassName": "ejpLAT",
+                                        "lastClassName": "ePkIjd",
                                         "rules": Array [
                                           "
-    position: relative;
-    top: 3px;
-    left: -10px;
-  ",
+        position: relative;
+        top: 3px;
+        left: -10px;
+      ",
                                         ],
                                       },
                                       "displayName": "styled.div",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kgoBCf",
+                                      "styledComponentId": "sc-hSdWYo",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -2047,7 +2049,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="sc-kgoBCf ejpLAT"
+                                    className="sc-hSdWYo ePkIjd"
                                   >
                                     <WithStyles(ForwardRef(Tabs))
                                       aria-label="Tabs"
@@ -2631,20 +2633,20 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-kGXeez",
+                                  "componentId": "sc-eHgmQL",
                                   "isStatic": false,
-                                  "lastClassName": "eRBpYu",
+                                  "lastClassName": "kmrsFJ",
                                   "rules": Array [
                                     "
-    flex-grow: 1;
-    overflow-y: auto;
-  ",
+        flex-grow: 1;
+        overflow-y: auto;
+      ",
                                   ],
                                 },
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-kGXeez",
+                                "styledComponentId": "sc-eHgmQL",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -2655,17 +2657,17 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                               Object {
                                 "current": <div
                                   aria-label="Sections"
-                                  class="sc-kGXeez eRBpYu"
+                                  class="sc-eHgmQL kmrsFJ"
                                 >
                                   <div
-                                    class="sc-dnqmqq psgzJ"
+                                    class="sc-cvbbAY gqWCjA"
                                     id="basic"
                                   >
-                                    <h3
-                                      class="sc-iwsKbI gaRpVe"
+                                    <div
+                                      class="sc-jWBwVP axmDW"
                                     >
                                       Basic
-                                    </h3>
+                                    </div>
                                     <div
                                       class="sc-gzVnrw jKdxIN"
                                     >
@@ -2680,14 +2682,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                     </div>
                                   </div>
                                   <div
-                                    class="sc-dnqmqq psgzJ"
+                                    class="sc-cvbbAY gqWCjA"
                                     id="validations"
                                   >
-                                    <h3
-                                      class="sc-iwsKbI gaRpVe"
+                                    <div
+                                      class="sc-jWBwVP axmDW"
                                     >
                                       Validations
-                                    </h3>
+                                    </div>
                                     <div
                                       class="sc-gzVnrw jKdxIN"
                                     >
@@ -2702,14 +2704,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                     </div>
                                   </div>
                                   <div
-                                    class="sc-dnqmqq psgzJ"
+                                    class="sc-cvbbAY gqWCjA"
                                     id="terms"
                                   >
-                                    <h3
-                                      class="sc-iwsKbI gaRpVe"
+                                    <div
+                                      class="sc-jWBwVP axmDW"
                                     >
                                       Terms
-                                    </h3>
+                                    </div>
                                     <div
                                       class="sc-gzVnrw jKdxIN"
                                     >
@@ -2720,14 +2722,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                     </div>
                                   </div>
                                   <div
-                                    class="sc-dnqmqq psgzJ"
+                                    class="sc-cvbbAY gqWCjA"
                                     id="ui"
                                   >
-                                    <h3
-                                      class="sc-iwsKbI gaRpVe"
+                                    <div
+                                      class="sc-jWBwVP axmDW"
                                     >
                                       UI
-                                    </h3>
+                                    </div>
                                     <div
                                       class="sc-gzVnrw jKdxIN"
                                     >
@@ -2747,7 +2749,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                           >
                             <div
                               aria-label="Sections"
-                              className="sc-kGXeez eRBpYu"
+                              className="sc-eHgmQL kmrsFJ"
                             >
                               <ForwardRef
                                 boxes={
@@ -2805,6 +2807,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                 }
                                 id="basic"
                                 key="basic"
+                                size={4}
                                 title="Basic"
                               >
                                 <Section
@@ -2865,14 +2868,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   innerRef={
                                     Object {
                                       "current": <div
-                                        class="sc-dnqmqq psgzJ"
+                                        class="sc-cvbbAY gqWCjA"
                                         id="basic"
                                       >
-                                        <h3
-                                          class="sc-iwsKbI gaRpVe"
+                                        <div
+                                          class="sc-jWBwVP axmDW"
                                         >
                                           Basic
-                                        </h3>
+                                        </div>
                                         <div
                                           class="sc-gzVnrw jKdxIN"
                                         >
@@ -2888,12 +2891,12 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       </div>,
                                     }
                                   }
-                                  level={1}
+                                  root={true}
+                                  size={4}
                                   title="Basic"
                                 >
                                   <styled.div
                                     id="basic"
-                                    level={1}
                                   >
                                     <StyledComponent
                                       forwardedComponent={
@@ -2901,27 +2904,27 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-cvbbAY",
                                             "isStatic": false,
-                                            "lastClassName": "psgzJ",
+                                            "lastClassName": "gqWCjA",
                                             "rules": Array [
                                               "
-  padding: ",
+        padding: ",
                                               [Function],
                                               ";
-  border-bottom: ",
+        border-bottom: ",
                                               [Function],
                                               ";
-  &:last-child {
-    border-bottom: none;
-  }
-",
+        &:last-child {
+          border-bottom: none;
+        }
+      ",
                                             ],
                                           },
                                           "displayName": "styled.div",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-cvbbAY",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2931,14 +2934,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       forwardedRef={
                                         Object {
                                           "current": <div
-                                            class="sc-dnqmqq psgzJ"
+                                            class="sc-cvbbAY gqWCjA"
                                             id="basic"
                                           >
-                                            <h3
-                                              class="sc-iwsKbI gaRpVe"
+                                            <div
+                                              class="sc-jWBwVP axmDW"
                                             >
                                               Basic
-                                            </h3>
+                                            </div>
                                             <div
                                               class="sc-gzVnrw jKdxIN"
                                             >
@@ -2955,62 +2958,58 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                         }
                                       }
                                       id="basic"
-                                      level={1}
                                     >
                                       <div
-                                        className="sc-dnqmqq psgzJ"
+                                        className="sc-cvbbAY gqWCjA"
                                         id="basic"
                                       >
-                                        <styled.h3
-                                          level={1}
-                                        >
+                                        <styled.div>
                                           <StyledComponent
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-iwsKbI",
+                                                  "componentId": "sc-jWBwVP",
                                                   "isStatic": false,
-                                                  "lastClassName": "gaRpVe",
+                                                  "lastClassName": "axmDW",
                                                   "rules": Array [
                                                     "
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ",
+        text-transform: uppercase;
+        line-height: 1.1;
+        color: inherit;
+        font-size: ",
+                                                    [Function],
+                                                    "px;
+        font-weight: ",
                                                     [Function],
                                                     ";
-  font-weight: ",
+        padding-bottom: ",
                                                     [Function],
-                                                    ";
-  padding: ",
-                                                    [Function],
-                                                    ";
-  margin: 0;
-",
+                                                    "px;
+        margin: 0;
+      ",
                                                   ],
                                                 },
-                                                "displayName": "styled.h3",
+                                                "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-iwsKbI",
-                                                "target": "h3",
+                                                "styledComponentId": "sc-jWBwVP",
+                                                "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
                                               }
                                             }
                                             forwardedRef={null}
-                                            level={1}
                                           >
-                                            <h3
-                                              className="sc-iwsKbI gaRpVe"
+                                            <div
+                                              className="sc-jWBwVP axmDW"
                                             >
                                               Basic
-                                            </h3>
+                                            </div>
                                           </StyledComponent>
-                                        </styled.h3>
+                                        </styled.div>
                                         <Box
                                           boxes={
                                             Array [
@@ -3440,6 +3439,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                 }
                                 id="validations"
                                 key="validations"
+                                size={4}
                                 title="Validations"
                               >
                                 <Section
@@ -3488,14 +3488,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   innerRef={
                                     Object {
                                       "current": <div
-                                        class="sc-dnqmqq psgzJ"
+                                        class="sc-cvbbAY gqWCjA"
                                         id="validations"
                                       >
-                                        <h3
-                                          class="sc-iwsKbI gaRpVe"
+                                        <div
+                                          class="sc-jWBwVP axmDW"
                                         >
                                           Validations
-                                        </h3>
+                                        </div>
                                         <div
                                           class="sc-gzVnrw jKdxIN"
                                         >
@@ -3511,12 +3511,12 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       </div>,
                                     }
                                   }
-                                  level={1}
+                                  root={true}
+                                  size={4}
                                   title="Validations"
                                 >
                                   <styled.div
                                     id="validations"
-                                    level={1}
                                   >
                                     <StyledComponent
                                       forwardedComponent={
@@ -3524,27 +3524,27 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-cvbbAY",
                                             "isStatic": false,
-                                            "lastClassName": "psgzJ",
+                                            "lastClassName": "gqWCjA",
                                             "rules": Array [
                                               "
-  padding: ",
+        padding: ",
                                               [Function],
                                               ";
-  border-bottom: ",
+        border-bottom: ",
                                               [Function],
                                               ";
-  &:last-child {
-    border-bottom: none;
-  }
-",
+        &:last-child {
+          border-bottom: none;
+        }
+      ",
                                             ],
                                           },
                                           "displayName": "styled.div",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-cvbbAY",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3554,14 +3554,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       forwardedRef={
                                         Object {
                                           "current": <div
-                                            class="sc-dnqmqq psgzJ"
+                                            class="sc-cvbbAY gqWCjA"
                                             id="validations"
                                           >
-                                            <h3
-                                              class="sc-iwsKbI gaRpVe"
+                                            <div
+                                              class="sc-jWBwVP axmDW"
                                             >
                                               Validations
-                                            </h3>
+                                            </div>
                                             <div
                                               class="sc-gzVnrw jKdxIN"
                                             >
@@ -3578,62 +3578,58 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                         }
                                       }
                                       id="validations"
-                                      level={1}
                                     >
                                       <div
-                                        className="sc-dnqmqq psgzJ"
+                                        className="sc-cvbbAY gqWCjA"
                                         id="validations"
                                       >
-                                        <styled.h3
-                                          level={1}
-                                        >
+                                        <styled.div>
                                           <StyledComponent
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-iwsKbI",
+                                                  "componentId": "sc-jWBwVP",
                                                   "isStatic": false,
-                                                  "lastClassName": "gaRpVe",
+                                                  "lastClassName": "axmDW",
                                                   "rules": Array [
                                                     "
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ",
+        text-transform: uppercase;
+        line-height: 1.1;
+        color: inherit;
+        font-size: ",
+                                                    [Function],
+                                                    "px;
+        font-weight: ",
                                                     [Function],
                                                     ";
-  font-weight: ",
+        padding-bottom: ",
                                                     [Function],
-                                                    ";
-  padding: ",
-                                                    [Function],
-                                                    ";
-  margin: 0;
-",
+                                                    "px;
+        margin: 0;
+      ",
                                                   ],
                                                 },
-                                                "displayName": "styled.h3",
+                                                "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-iwsKbI",
-                                                "target": "h3",
+                                                "styledComponentId": "sc-jWBwVP",
+                                                "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
                                               }
                                             }
                                             forwardedRef={null}
-                                            level={1}
                                           >
-                                            <h3
-                                              className="sc-iwsKbI gaRpVe"
+                                            <div
+                                              className="sc-jWBwVP axmDW"
                                             >
                                               Validations
-                                            </h3>
+                                            </div>
                                           </StyledComponent>
-                                        </styled.h3>
+                                        </styled.div>
                                         <Box
                                           boxes={
                                             Array [
@@ -3971,6 +3967,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                 }
                                 id="terms"
                                 key="terms"
+                                size={4}
                                 title="Terms"
                               >
                                 <Section
@@ -4015,14 +4012,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   innerRef={
                                     Object {
                                       "current": <div
-                                        class="sc-dnqmqq psgzJ"
+                                        class="sc-cvbbAY gqWCjA"
                                         id="terms"
                                       >
-                                        <h3
-                                          class="sc-iwsKbI gaRpVe"
+                                        <div
+                                          class="sc-jWBwVP axmDW"
                                         >
                                           Terms
-                                        </h3>
+                                        </div>
                                         <div
                                           class="sc-gzVnrw jKdxIN"
                                         >
@@ -4034,12 +4031,12 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       </div>,
                                     }
                                   }
-                                  level={1}
+                                  root={true}
+                                  size={4}
                                   title="Terms"
                                 >
                                   <styled.div
                                     id="terms"
-                                    level={1}
                                   >
                                     <StyledComponent
                                       forwardedComponent={
@@ -4047,27 +4044,27 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-cvbbAY",
                                             "isStatic": false,
-                                            "lastClassName": "psgzJ",
+                                            "lastClassName": "gqWCjA",
                                             "rules": Array [
                                               "
-  padding: ",
+        padding: ",
                                               [Function],
                                               ";
-  border-bottom: ",
+        border-bottom: ",
                                               [Function],
                                               ";
-  &:last-child {
-    border-bottom: none;
-  }
-",
+        &:last-child {
+          border-bottom: none;
+        }
+      ",
                                             ],
                                           },
                                           "displayName": "styled.div",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-cvbbAY",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -4077,14 +4074,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       forwardedRef={
                                         Object {
                                           "current": <div
-                                            class="sc-dnqmqq psgzJ"
+                                            class="sc-cvbbAY gqWCjA"
                                             id="terms"
                                           >
-                                            <h3
-                                              class="sc-iwsKbI gaRpVe"
+                                            <div
+                                              class="sc-jWBwVP axmDW"
                                             >
                                               Terms
-                                            </h3>
+                                            </div>
                                             <div
                                               class="sc-gzVnrw jKdxIN"
                                             >
@@ -4097,62 +4094,58 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                         }
                                       }
                                       id="terms"
-                                      level={1}
                                     >
                                       <div
-                                        className="sc-dnqmqq psgzJ"
+                                        className="sc-cvbbAY gqWCjA"
                                         id="terms"
                                       >
-                                        <styled.h3
-                                          level={1}
-                                        >
+                                        <styled.div>
                                           <StyledComponent
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-iwsKbI",
+                                                  "componentId": "sc-jWBwVP",
                                                   "isStatic": false,
-                                                  "lastClassName": "gaRpVe",
+                                                  "lastClassName": "axmDW",
                                                   "rules": Array [
                                                     "
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ",
+        text-transform: uppercase;
+        line-height: 1.1;
+        color: inherit;
+        font-size: ",
+                                                    [Function],
+                                                    "px;
+        font-weight: ",
                                                     [Function],
                                                     ";
-  font-weight: ",
+        padding-bottom: ",
                                                     [Function],
-                                                    ";
-  padding: ",
-                                                    [Function],
-                                                    ";
-  margin: 0;
-",
+                                                    "px;
+        margin: 0;
+      ",
                                                   ],
                                                 },
-                                                "displayName": "styled.h3",
+                                                "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-iwsKbI",
-                                                "target": "h3",
+                                                "styledComponentId": "sc-jWBwVP",
+                                                "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
                                               }
                                             }
                                             forwardedRef={null}
-                                            level={1}
                                           >
-                                            <h3
-                                              className="sc-iwsKbI gaRpVe"
+                                            <div
+                                              className="sc-jWBwVP axmDW"
                                             >
                                               Terms
-                                            </h3>
+                                            </div>
                                           </StyledComponent>
-                                        </styled.h3>
+                                        </styled.div>
                                         <Box
                                           boxes={
                                             Array [
@@ -4477,6 +4470,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                 }
                                 id="ui"
                                 key="ui"
+                                size={4}
                                 title="UI"
                               >
                                 <Section
@@ -4543,14 +4537,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   innerRef={
                                     Object {
                                       "current": <div
-                                        class="sc-dnqmqq psgzJ"
+                                        class="sc-cvbbAY gqWCjA"
                                         id="ui"
                                       >
-                                        <h3
-                                          class="sc-iwsKbI gaRpVe"
+                                        <div
+                                          class="sc-jWBwVP axmDW"
                                         >
                                           UI
-                                        </h3>
+                                        </div>
                                         <div
                                           class="sc-gzVnrw jKdxIN"
                                         >
@@ -4566,12 +4560,12 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       </div>,
                                     }
                                   }
-                                  level={1}
+                                  root={true}
+                                  size={4}
                                   title="UI"
                                 >
                                   <styled.div
                                     id="ui"
-                                    level={1}
                                   >
                                     <StyledComponent
                                       forwardedComponent={
@@ -4579,27 +4573,27 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-dnqmqq",
+                                            "componentId": "sc-cvbbAY",
                                             "isStatic": false,
-                                            "lastClassName": "psgzJ",
+                                            "lastClassName": "gqWCjA",
                                             "rules": Array [
                                               "
-  padding: ",
+        padding: ",
                                               [Function],
                                               ";
-  border-bottom: ",
+        border-bottom: ",
                                               [Function],
                                               ";
-  &:last-child {
-    border-bottom: none;
-  }
-",
+        &:last-child {
+          border-bottom: none;
+        }
+      ",
                                             ],
                                           },
                                           "displayName": "styled.div",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-dnqmqq",
+                                          "styledComponentId": "sc-cvbbAY",
                                           "target": "div",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -4609,14 +4603,14 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                       forwardedRef={
                                         Object {
                                           "current": <div
-                                            class="sc-dnqmqq psgzJ"
+                                            class="sc-cvbbAY gqWCjA"
                                             id="ui"
                                           >
-                                            <h3
-                                              class="sc-iwsKbI gaRpVe"
+                                            <div
+                                              class="sc-jWBwVP axmDW"
                                             >
                                               UI
-                                            </h3>
+                                            </div>
                                             <div
                                               class="sc-gzVnrw jKdxIN"
                                             >
@@ -4633,62 +4627,58 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                         }
                                       }
                                       id="ui"
-                                      level={1}
                                     >
                                       <div
-                                        className="sc-dnqmqq psgzJ"
+                                        className="sc-cvbbAY gqWCjA"
                                         id="ui"
                                       >
-                                        <styled.h3
-                                          level={1}
-                                        >
+                                        <styled.div>
                                           <StyledComponent
                                             forwardedComponent={
                                               Object {
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-iwsKbI",
+                                                  "componentId": "sc-jWBwVP",
                                                   "isStatic": false,
-                                                  "lastClassName": "gaRpVe",
+                                                  "lastClassName": "axmDW",
                                                   "rules": Array [
                                                     "
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ",
+        text-transform: uppercase;
+        line-height: 1.1;
+        color: inherit;
+        font-size: ",
+                                                    [Function],
+                                                    "px;
+        font-weight: ",
                                                     [Function],
                                                     ";
-  font-weight: ",
+        padding-bottom: ",
                                                     [Function],
-                                                    ";
-  padding: ",
-                                                    [Function],
-                                                    ";
-  margin: 0;
-",
+                                                    "px;
+        margin: 0;
+      ",
                                                   ],
                                                 },
-                                                "displayName": "styled.h3",
+                                                "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-iwsKbI",
-                                                "target": "h3",
+                                                "styledComponentId": "sc-jWBwVP",
+                                                "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
                                               }
                                             }
                                             forwardedRef={null}
-                                            level={1}
                                           >
-                                            <h3
-                                              className="sc-iwsKbI gaRpVe"
+                                            <div
+                                              className="sc-jWBwVP axmDW"
                                             >
                                               UI
-                                            </h3>
+                                            </div>
                                           </StyledComponent>
-                                        </styled.h3>
+                                        </styled.div>
                                         <Box
                                           boxes={
                                             Array [
@@ -5311,9 +5301,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-VigVT",
+                                    "componentId": "sc-dnqmqq",
                                     "isStatic": false,
-                                    "lastClassName": "nVjsR",
+                                    "lastClassName": "gLTWxr",
                                     "rules": Array [
                                       "
   flex: 0 0 auto;
@@ -5331,7 +5321,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   "displayName": "styled.div",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-VigVT",
+                                  "styledComponentId": "sc-dnqmqq",
                                   "target": "div",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -5342,7 +5332,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                             >
                               <div
                                 aria-label="Footer"
-                                className="sc-VigVT nVjsR"
+                                className="sc-dnqmqq gLTWxr"
                               >
                                 <styled.div>
                                   <StyledComponent
@@ -5351,9 +5341,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-jTzLTM",
+                                          "componentId": "sc-iwsKbI",
                                           "isStatic": false,
-                                          "lastClassName": "hHoAvA",
+                                          "lastClassName": "eAVJAJ",
                                           "rules": Array [
                                             "
   display: flex;
@@ -5366,7 +5356,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                         "displayName": "styled.div",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-jTzLTM",
+                                        "styledComponentId": "sc-iwsKbI",
                                         "target": "div",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -5376,7 +5366,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                     forwardedRef={null}
                                   >
                                     <div
-                                      className="sc-jTzLTM hHoAvA"
+                                      className="sc-iwsKbI eAVJAJ"
                                     >
                                       <styled.div
                                         key="Cancel"
@@ -5387,9 +5377,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-fjdhpX",
+                                                "componentId": "sc-gZMcBi",
                                                 "isStatic": false,
-                                                "lastClassName": "kdZlVV",
+                                                "lastClassName": "cfFiuj",
                                                 "rules": Array [
                                                   "
   margin-left: 15px;
@@ -5399,7 +5389,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                               "displayName": "styled.div",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-fjdhpX",
+                                              "styledComponentId": "sc-gZMcBi",
                                               "target": "div",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -5409,7 +5399,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                           forwardedRef={null}
                                         >
                                           <div
-                                            className="sc-fjdhpX kdZlVV"
+                                            className="sc-gZMcBi cfFiuj"
                                           >
                                             <Button
                                               label="Cancel"
@@ -5556,9 +5546,9 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-fjdhpX",
+                                                "componentId": "sc-gZMcBi",
                                                 "isStatic": false,
-                                                "lastClassName": "kdZlVV",
+                                                "lastClassName": "cfFiuj",
                                                 "rules": Array [
                                                   "
   margin-left: 15px;
@@ -5568,7 +5558,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                               "displayName": "styled.div",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-fjdhpX",
+                                              "styledComponentId": "sc-gZMcBi",
                                               "target": "div",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -5578,7 +5568,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                           forwardedRef={null}
                                         >
                                           <div
-                                            className="sc-fjdhpX kdZlVV"
+                                            className="sc-gZMcBi cfFiuj"
                                           >
                                             <Button
                                               disable={[Function]}
