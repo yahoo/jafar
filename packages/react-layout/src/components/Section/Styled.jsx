@@ -5,45 +5,21 @@
 
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  padding: ${props => (props.level === 1 ? '0 50px 40px 50px' : '0')};
-  border-bottom: ${props => (props.level === 1 ? '1px solid #d8d8d8' : 'none')};
-  &:last-child {
-    border-bottom: none;
-  }
-`;
-
-const Title = styled.h3`
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ${props => (props.level === 1 ? '21px' : '16px')};
-  font-weight: ${props => (props.level === 1 ? '500' : '400')};
-  padding: ${props => (props.level === 1 ? '50px 0' : '40px 0')};
-  margin: 0;
-`;
-
-const SmallWrapper = styled.div`
-  padding: ${props => (props.level === 1 ? '0 20px 10px 20px' : '0')};
-  border-bottom: ${props => (props.level === 1 ? '1px solid #d8d8d8' : 'none')};
-  &:last-child {
-    border-bottom: none;
-  }
-`;
-
-const SmallTitle = styled.h3`
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ${props => (props.level === 1 ? '19px' : '16px')};
-  font-weight: ${props => (props.level === 1 ? '500' : '400')};
-  padding: ${props => (props.level === 1 ? '40px 0' : '30px 0')};
-  margin: 0;
-`;
-
-export default {
-  Wrapper,
-  Title,
-  SmallWrapper,
-  SmallTitle,
-};
+export default (size, level) => ({
+  Wrapper: styled.div`
+    padding: ${() => (level === 1 ? `${(size * 8) + 18}px ${(size * 10) + 10}px ${size * 10}px ${(size * 10) + 10}px` : '0')};
+    border-bottom: ${() => (level === 1 ? '1px solid #d8d8d8' : 'none')};
+    &:last-child {
+      border-bottom: none;
+    }
+  `,
+  Title: styled.div`
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: inherit;
+    font-size: ${() => (12 + (2 * size) + (level === 1 ? 2 : 0))}px;
+    font-weight: ${() => level === 1 ? '500' : '400' };
+    padding-bottom: ${() => ((size * 10) + 10)}px;
+    margin: 0;
+  `,
+});

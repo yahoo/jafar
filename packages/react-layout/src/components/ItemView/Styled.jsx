@@ -5,7 +5,7 @@
 
 import styled from 'styled-components';
 
-export default {
+export default (size, hasTabs) => ({
   Wrapper: styled.div`
     color: #3d3d3d;
     background-color: #fff;
@@ -15,7 +15,7 @@ export default {
   `,
   Header: styled.div`
     flex: 0 0 auto;
-    padding: 0 50px;
+    padding: 0 ${() => (size * 10) + 10}px;
     border-bottom: 3px solid #e1e1e1;
     position: relative;
     min-height: 48px;
@@ -26,11 +26,11 @@ export default {
     right: 15px;
     bottom: 0;
   `,
-  Title: styled.h3`
-    font-size: 28px;
+  Title: styled.div`
+    font-size: ${() => ((size * 2) + 20)}px;
     font-weight: 500;
     margin: 0;
-    padding: ${props => (props.hasTabs ? '25px 0 10px 0' : '25px 0')};
+    padding: ${() => (hasTabs ? '25px 0 10px 0' : '25px 0')};
   `,
   TabsWrapper: styled.div`
     position: relative;
@@ -41,4 +41,4 @@ export default {
     flex-grow: 1;
     overflow-y: auto;
   `,
-};
+});

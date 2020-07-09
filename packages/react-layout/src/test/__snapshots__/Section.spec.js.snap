@@ -5,11 +5,11 @@ exports[`Section Should render complex section boxes 1`] = `
   id="job-information"
   level={1}
 >
-  <styled.h3
+  <styled.h2
     level={1}
   >
     Job Information
-  </styled.h3>
+  </styled.h2>
   <Box
     boxes={
       Array [
@@ -56,11 +56,11 @@ exports[`Section Should render section with grid 1`] = `
   id="job-information"
   level={1}
 >
-  <styled.h3
+  <styled.h2
     level={1}
   >
     Job Information
-  </styled.h3>
+  </styled.h2>
   <_default
     elements={
       Array [
@@ -117,11 +117,11 @@ exports[`Section Should render section with only sub sections with level one 1`]
   id="raw-data"
   level={1}
 >
-  <styled.h3
+  <styled.h2
     level={1}
   >
     Raw Data
-  </styled.h3>
+  </styled.h2>
   <Section
     boxes={
       Array [
@@ -157,6 +157,7 @@ exports[`Section Should render section with only sub sections with level one 1`]
     id="raw-data-general"
     key="raw-data-general"
     level={1}
+    size="large"
     title="General"
   />
   <Section
@@ -194,6 +195,7 @@ exports[`Section Should render section with only sub sections with level one 1`]
     id="raw-data-modification"
     key="raw-data-modification"
     level={1}
+    size="large"
     title="Modification"
   />
 </styled.div>
@@ -204,11 +206,11 @@ exports[`Section Should render section with sub sections 1`] = `
   id="raw-data"
   level={1}
 >
-  <styled.h3
+  <styled.h2
     level={1}
   >
     Raw Data
-  </styled.h3>
+  </styled.h2>
   <Box
     boxes={
       Array [
@@ -288,6 +290,7 @@ exports[`Section Should render section with sub sections 1`] = `
     id="raw-data-general"
     key="raw-data-general"
     level={2}
+    size="large"
     title="General"
   />
   <Section
@@ -325,6 +328,7 @@ exports[`Section Should render section with sub sections 1`] = `
     id="raw-data-modification"
     key="raw-data-modification"
     level={2}
+    size="large"
     title="Modification"
   />
 </styled.div>
@@ -335,11 +339,11 @@ exports[`Section Should render simple section boxes - level one 1`] = `
   id="job-information"
   level={1}
 >
-  <styled.h3
+  <styled.h2
     level={1}
   >
     Job Information
-  </styled.h3>
+  </styled.h2>
   <Box
     boxes={
       Array [
@@ -370,11 +374,11 @@ exports[`Section Should render simple section boxes - level two 1`] = `
   id="job-information"
   level={2}
 >
-  <styled.h3
+  <styled.h2
     level={2}
   >
     Job Information
-  </styled.h3>
+  </styled.h2>
   <Box
     boxes={
       Array [
@@ -456,5 +460,6 @@ exports[`Section Should render simple section with ref 1`] = `
   id="job-information"
   innerRef={null}
   level={1}
+  size="large"
 />
 `;

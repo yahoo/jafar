@@ -23,8 +23,8 @@ const SectionShape = {
     })).isRequired,
   }),
   boxes: PropTypes.arrayOf(PropTypes.object),
+  size: PropTypes.number,
   level: PropTypes.oneOf([1, 2]),
-  smallLayout: PropTypes.bool,
 };
 SectionShape.sections = PropTypes.arrayOf(PropTypes.shape(SectionShape));
 
@@ -32,17 +32,17 @@ export class Section extends React.Component {
   static propTypes = SectionShape;
 
   static defaultProps = {
+    size: 4,
     level: 1,
     boxes: [],
   };
 
   render() {
-    const Wrapper = this.props.smallLayout ? Styled.SmallWrapper : Styled.Wrapper;
-    const Title = this.props.smallLayout ? Styled.SmallTitle : Styled.Title;
+    const { Wrapper, Title } = Styled(this.props.size, this.props.level);
 
-    return (<Wrapper ref={this.props.innerRef} id={this.props.id} level={this.props.level}>
+    return (<Wrapper ref={this.props.innerRef} id={this.props.id}>
       {
-        this.props.title && <Title level={this.props.level}>{this.props.title}</Title>
+        this.props.title && <Title>{this.props.title}</Title>
       }
       {
         this.props.grid && <Grid templateAreas={this.props.grid.templateAreas} elements={this.props.grid.elements} />
@@ -52,7 +52,7 @@ export class Section extends React.Component {
       }
       {
         (this.props.sections || []).length > 0 && this.props.sections.map(section => (<Section
-          key={section.id} {...section} level={section.level || this.props.level + 1} />))
+          key={section.id} size={this.props.size} level={section.level || this.props.level + 1} {...section} />))
       }
     </Wrapper>);
   }
