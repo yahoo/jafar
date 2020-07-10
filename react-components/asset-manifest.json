@@ -1,13 +1,13 @@
 {
   "files": {
-    "build/0.691f9af9.js": "https://yahoo.github.io/jafar/react-components/build/0.691f9af9.js",
-    "main.js": "https://yahoo.github.io/jafar/react-components/build/main.2a14940e.js",
+    "build/0.f8d89169.js": "https://yahoo.github.io/jafar/react-components/build/0.f8d89169.js",
+    "main.js": "https://yahoo.github.io/jafar/react-components/build/main.7bfa0bcd.js",
     "runtime-main.js": "https://yahoo.github.io/jafar/react-components/build/bundle.105de5e2.js",
     "index.html": "https://yahoo.github.io/jafar/react-components/index.html"
   },
   "entrypoints": [
     "build/bundle.105de5e2.js",
-    "build/0.691f9af9.js",
-    "build/main.2a14940e.js"
+    "build/0.f8d89169.js",
+    "build/main.7bfa0bcd.js"
   ]
 }
