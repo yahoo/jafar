@@ -11,7 +11,7 @@ const columnStyle = {
   margin: '0 30px 0 0',
 };
 
-const columnStyleFields = {
+const columnStyleWide = {
   width: '100%',
   minWidth: '400px',
   maxWidth: '100%',
@@ -23,7 +23,7 @@ export default [{
   title: 'Model',
   boxes: [{
     direction: 'column',
-    style: columnStyleFields,
+    style: columnStyleWide,
     boxes: [{
       direction: 'column',
       style: columnStyle,
@@ -33,7 +33,7 @@ export default [{
       ],
     }, {
       direction: 'column',
-      style: columnStyleFields,
+      style: columnStyleWide,
       boxes: [
         { component: Field, props: { id: 'fields' } },
         { component: Field, props: { id: 'data' } },
@@ -59,6 +59,19 @@ export default [{
       boxes: [
         { component: Field, props: { id: 'changeStateDebounceWait' } },
         { component: Field, props: { id: 'changeStateDebounceMaxWait' } },
+      ],
+    }],
+  }],
+}, {
+  id: 'layouts',
+  title: 'Layouts',
+  boxes: [{
+    direction: 'row',
+    boxes: [{
+      direction: 'column',
+      style: columnStyleWide,
+      boxes: [
+        { component: Field, props: { id: 'layouts' } },
       ],
     }],
   }],

@@ -1,7 +1,7 @@
 {
   "name": "@jafar/react-editor",
   "version": "1.0.8",
-  "description": "Create jafar form model using a simple UI",
+  "description": "Create jafar form model and layout using a simple UI",
   "license": "MIT",
   "main": "src/website/app.js",
   "homepage": "http://localhost:3000/",

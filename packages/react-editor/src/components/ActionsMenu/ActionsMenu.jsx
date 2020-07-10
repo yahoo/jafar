@@ -25,8 +25,8 @@ export default function ActionsMenu({ options = [], data }) {
     setAnchorEl(null);
   };
 
-  const handleAction = (option) => {
-    option.onClick(data);
+  const handleAction = (option, index) => {
+    option.onClick(data, index);
     handleClose();
   };
 
@@ -57,7 +57,7 @@ export default function ActionsMenu({ options = [], data }) {
           options.map((option, index) => { 
             const Icon = option.icon;
             return (
-              <MenuItem key={index} onClick={() => handleAction(option)}>
+              <MenuItem key={index} onClick={() => handleAction(option, index)}>
                 <ListItemIcon><Icon fontSize="small" /></ListItemIcon>
                 <Typography variant="inherit" noWrap={true}>{ option.label }</Typography>
               </MenuItem>);

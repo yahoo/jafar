@@ -4,9 +4,9 @@
   */
 
 import React, { useState, useEffect } from 'react';
-import { FormEditor } from '../../components';
-import components from '../components';
 import database from '../database';
+import { FormEditor } from '../../components';
+import components from './components';
 
 const FormEdit = ({ match, history }) => {
   const [form, setForm] = useState();
