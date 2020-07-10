@@ -2,6 +2,8 @@
 
 Changes that have landed in master but are not yet released
 
+## v1.0.8 (July 10, 2020)
+
 ### React Layout
 
 * Add - size support. [Issue 67](https://github.com/yahoo/jafar/issues/67)
