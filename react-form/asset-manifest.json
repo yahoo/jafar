@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "https://yahoo.github.io/jafar/react-form/static/css/main.99903ae4.css",
-    "main.js": "https://yahoo.github.io/jafar/react-form/static/js/main.7267d345.js",
+    "main.js": "https://yahoo.github.io/jafar/react-form/static/js/main.40351034.js",
     "main.css.map": "https://yahoo.github.io/jafar/react-form/static/css/main.99903ae4.css.map",
-    "main.js.map": "https://yahoo.github.io/jafar/react-form/static/js/main.7267d345.js.map",
+    "main.js.map": "https://yahoo.github.io/jafar/react-form/static/js/main.40351034.js.map",
     "index.html": "https://yahoo.github.io/jafar/react-form/index.html",
-    "precache-manifest.f3f28dd191c157b3702d2e6e3830d8c8.js": "https://yahoo.github.io/jafar/react-form/precache-manifest.f3f28dd191c157b3702d2e6e3830d8c8.js",
+    "precache-manifest.5063269474db58b884612051e83e9c4a.js": "https://yahoo.github.io/jafar/react-form/precache-manifest.5063269474db58b884612051e83e9c4a.js",
     "service-worker.js": "https://yahoo.github.io/jafar/react-form/service-worker.js",
-    "static/js/main.7267d345.js.LICENSE.txt": "https://yahoo.github.io/jafar/react-form/static/js/main.7267d345.js.LICENSE.txt",
+    "static/js/main.40351034.js.LICENSE.txt": "https://yahoo.github.io/jafar/react-form/static/js/main.40351034.js.LICENSE.txt",
     "static/media/jafar.svg": "https://yahoo.github.io/jafar/react-form/static/media/jafar.1c1a5205.svg"
   },
   "entrypoints": [
     "static/css/main.99903ae4.css",
-    "static/js/main.7267d345.js"
+    "static/js/main.40351034.js"
   ]
 }
