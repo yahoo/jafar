@@ -1,4 +1,3 @@
-
 /**
   * Copyright 2020, Verizon Media
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
@@ -11,7 +10,7 @@ import Tab from '@material-ui/core/Tab';
 import Section from '../Section';
 import Footer from '../Footer';
 import Options from '../Options';
-import Styled from './Styled';
+import Style from './Styled';
 
 export default class ItemView extends React.Component {
   static propTypes = {
@@ -32,15 +31,22 @@ export default class ItemView extends React.Component {
     options: PropTypes.shape({
       actions: PropTypes.array,
     }),
+    size: PropTypes.number,
   };
 
+  static defaultProps = {
+    size: 4,
+  }
+
   render() {
+    const Styled = Style(this.props.size, this.props.tabs !== undefined);
+
     return (<Styled.Wrapper>
       {
         (this.props.title || this.props.tabs || this.props.options) && <Styled.Header>
           {
             this.props.title
-            && <Styled.Title hasTabs={this.props.tabs !== undefined}>{this.props.title}</Styled.Title>
+            && <Styled.Title>{this.props.title}</Styled.Title>
           }
           {
             this.props.options
@@ -63,8 +69,7 @@ export default class ItemView extends React.Component {
       }
       <Styled.Sections aria-label="Sections" ref={this.props.sectionsRef}>
         {
-          this.props.sections.map((section, index) => (<Section key={section.id} {...section}
-            showBorder={ index < this.props.sections.length - 1 } />))
+          this.props.sections.map((section, index) => (<Section key={section.id} size={this.props.size} {...section} />))
         }
       </Styled.Sections>
       {

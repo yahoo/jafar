@@ -29,6 +29,7 @@ class Demo extends React.Component {
       item: {
         title: 'Employee',
         layout: 'scroll',
+        size: 4,
         sections,
         mainActions: [{
           label: 'Cancel',
@@ -50,7 +51,7 @@ class Demo extends React.Component {
             open: () => this.context.model.invalid,
             component: FormErrors,
             props: { 
-              onClickField: this.onClickInvalidField,
+              onClickField: this.onClickField,
             },
           },
         }],
@@ -100,7 +101,6 @@ class Demo extends React.Component {
     return sectionId;
   }
 
-  // exclude section when all its fields are excluded
   applySectionsExclude = (section) => {
     section.exclude = () => {
       const boxes = getSectionComponentBoxes(section);

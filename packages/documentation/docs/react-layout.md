@@ -36,6 +36,7 @@ import Item from '@jafar/react-layout/Item'
 | sections | required array | Array of objects. Each object can contain the data defined in [Section](react-layout#section) and [Section extend](react-layout#section-extend) |
 | mainActions | array | Represent the label of the action. Its required when layout is not `mobile`. Each object can contain the data defined in [mainAction](react-layout#mainaction) |
 | optionsActions | array | Represent the label of the action. Its required when layout is not `mobile`. Each object can contain the data defined in [optionAction](react-layout#optionaction) |
+| size | number | Represent layout size |
 
 #### Example
 
@@ -46,6 +47,7 @@ import sections from './sections';
 const item = {
   title: 'Employee',
   layout: 'scroll',
+  size: 2,
   sections,
   mainActions: [{
     label: 'Cancel',
@@ -273,6 +275,7 @@ import Item from '@jafar/react-layout/Section'
 | grid | object | Object contain the data defined in [Grid](react-layout.html#grid) |
 | boxes | object array | Each object can contain the data defined in [Box](react-layout.html#box) |
 | sections | object array | Sub sections, each object can contain the data defined in [Section](react-layout.html#sections) |
+| size | number | Represent section size |
 
 ### Grid
 

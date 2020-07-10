@@ -1,6 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled Title Should render ok - with tabs 1`] = `
+exports[`Styled size: 1 Header 1`] = `
+.c0 {
+  background-color: #f0f0f0;
+  font-size: 16px;
+  padding: 10px 10px 10px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 1 Sections 1`] = `
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-y: auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 1 Title 1`] = `
 .c0 {
   font-size: 18px;
   font-weight: bold;
@@ -15,7 +50,61 @@ exports[`Styled Title Should render ok - with tabs 1`] = `
 />
 `;
 
-exports[`Styled Title Should render ok 1`] = `
+exports[`Styled size: 1 Wrapper 1`] = `
+.c0 {
+  color: #3d3d3d;
+  background-color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 2 Header 1`] = `
+.c0 {
+  background-color: #f0f0f0;
+  font-size: 16px;
+  padding: 10px 10px 10px 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 2 Sections 1`] = `
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-y: auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 2 Title 1`] = `
 .c0 {
   font-size: 18px;
   font-weight: bold;
@@ -23,6 +112,163 @@ exports[`Styled Title Should render ok 1`] = `
   -ms-flex: 1;
   flex: 1;
   line-height: 45px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 2 Wrapper 1`] = `
+.c0 {
+  color: #3d3d3d;
+  background-color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3 Header 1`] = `
+.c0 {
+  background-color: #f0f0f0;
+  font-size: 16px;
+  padding: 10px 10px 10px 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3 Sections 1`] = `
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-y: auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3 Title 1`] = `
+.c0 {
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 45px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3 Wrapper 1`] = `
+.c0 {
+  color: #3d3d3d;
+  background-color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4 Header 1`] = `
+.c0 {
+  background-color: #f0f0f0;
+  font-size: 16px;
+  padding: 10px 10px 10px 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4 Sections 1`] = `
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-y: auto;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4 Title 1`] = `
+.c0 {
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 45px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4 Wrapper 1`] = `
+.c0 {
+  color: #3d3d3d;
+  background-color: #fff;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div

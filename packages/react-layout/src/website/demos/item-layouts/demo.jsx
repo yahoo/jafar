@@ -29,6 +29,7 @@ class Demo extends React.Component {
       item: {
         title: 'Employee',
         layout: 'scroll',
+        size: 4,
         sections,
         mainActions: [{
           label: 'Cancel',
@@ -77,6 +78,7 @@ class Demo extends React.Component {
     return (
       <React.Fragment>
         <div id="layout-select" style={{ marginBottom: '40px' }}>
+          <span style={{ width: '60px', display: 'inline-block' }}>Layout:</span>
           {['scroll', 'tabs', 'mobile', 'undefined'].map(layout => (
             <FormControlLabel
               key={layout}
@@ -87,17 +89,27 @@ class Demo extends React.Component {
               labelPlacement="end"
             />))}
         </div>
+        <div id="size-select" style={{ marginBottom: '40px' }}>
+          <span style={{ width: '60px', display: 'inline-block' }}>Size:</span>
+          {[4, 3, 2, 1].map(size => (
+            <FormControlLabel
+              key={size}
+              value={size}
+              aria-checked={this.state.item.size === size}
+              control={<Radio color="primary" checked={this.state.item.size === size} onChange={this.handleChangeSize} />}
+              label={size}
+              labelPlacement="end"
+            />))}
+        </div>
         <Styled.ItemWrapper>
           <Item {...this.state.item} layout={this.state.item.layout === 'undefined' ? undefined : this.state.item.layout} />
         </Styled.ItemWrapper>
       </React.Fragment>);
   }
 
-  handleChangeLayout = (event) => {
-    this.setState({
-      item: { ...this.state.item, layout: event.target.value },
-    });
-  };
+  handleChangeLayout = (e) => this.setState({ item: { ...this.state.item, layout: e.target.value } });
+
+  handleChangeSize = (e) => this.setState({ item: { ...this.state.item, size: Number(e.target.value) } });
 
   onClickField = (fieldId) => {
     this.setState({

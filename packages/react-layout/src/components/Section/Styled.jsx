@@ -5,39 +5,32 @@
 
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  padding: ${props => (props.level === 1 ? '0 50px 40px 50px' : '0')};
-  border-bottom: ${props => (props.level === 1 && props.showBorder ? '1px solid #d8d8d8' : 'none')};
-`;
+const sectionSizeCache = {};
 
-const Title = styled.h3`
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ${props => (props.level === 1 ? '21px' : '16px')};
-  font-weight: ${props => (props.level === 1 ? '500' : '400')};
-  padding: ${props => (props.level === 1 ? '50px 0' : '40px 0')};
-  margin: 0;
-`;
+export default (size, root) => {
+  size = Math.max(size, 0);
+  const key = `${size},${root}`;
 
-const SmallWrapper = styled.div`
-  padding: ${props => (props.level === 1 ? '0 20px 10px 20px' : '0')};
-  border-bottom: ${props => (props.level === 1 && props.showBorder ? '1px solid #d8d8d8' : 'none')};
-`;
-
-const SmallTitle = styled.h3`
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: ${props => (props.level === 1 ? '19px' : '16px')};
-  font-weight: ${props => (props.level === 1 ? '500' : '400')};
-  padding: ${props => (props.level === 1 ? '40px 0' : '30px 0')};
-  margin: 0;
-`;
-
-export default {
-  Wrapper,
-  Title,
-  SmallWrapper,
-  SmallTitle,
+  if (!sectionSizeCache[key]) {
+    sectionSizeCache[key] = {
+      Wrapper: styled.div`
+        padding: ${() => (root ? `${(size * 8) + 18}px ${(size * 10) + 10}px ${size * 10}px ${(size * 10) + 10}px` : '0')};
+        border-bottom: ${() => (root ? '1px solid #d8d8d8' : 'none')};
+        &:last-child {
+          border-bottom: none;
+        }
+      `,
+      Title: styled.div`
+        text-transform: uppercase;
+        line-height: 1.1;
+        color: inherit;
+        font-size: ${() => (14 + (2 * size))}px;
+        font-weight: ${() => root ? '500' : '400' };
+        padding-bottom: ${() => (Math.max((size * 10) + 10, 24))}px;
+        margin: 0;
+      `,
+    };
+  }
+  return sectionSizeCache[key];
 };
+

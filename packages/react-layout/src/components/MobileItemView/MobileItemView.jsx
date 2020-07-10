@@ -11,7 +11,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Section from '../Section';
 import Menu from '../Menu';
 import { ITEM_HEIGHT } from '../Menu/Menu';
-import Styled from './Styled';
+import Style from './Styled';
 
 const menuRef = React.createRef();
 const elementRef = React.createRef();
@@ -26,6 +26,8 @@ function MobileItemView(props) {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const Styled = Style(props.size);
 
   return (<Styled.Wrapper ref={elementRef}>
     {
@@ -66,8 +68,7 @@ function MobileItemView(props) {
     }
     <Styled.Sections aria-label="Sections">
       {
-        props.sections.map((section, index) => (<Section key={section.id} {...section}
-          showBorder={ index < props.sections.length - 1 } smallLayout={true} />))
+        props.sections.map((section, index) => (<Section key={section.id} size={props.size} {...section} />))
       }
     </Styled.Sections>
     <div id="menu-anchor" ref={menuRef} />
@@ -79,6 +80,11 @@ MobileItemView.propTypes = {
   sections: PropTypes.array.isRequired,
   mainActions: PropTypes.array,
   optionsActions: PropTypes.array,
+  size: PropTypes.number,
+};
+
+MobileItemView.defaultProps = {
+  size: 1,
 };
 
 export default MobileItemView;

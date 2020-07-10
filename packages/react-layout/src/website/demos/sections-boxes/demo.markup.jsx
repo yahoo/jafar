@@ -33,8 +33,7 @@ class Demo extends React.Component {
     return (
       <React.Fragment>
         {
-          filteredSections.map((section, index) => (<Section key={section.id} {...section}
-            showBorder={ index < sections.length - 1 } />))
+          filteredSections.map((section, index) => (<Section key={section.id} {...section} />))
         }
       </React.Fragment>);
   }

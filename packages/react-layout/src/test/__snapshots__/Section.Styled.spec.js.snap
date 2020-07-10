@@ -1,41 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Styled SmallTitle Should render with level one 1`] = `
-.c0 {
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: 19px;
-  font-weight: 500;
-  padding: 40px 0;
-  margin: 0;
-}
-
-<h3
-  className="c0"
-/>
-`;
-
-exports[`Styled SmallTitle Should render with level two 1`] = `
+exports[`Styled size: 1, root: false Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
   font-size: 16px;
   font-weight: 400;
-  padding: 30px 0;
+  padding-bottom: 24px;
   margin: 0;
-}
-
-<h3
-  className="c0"
-/>
-`;
-
-exports[`Styled SmallWrapper Should render with level one 1`] = `
-.c0 {
-  padding: 0 20px 10px 20px;
-  border-bottom: none;
 }
 
 <div
@@ -43,52 +16,44 @@ exports[`Styled SmallWrapper Should render with level one 1`] = `
 />
 `;
 
-exports[`Styled SmallWrapper Should render with level two 1`] = `
+exports[`Styled size: 1, root: false Wrapper 1`] = `
 .c0 {
   padding: 0;
   border-bottom: none;
 }
 
+.c0:last-child {
+  border-bottom: none;
+}
+
 <div
   className="c0"
 />
 `;
 
-exports[`Styled Title Should render with level one 1`] = `
-.c0 {
-  text-transform: uppercase;
-  line-height: 1.1;
-  color: inherit;
-  font-size: 21px;
-  font-weight: 500;
-  padding: 50px 0;
-  margin: 0;
-}
-
-<h3
-  className="c0"
-/>
-`;
-
-exports[`Styled Title Should render with level two 1`] = `
+exports[`Styled size: 1, root: true Title 1`] = `
 .c0 {
   text-transform: uppercase;
   line-height: 1.1;
   color: inherit;
   font-size: 16px;
-  font-weight: 400;
-  padding: 40px 0;
+  font-weight: 500;
+  padding-bottom: 24px;
   margin: 0;
 }
 
-<h3
+<div
   className="c0"
 />
 `;
 
-exports[`Styled Wrapper Should render with level one 1`] = `
+exports[`Styled size: 1, root: true Wrapper 1`] = `
 .c0 {
-  padding: 0 50px 40px 50px;
+  padding: 26px 20px 10px 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c0:last-child {
   border-bottom: none;
 }
 
@@ -97,9 +62,184 @@ exports[`Styled Wrapper Should render with level one 1`] = `
 />
 `;
 
-exports[`Styled Wrapper Should render with level two 1`] = `
+exports[`Styled size: 2, root: false Title 1`] = `
+.c0 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 2, root: false Wrapper 1`] = `
 .c0 {
   padding: 0;
+  border-bottom: none;
+}
+
+.c0:last-child {
+  border-bottom: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 2, root: true Title 1`] = `
+.c0 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 2, root: true Wrapper 1`] = `
+.c0 {
+  padding: 34px 30px 20px 30px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c0:last-child {
+  border-bottom: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3, root: false Title 1`] = `
+.c0 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3, root: false Wrapper 1`] = `
+.c0 {
+  padding: 0;
+  border-bottom: none;
+}
+
+.c0:last-child {
+  border-bottom: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3, root: true Title 1`] = `
+.c0 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 3, root: true Wrapper 1`] = `
+.c0 {
+  padding: 42px 40px 30px 40px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c0:last-child {
+  border-bottom: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4, root: false Title 1`] = `
+.c0 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 400;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4, root: false Wrapper 1`] = `
+.c0 {
+  padding: 0;
+  border-bottom: none;
+}
+
+.c0:last-child {
+  border-bottom: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4, root: true Title 1`] = `
+.c0 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 500;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Styled size: 4, root: true Wrapper 1`] = `
+.c0 {
+  padding: 50px 50px 40px 50px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.c0:last-child {
   border-bottom: none;
 }
 

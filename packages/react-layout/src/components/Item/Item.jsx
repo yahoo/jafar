@@ -21,6 +21,7 @@ export default class Item extends React.Component {
     selected: PropTypes.object,
     mainActions: PropTypes.array,
     optionsActions: PropTypes.array,
+    size: PropTypes.number,
   };
 
   constructor(props) {
@@ -45,7 +46,7 @@ export default class Item extends React.Component {
     switch (this.props.layout) {
     case layoutTypes.MOBILE: {
       return (<MobileItemView title={this.props.title} sections={filteredSections} mainActions={mainActions}
-        optionsActions={optionsActions} />);
+        optionsActions={optionsActions} size={this.props.size} />);
     }
     default: {
       const selectedSectionId = this.state.selected.sectionId || filteredSections[0].id;
@@ -77,9 +78,9 @@ export default class Item extends React.Component {
       // prepare the current displayed sections and add ref to sections
       let sections = filteredSections.map(section => ({ ...section, ref: this.sectionsRefs[section.id] }));
 
-      // if tabs layout - show only selected tab
+      // if tabs layout - show only selected tab, without title for first level section
       if (this.props.layout === layoutTypes.TABS) {
-        sections = [sections.find(section => section.id === selectedSectionId)];
+        sections = [{ ...sections.find(section => section.id === selectedSectionId), title: undefined }];
       }
 
       // prepare footer
@@ -89,7 +90,7 @@ export default class Item extends React.Component {
       const options = this.props.optionsActions ? { actions: optionsActions } : undefined;
 
       return (<ItemView title={this.props.title} tabs={tabs} sections={sections} sectionsRef={this.sectionsRef}
-        footer={footer} options={options} />);
+        footer={footer} options={options} size={this.props.size} />);
     }
     }
   }

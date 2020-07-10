@@ -11,7 +11,7 @@ export default function () {
     <React.Fragment>
       <Styled.P>
         Item component usage. Allows creation of create / edit / details pages with it.
-        Select a layout bellow to view the different supported Item layouts
+        Select a layout and size bellow to view the different supported Item layouts
       </Styled.P>
     </React.Fragment>);
 }
