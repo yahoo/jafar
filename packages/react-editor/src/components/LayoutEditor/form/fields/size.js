@@ -5,7 +5,7 @@
 
 export default {
   label: 'Size',
-  description: 'Layout size',
+  description: 'Layout size: 1 | 2 | 3 | 4',
   path: 'item.size',
   component: {
     name: 'NumberInput',

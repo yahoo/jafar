@@ -38,7 +38,7 @@ export const HeaderRow = styled(Row)`
 export const Cell = styled.div`
   padding: 10px 20px;
   flex: ${props => props.minWidth ? 'unset' : 1 };
-  min-width: ${props => props.minWidth || '100px'};
+  min-width: ${props => props.minWidth || '50px'};
 `;
 
 export const Body = styled.div`

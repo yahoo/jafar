@@ -4,7 +4,9 @@
   */
 
 import model from './model';
+import layouts from './layouts';
 
 export default {
   model,
+  layouts,
 };

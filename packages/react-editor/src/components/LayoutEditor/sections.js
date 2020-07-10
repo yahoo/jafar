@@ -20,12 +20,6 @@ const getGrid = (templateAreas) => {
 };
 
 export default [{
-  id: 'form',
-  title: 'Form',
-  grid: getGrid([
-    'formId   .   .',
-  ]),
-}, {
   id: 'item',
   title: 'Item',
   grid: getGrid([

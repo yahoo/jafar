@@ -148,6 +148,9 @@ const FormList = ({ history }) => {
   }, {
     label: 'Settings',
     content: (form) => <BooleanWrapper><Boolean value={!!form.settings} /></BooleanWrapper>,
+  }, {
+    label: 'Layouts',
+    content: (form) => <BooleanWrapper><Boolean value={!!form.layouts} /></BooleanWrapper>,
   }];
 
   const data = Object.values(forms);

@@ -57,7 +57,7 @@ export default function ActionsMenu({ options = [], data }) {
           options.map((option, index) => { 
             const Icon = option.icon;
             return (
-              <MenuItem key={index} onClick={() => handleAction(option, index)}>
+              <MenuItem key={index} onClick={() => handleAction(option)}>
                 <ListItemIcon><Icon fontSize="small" /></ListItemIcon>
                 <Typography variant="inherit" noWrap={true}>{ option.label }</Typography>
               </MenuItem>);

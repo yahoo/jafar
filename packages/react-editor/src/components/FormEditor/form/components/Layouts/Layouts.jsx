@@ -35,28 +35,28 @@ const Layouts = ({ value = [], onValueChange }) => {
     setEditing({ layout: {}, index: undefined });
   };
 
-  const edit = (layout, index) => {
+  const edit = ({ layout, index }) => {
     setEditing({ layout, index });
   };
 
-  const duplicate = (layout) => {
+  const duplicate = ({ layout }) => {
     setEditing({ layout: cloneDeep(layout), index: undefined });
   };
 
-  const download = (layout) => {
+  const download = ({ layout }) => {
     downloadJson(layout, `${formId}-layout`);
   };
 
-  const remove = (layout, index) => {
+  const remove = ({ index }) => {
     const newValue = [...value];
-    delete newValue[index];
+    newValue.splice(index, 1);
     onValueChange(newValue);
   };
 
-  const save = (layout) => {
+  const save = ({ data }) => {
     const newValue = [...value];
     const index = editing.index !== undefined ? editing.index : value.length;
-    newValue[index] = layout;
+    newValue[index] = data;
     onValueChange(newValue);
     setEditing();
   };
@@ -86,8 +86,16 @@ const Layouts = ({ value = [], onValueChange }) => {
 
   const columns = [{
     label: 'Title',
-    content: (layout) => layout.label,
+    content: ({ layout }) => layout.item.title,
+  }, {
+    label: 'Layout',
+    content: ({ layout }) => layout.item.layout,
+  }, {
+    label: 'Size',
+    content: ({ layout }) => layout.item.size,
   }];
+
+  const data = value.map((layout, index) => ({ layout, index }));
   
   return (<div>
     {
@@ -100,7 +108,7 @@ const Layouts = ({ value = [], onValueChange }) => {
     }
     <Grid
       columns={columns}
-      data={value}
+      data={data}
       headerActions={headerActions}
       rowActions={rowActions}
     />
