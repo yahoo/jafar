@@ -18,29 +18,28 @@ const columnStyleWide = {
   margin: '0 30px 0 0',
 };
 
+const getGrid = (templateAreas) => {
+  let fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  fieldIds = [...(new Set(fieldIds))];
+  return {
+    templateAreas,
+    elements: fieldIds.map(id => ({ 
+      selector: `#${id}`, 
+      gridArea: id, 
+      component: Field, 
+      props: { id },
+      // style: 'min-width: 360px;',
+    })),
+  };
+};
+
 export default [{
   id: 'model',
   title: 'Model',
-  boxes: [{
-    direction: 'column',
-    style: columnStyleWide,
-    boxes: [{
-      direction: 'column',
-      style: columnStyle,
-      boxes: [
-        { component: Field, props: { id: 'id' } },
-  
-      ],
-    }, {
-      direction: 'column',
-      style: columnStyleWide,
-      boxes: [
-        { component: Field, props: { id: 'fields' } },
-        { component: Field, props: { id: 'data' } },
-  
-      ],
-    }],
-  }],
+  grid: getGrid([
+    'id . fields fields',
+    'data . fields fields',
+  ]),
 }, {
   id: 'settings',
   title: 'Settings',

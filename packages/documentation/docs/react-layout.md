@@ -99,7 +99,8 @@ sections.js - Using css grid example:
 import { Field } from '@jafar/react-form';
 
 const getGrid = (templateAreas) => {
-  const fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  let fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  fieldIds = [...(new Set(fieldIds))];
   return {
     templateAreas,
     elements: fieldIds.map(id => ({ 
