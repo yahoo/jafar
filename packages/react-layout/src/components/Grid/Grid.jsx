@@ -9,17 +9,19 @@ import styled from 'styled-components';
 const Grid = styled.div`
   display: grid;
   grid-template-areas: ${props => props.templateAreas.map(row => `"${row}"`).join(' ')};
-
+  grid-template-columns: ${props => props.templateColumns};
+  
   ${props => props.elements
     .map(element => `${element.selector} { grid-area: ${element.gridArea}; ${element.style || ''} }`)
     .join(' ')}
 `;
 
-export default ({ templateAreas, elements }) => (<Grid templateAreas={templateAreas} elements={elements}>
-  {
-    elements.map((element, index) => {
-      const GenericComponent = element.component;
-      return <GenericComponent key={index} {...element.props} />;
-    })
-  }
-</Grid>);
+export default ({ templateAreas, templateColumns, elements }) => 
+  (<Grid templateAreas={templateAreas} templateColumns={templateColumns} elements={elements}>
+    {
+      elements.map((element, index) => {
+        const GenericComponent = element.component;
+        return <GenericComponent key={index} {...element.props} />;
+      })
+    }
+  </Grid>);

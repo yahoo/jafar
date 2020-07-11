@@ -103,6 +103,7 @@ const getGrid = (templateAreas) => {
   fieldIds = [...(new Set(fieldIds))];
   return {
     templateAreas,
+    templateColumns: 'repeat(3, minmax(0, 1fr))',
     elements: fieldIds.map(id => ({ 
       selector: `#${id}`, 
       gridArea: id, 
@@ -294,6 +295,7 @@ import Item from '@jafar/react-layout/Grid'
 | ------------- |-------------| ------------|
 | elements | required object array | Each object contains selector, gridArea, component, props, style |
 | templateAreas | required string array | Represent `grid-template-areas` property in css grid |
+| templateColumns | string array | Represent `grid-template-columns` property in css grid |
 
 
 ### Box
