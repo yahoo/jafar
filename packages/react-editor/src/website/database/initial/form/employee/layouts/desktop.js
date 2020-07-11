@@ -22,5 +22,14 @@ export default {
         '.         creationDate       .',
       ],
     }],
+    mainActions: [
+      { label: 'Save', type: 'primary' },
+      { label: 'Cancel', type: 'tertiary' },
+    ],
+    optionsActions: [
+      { label: 'History' },
+      { label: 'Archive' },
+      { label: 'Delete' },
+    ],
   },
 };

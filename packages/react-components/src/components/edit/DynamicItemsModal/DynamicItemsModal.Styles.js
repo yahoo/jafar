@@ -15,9 +15,7 @@ const ItemsListContainer = styled.ul`
 const ListItem = styled.li`
 	display: flex;
 	line-height: 40px;
-	&:hover {
-		background-color: #f7f7f7;
-	}
+	position: relative;
 	&:hover div:nth-child(2){
 		display:block;
 	}
@@ -34,6 +32,9 @@ const ItemRendererContainer = styled.div`
 const ActionsContainer = styled.div`
 	justify-content: flex-end;
 	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
 `;
 
 const AddLabel = styled.span`

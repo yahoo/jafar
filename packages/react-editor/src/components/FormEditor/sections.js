@@ -39,6 +39,6 @@ export default [{
   id: 'layouts',
   title: 'Layouts',
   grid: getGrid([
-    'layouts layouts . ',
+    'layouts layouts layouts',
   ]),
 }];

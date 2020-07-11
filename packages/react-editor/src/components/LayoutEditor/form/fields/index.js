@@ -6,9 +6,13 @@
 import title from './title';
 import size from './size';
 import layout from './layout';
+import mainActions from './mainActions';
+import optionsActions from './optionsActions';
 
 export default {
   title,
   size,
   layout,
+  mainActions,
+  optionsActions,
 };

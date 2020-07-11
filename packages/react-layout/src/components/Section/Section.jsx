@@ -15,7 +15,7 @@ const SectionShape = {
   innerRef: PropTypes.object,
   grid: PropTypes.shape({
     templateAreas: PropTypes.arrayOf(PropTypes.string).isRequired,
-    templateColumns: PropTypes.arrayOf(PropTypes.string),
+    templateColumns: PropTypes.string,
     elements: PropTypes.arrayOf(PropTypes.shape({ 
       selector: PropTypes.string.isRequired,
       gridArea: PropTypes.string.isRequired,

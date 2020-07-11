@@ -19,5 +19,11 @@ export default {
         'benefits',
       ],
     }],
+    mainActions: [
+      { label: 'Save' },
+    ],
+    optionsActions: [
+      { label: 'Delete' },
+    ],
   },
 };

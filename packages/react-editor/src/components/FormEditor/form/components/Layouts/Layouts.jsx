@@ -93,6 +93,15 @@ const Layouts = ({ value = [], onValueChange }) => {
   }, {
     label: 'Size',
     content: ({ layout }) => layout.item.size,
+  }, {
+    label: 'Sections',
+    content: ({ layout }) => (layout.item.sections || []).length,
+  }, {
+    label: 'Main Actions',
+    content: ({ layout }) => (layout.item.mainActions || []).map(x => x.label).join(', '),
+  }, {
+    label: 'Options Actions',
+    content: ({ layout }) => (layout.item.optionsActions || []).map(x => x.label).join(', '),
   }];
 
   const data = value.map((layout, index) => ({ layout, index }));

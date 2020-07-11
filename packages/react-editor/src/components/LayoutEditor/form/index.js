@@ -6,6 +6,8 @@
 import components from './components';
 import stateChanges from './state-changes';
 import fields from './fields';
+import { mainActionsForm } from './fields/mainActions';
+import { optionsActionsForm } from './fields/optionsActions';
 
 export const model = {
   id: 'edit-layout',
@@ -15,6 +17,8 @@ export const model = {
 export const resources = {
   components,
   stateChanges,
+  mainActionsForm,
+  optionsActionsForm,
 };
 
 export default { model, resources };

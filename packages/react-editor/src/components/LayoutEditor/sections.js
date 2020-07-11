@@ -6,7 +6,8 @@
 import { Field } from '@jafar/react-form';
 
 const getGrid = (templateAreas) => {
-  const fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  let fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  fieldIds = [...(new Set(fieldIds))];
   return {
     templateAreas,
     elements: fieldIds.map(id => ({ 
@@ -23,8 +24,8 @@ export default [{
   id: 'item',
   title: 'Item',
   grid: getGrid([
-    'title    .  .',
-    'layout   .  .',
-    'size     .  .',
+    'title    mainActions  optionsActions',
+    'layout   mainActions  optionsActions',
+    'size     mainActions  optionsActions',
   ]),
 }];

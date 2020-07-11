@@ -6,9 +6,11 @@
 import TextInput from '@jafar/react-components/edit/Text';
 import NumberInput from '@jafar/react-components/edit/Number';
 import Select from '@jafar/react-components/edit/Select';
+import DynamicItemsModal from '@jafar/react-components/edit/DynamicItemsModal';
 
 export default {
   TextInput,
   NumberInput,
   Select,
+  DynamicItemsModal,
 };
