@@ -11,7 +11,7 @@ import Select from '@jafar/react-components/edit/Select';
 export default {
   label: 'Options Actions',
   description: 'Represent menu options actions',
-  path: 'item.mainActions',
+  path: 'item.optionsActions',
   component: {
     name: 'DynamicItemsModal',
     state: { 
