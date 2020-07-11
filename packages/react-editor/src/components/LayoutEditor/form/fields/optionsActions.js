@@ -31,7 +31,6 @@ const getGrid = (templateAreas) => {
       gridArea: id, 
       component: Field, 
       props: { id },
-      style: 'width:300px',
     })),
   };
 };
@@ -49,6 +48,45 @@ export const optionsActionsForm = {
             name: 'TextInput',
           },
         },
+        onClick: { 
+          label: 'On Click',
+          description: 'Describes what to do when an action is clicked',
+          path: 'onClick',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'On click do...',
+              multiline: true,
+              rowsMax: 3,
+            },
+          },
+        },
+        disable: { 
+          label: 'Disable',
+          description: 'Describes when the action should be disabled',
+          path: 'disable',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'Disable action when...',
+              multiline: true,
+              rowsMax: 3,
+            },
+          },
+        },
+        exclude: { 
+          label: 'Exclude',
+          description: 'Describes when the action should be excluded',
+          path: 'exclude',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'Exclude action when...',
+              multiline: true,
+              rowsMax: 3,
+            },
+          },
+        },
       },
       data: { type: 'primary' },
     },
@@ -64,11 +102,21 @@ export const optionsActionsForm = {
     sections: [{
       id: 'option-action',
       grid: getGrid([
-        'label',
+        'label onClick',
+        'disable exclude',
       ]),
     }],
   },
-  itemRenderer: ({ label }) => (<div style={{ margin: '0 0 15px 0' }}>
-    {label}
+  itemRenderer: (item, index) => (<div style={{ margin: '0 0 15px 0' }}>
+    <div>{index + 1}. {item.label}</div>
+    <ul style={{ whiteSpace: 'pre-wrap', lineHeight: 1.5 }}>
+      { item.onClick && <li>onClick: {item.onClick}</li> }
+      { item.disable && <li>disable: {item.disable}</li> }
+      { item.exclude && <li>exclude: {item.exclude}</li> }
+    </ul>
   </div>),
+  style: { 
+    list: { maxHeight: 'none' },
+    item: { marginBottom: '15px' },
+  },
 };

@@ -21,11 +21,16 @@ const getGrid = (templateAreas) => {
 };
 
 export default [{
-  id: 'item',
-  title: 'Item',
+  id: 'ui',
+  title: 'UI',
   grid: getGrid([
-    'title    mainActions  optionsActions',
-    'layout   mainActions  optionsActions',
-    'size     mainActions  optionsActions',
+    'title        .              .',
+    'layout       size           .',
+  ]),
+}, {
+  id: 'actions',
+  title: 'Actions',
+  grid: getGrid([
+    'mainActions  optionsActions .',
   ]),
 }];

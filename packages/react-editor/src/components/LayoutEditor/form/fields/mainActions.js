@@ -31,7 +31,6 @@ const getGrid = (templateAreas) => {
       gridArea: id, 
       component: Field, 
       props: { id },
-      style: 'width:300px',
     })),
   };
 };
@@ -63,8 +62,57 @@ export const mainActionsForm = {
             },
           },
         },
+        icon: { 
+          label: 'Icon',
+          description: 'Describes what to render for the action',
+          path: 'icon',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'Render icon named...',
+            },
+          },
+        },
+        onClick: { 
+          label: 'On Click',
+          description: 'Describes what to do when an action is clicked',
+          path: 'onClick',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'On click do...',
+              multiline: true,
+              rowsMax: 3,
+            },
+          },
+        },
+        disable: { 
+          label: 'Disable',
+          description: 'Describes when the action should be disabled',
+          path: 'disable',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'Disable action when...',
+              multiline: true,
+              rowsMax: 3,
+            },
+          },
+        },
+        exclude: { 
+          label: 'Exclude',
+          description: 'Describes when the action should be excluded',
+          path: 'exclude',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'Exclude action when...',
+              multiline: true,
+              rowsMax: 3,
+            },
+          },
+        },
       },
-      data: { type: 'primary' },
     },
     resources: {
       components: { 
@@ -78,12 +126,24 @@ export const mainActionsForm = {
     sections: [{
       id: 'main-action',
       grid: getGrid([
-        'label',
-        'type',
+        'label type',
+        'icon onClick',
+        'disable exclude',
       ]),
     }],
   },
-  itemRenderer: ({ label, type }) => (<div style={{ margin: '0 0 15px 0' }}>
-    {label} {type ? `(${type})` : ''}
+  itemRenderer: (item, index) => (<div>
+    <div>{index + 1}. {item.label}</div>
+    <ul style={{ whiteSpace: 'pre-wrap', lineHeight: 1.5 }}>
+      { item.type && <li>type: {item.type}</li> }
+      { item.icon && <li>icon: {item.icon}</li> }
+      { item.onClick && <li>onClick: {item.onClick}</li> }
+      { item.disable && <li>disable: {item.disable}</li> }
+      { item.exclude && <li>exclude: {item.exclude}</li> }
+    </ul>
   </div>),
+  style: { 
+    list: { maxHeight: 'none' },
+    item: { marginBottom: '15px' },
+  },
 };

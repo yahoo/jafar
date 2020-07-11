@@ -60,7 +60,7 @@ export default class BaseItem extends React.Component {
 
     this.item = {
       title: props.title,
-      layout: 'scroll',
+      layout: props.layout || 'scroll',
       sections: props.sections,
       mainActions,
       optionsActions,

@@ -14,11 +14,12 @@ import { LayoutEditor } from '../../../../index';
 import Grid from '../../../../Grid';
 import * as Styled from './Styled';
 
+
 const downloadJson = (exportObj, exportName) => {
   const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(exportObj));
   const downloadAnchorNode = document.createElement('a');
   downloadAnchorNode.setAttribute('href', dataStr);
-  downloadAnchorNode.setAttribute('download', exportName + '.json');
+  downloadAnchorNode.setAttribute('download', `${exportName}.json`);
   document.body.appendChild(downloadAnchorNode); // required for firefox
   downloadAnchorNode.click();
   downloadAnchorNode.remove();
@@ -43,7 +44,7 @@ const Layouts = ({ value = [], onValueChange }) => {
     setEditing({ layout: cloneDeep(layout), index: undefined });
   };
 
-  const download = ({ layout }) => {
+  const downloadAsJson = ({ layout }) => {
     downloadJson(layout, `${formId}-layout`);
   };
 
@@ -70,9 +71,9 @@ const Layouts = ({ value = [], onValueChange }) => {
     icon: DuplicateIcon,
     onClick: duplicate,
   }, {
-    label: 'Download',
+    label: 'Download Json',
     icon: DownloadIcon,
-    onClick: download,
+    onClick: downloadAsJson,
   }, {
     label: 'Remove',
     icon: DeleteIcon,

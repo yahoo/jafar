@@ -264,6 +264,10 @@ const resources = {
     form: employeeForm,
     item: employeeFormLayout,
     itemRenderer: employeeItemRenderer,
+    style: { 
+      list: { maxHeight: '300px' },
+      item: { marginBottom: '15px' },
+    },
   },
 };
 

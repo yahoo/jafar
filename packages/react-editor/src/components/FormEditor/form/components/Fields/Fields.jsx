@@ -65,7 +65,7 @@ const Fields = ({ value = {}, onValueChange }) => {
     icon: DuplicateIcon,
     onClick: duplicate,
   }, {
-    label: 'Download',
+    label: 'Download Json',
     icon: DownloadIcon,
     onClick: download,
   }, {
