@@ -33,4 +33,10 @@ export default [{
   grid: getGrid([
     'mainActions  optionsActions .',
   ]),
+}, {
+  id: 'sections',
+  title: 'Sections',
+  grid: getGrid([
+    'sections  sections .',
+  ]),
 }];

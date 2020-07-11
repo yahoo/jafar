@@ -18,8 +18,8 @@ export default {
     }, {
       title: 'Metadata',
       grid: [
-        'modifier  modificationDate   .',
-        '.         creationDate       .',
+        'modifier      modificationDate   .',
+        'creationDate  .                  .',
       ],
     }],
     mainActions: [

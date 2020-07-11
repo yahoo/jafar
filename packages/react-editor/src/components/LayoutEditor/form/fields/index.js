@@ -8,6 +8,7 @@ import size from './size';
 import layout from './layout';
 import mainActions from './mainActions';
 import optionsActions from './optionsActions';
+import sections from './sections';
 
 export default {
   title,
@@ -15,4 +16,5 @@ export default {
   layout,
   mainActions,
   optionsActions,
+  sections,
 };
