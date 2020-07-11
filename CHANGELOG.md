@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### Documentation
+
+* Fix - path doc. [Issue 69](https://github.com/yahoo/jafar/issues/69)
+
 ## v1.0.8 (July 10, 2020)
 
 ### React Layout
