@@ -4,14 +4,11 @@ title: Path
 sidebar_label: Path
 ---
 
-Form / Field dirty flags are calculate on each relevant action such as init, change value and change data.
-
-This does not need to be passed by default in the initial form model json.
-You can pass it in the initial form model json, if you are currently loading a form model from persist model (i.e you saved the form model before user did page reload - and want to reload the form with the exact same model state that it was before the refresh)
+Each field controls a specific part of the form's model [data](data), which determines by the field's path.
 
 ## Field Path 
 
-`model.fields.someField.path` - required boolean. Represent object path to a specific value in the model [data](data).
+`model.fields.someField.path` - required string. Represent an object path to a specific value in the model [data](data).
 
 ## Example
 
