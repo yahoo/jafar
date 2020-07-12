@@ -35,13 +35,15 @@ export const BooleanWrapper = styled.div`
   top: 7px;
 `;
 
-const downloadFiles = (form) => {
-  const rootFolder = new JSZip();
+const addFormFolder = (rootFolder, form) => {
+  // add form folder
+  const formFolder = rootFolder.folder('form');
+
   let formIndex = `import fields from './fields';\n`;
   const formIndexModelImports = ['fields'];
 
   // add fields folder
-  const fieldsFolder = rootFolder.folder('fields');
+  const fieldsFolder = formFolder.folder('fields');
   let fieldsIndex = '';
   const fieldIds = Object.keys(form.model.fields);
   fieldIds.forEach(fieldId => {
@@ -53,20 +55,27 @@ const downloadFiles = (form) => {
 
   // add data file
   if (form.model.data) {
-    rootFolder.file('data.json', JSON.stringify(form.model.data));
+    formFolder.file('data.json', JSON.stringify(form.model.data));
     formIndex += `import data from './data.json';\n`;
     formIndexModelImports.push('data');
   }
 
   // add settings file
   if (form.settings) {
-    rootFolder.file('settings.json', JSON.stringify(form.settings));
+    formFolder.file('settings.json', JSON.stringify(form.settings));
     formIndex += `import settings from './settings.json';\n`;
   }
 
+  // add index file
   formIndex += `\nexport default { model: { id: '${form.model.id}', ${formIndexModelImports.join(', ')} }${ form.settings ? 
     ', settings' : '' } }`;
-  rootFolder.file('index.js', formIndex);
+  formFolder.file('index.js', formIndex);
+}
+
+const downloadFiles = (form) => {
+  const rootFolder = new JSZip();
+  
+  addFormFolder(rootFolder, form);
 
   rootFolder.generateAsync({ type:'blob' }).then((content) => {
     const href = window.URL.createObjectURL(content);
