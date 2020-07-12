@@ -5,33 +5,36 @@
 
 import { Field } from '@jafar/react-form';
 
-const getGrid = (templateAreas) => {
-  let fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
-  fieldIds = [...(new Set(fieldIds))];
-  return {
-    templateAreas,
-    elements: fieldIds.map(id => ({ 
-      selector: `#${id}`, 
-      gridArea: id, 
-      component: Field, 
-      props: { id },
-      style: 'width: 350px;',
-    })),
-  };
+const columnStyle = {
+  width: '400px',
+  maxWidth: '400px',
+  margin: '0 30px 0 0',
 };
+
+function getColumn(fieldIds) {
+  return {
+    direction: 'column',
+    style: columnStyle,
+    boxes: fieldIds.map(id => ({ component: Field, props: { id } })),
+  };
+}
 
 export default [{
   id: 'ui',
   title: 'UI',
-  grid: getGrid([
-    'title     sections  sections',
-    'layout    sections  sections',
-    'size      sections  sections',
-  ]),
+  boxes: [{
+    direction: 'row',
+    boxes: [
+      getColumn(['title', 'layout', 'size']),
+      getColumn(['sections'])],
+  }],
 }, {
   id: 'actions',
   title: 'Actions',
-  grid: getGrid([
-    'mainActions  optionsActions .',
-  ]),
+  boxes: [{
+    direction: 'row',
+    boxes: [
+      getColumn(['mainActions']),
+      getColumn(['optionsActions'])],
+  }],
 }];

@@ -14,7 +14,10 @@ const propTypes = {
   elements: PropTypes.arrayOf(PropTypes.shape({ 
     selector: PropTypes.string.isRequired,
     gridArea: PropTypes.string.isRequired,
-    component: PropTypes.func.isRequired,
+    component: PropTypes.oneOfType([
+      PropTypes.func,
+      PropTypes.shape({ render: PropTypes.func.isRequired }),
+    ]).isRequired,
     props: PropTypes.object,
   })).isRequired,
 };
@@ -30,7 +33,7 @@ const Grid = styled.div`
     .join(' ')}
 `;
 
-const GridCss = (props) => 
+const CssGrid = (props) => 
   (<Grid {...props}>
     {
       props.elements.map((element, index) => {
@@ -40,6 +43,6 @@ const GridCss = (props) =>
     }
   </Grid>);
 
-GridCss.propTypes = propTypes;
+CssGrid.propTypes = propTypes;
 
-export default GridCss;
+export default CssGrid;
