@@ -24,19 +24,14 @@ export default [{
   id: 'ui',
   title: 'UI',
   grid: getGrid([
-    'title        .              .',
-    'layout       size           .',
+    'title     sections  sections',
+    'layout    sections  sections',
+    'size      sections  sections',
   ]),
 }, {
   id: 'actions',
   title: 'Actions',
   grid: getGrid([
     'mainActions  optionsActions .',
-  ]),
-}, {
-  id: 'sections',
-  title: 'Sections',
-  grid: getGrid([
-    'sections  sections .',
   ]),
 }];
