@@ -4,20 +4,26 @@ export default {
     layout: 'mobile',
     size: 1,
     sections: [{
+      id: 'personal-information',
       title: 'Personal Information',
-      grid: [
-        'firstName',
-        'lastName',
-        'personalId',
-        'address',
-      ],
+      grid: {
+        templateAreas: [
+          'firstName',
+          'lastName',
+          'personalId',
+          'address',
+        ],
+      },
     }, {
+      id: 'job-information',
       title: 'Job Information',
-      grid: [
-        'department',
-        'level',
-        'benefits',
-      ],
+      grid: {
+        templateAreas: [
+          'department',
+          'level',
+          'benefits',
+        ],
+      },
     }],
     mainActions: [
       { label: 'Save', disable: 'form is invalid', onClick: 'save to db, send google analytics and return to list page' },

@@ -4,10 +4,22 @@
   */
 
 import React from 'react';
+import styled from 'styled-components';
 import { Field } from '@jafar/react-form';
 import TextInput from '@jafar/react-components/edit/Text';
 import Grid from '@jafar/react-layout/Grid';
-import { withTheme } from '@material-ui/core/styles';
+
+const SectionViewItem = styled.div`
+  margin-bottom: 20px;
+  > div:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;  
+  }
+  > div:nth-child(2) {
+    background: #f9f9f9;
+    padding: 15px;
+  }
+`;
 
 export default {
   label: 'Sections',
@@ -22,11 +34,12 @@ export default {
   },
 };
 
-const getGrid = (templateAreas, component) => {
+const getGrid = (component, templateAreas, templateColumns) => {
   let fieldIds = templateAreas.join(' ').split(' ').filter(x => x && x !== '.');
   fieldIds = [...(new Set(fieldIds))];
   return {
     templateAreas,
+    templateColumns,
     elements: fieldIds.map(id => ({ 
       selector: `#${id}`, 
       gridArea: id, 
@@ -36,13 +49,17 @@ const getGrid = (templateAreas, component) => {
   };
 };
 
-const FieldName = withTheme(({ id, theme }) => (<div id={id} 
-  style={{ 
-    border: `1px solid ${theme.palette.primary.main}`,
+const FieldName = ({ id, theme }) => (<div id={id} 
+  style={{
+    border: '1px solid #d2d2d2',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
     padding: '0 15px',
     lineHeight: '48px',
+    background: '#ffffff',
   }}>
-  {id}</div>));
+  {id}</div>);
 
 export const sectionsForm = {
   form: {
@@ -64,19 +81,33 @@ export const sectionsForm = {
             name: 'TextInput',
           },
         },
-        grid: { 
-          label: 'Grid',
+        gridTemplateAreas: { 
+          label: 'Grid Template Areas',
           description: 'Represent css grid attribute - grid-template-areas',
-          path: 'grid',
+          path: 'grid.templateAreas',
+          required: true,
           component: { 
             name: 'TextInput',
             state: {
+              placeholder: 'Separate each grid row with new line',
               multiline: true,
               rowsMax: 100,
             },
           },
+          formatter: { name: 'join', args: { separator: '\n' } },
+          parser: { name: 'split', args: { separator: '\n' } },
         },
-
+        gridTemplateColumns: { 
+          label: 'Grid Template Columns',
+          description: 'Represent css grid attribute - grid-template-columns',
+          path: 'grid.templateColumns',
+          component: { 
+            name: 'TextInput',
+            state: {
+              placeholder: 'Example: repeat(3, minmax(0, 1fr))',
+            },
+          },
+        },
       },
     },
     resources: {
@@ -89,16 +120,17 @@ export const sectionsForm = {
     size: 0,
     sections: [{
       id: 'section',
-      grid: getGrid([
+      grid: getGrid(Field, [
         'id title',
-        'grid grid',
-      ], Field),
+        'gridTemplateAreas gridTemplateAreas',
+        'gridTemplateColumns gridTemplateColumns',
+      ]),
     }],
   },
-  itemRenderer: (item) => (<div>
-    <div style={{ fontWeight: 'bold' }}>{item.title}</div>
-    <Grid {...getGrid(item.grid, FieldName)} gap="15px" />
-  </div>),
+  itemRenderer: (item) => (<SectionViewItem>
+    <div>{item.title}</div>
+    <Grid {...getGrid(FieldName, item.grid.templateAreas, item.grid.templateColumns)} gap="15px" />
+  </SectionViewItem>),
   style: { 
     list: { maxHeight: 'none' },
     item: { marginBottom: '15px' },

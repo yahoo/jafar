@@ -4,23 +4,32 @@ export default {
     layout: 'scroll',
     size: 2,
     sections: [{
+      id: 'personal-information',
       title: 'Personal Information',
-      grid: [
-        'firstName   lastName   .',
-        'personalId  address    .',
-      ],
+      grid: {
+        templateAreas:   [
+          'firstName   lastName   .',
+          'personalId  address    .',
+        ],
+      },
     }, {
+      id: 'job-information',
       title: 'Job Information',
-      grid: [
-        'department  benefits   .',
-        'level       benefits   .',
-      ],
+      grid: {
+        templateAreas:  [
+          'department  benefits   .',
+          'level       benefits   .',
+        ],
+      },
     }, {
+      id: 'metadata',
       title: 'Metadata',
-      grid: [
-        'modifier      modificationDate   .',
-        'creationDate  .                  .',
-      ],
+      grid: {
+        templateAreas: [
+          'modifier      modificationDate   .',
+          'creationDate  .                  .',
+        ],
+      },
     }],
     mainActions: [
       { label: 'Save', type: 'primary', disable: 'form is invalid', onClick: 'save to db, send google analytics and return to list page' },

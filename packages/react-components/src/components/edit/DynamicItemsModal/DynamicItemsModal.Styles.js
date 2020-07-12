@@ -14,10 +14,10 @@ const ItemsListContainer = styled.ul`
 
 const ListItem = styled.li`
 	display: flex;
-	line-height: 40px;
+	min-height: 40px;
 	position: relative;
 	&:hover div:nth-child(2){
-		display:block;
+		visibility: visible;
 	}
 `;
 
@@ -31,7 +31,7 @@ const ItemRendererContainer = styled.div`
 
 const ActionsContainer = styled.div`
 	justify-content: flex-end;
-	display: none;
+	visibility: hidden;
 	position: absolute;
 	right: 0;
 	top: 0;
