@@ -1,4 +1,5 @@
 export default {
+  name: 'Desktop - edit employee',
   item: {
     title: 'Employee',
     layout: 'scroll',

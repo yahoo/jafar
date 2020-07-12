@@ -1,4 +1,5 @@
 export default {
+  name: 'Mobile - edit employee',
   item: {
     title: 'Employee',
     layout: 'mobile',

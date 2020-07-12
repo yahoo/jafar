@@ -86,6 +86,9 @@ const Layouts = ({ value = [], onValueChange }) => {
   }];
 
   const columns = [{
+    label: 'Name',
+    content: ({ layout }) => layout.name,
+  }, {
     label: 'Title',
     content: ({ layout }) => layout.item.title,
   }, {

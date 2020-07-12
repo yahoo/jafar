@@ -25,7 +25,7 @@ export default [{
   boxes: [{
     direction: 'row',
     boxes: [
-      getColumn(['title', 'layout', 'size']),
+      getColumn(['name', 'title', 'layout', 'size']),
       getColumn(['sections'])],
   }],
 }, {

@@ -72,10 +72,31 @@ const addFormFolder = (rootFolder, form) => {
   formFolder.file('index.js', formIndex);
 }
 
+const addLayoutsFolder = (rootFolder, layouts) => {
+  if (!layouts) return;
+
+  // add layouts folder
+  const layoutsFolder = rootFolder.folder('layouts');
+
+  // add each layout folder
+  layouts.forEach(layout => {
+    // create layout folder
+    const layoutFolder = layoutsFolder.folder(layout.name);
+
+    // add sections file
+    layoutFolder.file('sections.js', 'todo');
+
+    // add index file
+  });
+
+  // add index file
+}
+
 const downloadFiles = (form) => {
   const rootFolder = new JSZip();
   
   addFormFolder(rootFolder, form);
+  addLayoutsFolder(rootFolder, form.layouts);
 
   rootFolder.generateAsync({ type:'blob' }).then((content) => {
     const href = window.URL.createObjectURL(content);
