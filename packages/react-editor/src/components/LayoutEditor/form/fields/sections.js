@@ -40,7 +40,6 @@ const FieldName = withTheme(({ id, theme }) => (<div id={id}
   style={{ 
     border: `1px solid ${theme.palette.primary.main}`,
     padding: '0 15px',
-    margin: '0 15px 15px 0',
     lineHeight: '48px',
   }}>
   {id}</div>));
@@ -96,9 +95,9 @@ export const sectionsForm = {
       ], Field),
     }],
   },
-  itemRenderer: (item, index) => (<div>
-    <div>{index + 1}. {item.title}</div>
-    <Grid {...getGrid(item.grid, FieldName)} />
+  itemRenderer: (item) => (<div>
+    <div style={{ fontWeight: 'bold' }}>{item.title}</div>
+    <Grid {...getGrid(item.grid, FieldName)} gap="15px" />
   </div>),
   style: { 
     list: { maxHeight: 'none' },

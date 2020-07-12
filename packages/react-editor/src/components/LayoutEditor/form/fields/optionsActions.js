@@ -107,8 +107,8 @@ export const optionsActionsForm = {
       ]),
     }],
   },
-  itemRenderer: (item, index) => (<div style={{ margin: '0 0 15px 0' }}>
-    <div>{index + 1}. {item.label}</div>
+  itemRenderer: (item) => (<div style={{ margin: '0 0 15px 0' }}>
+    <div style={{ fontWeight: 'bold' }}>{item.label}</div>
     <ul style={{ whiteSpace: 'pre-wrap', lineHeight: 1.5 }}>
       { item.onClick && <li>onClick: {item.onClick}</li> }
       { item.disable && <li>disable: {item.disable}</li> }

@@ -132,8 +132,8 @@ export const mainActionsForm = {
       ]),
     }],
   },
-  itemRenderer: (item, index) => (<div>
-    <div>{index + 1}. {item.label}</div>
+  itemRenderer: (item) => (<div>
+    <div style={{ fontWeight: 'bold' }}>{item.label}</div>
     <ul style={{ whiteSpace: 'pre-wrap', lineHeight: 1.5 }}>
       { item.type && <li>type: {item.type}</li> }
       { item.icon && <li>icon: {item.icon}</li> }

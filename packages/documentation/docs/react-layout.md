@@ -295,8 +295,8 @@ import Item from '@jafar/react-layout/Grid'
 | ------------- |-------------| ------------|
 | elements | required object array | Each object contains selector, gridArea, component, props, style |
 | templateAreas | required string array | Represent `grid-template-areas` property in css grid |
-| templateColumns | string array | Represent `grid-template-columns` property in css grid |
-
+| templateColumns | string | Represent `grid-template-columns` property in css grid |
+| gap | string | Represent `grid-gap` property in css grid |
 
 ### Box
 
