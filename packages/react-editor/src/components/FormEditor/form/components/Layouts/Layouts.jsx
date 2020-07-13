@@ -12,18 +12,9 @@ import DownloadIcon from '@material-ui/icons/SaveAlt';
 import DuplicateIcon from '@material-ui/icons/FileCopy';
 import { LayoutEditor } from '../../../../index';
 import Grid from '../../../../Grid';
+import { downloadJson } from '../../../../../utils/download'; 
 import * as Styled from './Styled';
 
-
-const downloadJson = (exportObj, exportName) => {
-  const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(exportObj));
-  const downloadAnchorNode = document.createElement('a');
-  downloadAnchorNode.setAttribute('href', dataStr);
-  downloadAnchorNode.setAttribute('download', `${exportName}.json`);
-  document.body.appendChild(downloadAnchorNode); // required for firefox
-  downloadAnchorNode.click();
-  downloadAnchorNode.remove();
-};
 
 // value = [{ item }]
 const Layouts = ({ value = [], onValueChange }) => {
