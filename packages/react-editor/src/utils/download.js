@@ -61,7 +61,7 @@ const addSectionsFile = (sections, folder) => {
       id: '${section.id}',
       ${section.title ? `title: '${section.title}',` : ''}
       grid: getGrid([
-        ${section.grid.templateAreas.map(x => `'${x}',`).join('\n      ')}
+        ${section.grid.templateAreas.map(x => `'${x}',`).join('\n        ')}
       ]),
     },`).join(' ')}
   ];
