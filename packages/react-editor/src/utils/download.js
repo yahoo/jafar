@@ -35,7 +35,7 @@ const addFormFolder = (rootFolder, form) => {
   formIndex += `\nexport default { model: { id: '${form.model.id}', ${formIndexModelImports.join(', ')} }${ form.settings ? 
     ', settings' : '' } }`;
   formFolder.file('index.js', formIndex);
-}
+};
 
 const addSectionsFile = (sections, folder) => {
   const sectionsStr = 
@@ -68,7 +68,7 @@ const addSectionsFile = (sections, folder) => {
   `;
 
   folder.file('sections.js', sectionsStr);
-}
+};
 
 const getObjectStr = (obj, x) => (obj[x] !== undefined ? `\n          ${x}: '${obj[x]}',` : '');
 
@@ -81,7 +81,7 @@ const getActions = (actions) => `[${actions.map(action => {
     + getObjectFn(action, 'exclude')
     + getObjectFn(action, 'disable')
     + getObjectFn(action, 'onClick')
-    + '\n        }'
+    + '\n        }';
 }).join(', ')}]`;
 
 const getItem = (item) => '{' 
@@ -119,7 +119,7 @@ export default createForm(form)(ItemLayout);
 `;
 
   folder.file('Item.jsx', itemStr);
-}
+};
 
 const addLayoutsFolder = (rootFolder, layouts) => {
   if (!layouts) return;
@@ -138,7 +138,7 @@ const addLayoutsFolder = (rootFolder, layouts) => {
     // add item file
     addItemFile(layout.item, layoutFolder);
   });
-}
+};
 
 export const downloadFormFiles = (form) => {
   const rootFolder = new JSZip();

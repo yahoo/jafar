@@ -27,10 +27,18 @@ export default {
       },
     }],
     mainActions: [
-      { label: 'Save', disable: 'form is invalid', onClick: 'save to db, send google analytics and return to list page' },
+      { 
+        label: 'Save', 
+        disable: 'form is invalid', 
+        onClick: 'save to db, send google analytics and return to list page', 
+      },
     ],
     optionsActions: [
-      { label: 'Delete', exclude: 'no DELETE permission', onClick: 'delete from db, send google analytics and return to list page' },
+      { 
+        label: 'Delete', 
+        exclude: 'no DELETE permission', 
+        onClick: 'delete from db, send google analytics and return to list page', 
+      },
     ],
   },
 };
