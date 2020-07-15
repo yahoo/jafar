@@ -74,7 +74,7 @@ export default ({ value = ['. . .', '. . .', '. . .'], onValueChange }) => {
       return fieldIds.join(' ');
     });
     onValueChange(newValue);
-  }
+  };
 
   const onFieldChange = (row, col, fieldId) => {
     const newValue = [...value];
@@ -82,7 +82,7 @@ export default ({ value = ['. . .', '. . .', '. . .'], onValueChange }) => {
     rowArr[col] = fieldId || '.';
     newValue[row] = rowArr.join(' ');
     onValueChange(newValue); 
-  }
+  };
 
   return (<div>
     <Dimensions>

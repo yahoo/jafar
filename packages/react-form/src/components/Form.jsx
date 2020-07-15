@@ -51,6 +51,7 @@ export default class Form extends React.Component {
     }
 
     const context = {
+      parent: this.context,
       model: this.state.form.model,
       resources: this.state.form.resources,
       actions: {
@@ -62,7 +63,6 @@ export default class Form extends React.Component {
         submit: this.privateForm.submit.bind(this.privateForm),
         reset: this.privateForm.reset.bind(this.privateForm),
       },
-      parent: this.context,
     };
 
     return (
