@@ -21,7 +21,8 @@ const Layouts = ({ value = [], onValueChange }) => {
   const parentForm = useContext(FormContext);
   const [editing, setEditing] = useState();
 
-  const formId = (parentForm.model.data.model || {}).id;
+  const parentModel = (parentForm.model.data.model || {});
+  const formId = parentModel.id;
 
   const add = () => {
     setEditing({ layout: {}, index: undefined });
@@ -104,7 +105,7 @@ const Layouts = ({ value = [], onValueChange }) => {
   return (<div>
     {
       editing && <Styled.Wrapper aria-label="layout-editor"><LayoutEditor 
-        formId={formId} 
+        parentModel={parentModel} 
         layout={editing.layout} 
         onCancel={setEditing} 
         onSave={save} 

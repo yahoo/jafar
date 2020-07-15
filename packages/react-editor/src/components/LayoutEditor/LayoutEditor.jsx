@@ -19,8 +19,8 @@ const LayoutEditorWrapper = styled.div`
 `;
 
 // layout = { item }
-const LayoutEditor = ({ formId, layout = {}, onCancel, onSave }) => {
-  const title = `Layout for - ${formId}`;
+const LayoutEditor = ({ parentModel, layout = {}, onCancel, onSave }) => {
+  const title = `Layout for - ${parentModel.id}`;
 
   const [model] = useState({ ...initialModel, data: layout });
 

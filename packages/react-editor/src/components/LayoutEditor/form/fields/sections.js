@@ -6,8 +6,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Field } from '@jafar/react-form';
-import TextInput from '@jafar/react-components/edit/Text';
 import Grid from '@jafar/react-layout/Grid';
+import TextInput from '@jafar/react-components/edit/Text';
+import GridTemplateAreas from '../components/GridTemplateAreas';
 
 const SectionViewItem = styled.div`
   margin-bottom: 20px;
@@ -87,15 +88,8 @@ export const sectionsForm = {
           path: 'grid.templateAreas',
           required: true,
           component: { 
-            name: 'TextInput',
-            state: {
-              placeholder: 'Separate each grid row with new line',
-              multiline: true,
-              rowsMax: 100,
-            },
+            name: 'GridTemplateAreas',
           },
-          formatter: { name: 'join', args: { separator: '\n' } },
-          parser: { name: 'split', args: { separator: '\n' } },
         },
         gridTemplateColumns: { 
           label: 'Grid Template Columns',
@@ -113,6 +107,7 @@ export const sectionsForm = {
     resources: {
       components: { 
         TextInput,
+        GridTemplateAreas,
       },
     },
   },
