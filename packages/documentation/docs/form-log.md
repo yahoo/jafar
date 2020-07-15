@@ -18,6 +18,9 @@ all defined forms.
 
 `Debug` messages logs all the changes that are applied to the form per each action (such as init, changeFieldValue and more). Each debug message contains the sub action (dispatch action) which changes the internal private form model, and the new form model object. Some dispatch actions affect the ui, and will update the ui to use the new form model object (by passing the UI - such as the react Form component the new form model object to share in its context to its child components like the react Field component)
 
+> **Note:** `Debug` messages appear on `verbose` / `debug` tab of the browser's console - and not under `info` tab. Also
+by default they appear only when NODE_ENV === 'development' (e.g - on localhost debug), and therefor do not appear in the online Jafar demos.
+
 #### Example 
 
 Change field value causing the bellow debug messages. Change field value caused 3 ui renders (marked as `+ UI update`):

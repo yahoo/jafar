@@ -105,7 +105,8 @@ const FormList = ({ history }) => {
       <h1>Forms</h1>
       <p>
         We created a simple UI Form Editor - which you can use to create the form <Link
-          href="https://yahoo.github.io/jafar/docs/arguments.html#model">model configuration</Link>, to help you get started. 
+          href="https://yahoo.github.io/jafar/docs/arguments.html#model">model configuration</Link> and <Link
+          href="https://yahoo.github.io/jafar/docs/react-layout.html">layout configuration</Link>, to help you get started. 
         These form configurations demos are saved on local storage.
         You can create form models, and download them (you might need to supply <Link
           href="https://yahoo.github.io/jafar/docs/arguments.html#resources">resources</Link> such as actual components
