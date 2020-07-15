@@ -1,6 +1,6 @@
 {
   "name": "@jafar/documentation",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Jafar documentation",
   "license": "MIT",
   "repository": {
@@ -22,7 +22,7 @@
     "pre-push": "lint-staged"
   },
   "devDependencies": {
-    "@jafar/react-kit": "^1.0.8",
+    "@jafar/react-kit": "^1.0.9",
     "filepath": "^1.1.0",
     "front-matter": "^2.3.0",
     "glob-promise": "^3.3.0",

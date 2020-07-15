@@ -1,6 +1,6 @@
 {
   "name": "@jafar/react-layout",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React Item, List and more Components, to create full entities pages such as create / edit/ details / list with the same UI/UX experience",
   "license": "MIT",
   "main": "src/website/app.js",
@@ -41,9 +41,9 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@jafar/react-components": "^1.0.8",
-    "@jafar/react-form": "^1.0.8",
-    "@jafar/react-kit": "^1.0.8",
+    "@jafar/react-components": "^1.0.9",
+    "@jafar/react-form": "^1.0.9",
+    "@jafar/react-kit": "^1.0.9",
     "jszip": "^3.2.2",
     "prismjs": "^1.15.0",
     "raw-loader": "4.0.0",
