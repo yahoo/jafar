@@ -6,7 +6,7 @@ Changes that have landed in master but are not yet released
 
 ### React Form
 
-* Add - parent context for form's context. [Issue 73](https://github.com/yahoo/jafar/issues/73)
+* Add - parent context for form's context object. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
 ### React Layout
 
