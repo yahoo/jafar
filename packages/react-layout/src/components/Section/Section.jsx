@@ -13,15 +13,7 @@ const SectionShape = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string,
   innerRef: PropTypes.object,
-  grid: PropTypes.shape({
-    templateAreas: PropTypes.arrayOf(PropTypes.string).isRequired,
-    elements: PropTypes.arrayOf(PropTypes.shape({ 
-      selector: PropTypes.string.isRequired,
-      gridArea: PropTypes.string.isRequired,
-      component: PropTypes.func.isRequired,
-      props: PropTypes.object,
-    })).isRequired,
-  }),
+  grid: PropTypes.object,
   boxes: PropTypes.arrayOf(PropTypes.object),
   size: PropTypes.number,
   root: PropTypes.bool,
@@ -45,7 +37,7 @@ export class Section extends React.Component {
         this.props.title && <Title>{this.props.title}</Title>
       }
       {
-        this.props.grid && <Grid templateAreas={this.props.grid.templateAreas} elements={this.props.grid.elements} />
+        this.props.grid && <Grid {...this.props.grid} />
       }
       {
         this.props.boxes.map((box, index) => (<Box key={index} { ...box } />))

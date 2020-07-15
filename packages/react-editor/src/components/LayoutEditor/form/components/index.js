@@ -5,14 +5,12 @@
 
 import TextInput from '@jafar/react-components/edit/Text';
 import NumberInput from '@jafar/react-components/edit/Number';
-import JsonEditor from '@jafar/react-components/edit/JsonEditor';
-import Fields from './Fields';
-import Layouts from './Layouts';
+import Select from '@jafar/react-components/edit/Select';
+import DynamicItemsModal from '@jafar/react-components/edit/DynamicItemsModal';
 
 export default {
   TextInput,
   NumberInput,
-  JsonEditor,
-  Fields,
-  Layouts,
+  Select,
+  DynamicItemsModal,
 };

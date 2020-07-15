@@ -10,6 +10,7 @@ import changeValueDebounceWait from './changeValueDebounceWait';
 import changeValueDebounceMaxWait from './changeValueDebounceMaxWait';
 import changeStateDebounceWait from './changeStateDebounceWait';
 import changeStateDebounceMaxWait from './changeStateDebounceMaxWait';
+import layouts from './layouts';
 
 export default {
   id,
@@ -19,4 +20,5 @@ export default {
   changeValueDebounceMaxWait,
   changeStateDebounceWait,
   changeStateDebounceMaxWait,
+  layouts,
 };

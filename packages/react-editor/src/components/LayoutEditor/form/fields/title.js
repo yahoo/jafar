@@ -3,10 +3,11 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import model from './model';
-import layouts from './layouts';
-
 export default {
-  model,
-  layouts,
+  label: 'Title',
+  description: 'Title appears on to of the Item component',
+  path: 'item.title',
+  component: {
+    name: 'TextInput',
+  },
 };

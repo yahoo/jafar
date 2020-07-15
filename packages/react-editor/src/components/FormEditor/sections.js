@@ -5,61 +5,40 @@
 
 import { Field } from '@jafar/react-form';
 
-const columnStyle = {
-  width: '400px',
-  maxWidth: '400px',
-  margin: '0 30px 0 0',
-};
-
-const columnStyleFields = {
-  width: '100%',
-  minWidth: '400px',
-  maxWidth: '100%',
-  margin: '0 30px 0 0',
+const getGrid = (templateAreas) => {
+  let fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  fieldIds = [...(new Set(fieldIds))];
+  return {
+    templateAreas,
+    templateColumns: 'minmax(430px, 430px) minmax(0, 1fr) minmax(0, 1fr)',
+    elements: fieldIds.map(id => ({ 
+      selector: `#${id}`, 
+      gridArea: id, 
+      component: Field, 
+      props: { id },
+      style: ['fields', 'layouts'].includes(id) ? undefined : 'max-width: 360px;',
+    })),
+  };
 };
 
 export default [{
   id: 'model',
   title: 'Model',
-  boxes: [{
-    direction: 'column',
-    style: columnStyleFields,
-    boxes: [{
-      direction: 'column',
-      style: columnStyle,
-      boxes: [
-        { component: Field, props: { id: 'id' } },
-  
-      ],
-    }, {
-      direction: 'column',
-      style: columnStyleFields,
-      boxes: [
-        { component: Field, props: { id: 'fields' } },
-        { component: Field, props: { id: 'data' } },
-  
-      ],
-    }],
-  }],
+  grid: getGrid([
+    'id fields fields',
+    'data fields fields',
+  ]),
 }, {
   id: 'settings',
   title: 'Settings',
-  boxes: [{
-    direction: 'row',
-    boxes: [{
-      direction: 'column',
-      style: columnStyle,
-      boxes: [
-        { component: Field, props: { id: 'changeValueDebounceWait' } },
-        { component: Field, props: { id: 'changeValueDebounceMaxWait' } },
-      ],
-    }, {
-      direction: 'column',
-      style: columnStyle,
-      boxes: [
-        { component: Field, props: { id: 'changeStateDebounceWait' } },
-        { component: Field, props: { id: 'changeStateDebounceMaxWait' } },
-      ],
-    }],
-  }],
+  grid: getGrid([
+    'changeValueDebounceWait changeStateDebounceWait .',
+    'changeValueDebounceMaxWait changeStateDebounceMaxWait .',
+  ]),
+}, {
+  id: 'layouts',
+  title: 'Layouts',
+  grid: getGrid([
+    'layouts layouts layouts',
+  ]),
 }];

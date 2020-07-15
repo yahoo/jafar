@@ -9,6 +9,8 @@ import JForm from '@jafar/form';
 import FormContext from './context';
 
 export default class Form extends React.Component {
+  static contextType = FormContext;
+
   static propTypes = {
     model: PropTypes.object.isRequired,
     resources: PropTypes.object,
@@ -49,6 +51,7 @@ export default class Form extends React.Component {
     }
 
     const context = {
+      parent: this.context,
       model: this.state.form.model,
       resources: this.state.form.resources,
       actions: {

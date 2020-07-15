@@ -3,13 +3,6 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import FieldEditor from './FieldEditor';
-import FormEditor from './FormEditor';
 import LayoutEditor from './LayoutEditor';
 
-export {
-  FieldEditor,
-  FormEditor,
-  LayoutEditor,
-};
-
+export default LayoutEditor;

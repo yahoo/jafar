@@ -99,9 +99,11 @@ sections.js - Using css grid example:
 import { Field } from '@jafar/react-form';
 
 const getGrid = (templateAreas) => {
-  const fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  let fieldIds = templateAreas.join(' ').split(' ').filter(x => x !== '.');
+  fieldIds = [...(new Set(fieldIds))];
   return {
     templateAreas,
+    templateColumns: 'repeat(3, minmax(0, 1fr))',
     elements: fieldIds.map(id => ({ 
       selector: `#${id}`, 
       gridArea: id, 
@@ -293,7 +295,8 @@ import Item from '@jafar/react-layout/Grid'
 | ------------- |-------------| ------------|
 | elements | required object array | Each object contains selector, gridArea, component, props, style |
 | templateAreas | required string array | Represent `grid-template-areas` property in css grid |
-
+| templateColumns | string | Represent `grid-template-columns` property in css grid |
+| gap | string | Represent `grid-gap` property in css grid |
 
 ### Box
 

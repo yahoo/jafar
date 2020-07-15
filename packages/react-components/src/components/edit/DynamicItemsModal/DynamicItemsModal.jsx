@@ -111,10 +111,12 @@ class DynamicItemsModal extends React.Component {
   };
 
   renderItemsDisplay = () => {
-    return (<Styled.ItemsListContainer>
+    const style = this.resource.style || {};
+
+    return (<Styled.ItemsListContainer style={style.list}>
       {
         this.props.value.map((item, index) => 
-          (<Styled.ListItem key={index}>
+          (<Styled.ListItem key={index} style={style.item}>
             <Styled.ItemRendererContainer>{this.resource.itemRenderer(item, index)} </Styled.ItemRendererContainer>
             <Styled.ActionsContainer>
               <Fab style={{ margin: '0 5px' }} size="small" color="secondary" onClick={() => { this.edit(index); }}>

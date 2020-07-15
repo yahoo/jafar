@@ -3,10 +3,11 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import model from './model';
-import layouts from './layouts';
-
 export default {
-  model,
-  layouts,
+  formIdStateChange: ({ state, context }) => {
+    if (!state.item) {
+      return { ...state, items: context.formIds };
+    }
+    return undefined;
+  },
 };

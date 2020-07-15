@@ -3,10 +3,6 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import model from './model';
-import layouts from './layouts';
+import Layouts from './Layouts';
 
-export default {
-  model,
-  layouts,
-};
+export default Layouts;

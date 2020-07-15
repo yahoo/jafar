@@ -25,8 +25,8 @@ export default function ActionsMenu({ options = [], data }) {
     setAnchorEl(null);
   };
 
-  const handleAction = (option) => {
-    option.onClick(data);
+  const handleAction = (option, index) => {
+    option.onClick(data, index);
     handleClose();
   };
 

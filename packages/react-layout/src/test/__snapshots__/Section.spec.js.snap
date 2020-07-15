@@ -55,7 +55,7 @@ exports[`Section Should render section with grid 1`] = `
   <styled.div>
     Job Information
   </styled.div>
-  <_default
+  <CssGrid
     elements={
       Array [
         Object {
