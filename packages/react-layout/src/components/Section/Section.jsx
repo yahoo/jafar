@@ -13,8 +13,8 @@ const SectionShape = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string,
   innerRef: PropTypes.object,
-  grid: PropTypes.shape(Grid.propTypes),
-  boxes: PropTypes.arrayOf(PropTypes.shape(Box.propTypes)),
+  grid: PropTypes.object,
+  boxes: PropTypes.arrayOf(PropTypes.object),
   size: PropTypes.number,
   root: PropTypes.bool,
 };

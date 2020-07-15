@@ -6,6 +6,10 @@ Changes that have landed in master but are not yet released
 
 * Add - parent context for form's context
 
+### React Layout
+
+* Add - props of 'templateColumns' and 'gap' to section grid
+
 ### React Editor
 
 * Add - layout editor for each form
