@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### React Form
+
+* Add - parent context for form's context
+
 ### React Editor
 
 * Add - layout editor for each form

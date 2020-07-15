@@ -77,6 +77,7 @@ Context object contains:
 | model         | object | The current model object. Can be used to pull data for an underline component. For instance, a save button component, should use form data to disable the button in some cases |
 | resources     | object      | The current resources object |
 | actions       | object      | actions object contains a set of function to be called in order to manipulate the from. Full actions docs can be found [here](actions.html) |
+| parent       | object      | parent form [context](react-form#context-object) object |
 
 For Example:
 
