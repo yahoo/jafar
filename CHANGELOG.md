@@ -16,7 +16,7 @@ Changes that have landed in master but are not yet released
 
 * Add - layout editor for each form. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
-* Update - form download files - to include form's layouts. [Issue 73](https://github.com/yahoo/jafar/issues/73)
+* Update - download form files - to include form's layouts. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
 ### Documentation
 
