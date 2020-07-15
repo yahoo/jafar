@@ -4,17 +4,17 @@ Changes that have landed in master but are not yet released
 
 ### React Form
 
-* Add - parent context for form's context
+* Add - parent context for form's context. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
 ### React Layout
 
-* Add - props of 'templateColumns' and 'gap' to section grid
+* Add - props of 'templateColumns' and 'gap' to section grid. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
 ### React Editor
 
-* Add - layout editor for each form
+* Add - layout editor for each form. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
-* Update - form download files - to include form's layouts
+* Update - form download files - to include form's layouts. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
 ### Documentation
 
