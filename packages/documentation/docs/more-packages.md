@@ -5,7 +5,7 @@ sidebar_label: Packages
 ---
 Jafar is built as a monorepo which includes the following packages:
 
-## Structure
+## Main Packages Structure
 
 ![packages-structure](assets/packages-v1.0.0.png)
 
@@ -103,6 +103,8 @@ const item = {
 <Item item={...item} />
 ```
 
+### @jafar/react-editor
+[@jafar/react-editor](https://github.com/yahoo/jafar/tree/master/packages/react-editor) - contains form and layout configurations [editor](https://yahoo.github.io/jafar/demo-react-editor.html). 
 
 ### @jafar/documentation
 [@jafar/documentation](https://github.com/yahoo/jafar/tree/master/packages/documentation) - contains [this documentation site](https://yahoo.github.io/jafar/).
