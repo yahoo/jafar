@@ -10,7 +10,7 @@ Changes that have landed in master but are not yet released
 
 ### React Layout
 
-* Add - props of 'templateColumns' and 'gap' to section grid. [Issue 73](https://github.com/yahoo/jafar/issues/73)
+* Add - props of 'templateColumns' and 'gap' to section's grid. [Issue 73](https://github.com/yahoo/jafar/issues/73)
 
 ### React Editor
 
