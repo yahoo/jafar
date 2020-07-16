@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import FormIcon from '@material-ui/icons/ListAlt';
 import DbIcon from '@material-ui/icons/SettingsBackupRestore';
 import FieldsIcon from '@material-ui/icons/List';
+import Boolean from '@jafar/react-components/view/Boolean';
 import db from '../../database';
 import { Wrapper, Link, Actions, Action } from './Styled';
 
 export default withRouter(({ history }) => {
-  const resetDB = () => db.reset();
+  const [done, setDone] = useState();
+
+  const resetDB = () => {
+    db.reset();
+    setDone(actions[0].label);
+  }
 
   const goToForms = () => history.push('/form');
 
@@ -30,7 +36,7 @@ export default withRouter(({ history }) => {
   return (<Wrapper>
     <h1>Editor</h1>
     <p>
-      We created a simple UI Form Editor - which you can use to create the form <Link
+      We created a simple UI form editor - which you can use to create the form <Link
         href="https://yahoo.github.io/jafar/docs/arguments.html#model">model configuration</Link> and <Link
         href="https://yahoo.github.io/jafar/docs/react-layout.html">layout configuration</Link>, to help you get started. 
       These form configurations demos are saved on local storage.
@@ -42,7 +48,7 @@ export default withRouter(({ history }) => {
     <Actions>
       {
         actions.map(action => (<Action key={action.label} onClick={action.onClick}>
-          <action.icon />
+          { done === action.label ? <Boolean value={true} /> : <action.icon /> }
           <div>{action.label}</div>
         </Action>))
       }
