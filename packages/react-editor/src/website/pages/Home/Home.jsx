@@ -4,16 +4,16 @@ import FormIcon from '@material-ui/icons/ListAlt';
 import DbIcon from '@material-ui/icons/SettingsBackupRestore';
 import FieldsIcon from '@material-ui/icons/List';
 import Boolean from '@jafar/react-components/view/Boolean';
-import db from '../../database';
+import service from '../../service';
 import { Wrapper, Link, Actions, Action } from './Styled';
 
 export default withRouter(({ history }) => {
   const [done, setDone] = useState();
 
   const resetDB = () => {
-    db.reset();
+    service.reset();
     setDone(actions[0].label);
-  }
+  };
 
   const goToForms = () => history.push('/form');
 
@@ -53,5 +53,5 @@ export default withRouter(({ history }) => {
         </Action>))
       }
     </Actions>
-  </Wrapper>)
+  </Wrapper>);
 });

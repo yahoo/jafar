@@ -5,7 +5,7 @@
 
 import React from 'react';
 import Grid from '../../../components/Grid';
-import db from '../../database';
+import service from '../../service';
 import { downloadJson, downloadFormFiles } from '../../../utils/download';
 import { FormListWrapper } from './Styled';
 import columns from './columns';
@@ -13,7 +13,7 @@ import rowActions from './row-actions';
 import headerActions from './header-actions';
 
 const FormList = ({ history }) => {
-  const forms = db.searchEntity('form');
+  const forms = service.searchEntity('form');
   const data = Object.values(forms);
 
   const create = () => history.push({ pathname: `/form/new` });
@@ -23,7 +23,7 @@ const FormList = ({ history }) => {
   const download = (form) => downloadJson(form, form.model.id);
 
   const remove = (form) => {
-    db.removeEntity('form', form.model.id);
+    service.removeEntity('form', form.model.id);
     window.location.reload();
   };
 

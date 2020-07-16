@@ -4,7 +4,7 @@
   */
 
 import React, { useState, useEffect } from 'react';
-import database from '../../database';
+import service from '../../service';
 import { FormEditor } from '../../../components';
 import components from './components';
 
@@ -13,7 +13,7 @@ const FormEdit = ({ match, history }) => {
   const [formIds, setFormIds] = useState();
 
   useEffect(() => {
-    const forms = database.searchEntity('form') || {};
+    const forms = service.searchEntity('form') || {};
     const form = forms[match.params.formId] || {};
     setForm(form);
     setFormIds(Object.keys(forms));
@@ -22,7 +22,7 @@ const FormEdit = ({ match, history }) => {
   const onCancel = () => history.push({ pathname: `/form` });
 
   const onSave = ({ data }) => {
-    database.setEntity('form', data.model.id, data);
+    service.setEntity('form', data.model.id, data);
     onCancel();
   };
 

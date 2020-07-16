@@ -1,0 +1,43 @@
+/**
+  * Copyright 2020, Verizon Media
+  * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
+  */
+
+import initialDatabase from '../database';
+
+const LOCAL_STORAGE_KEY = 'jafar-editor';
+
+const getDB = () => {
+  // fetch local db
+  let db = localStorage.getItem(LOCAL_STORAGE_KEY);
+  db = db ? JSON.parse(db) : {};
+  return db;
+};
+
+export default {
+  reset: () => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(initialDatabase));
+  },
+  searchEntity: (name) => {
+    const db = getDB();
+    const entityMap = db[name] || {};
+    return entityMap;
+  },
+  getEntity: (name, id) => {
+    const db = getDB();
+    const entityMap = db[name] || {};
+    return entityMap[id];
+  },
+  setEntity: (name, id, entity) => {
+    const db = getDB();
+    db[name] = db[name] || {};
+    db[name][id] = entity;
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(db));
+  },
+  removeEntity: (name, id) => {
+    const db = getDB();
+    db[name] = db[name] || {};
+    delete db[name][id];
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(db));
+  },
+};
