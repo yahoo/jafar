@@ -24,9 +24,9 @@ export const Actions = styled.div`
 `;
 
 export const Action = withTheme(styled.a`
-  border: 1px solid ${props => props.theme.palette.primary.main};
+  border: 1px solid ${props => props.theme.palette.secondary.main};
   border-radius: 3px;
-  color: ${props => props.theme.palette.primary.main};
+  color: ${props => props.theme.palette.secondary.main};
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
@@ -43,7 +43,7 @@ export const Action = withTheme(styled.a`
   &:hover {
     text-decoration: none;
     cursor: pointer;
-    background: ${props => props.theme.palette.primary.main};
+    background: ${props => props.theme.palette.secondary.main};
     color: #ffffff;
   }
   svg {
