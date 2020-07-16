@@ -4,39 +4,17 @@
   */
 
 import React from 'react';
-import styled from 'styled-components';
-import { withTheme } from '@material-ui/styles';
-import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Create';
-import Boolean from '@jafar/react-components/view/Boolean';
-import DownloadIcon from '@material-ui/icons/SaveAlt';
 import Grid from '../../../components/Grid';
 import db from '../../database';
 import { downloadJson, downloadFormFiles } from '../../../utils/download';
-
-export const Link = withTheme(styled.a`
-  flex: 1;
-  text-decoration: none;
-  cursor: pointer;
-  color: ${props => props.theme.palette.secondary.main};
-  &:hover {
-    text-decoration: underline;
-  }
-`);
-
-const FormListWrapper = styled.div`
-  padding: 40px;
-  margin: 0 auto;
-  max-width: 700px;
-`;
-
-export const BooleanWrapper = styled.div`
-  position: relative;
-  top: 7px;
-`;
+import { Link, FormListWrapper } from './Styled';
+import columns from './columns';
+import rowActions from './row-actions';
+import headerActions from './header-actions';
 
 const FormList = ({ history }) => {
   const forms = db.searchEntity('form');
+  const data = Object.values(forms);
 
   const create = () => history.push({ pathname: `/form/new` });
 
@@ -54,52 +32,6 @@ const FormList = ({ history }) => {
     window.location.reload();
   };
 
-  const rowActions = [{
-    label: 'Edit',
-    icon: EditIcon,
-    onClick: edit,
-  }, {
-    label: 'Download Json',
-    icon: DownloadIcon,
-    onClick: download,
-  }, {
-    label: 'Download Files',
-    icon: DownloadIcon,
-    onClick: downloadFormFiles,
-  }, {
-    label: 'Delete',
-    icon: DeleteIcon,
-    onClick: remove,
-  }];
-
-  const headerActions = [{
-    label: 'Init Mock Forms',
-    onClick: resetDB,
-    variant: 'outlined',
-  }, {
-    label: 'Create',
-    onClick: create,
-  }];
-
-  const columns = [{
-    label: 'Id',
-    content: (form) => <Link onClick={() => edit(form)}>{form.model.id}</Link>,
-  }, {
-    label: 'Fields',
-    content: (form) => Object.keys(form.model.fields).length,
-  }, {
-    label: 'Initial Data',
-    content: (form) => <BooleanWrapper><Boolean value={!!form.model.data} /></BooleanWrapper>,
-  }, {
-    label: 'Settings',
-    content: (form) => <BooleanWrapper><Boolean value={!!form.settings} /></BooleanWrapper>,
-  }, {
-    label: 'Layouts',
-    content: (form) => <BooleanWrapper><Boolean value={!!form.layouts} /></BooleanWrapper>,
-  }];
-
-  const data = Object.values(forms);
-
   return (
     <FormListWrapper id="form-list">
       <h1>Forms</h1>
@@ -115,10 +47,10 @@ const FormList = ({ history }) => {
       </p>
       <div>
         <Grid        
-          columns={columns}
           data={data}
-          headerActions={headerActions}
-          rowActions={rowActions} />
+          columns={columns({ edit })}
+          headerActions={headerActions({ resetDB, create })}
+          rowActions={rowActions({ edit, download, downloadFormFiles, remove })} />
       </div>
     </FormListWrapper>
   );

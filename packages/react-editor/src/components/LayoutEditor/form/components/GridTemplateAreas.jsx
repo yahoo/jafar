@@ -36,6 +36,9 @@ export default ({ value = ['. . .', '. . .', '. . .'], onValueChange }) => {
     items,
     searchable: true,
     placeholder: '',
+    styles: {
+      menuList: { maxHeight: '120px' },
+    },
   };
 
   const colsState = {
