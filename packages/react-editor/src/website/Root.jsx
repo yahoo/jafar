@@ -7,8 +7,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGenerateClassName, StylesProvider, ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Styled from './Styled';
+import Home from './pages/Home';
 import FormEdit from './pages/FormEdit';
 import FormList from './pages/FormList';
 
@@ -43,7 +44,7 @@ const Root = () => {
           </Styled.Header>
           <Styled.Main id="jafar-react-editor-demos">
             <Switch>
-              <Route exact={true} path="/"><Redirect to="/form/" /></Route>
+              <Route exact={true} path="/" render={Home} />
               <Route exact={true} path="/form/:formId" component={FormEdit} />
               <Route exact={true} path="/form/" render={FormList} />
             </Switch>
