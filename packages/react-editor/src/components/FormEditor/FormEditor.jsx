@@ -20,7 +20,7 @@ const FormEditorWrapper = styled.div`
 
 const FormEditor = ({ form = {}, formIds = [], onCancel, onSave }) => {
   const formId = (form.model || {}).id;
-  const title = `Form - ${formId || 'new'}`;
+  const title = `Form | ${formId || 'new'}`;
 
   const [model] = useState({ 
     ...initialModel, 

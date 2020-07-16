@@ -6,5 +6,5 @@
 import employee from './employee';
 
 export default {
-  employee,
+  [employee.model.id]: employee,
 };

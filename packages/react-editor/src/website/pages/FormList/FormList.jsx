@@ -42,7 +42,7 @@ const FormList = ({ history }) => {
         These form configurations demos are saved on local storage.
         You can create form models, and download them (you might need to supply <Link
           href="https://yahoo.github.io/jafar/docs/arguments.html#resources">resources</Link> such as actual components
-        if defined prior to use it in the Form class / component). In addition you can clone the repo and
+        if defined prior to use it in the Form class / component). In addition you can clone Jafar repository and
         change / adapt the Form Editor to your system's needs (located in the "react-editor" package).
       </p>
       <div>

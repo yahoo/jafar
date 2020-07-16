@@ -105,7 +105,7 @@ const Layouts = ({ value = [], onValueChange }) => {
   return (<div>
     {
       editing && <Styled.Wrapper aria-label="layout-editor"><LayoutEditor 
-        parentModel={parentModel} 
+        formId={parentModel.id} 
         layout={editing.layout} 
         onCancel={setEditing} 
         onSave={save} 

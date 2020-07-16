@@ -16,7 +16,7 @@ const FieldEditor = ({ onCancel, onSave, formId, fieldId, field = {}, fieldIds =
     context: { fieldIds: fieldIds.filter(id => id !== fieldId) },
   });
 
-  const title = `Field - ${formId || 'new'} / ${fieldId || 'new'}`;
+  const title = `Field | ${formId || 'new'} / ${fieldId || 'new'}`;
 
   const save = ({ data }) => {
     const fieldId = data.id;
