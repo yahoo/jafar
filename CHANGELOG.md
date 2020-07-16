@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### React Components
+
+* Update selects components - support custom styles. [Issue 79](https://github.com/yahoo/jafar/issues/79)
+
 ## v1.0.9 (July 15, 2020)
 
 ### React Form

@@ -92,6 +92,11 @@ initialState = {
         value: '6',
         label: 'Phoebe Buffay'
     }],
+    styles: {
+      menuList: {
+        maxHeight: '120px',
+      },
+    },
   },
 };
 

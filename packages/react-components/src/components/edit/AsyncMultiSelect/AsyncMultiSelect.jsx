@@ -30,6 +30,7 @@ export default class AsyncMultiSelect extends React.Component {
       searchQuery: PropTypes.string,
       isLoading: PropTypes.bool,
       itemIdField: PropTypes.string,
+      styles: PropTypes.object,
     }),
     disabled: PropTypes.bool,
     onValueChange: PropTypes.func.isRequired,
@@ -43,6 +44,7 @@ export default class AsyncMultiSelect extends React.Component {
       placeholder: 'Search...',
       searchQuery: '',
       isLoading: false,
+      styles: {},
     },
     disabled: false,
   };
@@ -60,6 +62,7 @@ export default class AsyncMultiSelect extends React.Component {
 
     const selected = (this.props.value || []).map(mapFunc);
     const options = (this.props.state.items || []).map(mapFunc);
+    const styles = customStyles(this.props.state.styles);
 
     return (
       <SelectInternal
@@ -73,7 +76,7 @@ export default class AsyncMultiSelect extends React.Component {
         isLoading={!!this.props.state.isLoading}
         inputValue={this.props.state.searchQuery}
         onInputChange={this.onSearchChange}
-        styles={customStyles}
+        styles={styles}
       />
     );
   }

@@ -40,32 +40,17 @@ export const styleOverrides = {
   },
 };
 
-export const customStyles = {
-  control: (provided) => ({
-    ...provided,
-    ...styleOverrides.control,
-  }),
-  singleValue: (provided) => ({
-    ...provided,
-    ...styleOverrides.singleValue,
-  }),
-  valueContainer: (provided) => ({
-    ...provided,
-    ...styleOverrides.valueContainer,
-  }),
-  clearIndicator: (provided) => ({
-    ...provided,
-    ...styleOverrides.clearIndicator,
-  }),
-  dropdownIndicator: (provided) => ({
-    ...provided,
-    ...styleOverrides.dropdownIndicator,
-  }),
-  menu: (provided) => ({
-    ...provided,
-    ...styleOverrides.menu,
-  }),
-};
+const getStyle = (a, b) => (provided) => ({ ...provided, ...a, ...b });
+
+export const customStyles = (styles = {}) => ({
+  control: getStyle(styleOverrides.control, styles.control),
+  singleValue: getStyle(styleOverrides.singleValue, styles.singleValue),
+  valueContainer: getStyle(styleOverrides.valueContainer, styles.valueContainer),
+  clearIndicator: getStyle(styleOverrides.clearIndicator, styles.clearIndicator),
+  dropdownIndicator: getStyle(styleOverrides.dropdownIndicator, styles.dropdownIndicator),
+  menu: getStyle(styleOverrides.menu, styles.menu),
+  menuList: getStyle(styleOverrides.menuList, styles.menuList),
+});
 
 /**
  * Represent a selection of a single item from fixed items list
@@ -82,6 +67,7 @@ export default class Select extends React.Component {
       placeholder: PropTypes.string,
       searchable: PropTypes.bool,
       searchQuery: PropTypes.string,
+      styles: PropTypes.object,
     }),
     disabled: PropTypes.bool,
     required: PropTypes.bool,
@@ -96,6 +82,7 @@ export default class Select extends React.Component {
       placeholder: 'Search',
       searchable: false,
       searchQuery: '',
+      styles: {},
     },
     disabled: false,
     required: false,
@@ -105,6 +92,7 @@ export default class Select extends React.Component {
   render() {
     // null - fixes underline controlled VS uncontrolled issue when value turns to undefined
     let selected = (this.props.state.items || []).find(x => isEqual(x.value, this.props.value)) || null;
+    const styles = customStyles(this.props.state.styles);
 
     return (
       <SelectInternal
@@ -117,7 +105,7 @@ export default class Select extends React.Component {
         isSearchable={!!this.props.state.searchable}
         inputValue={this.props.state.searchQuery}
         onInputChange={this.onSearchChange}
-        styles={customStyles}
+        styles={styles}
       />
     );
   }

@@ -24,6 +24,7 @@ export default class AsyncSelect extends React.Component {
       placeholder: PropTypes.string,
       searchQuery: PropTypes.string,
       isLoading: PropTypes.bool,
+      styles: PropTypes.object,
     }),
     disabled: PropTypes.bool,
     required: PropTypes.bool,
@@ -38,12 +39,15 @@ export default class AsyncSelect extends React.Component {
       placeholder: 'Search',
       searchQuery: '',
       isLoading: false,
+      styles: {},
     },
     disabled: false,
     required: false,
   };
 
   render() {
+    const styles = customStyles(this.props.state.styles);
+
     return (
       <SelectInternal
         value={this.props.value}
@@ -56,7 +60,7 @@ export default class AsyncSelect extends React.Component {
         isSearchable={true}
         inputValue={this.props.state.searchQuery}
         onInputChange={this.onSearchChange}
-        styles={customStyles}
+        styles={styles}
       />
     );
   }

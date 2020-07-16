@@ -21,6 +21,7 @@ export default class CreatableMultiSelect extends React.Component {
     value: PropTypes.arrayOf(PropTypes.string),
     state: PropTypes.shape({
       placeholder: PropTypes.string,
+      styles: PropTypes.object,
     }),
     disabled: PropTypes.bool,
     onValueChange: PropTypes.func.isRequired,
@@ -30,12 +31,14 @@ export default class CreatableMultiSelect extends React.Component {
     value: [],
     state: {
       placeholder: '',
+      styles: {},
     },
     disabled: false,
   };
 
   render() {
     const value = (this.props.value || []).map(item => { return { label: item, value: item }; });
+    const styles = customStyles(this.props.state.styles);
 
     return (
       <SelectInternal
@@ -44,7 +47,7 @@ export default class CreatableMultiSelect extends React.Component {
         onChange={this.onValueChange}
         placeholder={this.props.state.placeholder}
         isDisabled={this.props.disabled}
-        styles={customStyles}
+        styles={styles}
       />
     );
   }
