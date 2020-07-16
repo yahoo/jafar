@@ -24,6 +24,7 @@ export default class MultiSelect extends React.Component {
       placeholder: PropTypes.string,
       searchable: PropTypes.bool,
       searchQuery: PropTypes.string,
+      styles: PropTypes.object,
     }),
     disabled: PropTypes.bool,
     onValueChange: PropTypes.func.isRequired,
@@ -37,6 +38,7 @@ export default class MultiSelect extends React.Component {
       placeholder: 'Search',
       searchable: false,
       searchQuery: '',
+      styles: {},
     },
     disabled: false,
     onStateChange: noop,
@@ -59,6 +61,8 @@ export default class MultiSelect extends React.Component {
     let options = items.filter(item => 
       !selected.find(selectedItem => isEqual(selectedItem.value, item.orgValue)));
 
+    const styles = customStyles(this.props.state.styles);
+
     return (
       <SelectInternal
         isMulti={true}
@@ -70,7 +74,7 @@ export default class MultiSelect extends React.Component {
         isSearchable={!!this.props.state.searchable}
         inputValue={this.props.state.searchQuery}
         onInputChange={this.onSearchChange}
-        styles={customStyles}
+        styles={styles}
       />
     );
   }

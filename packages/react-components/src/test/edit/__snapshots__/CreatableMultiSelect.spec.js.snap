@@ -14,6 +14,7 @@ exports[`<CreatableMultiSelect /> Should render provided data - disabled 1`] = `
       "control": [Function],
       "dropdownIndicator": [Function],
       "menu": [Function],
+      "menuList": [Function],
       "singleValue": [Function],
       "valueContainer": [Function],
     }
@@ -43,6 +44,7 @@ exports[`<CreatableMultiSelect /> Should render provided data - required 1`] = `
       "control": [Function],
       "dropdownIndicator": [Function],
       "menu": [Function],
+      "menuList": [Function],
       "singleValue": [Function],
       "valueContainer": [Function],
     }
@@ -72,6 +74,7 @@ exports[`<CreatableMultiSelect /> Should render provided data 1`] = `
       "control": [Function],
       "dropdownIndicator": [Function],
       "menu": [Function],
+      "menuList": [Function],
       "singleValue": [Function],
       "valueContainer": [Function],
     }
