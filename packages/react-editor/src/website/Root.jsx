@@ -10,8 +10,9 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Styled from './Styled';
 import Home from './pages/Home';
-import FormEdit from './pages/FormEdit';
 import FormList from './pages/FormList';
+import FormEdit from './pages/FormEdit';
+import FieldList from './pages/FieldList';
 
 const generateClassName = createGenerateClassName({ productionPrefix: 'jafar-react-editor' });
 
@@ -45,8 +46,10 @@ const Root = () => {
           <Styled.Main id="jafar-react-editor-demos">
             <Switch>
               <Route exact={true} path="/" component={Home} />
-              <Route exact={true} path="/form/:formId" component={FormEdit} />
+              <Route exact={true} path="/form/:id" component={FormEdit} />
               <Route exact={true} path="/form/" component={FormList} />
+              {/* <Route exact={true} path="/field/:id" component={FieldEdit} /> */}
+              <Route exact={true} path="/field/" component={FieldList} />
             </Switch>
           </Styled.Main>
         </ThemeProvider>

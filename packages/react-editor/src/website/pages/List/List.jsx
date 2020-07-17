@@ -4,6 +4,7 @@
   */
 
 import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 import Grid from '../../../components/Grid';
 import service from '../../service';
 import { downloadJson } from '../../../utils/download';
@@ -48,4 +49,4 @@ const List = ({ history, name, label = 'List', columns, headerActions = {}, rowA
   );
 };
 
-export default List;
+export default withRouter(List);

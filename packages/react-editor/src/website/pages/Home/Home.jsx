@@ -17,7 +17,7 @@ export default withRouter(({ history }) => {
 
   const goToForms = () => history.push('/form');
 
-  const goToFields = () => history.push('/fields');
+  const goToFields = () => history.push('/field');
 
   const actions = [{
     id: 'init-db',

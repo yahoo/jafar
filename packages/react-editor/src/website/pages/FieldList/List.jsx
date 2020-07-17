@@ -4,19 +4,15 @@
   */
 
 import React from 'react';
-import { downloadFormFiles } from '../../../utils/download';
 import List from '../List';
 import columns from './columns';
 import rowActions from './row-actions';
 import headerActions from './header-actions';
 
-const FormList = ({ history }) => (<List
-  history={history} 
-  name="form" 
-  label="Forms"
+export default () => (<List
+  name="field" 
+  label="Fields"
   columns={columns} 
   headerActions={headerActions()} 
-  rowActions={rowActions({ downloadFormFiles })} 
+  rowActions={rowActions()} 
 />);
-
-export default FormList;

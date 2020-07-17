@@ -17,7 +17,7 @@ const FormEdit = ({ match, location, history }) => {
       const params = new URLSearchParams(location.search); 
       const from = params.get('from');
       const isNew = match.params.formId === 'new';
-      const formId = isNew ? from : match.params.formId;
+      const formId = isNew ? from : match.params.id;
       const form = await service.getEntity('form', formId) || {};
       if (isNew && from) {
         delete form.model.id;

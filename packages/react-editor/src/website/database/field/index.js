@@ -3,10 +3,12 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import form from './form';
-import field from './field';
-
 export default {
-  form,
-  field,
+  id: {
+    label: 'Id',
+    path: 'id',
+    component: {
+      name: 'Text',
+    },
+  },
 };
