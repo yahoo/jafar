@@ -11,14 +11,6 @@ export default {
       name: 'Text',
     },
   },
-  name: {
-    label: 'Name',
-    path: 'name',
-    component: {
-      name: 'TextInput',
-    },
-    required: true,
-  },
   modifier: {
     label: 'Modifier',
     path: 'modifier',

@@ -27,7 +27,7 @@ const FormEdit = ({ match, location, history }) => {
       setFormIds(forms.data.map(x => x.model.id));
     };
     loadData();
-  }, [match.params.formId, location.search]);
+  }, [match.params.id, location.search]);
 
   const onCancel = () => history.push({ pathname: `/form` });
 

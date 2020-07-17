@@ -90,6 +90,9 @@ const Fields = ({ value = {}, onValueChange }) => {
   }, {
     label: 'Component',
     content: ({ field }) => field.component ? field.component.name : '',
+  }, {
+    label: 'Referenced',
+    content: ({ field }) => <Styled.BooleanWrapper><Boolean value={!!field._referenced} /></Styled.BooleanWrapper>,
   }];
 
   const data = Object.keys(value).sort().map(fieldId => ({ fieldId, field: value[fieldId] }));

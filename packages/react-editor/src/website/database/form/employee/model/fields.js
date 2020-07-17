@@ -5,11 +5,12 @@
 
 export default {
   id: {
-    label: 'Id',
+    label: 'Entity Id',
     path: 'id',
     component: {
       name: 'Text',
     },
+    _referenced: true,
   },
   personalId: {
     label: 'Personal Id',
@@ -125,6 +126,7 @@ export default {
     component: {
       name: 'Url',
     },
+    _referenced: true,
   },
   creationDate: {
     label: 'Creation Date',
