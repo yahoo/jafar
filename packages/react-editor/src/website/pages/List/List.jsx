@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom';
 import Grid from '../../../components/Grid';
 import service from '../../service';
 import { downloadJson } from '../../../utils/download';
-import { Wrapper } from './Styled';
+import { Wrapper, Title } from './Styled';
 import baseRowActions from './row-actions';
 import baseHeaderActions from './header-actions';
 
@@ -39,7 +39,7 @@ const List = ({ history, name, label = 'List', columns, headerActions = {}, rowA
 
   return !result ? (null) : (
     <Wrapper id={`${name}-list`}>
-      <h1>{label} ({result.count})</h1>
+      <Title>{label} ({result.count})</Title>
       <Grid        
         data={result.data}
         columns={columns({ edit })}

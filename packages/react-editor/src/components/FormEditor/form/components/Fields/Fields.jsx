@@ -96,7 +96,7 @@ const Fields = ({ value = {}, onValueChange }) => {
 
   const parentModel = parentForm.model.data.model || {};
   
-  return (<div>
+  return (<>
     {
       editingField && <Styled.FieldEditorWrapper aria-label="field-editor"><FieldEditor 
         formId={parentModel.id} 
@@ -107,13 +107,14 @@ const Fields = ({ value = {}, onValueChange }) => {
         onSave={save} 
       /></Styled.FieldEditorWrapper>
     }
-    <Grid
-      columns={columns}
-      data={data}
-      headerActions={headerActions}
-      rowActions={rowActions}
-    />
-  </div>);
+    <Styled.GridWrapper>
+      <Grid
+        columns={columns}
+        data={data}
+        headerActions={headerActions}
+        rowActions={rowActions} />
+    </Styled.GridWrapper> 
+  </>);
 };
 
 export default Fields;

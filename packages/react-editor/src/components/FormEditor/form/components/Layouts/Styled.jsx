@@ -13,3 +13,10 @@ export const Wrapper = styled.div`
   height: 100%;
   z-index: 21;
 `;
+
+export const GridWrapper = styled.div`
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;

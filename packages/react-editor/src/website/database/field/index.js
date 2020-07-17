@@ -5,10 +5,55 @@
 
 export default {
   id: {
-    label: 'Id',
+    label: 'Entity Id',
     path: 'id',
     component: {
       name: 'Text',
+    },
+  },
+  name: {
+    label: 'Name',
+    path: 'name',
+    component: {
+      name: 'TextInput',
+    },
+    required: true,
+  },
+  modifier: {
+    label: 'Modifier',
+    path: 'modifier',
+    component: {
+      name: 'Url',
+    },
+  },
+  creationDate: {
+    label: 'Creation Date',
+    path: 'creationDate',
+    component: {
+      name: 'DateView',
+    },
+    dependencies: ['department'],
+    excludeTerm: {
+      name: 'equals',
+      args: {
+        fieldId: 'department',
+        value: 'HR',
+      },
+    },
+  },
+  modificationDate: {
+    label: 'Modification Date',
+    path: 'modificationDate',
+    component: {
+      name: 'DateView',
+    },
+    dependencies: ['department'],
+    excludeTerm: {
+      name: 'equals',
+      args: {
+        fieldId: 'department',
+        value: 'HR',
+      },
     },
   },
 };

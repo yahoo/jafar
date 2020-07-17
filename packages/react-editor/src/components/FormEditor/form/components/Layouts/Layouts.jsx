@@ -102,7 +102,7 @@ const Layouts = ({ value = [], onValueChange }) => {
 
   const data = value.map((layout, index) => ({ layout, index }));
   
-  return (<div>
+  return (<>
     {
       editing && <Styled.Wrapper aria-label="layout-editor"><LayoutEditor 
         formId={parentModel.id} 
@@ -111,13 +111,15 @@ const Layouts = ({ value = [], onValueChange }) => {
         onSave={save} 
       /></Styled.Wrapper>
     }
-    <Grid
-      columns={columns}
-      data={data}
-      headerActions={headerActions}
-      rowActions={rowActions}
-    />
-  </div>);
+    <Styled.GridWrapper>
+      <Grid
+        columns={columns}
+        data={data}
+        headerActions={headerActions}
+        rowActions={rowActions}
+      />
+    </Styled.GridWrapper>
+  </>);
 };
 
 export default Layouts;

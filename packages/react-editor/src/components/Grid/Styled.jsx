@@ -10,6 +10,13 @@ export const HeaderButton = styled(Button)`
   margin-left: 10px !important;
 `;
 
+export const Grid = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+`;
+
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -43,7 +50,9 @@ export const Cell = styled.div`
 `;
 
 export const Body = styled.div`
-  max-height: 300px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
 `;
 

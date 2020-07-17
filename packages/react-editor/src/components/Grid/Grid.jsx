@@ -8,7 +8,7 @@ import ActionsMenu from '../ActionsMenu';
 import * as Styled from './Styled';
 
 const Grid = ({ columns, data, headerActions, rowActions }) => {  
-  return (<div aria-label="grid">
+  return (<Styled.Grid aria-label="grid">
     <Styled.HeaderMenu aria-label="grid-header-menu">
       {
         headerActions.map((action, index) => (<Styled.HeaderButton key={index} variant={action.variant || 'contained'} 
@@ -37,7 +37,7 @@ const Grid = ({ columns, data, headerActions, rowActions }) => {
         </Styled.Row>))
       }
     </Styled.Body>
-  </div>);
+  </Styled.Grid>);
 };
 
 export default Grid;

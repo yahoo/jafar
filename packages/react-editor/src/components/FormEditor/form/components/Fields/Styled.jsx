@@ -21,6 +21,13 @@ export const FieldLink = withTheme(styled.a`
   }
 `);
 
+export const GridWrapper = styled.div`
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
 export const FieldEditorWrapper = styled.div`
   position: absolute;
   top: 0;
