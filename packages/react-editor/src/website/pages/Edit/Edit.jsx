@@ -3,7 +3,7 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import service from '../../service';
 
@@ -26,7 +26,7 @@ const Edit = ({ name, generateId = _generateId, renderEditor, match, location, h
       setEntity(entity);
     };
     loadData();
-  }, [match.params.id, location.search]);
+  }, [match.params.id, location.search, name]);
 
   const onSave = async ({ data }) => {
     await service.setEntity(name, generateId(data), data);

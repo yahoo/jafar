@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import FormList from './pages/Form/List';
 import FormEdit from './pages/Form/Edit';
 import FieldList from './pages/Field/List';
+import FieldEdit from './pages/Field/Edit';
 
 const generateClassName = createGenerateClassName({ productionPrefix: 'jafar-react-editor' });
 
@@ -48,7 +49,7 @@ const Root = () => {
               <Route exact={true} path="/" component={Home} />
               <Route exact={true} path="/form/:id" component={FormEdit} />
               <Route exact={true} path="/form/" component={FormList} />
-              {/* <Route exact={true} path="/field/:id" component={FieldEdit} /> */}
+              <Route exact={true} path="/field/:id" component={FieldEdit} />
               <Route exact={true} path="/field/" component={FieldList} />
             </Switch>
           </Styled.Main>
