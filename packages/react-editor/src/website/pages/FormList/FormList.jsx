@@ -3,7 +3,7 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '../../../components/Grid';
 import service from '../../service';
 import { downloadJson, downloadFormFiles } from '../../../utils/download';
@@ -13,8 +13,15 @@ import rowActions from './row-actions';
 import headerActions from './header-actions';
 
 const FormList = ({ history }) => {
-  const forms = service.searchEntity('form');
-  const data = Object.values(forms);
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    const loadData = async () => {
+      const forms = await service.searchEntity('form');
+      setData(Object.values(forms));
+    };
+    loadData();
+  }, []);
 
   const create = () => history.push({ pathname: `/form/new` });
 
@@ -22,12 +29,13 @@ const FormList = ({ history }) => {
 
   const download = (form) => downloadJson(form, form.model.id);
 
-  const remove = (form) => {
-    service.removeEntity('form', form.model.id);
-    window.location.reload();
+  const remove = async (form) => {
+    await service.removeEntity('form', form.model.id);
+    const forms = await service.searchEntity('form');
+    setData(Object.values(forms));
   };
 
-  return (
+  return !data ? (null) : (
     <FormListWrapper id="form-list">
       <h1>Forms</h1>
       <div>

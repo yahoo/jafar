@@ -44,9 +44,9 @@ const Root = () => {
           </Styled.Header>
           <Styled.Main id="jafar-react-editor-demos">
             <Switch>
-              <Route exact={true} path="/" render={Home} />
+              <Route exact={true} path="/" component={Home} />
               <Route exact={true} path="/form/:formId" component={FormEdit} />
-              <Route exact={true} path="/form/" render={FormList} />
+              <Route exact={true} path="/form/" component={FormList} />
             </Switch>
           </Styled.Main>
         </ThemeProvider>

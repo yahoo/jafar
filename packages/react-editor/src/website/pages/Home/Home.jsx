@@ -10,8 +10,8 @@ import { Wrapper, Link, Actions, Action } from './Styled';
 export default withRouter(({ history }) => {
   const [done, setDone] = useState();
 
-  const resetDB = () => {
-    service.reset();
+  const resetDB = async () => {
+    await service.reset();
     setDone(actions[0].label);
   };
 

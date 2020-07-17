@@ -15,26 +15,26 @@ const getDB = () => {
 };
 
 export default {
-  reset: () => {
+  reset: async () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(initialDatabase));
   },
-  searchEntity: (name) => {
+  searchEntity: async (name) => {
     const db = getDB();
     const entityMap = db[name] || {};
     return entityMap;
   },
-  getEntity: (name, id) => {
+  getEntity: async (name, id) => {
     const db = getDB();
     const entityMap = db[name] || {};
     return entityMap[id];
   },
-  setEntity: (name, id, entity) => {
+  setEntity: async (name, id, entity) => {
     const db = getDB();
     db[name] = db[name] || {};
     db[name][id] = entity;
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(db));
   },
-  removeEntity: (name, id) => {
+  removeEntity: async (name, id) => {
     const db = getDB();
     db[name] = db[name] || {};
     delete db[name][id];

@@ -13,16 +13,19 @@ const FormEdit = ({ match, history }) => {
   const [formIds, setFormIds] = useState();
 
   useEffect(() => {
-    const forms = service.searchEntity('form') || {};
-    const form = forms[match.params.formId] || {};
-    setForm(form);
-    setFormIds(Object.keys(forms));
+    const loadData = async () => {
+      const forms = await service.searchEntity('form') || {};
+      const form = forms[match.params.formId] || {};
+      setForm(form);
+      setFormIds(Object.keys(forms));
+    };
+    loadData();
   }, [match.params.formId]);
 
   const onCancel = () => history.push({ pathname: `/form` });
 
-  const onSave = ({ data }) => {
-    service.setEntity('form', data.model.id, data);
+  const onSave = async ({ data }) => {
+    await service.setEntity('form', data.model.id, data);
     onCancel();
   };
 
