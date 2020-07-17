@@ -21,7 +21,8 @@ export default {
   searchEntity: async (name) => {
     const db = getDB();
     const entityMap = db[name] || {};
-    return entityMap;
+    const data = Object.values(entityMap);
+    return { data, count: data.length };
   },
   getEntity: async (name, id) => {
     const db = getDB();

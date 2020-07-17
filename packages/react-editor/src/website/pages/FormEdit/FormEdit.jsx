@@ -14,10 +14,10 @@ const FormEdit = ({ match, history }) => {
 
   useEffect(() => {
     const loadData = async () => {
-      const forms = await service.searchEntity('form') || {};
-      const form = forms[match.params.formId] || {};
+      const form = await service.getEntity('form', match.params.formId) || {};
       setForm(form);
-      setFormIds(Object.keys(forms));
+      const forms = await service.searchEntity('form') || {};
+      setFormIds(forms.data.map(x => x.model.id));
     };
     loadData();
   }, [match.params.formId]);
@@ -29,7 +29,7 @@ const FormEdit = ({ match, history }) => {
     onCancel();
   };
 
-  return form ? (<FormEditor 
+  return form && formIds ? (<FormEditor 
     form={form}
     formIds={formIds}
     components={components}

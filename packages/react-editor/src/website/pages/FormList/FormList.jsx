@@ -13,12 +13,12 @@ import rowActions from './row-actions';
 import headerActions from './header-actions';
 
 const FormList = ({ history }) => {
-  const [data, setData] = useState();
+  const [forms, setForms] = useState();
 
   useEffect(() => {
     const loadData = async () => {
       const forms = await service.searchEntity('form');
-      setData(Object.values(forms));
+      setForms(forms);
     };
     loadData();
   }, []);
@@ -32,15 +32,15 @@ const FormList = ({ history }) => {
   const remove = async (form) => {
     await service.removeEntity('form', form.model.id);
     const forms = await service.searchEntity('form');
-    setData(Object.values(forms));
+    setForms(forms);
   };
 
-  return !data ? (null) : (
+  return !forms ? (null) : (
     <FormListWrapper id="form-list">
-      <h1>Forms</h1>
+      <h1>Forms ({forms.count})</h1>
       <div>
         <Grid        
-          data={data}
+          data={forms.data}
           columns={columns({ edit })}
           headerActions={headerActions({ create })}
           rowActions={rowActions({ edit, download, downloadFormFiles, remove })} />
