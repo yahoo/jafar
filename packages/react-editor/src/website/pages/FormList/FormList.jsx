@@ -25,12 +25,12 @@ const FormList = ({ history }) => {
 
   const create = () => history.push({ pathname: `/form/new` });
 
-  const edit = (form) => history.push({ pathname: `/form/${form.model.id}` });
+  const edit = (form) => history.push({ pathname: `/form/${form.id}` });
 
-  const download = (form) => downloadJson(form, form.model.id);
+  const download = (form) => downloadJson(form, form.id);
 
   const remove = async (form) => {
-    await service.removeEntity('form', form.model.id);
+    await service.removeEntity('form', form.id);
     const forms = await service.searchEntity('form');
     setForms(forms);
   };
