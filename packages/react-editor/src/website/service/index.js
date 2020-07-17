@@ -27,7 +27,7 @@ export default {
   getEntity: async (name, id) => {
     const db = getDB();
     const entityMap = db[name] || {};
-    return entityMap[id];
+    return { id, ...entityMap[id] };
   },
   setEntity: async (name, id, entity) => {
     const db = getDB();

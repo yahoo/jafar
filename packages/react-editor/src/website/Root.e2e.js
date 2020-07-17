@@ -206,6 +206,7 @@ async function testCreateNewForm(page) {
   await page.click(selectors.showJsonMenuItem);
 
   // verify its data there
+  expectedFormJson.id = expectedFormJson.model.id;
   await verifyJsonView(page, expectedFormJson);
 }
 
