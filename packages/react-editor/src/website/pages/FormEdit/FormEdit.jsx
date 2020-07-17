@@ -8,19 +8,26 @@ import service from '../../service';
 import { FormEditor } from '../../../components';
 import components from './components';
 
-const FormEdit = ({ match, history }) => {
+const FormEdit = ({ match, location, history }) => {
   const [form, setForm] = useState();
   const [formIds, setFormIds] = useState();
 
   useEffect(() => {
     const loadData = async () => {
-      const form = await service.getEntity('form', match.params.formId) || {};
+      const params = new URLSearchParams(location.search); 
+      const from = params.get('from');
+      const isNew = match.params.formId === 'new';
+      const formId = isNew ? from : match.params.formId;
+      const form = await service.getEntity('form', formId) || {};
+      if (isNew && from) {
+        delete form.model.id;
+      }
       setForm(form);
       const forms = await service.searchEntity('form') || {};
       setFormIds(forms.data.map(x => x.model.id));
     };
     loadData();
-  }, [match.params.formId]);
+  }, [match.params.formId, location.search]);
 
   const onCancel = () => history.push({ pathname: `/form` });
 

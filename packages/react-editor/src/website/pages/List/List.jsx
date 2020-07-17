@@ -27,6 +27,8 @@ const List = ({ history, name, label = 'List', columns, headerActions = {}, rowA
 
   const edit = (entity) => history.push({ pathname: `/${name}/${entity.id}` });
 
+  const duplicate = (entity) => history.push({ pathname: `/${name}/new`, search: `from=${entity.id}` });
+
   const download = (entity) => downloadJson(entity, entity.id);
 
   const remove = async (entity) => {
@@ -41,7 +43,7 @@ const List = ({ history, name, label = 'List', columns, headerActions = {}, rowA
         data={result.data}
         columns={columns({ edit })}
         headerActions={baseHeaderActions({ create }, headerActions)}
-        rowActions={baseRowActions({ edit, download, remove }, rowActions)} />
+        rowActions={baseRowActions({ edit, duplicate, download, remove }, rowActions)} />
     </Wrapper>
   );
 };
