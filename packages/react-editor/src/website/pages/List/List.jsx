@@ -20,9 +20,7 @@ const loadData = async (name, setResult) => {
 const List = ({ history, name, label }) => {
   const [result, setResult] = useState();
 
-  useEffect(() => {
-    loadData(name, setResult);
-  }, []);
+  useEffect(() => loadData(name, setResult), []);
 
   const create = () => history.push({ pathname: `/${name}/new` });
 
@@ -38,13 +36,11 @@ const List = ({ history, name, label }) => {
   return !result ? (null) : (
     <Wrapper id={`${name}-list`}>
       <h1>{label} ({result.count})</h1>
-      <div>
-        <Grid        
-          data={result.data}
-          columns={columns({ edit })}
-          headerActions={headerActions({ create })}
-          rowActions={rowActions({ edit, download, downloadFormFiles, remove })} />
-      </div>
+      <Grid        
+        data={result.data}
+        columns={columns({ edit })}
+        headerActions={headerActions({ create })}
+        rowActions={rowActions({ edit, download, downloadFormFiles, remove })} />
     </Wrapper>
   );
 };
