@@ -6,21 +6,22 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '../../../components/Grid';
 import service from '../../service';
-import { downloadJson, downloadFormFiles } from '../../../utils/download';
+import { downloadJson } from '../../../utils/download';
 import { Wrapper } from './Styled';
-import columns from './columns';
-import rowActions from './row-actions';
-import headerActions from './header-actions';
+import baseRowActions from './row-actions';
+import baseHeaderActions from './header-actions';
 
 const loadData = async (name, setResult) => {
   const result = await service.searchEntity(name);
   setResult(result);
 };
 
-const List = ({ history, name, label }) => {
+const List = ({ history, name, label = 'List', columns, headerActions = {}, rowActions = {} }) => {
   const [result, setResult] = useState();
 
-  useEffect(() => loadData(name, setResult), []);
+  useEffect(() => {
+    loadData(name, setResult);
+  }, [name]);
 
   const create = () => history.push({ pathname: `/${name}/new` });
 
@@ -39,8 +40,8 @@ const List = ({ history, name, label }) => {
       <Grid        
         data={result.data}
         columns={columns({ edit })}
-        headerActions={headerActions({ create })}
-        rowActions={rowActions({ edit, download, downloadFormFiles, remove })} />
+        headerActions={[ ...baseHeaderActions({ create }), ...headerActions ]}
+        rowActions={[ ...baseRowActions({ edit, download, remove }), ...rowActions ]} />
     </Wrapper>
   );
 };

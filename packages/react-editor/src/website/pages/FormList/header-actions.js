@@ -1,4 +1,1 @@
-export default ({ create }) => [{
-  label: 'Create',
-  onClick: create,
-}];
+export default () => [];

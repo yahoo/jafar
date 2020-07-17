@@ -1,3 +1,3 @@
-import List from './Li./List
+import List from './List';
 
 export default List;

@@ -3,50 +3,20 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import React, { useState, useEffect } from 'react';
-import Grid from '../../../components/Grid';
-import service from '../../service';
-import { downloadJson, downloadFormFiles } from '../../../utils/download';
-import { FormListWrapper } from './Styled';
+import React from 'react';
+import { downloadFormFiles } from '../../../utils/download';
+import List from '../List';
 import columns from './columns';
 import rowActions from './row-actions';
 import headerActions from './header-actions';
 
-const FormList = ({ history }) => {
-  const [forms, setForms] = useState();
-
-  useEffect(() => {
-    const loadData = async () => {
-      const forms = await service.searchEntity('form');
-      setForms(forms);
-    };
-    loadData();
-  }, []);
-
-  const create = () => history.push({ pathname: `/form/new` });
-
-  const edit = (form) => history.push({ pathname: `/form/${form.id}` });
-
-  const download = (form) => downloadJson(form, form.id);
-
-  const remove = async (form) => {
-    await service.removeEntity('form', form.id);
-    const forms = await service.searchEntity('form');
-    setForms(forms);
-  };
-
-  return !forms ? (null) : (
-    <FormListWrapper id="form-list">
-      <h1>Forms ({forms.count})</h1>
-      <div>
-        <Grid        
-          data={forms.data}
-          columns={columns({ edit })}
-          headerActions={headerActions({ create })}
-          rowActions={rowActions({ edit, download, downloadFormFiles, remove })} />
-      </div>
-    </FormListWrapper>
-  );
-};
+const FormList = ({ history }) => (<List
+  history={history} 
+  name="form" 
+  label="Forms"
+  columns={columns} 
+  headerActions={headerActions()} 
+  rowActions={rowActions({ downloadFormFiles })} 
+/>);
 
 export default FormList;
