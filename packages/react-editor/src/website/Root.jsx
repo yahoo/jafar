@@ -10,9 +10,9 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import Styled from './Styled';
 import Home from './pages/Home';
-import FormList from './pages/FormList';
-import FormEdit from './pages/FormEdit';
-import FieldList from './pages/FieldList';
+import FormList from './pages/Form/List';
+import FormEdit from './pages/Form/Edit';
+import FieldList from './pages/Field/List';
 
 const generateClassName = createGenerateClassName({ productionPrefix: 'jafar-react-editor' });
 

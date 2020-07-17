@@ -4,8 +4,8 @@
   */
 
 import React, { useState, useEffect } from 'react';
-import service from '../../service';
-import { FormEditor } from '../../../components';
+import service from '../../../service';
+import { FormEditor } from '../../../../components';
 import components from './components';
 
 const FormEdit = ({ match, location, history }) => {

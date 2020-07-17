@@ -4,15 +4,16 @@
   */
 
 import React from 'react';
-import List from '../List';
+import { downloadFormFiles } from '../../../../utils/download';
+import List from '../../List';
 import columns from './columns';
 import rowActions from './row-actions';
 import headerActions from './header-actions';
 
 export default () => (<List
-  name="field" 
-  label="Fields"
+  name="form" 
+  label="Forms"
   columns={columns} 
   headerActions={headerActions()} 
-  rowActions={rowActions()} 
+  rowActions={rowActions({ downloadFormFiles })} 
 />);
