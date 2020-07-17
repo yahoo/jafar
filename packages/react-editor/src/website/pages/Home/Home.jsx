@@ -20,20 +20,23 @@ export default withRouter(({ history }) => {
   const goToFields = () => history.push('/fields');
 
   const actions = [{
+    id: 'init-db',
     label: 'Init Mock DB',
     icon: DbIcon,
     onClick: resetDB,
   }, {
+    id: 'forms',
     label: 'Forms',
     icon: FormIcon,
     onClick: goToForms,
   }, {
+    id: 'fields',
     label: 'Fields Library',
     icon: FieldsIcon,
     onClick: goToFields,
   }]; 
 
-  return (<Wrapper>
+  return (<Wrapper aria-label="home-page">
     <h1>Editor</h1>
     <p>
       We created a simple UI form editor - which you can use to create the form <Link
@@ -45,9 +48,9 @@ export default withRouter(({ history }) => {
       if defined prior to use it in the Form class / component). In addition you can clone Jafar repository and
       change / adapt the Form Editor to your system's needs (located in the "react-editor" package).
     </p>
-    <Actions>
+    <Actions aria-label="actions">
       {
-        actions.map(action => (<Action key={action.label} onClick={action.onClick}>
+        actions.map(action => (<Action key={action.id} aria-label={action.id} onClick={action.onClick}>
           { done === action.label ? <Boolean value={true} /> : <action.icon /> }
           <div>{action.label}</div>
         </Action>))
