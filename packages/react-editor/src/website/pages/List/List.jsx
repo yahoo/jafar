@@ -40,8 +40,8 @@ const List = ({ history, name, label = 'List', columns, headerActions = {}, rowA
       <Grid        
         data={result.data}
         columns={columns({ edit })}
-        headerActions={[ ...baseHeaderActions({ create }), ...headerActions ]}
-        rowActions={[ ...baseRowActions({ edit, download, remove }), ...rowActions ]} />
+        headerActions={baseHeaderActions({ create }, headerActions)}
+        rowActions={baseRowActions({ edit, download, remove }, rowActions)} />
     </Wrapper>
   );
 };
