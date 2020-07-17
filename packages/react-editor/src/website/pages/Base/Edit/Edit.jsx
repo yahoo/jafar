@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import service from '../../service';
+import service from '../../../service';
 
 const _generateId = () => Math.random().toString(16).slice(2);
 

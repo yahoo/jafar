@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import service from '../../../service';
 import { FormEditor } from '../../../../components';
-import Edit from '../../Edit';
+import Edit from '../../Base/Edit';
 import components from '../../../components';
 
 const generateId = form => form.model.id;
