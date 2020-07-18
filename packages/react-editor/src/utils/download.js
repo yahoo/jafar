@@ -1,5 +1,15 @@
 import JSZip from 'jszip';
 
+const removePrivateData = (obj = {}) => {
+  const newObj = { ...obj };
+  Object.keys(newObj).forEach(key => {
+    if (key.startsWith('_')) {
+      delete newObj[key];
+    }
+  })
+  return newObj;
+}
+
 const addFormFolder = (rootFolder, form) => {
   // add form folder
   const formFolder = rootFolder.folder('form');
@@ -12,7 +22,8 @@ const addFormFolder = (rootFolder, form) => {
   let fieldsIndex = '';
   const fieldIds = Object.keys(form.model.fields);
   fieldIds.forEach(fieldId => {
-    fieldsFolder.file(`${fieldId}.json`, JSON.stringify(form.model.fields[fieldId]));
+    const field = removePrivateData(form.model.fields[fieldId]);
+    fieldsFolder.file(`${fieldId}.json`, JSON.stringify(field));
     fieldsIndex += `import ${fieldId} from './${fieldId}.json';\n`;
   });
   fieldsIndex += `\n\nexport default { ${ fieldIds.join(', ') } }`;
