@@ -327,9 +327,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-hzDkRC",
+              "componentId": "sc-dVhcbM",
               "isStatic": false,
-              "lastClassName": "kkwFYN",
+              "lastClassName": "cfZMBZ",
               "rules": Array [
                 "
   position: relative;
@@ -343,7 +343,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-hzDkRC",
+            "styledComponentId": "sc-dVhcbM",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -354,12 +354,13 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
       >
         <div
           aria-label="form-editor"
-          className="sc-hzDkRC kkwFYN"
+          className="sc-dVhcbM cfZMBZ"
         >
           <Form
             model={
               Object {
                 "context": Object {
+                  "fieldsLibrary": undefined,
                   "formIds": Array [],
                 },
                 "data": Object {},
@@ -624,7 +625,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                   },
                 ]
               }
-              title="Form - new"
+              title="Form | new"
             >
               <styled.div>
                 <StyledComponent
@@ -828,7 +829,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                           },
                         ]
                       }
-                      title="Form - new"
+                      title="Form | new"
                     >
                       <ItemView
                         footer={
@@ -945,11 +946,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                               "id": "model",
                               "ref": Object {
                                 "current": <div
-                                  class="sc-caSCKo bcZDVN"
+                                  class="sc-TOsTZ eEgwHT"
                                   id="model"
                                 >
                                   <div
-                                    class="sc-gisBJw dPmelf"
+                                    class="sc-kgAjT kWaGSh"
                                   >
                                     Model
                                   </div>
@@ -1009,11 +1010,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                               "id": "settings",
                               "ref": Object {
                                 "current": <div
-                                  class="sc-caSCKo bcZDVN"
+                                  class="sc-TOsTZ eEgwHT"
                                   id="settings"
                                 >
                                   <div
-                                    class="sc-gisBJw dPmelf"
+                                    class="sc-kgAjT kWaGSh"
                                   >
                                     Settings
                                   </div>
@@ -1045,11 +1046,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                               "id": "layouts",
                               "ref": Object {
                                 "current": <div
-                                  class="sc-caSCKo bcZDVN"
+                                  class="sc-TOsTZ eEgwHT"
                                   id="layouts"
                                 >
                                   <div
-                                    class="sc-gisBJw dPmelf"
+                                    class="sc-kgAjT kWaGSh"
                                   >
                                     Layouts
                                   </div>
@@ -1066,14 +1067,14 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                           Object {
                             "current": <div
                               aria-label="Sections"
-                              class="sc-fAjcbJ dvyzbP"
+                              class="sc-cHGsZl iZzibN"
                             >
                               <div
-                                class="sc-caSCKo bcZDVN"
+                                class="sc-TOsTZ eEgwHT"
                                 id="model"
                               >
                                 <div
-                                  class="sc-gisBJw dPmelf"
+                                  class="sc-kgAjT kWaGSh"
                                 >
                                   Model
                                 </div>
@@ -1082,11 +1083,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                 />
                               </div>
                               <div
-                                class="sc-caSCKo bcZDVN"
+                                class="sc-TOsTZ eEgwHT"
                                 id="settings"
                               >
                                 <div
-                                  class="sc-gisBJw dPmelf"
+                                  class="sc-kgAjT kWaGSh"
                                 >
                                   Settings
                                 </div>
@@ -1095,11 +1096,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                 />
                               </div>
                               <div
-                                class="sc-caSCKo bcZDVN"
+                                class="sc-TOsTZ eEgwHT"
                                 id="layouts"
                               >
                                 <div
-                                  class="sc-gisBJw dPmelf"
+                                  class="sc-kgAjT kWaGSh"
                                 >
                                   Layouts
                                 </div>
@@ -1131,7 +1132,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                             "value": "model",
                           }
                         }
-                        title="Form - new"
+                        title="Form | new"
                       >
                         <styled.div>
                           <StyledComponent
@@ -1140,9 +1141,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jhAzac",
+                                  "componentId": "sc-eqIVtm",
                                   "isStatic": false,
-                                  "lastClassName": "iTANVJ",
+                                  "lastClassName": "yZXex",
                                   "rules": Array [
                                     "
         color: #3d3d3d;
@@ -1156,7 +1157,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-jhAzac",
+                                "styledComponentId": "sc-eqIVtm",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -1166,7 +1167,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                             forwardedRef={null}
                           >
                             <div
-                              className="sc-jhAzac iTANVJ"
+                              className="sc-eqIVtm yZXex"
                             >
                               <styled.div>
                                 <StyledComponent
@@ -1175,9 +1176,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-fBuWsC",
+                                        "componentId": "sc-fAjcbJ",
                                         "isStatic": false,
-                                        "lastClassName": "gSkNYl",
+                                        "lastClassName": "dFkfmm",
                                         "rules": Array [
                                           "
         flex: 0 0 auto;
@@ -1194,7 +1195,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       "displayName": "styled.div",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-fBuWsC",
+                                      "styledComponentId": "sc-fAjcbJ",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -1204,7 +1205,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="sc-fBuWsC gSkNYl"
+                                    className="sc-fAjcbJ dFkfmm"
                                   >
                                     <styled.div>
                                       <StyledComponent
@@ -1213,9 +1214,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-dVhcbM",
+                                              "componentId": "sc-gisBJw",
                                               "isStatic": false,
-                                              "lastClassName": "kkFLQZ",
+                                              "lastClassName": "eKBFPR",
                                               "rules": Array [
                                                 "
         font-size: ",
@@ -1232,7 +1233,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "displayName": "styled.div",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-dVhcbM",
+                                            "styledComponentId": "sc-gisBJw",
                                             "target": "div",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -1242,9 +1243,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         forwardedRef={null}
                                       >
                                         <div
-                                          className="sc-dVhcbM kkFLQZ"
+                                          className="sc-gisBJw eKBFPR"
                                         >
-                                          Form - new
+                                          Form | new
                                         </div>
                                       </StyledComponent>
                                     </styled.div>
@@ -1255,9 +1256,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-fMiknA",
+                                              "componentId": "sc-caSCKo",
                                               "isStatic": false,
-                                              "lastClassName": "erywSe",
+                                              "lastClassName": "feoCXg",
                                               "rules": Array [
                                                 "
         position: absolute;
@@ -1269,7 +1270,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "displayName": "styled.div",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-fMiknA",
+                                            "styledComponentId": "sc-caSCKo",
                                             "target": "div",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -1279,7 +1280,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         forwardedRef={null}
                                       >
                                         <div
-                                          className="sc-fMiknA erywSe"
+                                          className="sc-caSCKo feoCXg"
                                         >
                                           <Options
                                             options={
@@ -1556,9 +1557,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-eqIVtm",
+                                              "componentId": "sc-kjoXOD",
                                               "isStatic": false,
-                                              "lastClassName": "knYuxi",
+                                              "lastClassName": "kDWfGG",
                                               "rules": Array [
                                                 "
         position: relative;
@@ -1570,7 +1571,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             "displayName": "styled.div",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-eqIVtm",
+                                            "styledComponentId": "sc-kjoXOD",
                                             "target": "div",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -1580,7 +1581,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         forwardedRef={null}
                                       >
                                         <div
-                                          className="sc-eqIVtm knYuxi"
+                                          className="sc-kjoXOD kDWfGG"
                                         >
                                           <WithStyles(ForwardRef(Tabs))
                                             aria-label="Tabs"
@@ -2046,9 +2047,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-fAjcbJ",
+                                        "componentId": "sc-cHGsZl",
                                         "isStatic": false,
-                                        "lastClassName": "dvyzbP",
+                                        "lastClassName": "iZzibN",
                                         "rules": Array [
                                           "
         flex-grow: 1;
@@ -2059,7 +2060,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                       "displayName": "styled.div",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-fAjcbJ",
+                                      "styledComponentId": "sc-cHGsZl",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -2070,14 +2071,14 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                     Object {
                                       "current": <div
                                         aria-label="Sections"
-                                        class="sc-fAjcbJ dvyzbP"
+                                        class="sc-cHGsZl iZzibN"
                                       >
                                         <div
-                                          class="sc-caSCKo bcZDVN"
+                                          class="sc-TOsTZ eEgwHT"
                                           id="model"
                                         >
                                           <div
-                                            class="sc-gisBJw dPmelf"
+                                            class="sc-kgAjT kWaGSh"
                                           >
                                             Model
                                           </div>
@@ -2086,11 +2087,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                           />
                                         </div>
                                         <div
-                                          class="sc-caSCKo bcZDVN"
+                                          class="sc-TOsTZ eEgwHT"
                                           id="settings"
                                         >
                                           <div
-                                            class="sc-gisBJw dPmelf"
+                                            class="sc-kgAjT kWaGSh"
                                           >
                                             Settings
                                           </div>
@@ -2099,11 +2100,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                           />
                                         </div>
                                         <div
-                                          class="sc-caSCKo bcZDVN"
+                                          class="sc-TOsTZ eEgwHT"
                                           id="layouts"
                                         >
                                           <div
-                                            class="sc-gisBJw dPmelf"
+                                            class="sc-kgAjT kWaGSh"
                                           >
                                             Layouts
                                           </div>
@@ -2117,7 +2118,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                 >
                                   <div
                                     aria-label="Sections"
-                                    className="sc-fAjcbJ dvyzbP"
+                                    className="sc-cHGsZl iZzibN"
                                   >
                                     <ForwardRef
                                       grid={
@@ -2207,11 +2208,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         innerRef={
                                           Object {
                                             "current": <div
-                                              class="sc-caSCKo bcZDVN"
+                                              class="sc-TOsTZ eEgwHT"
                                               id="model"
                                             >
                                               <div
-                                                class="sc-gisBJw dPmelf"
+                                                class="sc-kgAjT kWaGSh"
                                               >
                                                 Model
                                               </div>
@@ -2234,9 +2235,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-caSCKo",
+                                                  "componentId": "sc-TOsTZ",
                                                   "isStatic": false,
-                                                  "lastClassName": "bcZDVN",
+                                                  "lastClassName": "eEgwHT",
                                                   "rules": Array [
                                                     "
         padding: ",
@@ -2254,7 +2255,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                 "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-caSCKo",
+                                                "styledComponentId": "sc-TOsTZ",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2264,11 +2265,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             forwardedRef={
                                               Object {
                                                 "current": <div
-                                                  class="sc-caSCKo bcZDVN"
+                                                  class="sc-TOsTZ eEgwHT"
                                                   id="model"
                                                 >
                                                   <div
-                                                    class="sc-gisBJw dPmelf"
+                                                    class="sc-kgAjT kWaGSh"
                                                   >
                                                     Model
                                                   </div>
@@ -2281,7 +2282,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             id="model"
                                           >
                                             <div
-                                              className="sc-caSCKo bcZDVN"
+                                              className="sc-TOsTZ eEgwHT"
                                               id="model"
                                             >
                                               <styled.div>
@@ -2291,9 +2292,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-gisBJw",
+                                                        "componentId": "sc-kgAjT",
                                                         "isStatic": false,
-                                                        "lastClassName": "dPmelf",
+                                                        "lastClassName": "kWaGSh",
                                                         "rules": Array [
                                                           "
         text-transform: uppercase;
@@ -2315,7 +2316,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                       "displayName": "styled.div",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-gisBJw",
+                                                      "styledComponentId": "sc-kgAjT",
                                                       "target": "div",
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -2325,7 +2326,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                   forwardedRef={null}
                                                 >
                                                   <div
-                                                    className="sc-gisBJw dPmelf"
+                                                    className="sc-kgAjT kWaGSh"
                                                   >
                                                     Model
                                                   </div>
@@ -2667,11 +2668,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         innerRef={
                                           Object {
                                             "current": <div
-                                              class="sc-caSCKo bcZDVN"
+                                              class="sc-TOsTZ eEgwHT"
                                               id="settings"
                                             >
                                               <div
-                                                class="sc-gisBJw dPmelf"
+                                                class="sc-kgAjT kWaGSh"
                                               >
                                                 Settings
                                               </div>
@@ -2694,9 +2695,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-caSCKo",
+                                                  "componentId": "sc-TOsTZ",
                                                   "isStatic": false,
-                                                  "lastClassName": "bcZDVN",
+                                                  "lastClassName": "eEgwHT",
                                                   "rules": Array [
                                                     "
         padding: ",
@@ -2714,7 +2715,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                 "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-caSCKo",
+                                                "styledComponentId": "sc-TOsTZ",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -2724,11 +2725,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             forwardedRef={
                                               Object {
                                                 "current": <div
-                                                  class="sc-caSCKo bcZDVN"
+                                                  class="sc-TOsTZ eEgwHT"
                                                   id="settings"
                                                 >
                                                   <div
-                                                    class="sc-gisBJw dPmelf"
+                                                    class="sc-kgAjT kWaGSh"
                                                   >
                                                     Settings
                                                   </div>
@@ -2741,7 +2742,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             id="settings"
                                           >
                                             <div
-                                              className="sc-caSCKo bcZDVN"
+                                              className="sc-TOsTZ eEgwHT"
                                               id="settings"
                                             >
                                               <styled.div>
@@ -2751,9 +2752,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-gisBJw",
+                                                        "componentId": "sc-kgAjT",
                                                         "isStatic": false,
-                                                        "lastClassName": "dPmelf",
+                                                        "lastClassName": "kWaGSh",
                                                         "rules": Array [
                                                           "
         text-transform: uppercase;
@@ -2775,7 +2776,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                       "displayName": "styled.div",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-gisBJw",
+                                                      "styledComponentId": "sc-kgAjT",
                                                       "target": "div",
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -2785,7 +2786,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                   forwardedRef={null}
                                                 >
                                                   <div
-                                                    className="sc-gisBJw dPmelf"
+                                                    className="sc-kgAjT kWaGSh"
                                                   >
                                                     Settings
                                                   </div>
@@ -3118,11 +3119,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                         innerRef={
                                           Object {
                                             "current": <div
-                                              class="sc-caSCKo bcZDVN"
+                                              class="sc-TOsTZ eEgwHT"
                                               id="layouts"
                                             >
                                               <div
-                                                class="sc-gisBJw dPmelf"
+                                                class="sc-kgAjT kWaGSh"
                                               >
                                                 Layouts
                                               </div>
@@ -3145,9 +3146,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                 "$$typeof": Symbol(react.forward_ref),
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
-                                                  "componentId": "sc-caSCKo",
+                                                  "componentId": "sc-TOsTZ",
                                                   "isStatic": false,
-                                                  "lastClassName": "bcZDVN",
+                                                  "lastClassName": "eEgwHT",
                                                   "rules": Array [
                                                     "
         padding: ",
@@ -3165,7 +3166,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                 "displayName": "styled.div",
                                                 "foldedComponentIds": Array [],
                                                 "render": [Function],
-                                                "styledComponentId": "sc-caSCKo",
+                                                "styledComponentId": "sc-TOsTZ",
                                                 "target": "div",
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
@@ -3175,11 +3176,11 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             forwardedRef={
                                               Object {
                                                 "current": <div
-                                                  class="sc-caSCKo bcZDVN"
+                                                  class="sc-TOsTZ eEgwHT"
                                                   id="layouts"
                                                 >
                                                   <div
-                                                    class="sc-gisBJw dPmelf"
+                                                    class="sc-kgAjT kWaGSh"
                                                   >
                                                     Layouts
                                                   </div>
@@ -3192,7 +3193,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                             id="layouts"
                                           >
                                             <div
-                                              className="sc-caSCKo bcZDVN"
+                                              className="sc-TOsTZ eEgwHT"
                                               id="layouts"
                                             >
                                               <styled.div>
@@ -3202,9 +3203,9 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                       "$$typeof": Symbol(react.forward_ref),
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-gisBJw",
+                                                        "componentId": "sc-kgAjT",
                                                         "isStatic": false,
-                                                        "lastClassName": "dPmelf",
+                                                        "lastClassName": "kWaGSh",
                                                         "rules": Array [
                                                           "
         text-transform: uppercase;
@@ -3226,7 +3227,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                       "displayName": "styled.div",
                                                       "foldedComponentIds": Array [],
                                                       "render": [Function],
-                                                      "styledComponentId": "sc-gisBJw",
+                                                      "styledComponentId": "sc-kgAjT",
                                                       "target": "div",
                                                       "toString": [Function],
                                                       "warnTooManyClasses": [Function],
@@ -3236,7 +3237,7 @@ exports[`FormEditor Should render component when props are defined - ok 1`] = `
                                                   forwardedRef={null}
                                                 >
                                                   <div
-                                                    className="sc-gisBJw dPmelf"
+                                                    className="sc-kgAjT kWaGSh"
                                                   >
                                                     Layouts
                                                   </div>

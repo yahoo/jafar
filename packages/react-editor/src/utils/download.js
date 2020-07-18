@@ -6,9 +6,9 @@ const removePrivateData = (obj = {}) => {
     if (key.startsWith('_')) {
       delete newObj[key];
     }
-  })
+  });
   return newObj;
-}
+};
 
 const addFormFolder = (rootFolder, form) => {
   // add form folder

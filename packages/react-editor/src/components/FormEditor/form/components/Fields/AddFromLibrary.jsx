@@ -36,4 +36,4 @@ export default ({ value = initialValue, onValueChange, fields }) => {
       <RadioGroup value={value.type} state={radioState} onValueChange={onChangeType} />
     </ComponentWrapper>
   </>);
-}
+};
