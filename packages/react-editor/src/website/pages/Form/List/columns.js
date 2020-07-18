@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Boolean from '@jafar/react-components/view/Boolean';
-import { BooleanWrapper, Link } from '../../List/Styled';
+import { BooleanWrapper, Link } from '../../Base/List/Styled';
 
 
 export default ({ edit }) => [{

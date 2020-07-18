@@ -42,7 +42,7 @@ export default () => {
       onCancel={onCancel}
       fieldId={entity.id} 
       fieldIds={fieldIds} />);
-  }
+  };
   
   return !fieldIds ? (null) : (<Edit name={NAME} renderEditor={renderEditor} />);
 };

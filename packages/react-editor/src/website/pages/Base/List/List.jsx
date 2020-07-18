@@ -4,10 +4,11 @@
   */
 
 import React, { useState, useEffect } from 'react';
+import noop from 'lodash/noop';
 import { withRouter } from 'react-router-dom';
-import Grid from '../../../components/Grid';
-import service from '../../service';
-import { downloadJson } from '../../../utils/download';
+import Grid from '../../../../components/Grid';
+import service from '../../../service';
+import { downloadJson } from '../../../../utils/download';
 import { Wrapper, Title } from './Styled';
 import baseRowActions from './row-actions';
 import baseHeaderActions from './header-actions';
@@ -17,7 +18,7 @@ const loadData = async (name, setResult) => {
   setResult(result);
 };
 
-const List = ({ history, name, label = 'List', columns, headerActions = {}, rowActions = {} }) => {
+const List = ({ history, name, label = 'List', columns, headerActions = {}, rowActions = {}, onDelete = noop }) => {
   const [result, setResult] = useState();
 
   useEffect(() => {
@@ -33,6 +34,8 @@ const List = ({ history, name, label = 'List', columns, headerActions = {}, rowA
   const download = (entity) => downloadJson(entity, entity.id);
 
   const remove = async (entity) => {
+    debugger; // eslint-disable-line
+    await onDelete(entity);
     await service.removeEntity(name, entity.id);
     await loadData(name, setResult);
   };

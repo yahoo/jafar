@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { downloadFormFiles } from '../../../../utils/download';
-import List from '../../List';
+import List from '../../Base/List';
 import columns from './columns';
 import rowActions from './row-actions';
 import headerActions from './header-actions';

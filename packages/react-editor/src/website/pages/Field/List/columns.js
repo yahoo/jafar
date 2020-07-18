@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Boolean from '@jafar/react-components/view/Boolean';
 import service from '../../../service';
-import { Link, BooleanWrapper } from '../../List/Styled';
+import { Link, BooleanWrapper } from '../../Base/List/Styled';
 
 const References = ({ fieldId }) => {
   const [references, setReferences] = useState();
