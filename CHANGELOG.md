@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### React Editor
+
+* Add - fields library. [Issue 75](https://github.com/yahoo/jafar/issues/75)
+
 ### React Components
 
 * Update selects components - support custom styles. [Issue 79](https://github.com/yahoo/jafar/issues/79)
