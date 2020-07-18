@@ -36,3 +36,8 @@ export const FieldEditorWrapper = styled.div`
   height: 100%;
   z-index: 21;
 `;
+
+export const ComponentWrapper = styled.div`
+  width: 400px;
+  margin: 0 0 20px 0;
+`;

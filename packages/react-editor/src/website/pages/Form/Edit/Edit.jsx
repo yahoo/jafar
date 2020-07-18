@@ -15,11 +15,15 @@ const generateId = form => form.model.id;
 
 export default () => {
   const [formIds, setFormIds] = useState();
+  const [libraryFields, setLibraryFields] = useState();
 
   useEffect(() => {
     const loadData = async () => {
-      const forms = await service.searchEntity(NAME) || {};
+      const forms = await service.searchEntity(NAME);
       setFormIds(forms.data.map(x => x.model.id));
+
+      const fields = await service.searchEntity('field');
+      setLibraryFields(fields.data);
     };
     loadData();
   }, []);
@@ -28,11 +32,9 @@ export default () => {
     form={entity}
     formIds={formIds}
     components={components}
-    fieldsLibrary={{
-      // todo
-    }}
+    fieldsLibrary={{ fields: libraryFields }}
     onSave={onSave} 
     onCancel={onCancel} />);
   
-  return !formIds ? (null) : (<Edit name={NAME} generateId={generateId} renderEditor={renderEditor} />);
+  return !formIds || !libraryFields ? (null) : (<Edit name={NAME} generateId={generateId} renderEditor={renderEditor} />);
 };

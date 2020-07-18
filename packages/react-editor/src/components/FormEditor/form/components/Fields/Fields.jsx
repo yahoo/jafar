@@ -14,13 +14,15 @@ import columns from './columns';
 import rowActions from './row-actions';
 import headerActions from './header-actions';
 import { FieldEditorWrapper, GridWrapper } from './Styled';
+import AddFromLibrary from './AddFromLibrary';
 
 
 const Fields = ({ value = {}, state = {}, onValueChange, onStateChange }) => {
   const parentForm = useContext(FormContext);
-  const { editingField, showModal } = state;
+  const { editingField, showModal, addFromLibraryValue } = state;
   const setEditingField = editingField => onStateChange({ ...state, editingField });
   const setShowModal = name => onStateChange({ ...state, showModal: name });
+  const setAddFromLibraryValue = addFromLibraryValue => onStateChange({ ...state, addFromLibraryValue });
 
   const add = () => setEditingField({ field: {} });
 
@@ -59,7 +61,7 @@ const Fields = ({ value = {}, state = {}, onValueChange, onStateChange }) => {
   const data = Object.keys(value).sort().map(fieldId => ({ fieldId, field: value[fieldId] }));
   const parentModel = parentForm.model.data.model || {};
   const fieldsLibrary = parentForm.model.context.fieldsLibrary;
-  
+
   return (<>
     {
       editingField && <FieldEditorWrapper aria-label="field-editor"><FieldEditor 
@@ -74,11 +76,15 @@ const Fields = ({ value = {}, state = {}, onValueChange, onStateChange }) => {
     {
       showModal === 'library' && <Dialog 
         open={true}
-        title="Add Field From Library"
+        title="Add Fields From Library"
         confirmText="Add"
         onConfirm={saveFromLibrary} 
         onCancel={setShowModal}>
-        <div>hii</div>
+        <AddFromLibrary 
+          value={addFromLibraryValue} 
+          onValueChange={setAddFromLibraryValue} 
+          fields={fieldsLibrary.fields}
+        />
       </Dialog>
     }
     <GridWrapper>
