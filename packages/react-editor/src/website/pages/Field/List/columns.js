@@ -26,6 +26,9 @@ export default ({ edit }) => [{
   label: 'Label',
   content: (field) => field.label,
 }, {
+  label: 'Dependencies',
+  content: (field) => (field.dependencies || []).join(', '),
+}, {
   label: 'Required',
   content: (field) => <BooleanWrapper><Boolean value={field.required} /></BooleanWrapper>,
 }, {
