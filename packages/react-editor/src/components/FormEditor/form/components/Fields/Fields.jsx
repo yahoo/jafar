@@ -41,7 +41,10 @@ const Fields = ({ value = {}, onValueChange }) => {
     onValueChange(newValue);
   };
 
-  const save = ({ fieldId, field }) => {
+  const save = ({ data }) => {
+    const fieldId = data.id;
+    const field = { ...data };
+    delete field.id;
     const newValue = { ...value };
     newValue[fieldId] = field;
     onValueChange(newValue);

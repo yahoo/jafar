@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import service from '../../../service';
 
-const _generateId = () => Math.random().toString(16).slice(2);
+const _generateId = (entity) => entity.id || Math.random().toString(16).slice(2);
 
 const Edit = ({ name, generateId = _generateId, renderEditor, match, location, history }) => {
   const [entity, setEntity] = useState();

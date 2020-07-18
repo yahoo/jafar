@@ -9,6 +9,8 @@ import { FormEditor } from '../../../../components';
 import Edit from '../../Base/Edit';
 import components from '../../../components';
 
+const NAME = 'form';
+
 const generateId = form => form.model.id;
 
 export default () => {
@@ -16,7 +18,7 @@ export default () => {
 
   useEffect(() => {
     const loadData = async () => {
-      const forms = await service.searchEntity('form') || {};
+      const forms = await service.searchEntity(NAME) || {};
       setFormIds(forms.data.map(x => x.model.id));
     };
     loadData();
@@ -29,5 +31,5 @@ export default () => {
     onSave={onSave} 
     onCancel={onCancel} />);
   
-  return !formIds ? (null) : (<Edit name="form" generateId={generateId} renderEditor={renderEditor} />);
+  return !formIds ? (null) : (<Edit name={NAME} generateId={generateId} renderEditor={renderEditor} />);
 };
