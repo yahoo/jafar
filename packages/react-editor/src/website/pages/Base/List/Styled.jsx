@@ -3,8 +3,6 @@ import { withTheme } from '@material-ui/styles';
 
 export const Wrapper = styled.div`
   padding: 40px;
-  margin: 0 auto;
-  width: 700px;
   flex: 1;
   display: flex;
   flex-direction: column;

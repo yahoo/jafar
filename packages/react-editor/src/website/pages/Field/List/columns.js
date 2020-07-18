@@ -5,7 +5,7 @@ import service from '../../../service';
 import { Link, BooleanWrapper } from '../../Base/List/Styled';
 
 const References = ({ fieldId }) => {
-  const [references, setReferences] = useState();
+  const [references, setReferences] = useState([]);
 
   useEffect(() => {
     const loadData = async () => {
@@ -16,7 +16,7 @@ const References = ({ fieldId }) => {
     loadData();
   }, [fieldId]);
   
-  return !references ? (null) : (<div>{references.length}</div>);
+  return !references.length ? (null) : (<div>{references.length}</div>);
 };
 
 export default ({ edit }) => [{
