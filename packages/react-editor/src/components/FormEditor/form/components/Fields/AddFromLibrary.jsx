@@ -28,7 +28,7 @@ export default ({ value = initialValue, onValueChange, fields }) => {
   const onChangeType = (type) => { onValueChange({ ...value, type }); };
   const onChangeFields = (fields) => { onValueChange({ ...value, fields }); };
 
-  multiSelectState.items = fields.map(field => ({ value: field.id, label: field.label }));
+  multiSelectState.items = fields.map(field => ({ value: field, label: field.label }));
 
   return (<>
     <ComponentWrapper>

@@ -20,9 +20,9 @@ import AddFromLibrary from './AddFromLibrary';
 const Fields = ({ value = {}, state = {}, onValueChange, onStateChange }) => {
   const parentForm = useContext(FormContext);
   const { editingField, showModal, addFromLibraryValue } = state;
-  const setEditingField = editingField => onStateChange({ ...state, editingField });
-  const setShowModal = name => onStateChange({ ...state, showModal: name });
-  const setAddFromLibraryValue = addFromLibraryValue => onStateChange({ ...state, addFromLibraryValue });
+  const setEditingField = editingField => onStateChange(({ state }) => ({ ...state, editingField }));
+  const setShowModal = name => onStateChange(({ state }) => ({ ...state, showModal: name }));
+  const setAddFromLibraryValue = addFromLibraryValue => onStateChange(({ state }) => ({ ...state, addFromLibraryValue }));
 
   const add = () => setEditingField({ field: {} });
 
@@ -39,7 +39,23 @@ const Fields = ({ value = {}, state = {}, onValueChange, onStateChange }) => {
   const addFromLibrary = () => setShowModal('library');
 
   const saveFromLibrary = () => {
+    // add selected library fields to local fields
+    const newValue = { ...value };
+    const { fields, type } = addFromLibraryValue;
     
+    fields.forEach(field => {
+      const addField = { ...field };
+      delete addField.id;
+      if (type === 'reference') {
+        addField._referenced = true;
+      }
+      newValue[field.id] = addField;     
+    });
+    onValueChange(newValue);
+
+    // clean modal and close
+    setShowModal();
+    setAddFromLibraryValue();
   };
 
   const duplicate = ({ fieldId }) => {
