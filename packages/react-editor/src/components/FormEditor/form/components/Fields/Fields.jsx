@@ -3,7 +3,7 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { FormContext } from '@jafar/react-form';
 import { FieldEditor } from '../../../../index';
@@ -15,9 +15,10 @@ import headerActions from './header-actions';
 import * as Styled from './Styled';
 
 
-const Fields = ({ value = {}, onValueChange }) => {
+const Fields = ({ value = {}, state = {}, onValueChange, onStateChange }) => {
   const parentForm = useContext(FormContext);
-  const [editingField, setEditingField] = useState();
+  const { editingField } = state;
+  const setEditingField = editingField => onStateChange({ ...state, editingField });
 
   const add = () => {
     setEditingField({ field: {} });
