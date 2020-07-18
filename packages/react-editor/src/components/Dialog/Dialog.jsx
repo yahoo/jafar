@@ -6,7 +6,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
 
-export default ({ title, onCancel, onConfirm, confirmText = 'OK', cancelText = 'Cancel', children }) => (<Dialog open={true} onClose={onCancel}>
+export default ({ title, onCancel, onConfirm, confirmText = 'OK', cancelText = 'Cancel', 
+  children }) => (<Dialog open={true} onClose={onCancel}>
   <DialogTitle>{title}</DialogTitle>
   <DialogContent>
     { typeof children === 'string' ? <DialogContentText>{children}</DialogContentText> : <>{ children }</>}

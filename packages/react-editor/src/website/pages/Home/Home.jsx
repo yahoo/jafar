@@ -51,8 +51,9 @@ export default withRouter(({ history }) => {
         href="https://yahoo.github.io/jafar/docs/arguments.html#resources">resources</Link> such as actual components,
         custom validators and more - if defined in the form model, prior to passing it to the Form class / component)</li>
       <li>Create common fields in 'Fields Library'</li>
-      <li>Add common fields to a form using a reference (i.e when a library field is updated - all referenced fields are updated as well), 
-        or clone (i.e a full copy of the library field which will not be affected when the library field updates)</li>
+      <li>Add common fields to a form using a reference (i.e when a library field is updated - all referenced fields are 
+        updated as well), or clone (i.e a full copy of the library field which will not be affected when the library field 
+        updates)</li>
       <li>Clone Jafar repository and adapt the Form Editor to your system's needs (located in the "react-editor" package)</li>
     </ul>
     <h3>Get Started</h3>
