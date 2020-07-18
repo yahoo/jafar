@@ -3,8 +3,8 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import form from './form';
+import employee from './employee';
 
 export default {
-  form,
+  [employee.model.id]: employee,
 };

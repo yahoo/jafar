@@ -25,6 +25,8 @@ html, body, #root {
 
 const Main = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
 `;
 

@@ -12,6 +12,9 @@ const JsonEditorWrapper = styled.div`
   [name="outer-box"], [name="container"] {
     width: 100% !important;
   }
+  [name="body"] {
+    background-color: #f9f9f9 !important;
+  }
 `;
 
 /**

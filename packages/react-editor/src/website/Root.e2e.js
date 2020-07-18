@@ -15,19 +15,26 @@ const BASE_URL = process.env.DEMO_URL || localhostUrl;
 const browsers = [];
 
 const selectors = {
+  logo: '#logo',
   root: '#jafar-react-editor-demos',
+  home: {
+    wrapper: '[aria-label="home-page"]',
+    actions: {
+      initDB: '[aria-label="init-db"]',
+      forms: '[aria-label="forms"]',
+    },
+  },
   jsonView: '[aria-label="json-view"]',
   optionsMenuButton: '[aria-label="Options"]',
   showJsonMenuItem: '[id="options-menu"] [role="menuitem"]:nth-child(1)',
   formListWrapper: '#form-list',
   formsGridRows: '[aria-label="grid"] [aria-label="grid-row"]',
-  formsGridCreateButton: '[aria-label="grid"] [aria-label="grid-header-menu"] button:nth-child(2)',
-  formsGridInitButton: '[aria-label="grid"] [aria-label="grid-header-menu"] button:nth-child(1)',
+  formsGridCreateButton: '[aria-label="grid"] [aria-label="grid-header-menu"] button:nth-child(1)',
   formEditorWrapper: '[aria-label="form-editor"]',
   formDataEditor: '[id="data"]',
   saveButton: '[aria-label="Footer"] button[button-type="primary"]',
   cancelButton: '[aria-label="Footer"] button[button-type="tertiary"]',
-  addFieldButton: '[id="fields"] [aria-label="grid-header-menu"] button',
+  addFieldButton: '[id="fields"] [aria-label="grid-header-menu"] button:last-child',
   fieldEditorWrapper: '[aria-label="field-editor"]',
   fieldsGridRows: '[id="fields"] [aria-label="grid-row"]',
   addValidator: 'div[id="validators"] [aria-label="add-validator"]',
@@ -88,20 +95,45 @@ async function openTabPageOnBrowser(browser) {
 async function testCreateNewForm(page) {
   await page.waitFor(ANIMATION_DURATION);
 
+  // verify we are in home page
+  let homeWrapper = await page.$(selectors.home.wrapper);
+  expect(homeWrapper).toBeTruthy();
+
+  // click button - go to forms
+  await page.click(selectors.home.actions.forms);
+  await page.waitFor(JAFAR_LIFECYCLE);
+
   // verify we are in form list page
-  const formListWrapper = await page.$(selectors.formListWrapper);
+  let formListWrapper = await page.$(selectors.formListWrapper);
   expect(formListWrapper).toBeTruthy();
   
   // verify form list page has no forms
   let formsGridRows = await page.$$(selectors.formsGridRows);
   expect(formsGridRows).toHaveLength(0);
 
-  // click init forms button
-  await page.click(selectors.formsGridInitButton);
+  // click logo - go to home
+  await page.click(selectors.logo);
   await page.waitFor(JAFAR_LIFECYCLE);
+
+  // verify we are in home page
+  homeWrapper = await page.$(selectors.home.wrapper);
+  expect(homeWrapper).toBeTruthy();
+
+  // click button - init forms
+  await page.click(selectors.home.actions.initDB);
+  await page.waitFor(JAFAR_LIFECYCLE);
+
+  // click button - go to forms
+  await page.click(selectors.home.actions.forms);
+  await page.waitFor(JAFAR_LIFECYCLE);
+
+  // verify we are in form list page
+  formListWrapper = await page.$(selectors.formListWrapper);
+  expect(formListWrapper).toBeTruthy();
 
   // verify form list page has 1 form
   formsGridRows = await page.$$(selectors.formsGridRows);
+  await page.waitFor(JAFAR_LIFECYCLE);
   expect(formsGridRows).toHaveLength(1);
 
   // click create new from
@@ -174,6 +206,7 @@ async function testCreateNewForm(page) {
   await page.click(selectors.showJsonMenuItem);
 
   // verify its data there
+  expectedFormJson.id = expectedFormJson.model.id;
   await verifyJsonView(page, expectedFormJson);
 }
 

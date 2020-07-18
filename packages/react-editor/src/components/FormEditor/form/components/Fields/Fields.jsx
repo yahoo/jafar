@@ -3,26 +3,59 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { FormContext } from '@jafar/react-form';
-import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Create';
-import DownloadIcon from '@material-ui/icons/SaveAlt';
-import DuplicateIcon from '@material-ui/icons/FileCopy';
-import Boolean from '@jafar/react-components/view/Boolean';
 import { FieldEditor } from '../../../../index';
 import Grid from '../../../../Grid';
+import Dialog from '../../../../Dialog';
 import { downloadJson } from '../../../../../utils/download'; 
-import * as Styled from './Styled';
+import columns from './columns';
+import rowActions from './row-actions';
+import headerActions from './header-actions';
+import { FieldEditorWrapper, GridWrapper } from './Styled';
+import AddFromLibrary from './AddFromLibrary';
 
 
-const Fields = ({ value = {}, onValueChange }) => {
+const Fields = ({ value = {}, state = {}, onValueChange, onStateChange }) => {
   const parentForm = useContext(FormContext);
-  const [editingField, setEditingField] = useState();
+  const { editingField, showModal, addFromLibraryValue } = state;
+  const setEditingField = editingField => onStateChange(({ state }) => ({ ...state, editingField }));
+  const setShowModal = name => onStateChange(({ state }) => ({ ...state, showModal: name }));
+  const setAddFromLibraryValue = addFromLibraryValue => onStateChange(({ state }) => ({ ...state, addFromLibraryValue }));
 
-  const add = () => {
-    setEditingField({ field: {} });
+  const add = () => setEditingField({ field: {} });
+
+  const save = ({ data }) => {
+    const fieldId = data.id;
+    const field = { ...data };
+    delete field.id;
+    const newValue = { ...value };
+    newValue[fieldId] = field;
+    onValueChange(newValue);
+    setEditingField();
+  };
+
+  const addFromLibrary = () => setShowModal('library');
+
+  const saveFromLibrary = () => {
+    // add selected library fields to local fields
+    const newValue = { ...value };
+    const { fields, type } = addFromLibraryValue;
+    
+    fields.forEach(field => {
+      const addField = { ...field };
+      delete addField.id;
+      if (type === 'reference') {
+        addField._referenced = true;
+      }
+      newValue[field.id] = addField;     
+    });
+    onValueChange(newValue);
+
+    // clean modal and close
+    setShowModal();
+    setAddFromLibraryValue();
   };
 
   const duplicate = ({ fieldId }) => {
@@ -41,79 +74,43 @@ const Fields = ({ value = {}, onValueChange }) => {
     onValueChange(newValue);
   };
 
-  const save = ({ fieldId, field }) => {
-    const newValue = { ...value };
-    newValue[fieldId] = field;
-    onValueChange(newValue);
-    setEditingField();
-  };
-  
-  const rowActions = [{
-    label: 'Edit',
-    icon: EditIcon,
-    onClick: setEditingField,
-  }, {
-    label: 'Duplicate',
-    icon: DuplicateIcon,
-    onClick: duplicate,
-  }, {
-    label: 'Download Json',
-    icon: DownloadIcon,
-    onClick: download,
-  }, {
-    label: 'Remove',
-    icon: DeleteIcon,
-    onClick: remove,
-  }];
-
-  const headerActions = [{
-    label: 'Add',
-    onClick: add,
-  }];
-
-  const columns = [{
-    label: 'Id',
-    content: ({ fieldId, field }) => (<Styled.FieldLink onClick={() => setEditingField({ fieldId, field })}>
-      {fieldId}</Styled.FieldLink>),
-  }, {
-    label: 'Label',
-    content: ({ field }) => field.label,
-  }, {
-    label: 'Dependencies',
-    content: ({ field }) => (field.dependencies || []).join(', '),
-  }, {
-    label: 'Required',
-    content: ({ field }) => <Styled.BooleanWrapper><Boolean value={field.required} /></Styled.BooleanWrapper>,
-  }, {
-    label: 'Validations',
-    content: ({ field }) => (field.validators || []).map(x => x.name).join(', '),
-  }, {
-    label: 'Component',
-    content: ({ field }) => field.component ? field.component.name : '',
-  }];
-
   const data = Object.keys(value).sort().map(fieldId => ({ fieldId, field: value[fieldId] }));
-
   const parentModel = parentForm.model.data.model || {};
-  
-  return (<div>
+  const fieldsLibrary = parentForm.model.context.fieldsLibrary;
+
+  return (<>
     {
-      editingField && <Styled.FieldEditorWrapper aria-label="field-editor"><FieldEditor 
+      editingField && <FieldEditorWrapper aria-label="field-editor"><FieldEditor 
         formId={parentModel.id} 
         fieldId={editingField.fieldId} 
         field={editingField.field} 
         fieldIds={Object.keys(parentModel.fields || {})} 
         onCancel={setEditingField} 
         onSave={save} 
-      /></Styled.FieldEditorWrapper>
+      /></FieldEditorWrapper>
     }
-    <Grid
-      columns={columns}
-      data={data}
-      headerActions={headerActions}
-      rowActions={rowActions}
-    />
-  </div>);
+    {
+      showModal === 'library' && <Dialog 
+        open={true}
+        title="Add Fields From Library"
+        confirmText="Add"
+        onConfirm={saveFromLibrary} 
+        onCancel={setShowModal}>
+        <AddFromLibrary 
+          value={addFromLibraryValue} 
+          onValueChange={setAddFromLibraryValue} 
+          fields={fieldsLibrary.fields}
+        />
+      </Dialog>
+    }
+    <GridWrapper>
+      <Grid
+        columns={columns({ setEditingField })}
+        data={data}
+        headerActions={headerActions({ add, addFromLibrary, fieldsLibrary })}
+        rowActions={rowActions({ setEditingField, duplicate, download, remove })} />
+    </GridWrapper> 
+  </>);
 };
 
 export default Fields;

@@ -821,7 +821,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
             },
           ]
         }
-        title="Field - new / new"
+        title="Field | new / new"
       >
         <styled.div>
           <StyledComponent
@@ -1113,7 +1113,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                     },
                   ]
                 }
-                title="Field - new / new"
+                title="Field | new / new"
               >
                 <ItemView
                   footer={
@@ -1600,7 +1600,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                       "value": "basic",
                     }
                   }
-                  title="Field - new / new"
+                  title="Field | new / new"
                 >
                   <styled.div>
                     <StyledComponent
@@ -1713,7 +1713,7 @@ exports[`FieldEditor Should render component when props are defined - ok 1`] = `
                                   <div
                                     className="sc-iAyFgw kwWvzo"
                                   >
-                                    Field - new / new
+                                    Field | new / new
                                   </div>
                                 </StyledComponent>
                               </styled.div>

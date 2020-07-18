@@ -16,20 +16,13 @@ const FieldEditor = ({ onCancel, onSave, formId, fieldId, field = {}, fieldIds =
     context: { fieldIds: fieldIds.filter(id => id !== fieldId) },
   });
 
-  const title = `Field - ${formId || 'new'} / ${fieldId || 'new'}`;
-
-  const save = ({ data }) => {
-    const fieldId = data.id;
-    const field = { ...data };
-    delete field.id;
-    onSave({ fieldId, field });
-  };
+  const title = `Field | ${formId || 'new'} / ${fieldId || 'new'}`;
 
   return model ? (<Form model={model} resources={resources}>
     <BaseItem 
       title={title} 
       sections={sections} 
-      onSave={save}
+      onSave={onSave}
       onCancel={onCancel} />
   </Form>) : (null);
 };

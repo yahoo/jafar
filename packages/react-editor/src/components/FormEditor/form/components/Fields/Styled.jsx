@@ -21,6 +21,13 @@ export const FieldLink = withTheme(styled.a`
   }
 `);
 
+export const GridWrapper = styled.div`
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
 export const FieldEditorWrapper = styled.div`
   position: absolute;
   top: 0;
@@ -28,4 +35,9 @@ export const FieldEditorWrapper = styled.div`
   width: 100%;
   height: 100%;
   z-index: 21;
+`;
+
+export const ComponentWrapper = styled.div`
+  width: 400px;
+  margin: 0 0 20px 0;
 `;
