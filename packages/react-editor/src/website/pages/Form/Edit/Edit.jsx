@@ -28,6 +28,9 @@ export default () => {
     form={entity}
     formIds={formIds}
     components={components}
+    fieldsLibrary={{
+      // todo
+    }}
     onSave={onSave} 
     onCancel={onCancel} />);
   

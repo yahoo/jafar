@@ -34,7 +34,7 @@ const selectors = {
   formDataEditor: '[id="data"]',
   saveButton: '[aria-label="Footer"] button[button-type="primary"]',
   cancelButton: '[aria-label="Footer"] button[button-type="tertiary"]',
-  addFieldButton: '[id="fields"] [aria-label="grid-header-menu"] button',
+  addFieldButton: '[id="fields"] [aria-label="grid-header-menu"] button:last-child',
   fieldEditorWrapper: '[aria-label="field-editor"]',
   fieldsGridRows: '[id="fields"] [aria-label="grid-row"]',
   addValidator: 'div[id="validators"] [aria-label="add-validator"]',

@@ -18,14 +18,14 @@ const FormEditorWrapper = styled.div`
   width: 100%;
 `;
 
-const FormEditor = ({ form = {}, formIds = [], onCancel, onSave }) => {
+const FormEditor = ({ form = {}, formIds = [], fieldsLibrary, onCancel, onSave }) => {
   const formId = (form.model || {}).id;
   const title = `Form | ${formId || 'new'}`;
 
   const [model] = useState({ 
     ...initialModel, 
     data: form, 
-    context: { formIds: formIds.filter(id => id !== formId) }, 
+    context: { formIds: formIds.filter(id => id !== formId), fieldsLibrary }, 
   });
 
   return (<FormEditorWrapper aria-label="form-editor">
