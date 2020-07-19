@@ -142,9 +142,9 @@ async function runAfterHooks(formId, action, getState, afterNamedAction, afterDa
   await afterNamedAction(props);
 }
 
-const resolveAction = action => {
+const resolveAction = (action) => {
   (action.debounceResolves || []).forEach(resolve => resolve());
   action.resolve();
-}
+};
 
 const isQueueClosed = formId => getState => !getState().forms[formId];
