@@ -23,6 +23,9 @@ const changeDataActions = [Actions.INIT, Actions.CHANGE_VALUE, Actions.CHANGE_DA
 
 // action = { type, metadata, func, args, resolve }
 export const addPendingAction = (formId, action) => async (getState, dispatch) => {
+  // when try to add action (with debounce like changeValue) after destroy action removed form object - ignore
+  if (isQueueClosed(formId)(getState)) return resolveAction(action);
+
   dispatch(addAction(formId, action));
 
   // if form is not currently processing - start processing
@@ -138,3 +141,10 @@ async function runAfterHooks(formId, action, getState, afterNamedAction, afterDa
   // run after action hook
   await afterNamedAction(props);
 }
+
+const resolveAction = action => {
+  (action.debounceResolves || []).forEach(resolve => resolve());
+  action.resolve();
+}
+
+const isQueueClosed = formId => getState => !getState().forms[formId];

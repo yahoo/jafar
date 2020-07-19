@@ -2,6 +2,10 @@
 
 Changes that have landed in master but are not yet released
 
+### Form
+
+* Fix - form gets new actions after destroy. [Issue 82](https://github.com/yahoo/jafar/issues/82)
+
 ### React Editor
 
 * Add - fields library. [Issue 75](https://github.com/yahoo/jafar/issues/75)

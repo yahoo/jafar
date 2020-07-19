@@ -5,84 +5,94 @@
 
 import { noop } from 'lodash';
 import { Actions } from './actions/types';
+import { throwError, errors } from './errors';
 import handleAction from './handle-action';
 
 const internal = Symbol('internal');
 const external = Symbol('external');
+const destroyed = Symbol('destroyed');
+
 
 export default class Form {
   init(model, resources, settings, onUpdateForm = noop) {
     this[internal] = { model, resources, settings };
     this.onUpdateForm = onUpdateForm;
-    return handle.call(this, Actions.INIT, [model, resources, settings]);
+    return safe.call(this, () => exec.call(this, Actions.INIT, [model, resources, settings]));
   }
 
   changeValue(fieldId, value) {
-    return handle.call(this, Actions.CHANGE_VALUE, [this[internal].model.id, fieldId, value]);
+    return safe.call(this, () => exec.call(this, Actions.CHANGE_VALUE, [this[internal].model.id, fieldId, value]));
   }
 
   changeState(fieldId, state) {
-    return handle.call(this, Actions.CHANGE_STATE, [this[internal].model.id, fieldId, state]);
+    return safe.call(this, () => exec.call(this, Actions.CHANGE_STATE, [this[internal].model.id, fieldId, state]));
   }
 
   changeData(data) {
-    return handle.call(this, Actions.CHANGE_DATA, [this[internal].model.id, data]);
+    return safe.call(this, () => exec.call(this, Actions.CHANGE_DATA, [this[internal].model.id, data]));
   }
 
   changeContext(context) {
-    return handle.call(this, Actions.CHANGE_CONTEXT, [this[internal].model.id, context]);
+    return safe.call(this, () => exec.call(this, Actions.CHANGE_CONTEXT, [this[internal].model.id, context]));
   }
 
   changeUi(fieldId, ui) {
-    return handle.call(this, Actions.CHANGE_UI, [this[internal].model.id, fieldId, ui]);
+    return safe.call(this, () => exec.call(this, Actions.CHANGE_UI, [this[internal].model.id, fieldId, ui]));
   }
 
   submit() {
-    return handle.call(this, Actions.SUBMIT, [this[internal].model.id]);
+    return safe.call(this, () => exec.call(this, Actions.SUBMIT, [this[internal].model.id]));
   }
 
   reset() {
-    return handle.call(this, Actions.RESET, [this[internal].model.id]);
+    return safe.call(this, () => exec.call(this, Actions.RESET, [this[internal].model.id]));
   }
 
   destroy() {
-    return handle.call(this, Actions.DESTROY, [this[internal].model.id]);
+    const promise = safe.call(this, () => exec.call(this, Actions.DESTROY, [this[internal].model.id]));
+    this[destroyed] = true;
+    return promise;
   }
 
   get id() {
-    return this[external].model.id;
+    return safe.call(this, () => this[external].model.id);
   }
 
   get fields() {
-    return this[external].model.fields;
+    return safe.call(this, () => this[external].model.fields);
   }
 
   get data() {
-    return this[external].model.data;
+    return safe.call(this, () => this[external].model.data);
   }
 
   get context() {
-    return this[external].model.context;
+    return safe.call(this, () => this[external].model.context);
   }
 
   get dirty() {
-    return this[external].model.dirty;
+    return safe.call(this, () => this[external].model.dirty);
   }
 
   get invalid() {
-    return this[external].model.invalid;
+    return safe.call(this, () => this[external].model.invalid);
   }
 
   get errors() {
-    return this[external].model.errors;
+    return safe.call(this, () => this[external].model.errors);
   }
 
   get pendingActions() {
-    return this[external].model.pendingActions;
+    return safe.call(this, () => this[external].model.pendingActions);
   }
 }
 
-function handle(type, args) {
+function safe(func) {
+  if (this[destroyed]) throwError('Form class - ', errors.ACCESS_DESTROYED_FORM);
+  return func();
+}
+
+function exec(type, args) {
   const getState = () => this[internal];
   const setForm = (form, action, isUiAction) => {
     this[internal] = form;
