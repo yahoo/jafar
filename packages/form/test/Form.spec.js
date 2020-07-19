@@ -614,18 +614,59 @@ describe('Form', () => {
   });
 
   describe('destroy form', () => {
-    it('should destroy form', async () => {
+    it('form should throw an error when try to call action after destroy', async () => {
       const form = new Form();
       await form.init(simpleForm.model, simpleForm.resources);
       expect(form.id).toEqual('simple');
       await form.destroy();
-      let called = false;
+      // call action of the form
+      let error;
+      try {
+        await form.changeValue('name', 'Tag');
+      } catch (err) {
+        error = err;
+      }
+      expect(error.code).toEqual(errors.ACCESS_DESTROYED_FORM.code);
+    });
+
+    it('form should throw an error when try to call getter after destroy', async () => {
+      const form = new Form();
+      await form.init(simpleForm.model, simpleForm.resources);
+      expect(form.id).toEqual('simple');
+      await form.destroy();
+      // try get property of the form
+      let error;
       try {
         const { id } = form; // eslint-disable-line
       } catch (err) {
-        called = true;
+        error = err;
       }
-      expect(called).toBeTruthy();
+      expect(error.code).toEqual(errors.ACCESS_DESTROYED_FORM.code);
+    });
+
+    it('ui case - destroy form without await and call form action after without await - form should not handle '
+        + 'new actions after destroy', async () => {
+      const form = new Form();
+      await form.init(simpleForm.model, simpleForm.resources);
+      expect(form.id).toEqual('simple');
+      // UI case: when editing component that called "onValueChange" on blur and right after click "save" that
+      // redirect from the page and destroy the form
+      // destroy is async so by the time its "addAction" to queue happens - the changeValue already fires
+      // order: changeValue called (on blur) -> destroy called -> changeValue await 250ms for debounce -> 
+      // destroy "addAction" called -> changeValue "addAction" called after 250ms that will fail cuz form is undefined
+      // after destroy - so this function make sure it wont throw error when process queue is closed
+      // we dont want to throw error in this case - cuz the component actually called onValueChange before the destroy
+      // so only ignore
+      const promise1 = form.changeValue('name', 'Tag');
+      const promise2 = form.changeValue('name', 'Tag2');
+      const promise3 = form.destroy();
+      let error;
+      try {
+        await Promise.all([promise1, promise2, promise3]);
+      } catch (err) {
+        error = err;
+      }
+      expect(error).toBeFalsy();
     });
   });
 

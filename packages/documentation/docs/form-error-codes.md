@@ -869,6 +869,49 @@ await form.init(model, resources);
 await form.changeValue('size', ({ value }) => ({ x: value.x + 1, y: value.y + 1 }));
 ```
 
+## ACCESS_DESTROYED_FORM
+
+can\'t access destroyed form. [More info](actions#destroy)
+
+Example
+
+```javascript
+import Form from '@jafar/form';
+
+const model = { /* ... */ };
+
+const resources = { /* ... */ };
+
+// create form
+const form = new Form();
+await form.init(model, resources);
+
+// destroy form
+await form.destroy();
+
+// change value
+await form.changeValue('firstName', 'Rachel'); // throws error
+```
+
+Solution
+
+```javascript
+import Form from '@jafar/form';
+
+const model = { /* ... */ };
+
+const resources = { /* ... */ };
+
+// create form
+const form = new Form();
+await form.init(model, resources);
+
+// destroy form
+await form.destroy();
+
+// don't access form instance anymore
+```
+
 ## INVALID_LOG_LEVEL
 
 log level `logLevel` is not supported. Supported log levels are: `debug`, `warn`, `error` and `none`. [More info](log)

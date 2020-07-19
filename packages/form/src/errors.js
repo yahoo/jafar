@@ -19,7 +19,7 @@ JafarError.prototype.toString = function toString() {
   return `Jafar error - "${this.code}": ${this.message}. More info: ${this.reference}.`;
 };
 
-export function createError(prefix, error, data, args, subError) {
+export function createError(prefix, error, data, args = [], subError) {
   const message = error.message.apply(null, args);
   const referenceHash = error.code.replace(/_/g, '-').toLowerCase();
   const reference = `${JAFAR_DOCS_ERROR_CODES}#${referenceHash}`;
@@ -122,6 +122,10 @@ export const errors = {
   CHANGE_VALUE_UPDATER_NOT_SUPPORTED: {
     code: 'CHANGE_VALUE_UPDATER_NOT_SUPPORTED',
     message: () => `calling changeValue action with an updater function is not supported for a field without a component`,
+  },
+  ACCESS_DESTROYED_FORM: {
+    code: 'ACCESS_DESTROYED_FORM',
+    message: () => 'can\'t access destroyed form',
   },
   INVALID_LOG_LEVEL: {
     code: 'INVALID_LOG_LEVEL',
