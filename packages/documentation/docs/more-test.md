@@ -126,6 +126,85 @@ expect(form.fields.firstName.errors).toEqual([{
 }]);
 ```
 
+
+### Components tests
+
+Since Jafar uses generic component props for all of its components, a mapping layer to existing component props is required,
+which should be tested.
+
+Example - component Input using [toJafar](react-components#tojafar) hoc
+
+```javascript
+/* Input.js */
+import { toJafar } from '@jafar/react-components/utils';
+import Input from '@material-ui/core/Input';
+
+export const mapper = ({ value = '', disabled = false, state = {}, onValueChange }) => ({
+  type: state.type
+  placeholder: state.placeholder,
+  value,
+  disabled,
+  onChange: (e) => onValueChange(e.target.value),
+});
+
+export default toJafar(Input, mapper);
+```
+
+Using the above format saves the `react` import as well as simplify tests. 
+The following code tests mapper function with a simple javascript test.
+
+```javascript
+/* Input.spec.js */
+import React from 'react';
+import { shallow } from 'enzyme';
+import Input, { mapper } from './Input.js';
+
+describe('Input', () => {
+  const jafarProps = {
+    state: {
+      type: 'text',
+      placeholder: 'Enter name...',
+    },
+    value: 'Rachel',
+    disabled: false,
+    onValueChange: jest.fn(),
+  };
+
+  const expectedInputProps = {
+    type: 'text',
+    placeholder: 'Enter name...',
+    value: 'Rachel Green',
+    disabled: false,
+    onChange: expect.any(Function),
+  };
+
+  let inputProps;
+  
+  beforeEach(() => {
+    inputProps = mapper(jafarProps);
+  });
+  
+  describe('mapper', () => {
+    it('return correct props', () => {
+      expect(inputProps).toEqual(expectedInputProps);
+    });
+
+    it('call onValueChange with correct value', () => {
+      const mockEvent = { target: { value: 'Ross' } };
+      inputProps.onChange(mockEvent);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith('Ross');
+    });
+  });
+
+  describe('component', () => {
+    it('renders ok', () => {
+      const component = shallow(<Input {...jafarProps} />);
+      expect(component.props()).toEqual(expectedInputProps);
+    });
+  });
+});
+```
+
 ### E2E tests
 
 Add e2e tests to verify that your ui was loaded and perform some real user changes to verify it works correctly.
