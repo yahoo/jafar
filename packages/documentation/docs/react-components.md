@@ -34,49 +34,32 @@ For more info please view [stateful component](component#stateful-component) and
 
 ## Example
 
+Simple Example
+
 ```javascript
 import React from 'react';
-import PropTypes from 'prop-types';
-import InternalCheckboxCollection from './internal/CheckboxCollection';
+import Input from '@material-ui/core/Input';
 
-export default class CheckboxCollection extends React.Component {
-  static propTypes = {
-    value: PropTypes.array,
-    state: PropTypes.object,
-    disabled: PropTypes.bool,
-    onValueChange: PropTypes.func.isRequired,
-    onStateChange: PropTypes.func,
-  }
+export default ({ value = '', state = {}, onValueChange }) => <Input
+  value={value}
+  onChange={(e) => onValueChange(e.target.value)}
+  type={state.type}
+  placeholder={state.placeholder}
+/>
+```
 
-  static defaultProps = {
-    value: [],
-    state: {
-      items: [],
-      search: undefined, // { value, placeholder }
-    },
-    disabled: false,
-    invalid: false,
-    onStateChange: noop,
-  }
+Advanced example
 
-  render() {
-    return (
-      <InternalCheckboxCollection
-        search={this.props.state.search}
-        items={this.props.state.items}
-        inline={this.props.state.inline}
-        value={this.props.value}
-        disabled={this.props.disabled}
-        onCheckChange={this.onItemCheckChange}
-        onSearchChange={this.onSearchFilterChange}
-      />
-    );
-  }
+```javascript
+import React from 'react';
+import InternalCheckboxCollection from 'some-components-library/CheckboxCollection';
 
-  onItemCheckChange = (e, checked) => {
+export default ({ value = [] state, disabled, invalid, onValueChange, onStateChange }) => {
+
+  const onItemCheckChange = (e, checked) => {
     // pass a new value object to the hook
     const itemValue = e.target.value;
-    const newValue = [...this.props.value];
+    const newValue = [...value];
     
     if (checked) {
       newValue.push(itemValue);
@@ -84,23 +67,69 @@ export default class CheckboxCollection extends React.Component {
       newValue.splice(value.indexOf(itemValue), 1);
     }
 
-    this.props.onValueChange(newValue);
+    onValueChange(newValue);
   };
 
-  onSearchFilterChange = (filter) => {
+  const onSearchFilterChange = (filter) => {
     // pass a new state object to the hook
-    const newState = { 
-      ...this.props.state, 
-      search: { 
-        ...this.props.state.search,
-        value: filter
-      } 
-    };
-
-    this.props.onStateChange(newState);
+    const newState = { ...state, search: { ...state.search, value: filter } };
+    onStateChange(newState);
   }
+
+  return <InternalCheckboxCollection
+    search={state.search}
+    items={state.items}
+    inline={state.inline}
+    value={value}
+    disabled={disabled}
+    onCheckChange={onItemCheckChange}
+    onSearchChange={onSearchFilterChange}
+  />;
 }
 ```
+
+## Utils
+
+### toJafar
+
+To use existing components library in a form (such as [Material UI](https://material-ui.com/)) -
+a map from the Jafar component generic props to the existing component props is needed.
+
+Example - using react functional component
+
+```javascript
+/* Input.js */
+import React from 'react';
+import Input from '@material-ui/core/Input';
+
+export default ({ value = '', state = {}, disabled = false, onValueChange }) => <Input
+  type={state.type}
+  placeholder={state.placeholder}
+  value={value}
+  disabled={disabled}
+  onChange={(e) => onValueChange(e.target.value)}
+/>
+```
+
+Example - using toJafar HOC
+
+```javascript
+/* Input.js */
+import { toJafar } from '@jafar/react-components/utils';
+import Input from '@material-ui/core/Input';
+
+export const mapper = ({ value = '', disabled = false, state = {}, onValueChange }) => ({
+  type: state.type
+  placeholder: state.placeholder,
+  value,
+  disabled,
+  onChange: (e) => onValueChange(e.target.value),
+});
+
+export default toJafar(Input, mapper);
+```
+
+Using the above HOC saves the `react` import as well as simplify tests ([More info](test#components-tests)).
 
 ## Our Common Components
 
