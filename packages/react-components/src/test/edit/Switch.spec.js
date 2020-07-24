@@ -5,7 +5,8 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import Switch, { mapper } from '../../components/edit/Switch';
+import Switch from '../../components/edit/Switch/index.js';
+import { mapper } from '../../components/edit/Switch/Switch';
 
 describe('Switch', () => {
   let componentProps;

@@ -14,6 +14,12 @@ Changes that have landed in master but are not yet released
 
 * Update selects components - support custom styles. [Issue 79](https://github.com/yahoo/jafar/issues/79)
 
+* Add toJafar hoc util and transfer components to use it. [Issue 86](https://github.com/yahoo/jafar/issues/86)
+
+### Documentation
+
+* Add toJafar hoc util and how to test components. [Issue 86](https://github.com/yahoo/jafar/issues/86)
+
 ## v1.0.9 (July 15, 2020)
 
 ### React Form

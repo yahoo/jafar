@@ -35,7 +35,7 @@ Switch.defaultProps = defaultProps;
 
 export default Switch;
 
-
+// hack for styleguidist (issue with hoc components)
 /** @component */
 /**
  * Represent a boolean value
@@ -44,7 +44,7 @@ export default Switch;
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Switch">
  Switch</a> from '@jafar/react-components/edit/Switch'
  */
-export const DemoSwitch = props => <Switch {...props} />; // hack for styleguidist 
+export const DemoSwitch = props => <Switch {...props} />;
 DemoSwitch.propTypes = propTypes;
 DemoSwitch.defaultProps = defaultProps;
 DemoSwitch.displayName = 'Switch';
