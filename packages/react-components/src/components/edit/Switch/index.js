@@ -3,6 +3,8 @@
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
 
-import Switch from './Switch';
+import Switch, { mapper as _mapper } from './Switch';
+
+export const mapper = _mapper;
 
 export default Switch;

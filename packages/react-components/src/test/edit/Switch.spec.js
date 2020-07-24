@@ -2,46 +2,46 @@
   * Copyright 2020, Verizon Media
   * Licensed under the terms of the MIT license. See LICENSE file in project root for terms.
   */
- 
+
 import React from 'react';
-import { mount, shallow } from 'enzyme';
-import Switch from '../../components/edit/Switch/index';
+import { shallow } from 'enzyme';
+import Switch, { mapper } from '../../components/edit/Switch';
 
-describe('<Switch />', () => {
-  let component;
-  let onValueChangeSpy;
-  const value = true;
-  const disabled = false;
-  const state = { };
+describe('Switch', () => {
+  let componentProps;
 
+  const jafarProps = {
+    value: true,
+    disabled: true,
+    onValueChange: jest.fn(),
+  };
+
+  const expectedProps = {
+    checked: true,
+    disabled: true,
+    onChange: expect.any(Function),
+  };
+ 
   beforeEach(() => {
-    onValueChangeSpy = jest.fn();
+    componentProps = mapper(jafarProps);
   });
 
-  it('should render provided data', () => {
-    component = shallow(
-      getComponent(value, state, disabled, onValueChangeSpy)
-    );
-    expect(component).toMatchSnapshot();
+  describe('mapper', () => {
+    it('mapper return correct props', () => {
+      expect(componentProps).toEqual(expectedProps);
+    });
+  
+    it('call onValueChange with correct value', () => {
+      const mockEvent = { target: { checked: false } };
+      componentProps.onChange(mockEvent);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith(false);
+    });
   });
 
-  it('should trigger onValueChange callback on value change', () => {
-    component = mount(
-      getComponent(value, state, disabled, onValueChangeSpy)
-    );
-    const newValue = false;
-    component.find('input').simulate('change', { target: { checked: newValue } });
-    expect(onValueChangeSpy).toHaveBeenCalledWith(newValue);
+  describe('component', () => {
+    it('renders ok', () => {
+      const component = shallow(<Switch {...jafarProps} />);
+      expect(component.props()).toEqual(expectedProps);
+    });
   });
-
-  function getComponent(value, state, disabled, onValueChange) {
-    return (
-      <Switch
-        value={value}
-        state={state}
-        disabled={disabled}
-        onValueChange={onValueChange}
-      />
-    );
-  }
 });
