@@ -44,7 +44,7 @@ export default Switch;
  href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Switch">
  Switch</a> from '@jafar/react-components/edit/Switch'
  */
-export const DemoSwitch = props => <Switch {...props} /> // hack for styleguidist 
+export const DemoSwitch = props => <Switch {...props} />; // hack for styleguidist 
 DemoSwitch.propTypes = propTypes;
 DemoSwitch.defaultProps = defaultProps;
 DemoSwitch.displayName = 'Switch';

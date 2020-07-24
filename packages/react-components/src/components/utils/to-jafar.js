@@ -5,4 +5,4 @@
 
 import React from 'react';
 
-export default (Component, mapper) =>  props => (<Component {...mapper(props)} />);
+export default (Component, mapper) => props => (<Component {...mapper(props)} />);
