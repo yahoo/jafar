@@ -12,10 +12,7 @@ import { customStyles } from '../Select/Select';
 import { toJafar } from '../../utils';
  
 const propTypes = {
-  value: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.any,
-  })),
+  value: PropTypes.arrayOf(PropTypes.any),
   state: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string,
