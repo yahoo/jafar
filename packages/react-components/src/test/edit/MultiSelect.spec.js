@@ -4,98 +4,78 @@
   */
 
 import React from 'react';
-import { mount, shallow } from 'enzyme';
-import MultiSelect from '../../components/edit/MultiSelect/index';
-
-describe('<MultiSelect />', () => {
-  let component;
-  let onValueChangeSpy;
-  let onStateChangeSpy;
-  let state;
-  let value;
-  let disabled;
-  let required;
-
-  beforeEach(() => {
-    onValueChangeSpy = jest.fn();
-    onStateChangeSpy = jest.fn();
-    value = ['ocean'];
-    disabled = false;
-    required = false;
-    state = { 
-      options:[
+import { shallow } from 'enzyme';
+import MultiSelect from '../../components/edit/MultiSelect';
+import { mapper } from '../../components/edit/MultiSelect/MultiSelect';
+  
+describe('MultiSelect', () => {
+  let componentProps;
+  
+  const jafarProps = {
+    value: ['ocean'],
+    disabled: false,
+    required: false,
+    state: {
+      searchable: true,
+      searchQuery: 'oc',
+      placeholder: 'Color...',
+      items:[
         { value: 'ocean', label: 'Ocean' },
         { value: 'blue', label: 'Blue' },
         { value: 'purple', label: 'Purple' },
       ],
-    };
-  });
+    },
+    onValueChange: jest.fn(),
+    onStateChange: jest.fn(),
+  };
 
-  it('Should render provided data', () => {
-    component = shallow(
-      getComponent(value, state, disabled, required, onValueChangeSpy, onStateChangeSpy)
-    );
-    expect(component).toMatchSnapshot();
+  const mapFunc = (item) => ({ label: item.label, value: item.value, orgValue: item.value });
+  
+  const expectedProps = {
+    isMulti: true,
+    value: [{ value: 'ocean', label: 'Ocean' }].map(mapFunc),
+    options: jafarProps.state.items.slice(1).map(mapFunc),
+    placeholder: 'Color...',
+    isDisabled: false,
+    isSearchable: true,
+    inputValue: 'oc',
+    styles: expect.any(Object),
+    onChange: expect.any(Function),
+    onInputChange: expect.any(Function),
+  };
+   
+  beforeEach(() => {
+    componentProps = mapper(jafarProps);
   });
-
-  it('Should render provided data - disabled', () => {
-    disabled = true;
-    component = shallow(
-      getComponent(value, state, disabled, required, onValueChangeSpy, onStateChangeSpy)
-    );
-    expect(component).toMatchSnapshot();
+  
+  describe('mapper', () => {
+    it('return correct props', () => {
+      expect(componentProps).toEqual(expectedProps);
+    });
+    
+    it('onChange - call onValueChange with correct value', () => {
+      const selected = expectedProps.options[0];
+      componentProps.onChange([selected]);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith([jafarProps.state.items[1].value]);
+    });
+ 
+    it('onChange - call onValueChange with undefined value', () => {
+      componentProps.onChange(undefined);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith(undefined);
+    });
+ 
+    it('onInputChange - call onStateChange with correct value', () => {
+      componentProps.onInputChange('ra');
+      expect(jafarProps.onStateChange).toHaveBeenCalledWith(expect.any(Function));
+      const updater = jafarProps.onStateChange.mock.calls[0][0];
+      expect(updater({ state: { items: [] } })).toEqual({ items: [], searchQuery: 'ra' });
+    });
   });
-
-  it('Should render provided data - required', () => {
-    required = true;
-    component = shallow(
-      getComponent(value, state, disabled, required, onValueChangeSpy, onStateChangeSpy)
-    );
-    expect(component).toMatchSnapshot();
+  
+  describe('component', () => {
+    it('renders ok', () => {
+      const component = shallow(<MultiSelect {...jafarProps} />);
+      expect(component.props()).toMatchObject(expectedProps);
+    });
   });
-
-  it('onValueChange - new value defined - ok', () => {
-    component = mount(
-      getComponent(value, state, disabled, required, onValueChangeSpy, onStateChangeSpy)
-    );
-    const controller = component.instance();
-    const newValue = [{ value: 'purple', orgValue: 'purple', label: 'Purple' }];
-    controller.onValueChange(newValue);
-    expect(onValueChangeSpy).toHaveBeenCalledWith(['purple']);
-  });
-
-  it('onValueChange - new value undefined - ok', () => {
-    component = mount(
-      getComponent(value, state, disabled, required, onValueChangeSpy, onStateChangeSpy)
-    );
-    const controller = component.instance();
-    const newValue = undefined;
-    controller.onValueChange(newValue);
-    expect(onValueChangeSpy).toHaveBeenCalledWith(undefined);
-  });
-
-  it('onSearchChange - ok', () => {
-    component = mount(
-      getComponent(value, state, disabled, required, onValueChangeSpy, onStateChangeSpy)
-    );
-    const controller = component.instance();
-    const query = 'pu';
-    controller.onSearchChange(query);
-    const expectedState = state;
-    expectedState.searchQuery = query;
-    expect(onStateChangeSpy).toHaveBeenCalledWith(expectedState);
-  });
-
-  function getComponent(value, state, disabled, required, onValueChange, onStateChange) {
-    return (
-      <MultiSelect
-        value={value}
-        state={state}
-        disabled={disabled}
-        required={required}
-        onValueChange={onValueChange}
-        onStateChange={onStateChange}
-      />
-    );
-  }
 });

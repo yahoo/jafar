@@ -5,18 +5,17 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import Select from '../../components/edit/Select';
-import { mapper } from '../../components/edit/Select/Select';
-  
-describe('Select', () => {
+import AsyncMultiSelect from '../../components/edit/AsyncMultiSelect';
+import { mapper } from '../../components/edit/AsyncMultiSelect/AsyncMultiSelect';
+ 
+describe('AsyncMultiSelect', () => {
   let componentProps;
-  
+ 
   const jafarProps = {
-    value: 'ocean',
+    value: [{ value: 'ocean', label: 'Ocean' }],
     disabled: false,
     required: false,
     state: {
-      searchable: true,
       searchQuery: 'oc',
       placeholder: 'Color...',
       items:[
@@ -28,40 +27,43 @@ describe('Select', () => {
     onValueChange: jest.fn(),
     onStateChange: jest.fn(),
   };
+ 
+  const mapFunc = (item) => ({ label: item.label, value: item.value, orgValue: item.value });
 
   const expectedProps = {
-    value: { value: 'ocean', label: 'Ocean' },
-    options: jafarProps.state.items,
+    isMulti: true,
+    value: [{ value: 'ocean', label: 'Ocean', orgValue: 'ocean' }],
+    options: jafarProps.state.items.map(mapFunc),
     placeholder: 'Color...',
     isDisabled: false,
-    isClearable: true,
     isSearchable: true,
+    isLoading: false,
     inputValue: 'oc',
     styles: expect.any(Object),
     onChange: expect.any(Function),
     onInputChange: expect.any(Function),
   };
-   
+  
   beforeEach(() => {
     componentProps = mapper(jafarProps);
   });
-  
+ 
   describe('mapper', () => {
     it('return correct props', () => {
       expect(componentProps).toEqual(expectedProps);
     });
-    
+   
     it('onChange - call onValueChange with correct value', () => {
       const selected = expectedProps.options[1];
-      componentProps.onChange(selected);
-      expect(jafarProps.onValueChange).toHaveBeenCalledWith(jafarProps.state.items[1].value);
+      componentProps.onChange([selected]);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith([jafarProps.state.items[1]]);
     });
- 
+
     it('onChange - call onValueChange with undefined value', () => {
       componentProps.onChange(undefined);
       expect(jafarProps.onValueChange).toHaveBeenCalledWith(undefined);
     });
- 
+
     it('onInputChange - call onStateChange with correct value', () => {
       componentProps.onInputChange('ra');
       expect(jafarProps.onStateChange).toHaveBeenCalledWith(expect.any(Function));
@@ -69,12 +71,11 @@ describe('Select', () => {
       expect(updater({ state: { items: [] } })).toEqual({ items: [], searchQuery: 'ra' });
     });
   });
-  
+ 
   describe('component', () => {
     it('renders ok', () => {
-      const component = shallow(<Select {...jafarProps} />);
+      const component = shallow(<AsyncMultiSelect {...jafarProps} />);
       expect(component.props()).toMatchObject(expectedProps);
     });
   });
 });
- 

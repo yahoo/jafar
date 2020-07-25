@@ -4,116 +4,72 @@
   */
 
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import CheckboxCollection from '../../components/edit/CheckboxCollection/index';
+import { shallow } from 'enzyme';
+import CheckboxCollection from '../../components/edit/CheckboxCollection';
+import { mapper } from '../../components/edit/CheckboxCollection/CheckboxCollection';
+  
+describe('CheckboxCollection', () => {
+  let componentProps;
+  
+  const jafarProps = {
+    value: ['ocean'],
+    disabled: true,
+    state: {
+      search: { value: 'oc' },
+      inline: true,
+      items:[
+        { value: 'ocean', label: 'Ocean' },
+        { value: 'blue', label: 'Blue' },
+        { value: 'purple', label: 'Purple' },
+      ],
+    },
+    onValueChange: jest.fn(),
+    onStateChange: jest.fn(),
+  };
 
-describe('<CheckboxCollection />', () => {
-  let component;
-  let onValueChangeSpy;
-  let onStateChangeSpy;
-  const value = ['1', '2'];
-  const items = [
-    {
-      value: '1',
-      label: 'Ross Geller',
-    },
-    {
-      value: '2',
-      label: 'Monica Geller',
-    },
-    {
-      value: '3',
-      label: 'Rachel Green',
-    },
-    {
-      value: '4',
-      label: 'Chandler Bing',
-    },
-    {
-      value: '5',
-      label: 'Joey Tribbiani',
-    },
-    {
-      value: '6',
-      label: 'Phoebe Buffay',
-    },
-  ];
-  let disabled;
-  let inline;
-  let search;
-
+  const expectedProps = {
+    value: jafarProps.value,
+    disabled: jafarProps.disabled,
+    items: jafarProps.state.items,
+    search: jafarProps.state.search,
+    inline: jafarProps.state.inline,
+    onChange: expect.any(Function),
+    onSearchChange: expect.any(Function),
+  };
+   
   beforeEach(() => {
-    disabled = false;
-    inline = false;
-    search = undefined;
-    onValueChangeSpy = jest.fn();
-    onStateChangeSpy = jest.fn();
+    componentProps = mapper(jafarProps);
   });
-
-  describe('should render provided data', () => {
-    it('checkboxes only', () => {
-      component = shallow(getComponent(value, items, disabled, inline, search, onValueChangeSpy, onStateChangeSpy));
-      expect(component).toMatchSnapshot();
+  
+  describe('mapper', () => {
+    it('return correct props', () => {
+      expect(componentProps).toEqual(expectedProps);
     });
-
-    it('checkboxes inline', () => {
-      inline = true;
-      component = shallow(getComponent(value, items, disabled, inline, search, onValueChangeSpy, onStateChangeSpy));
-      expect(component).toMatchSnapshot();
+    
+    it('onChange - call onValueChange with correct value', () => {
+      const selected = [expectedProps.items[1].value];
+      componentProps.onChange(selected);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith(selected);
     });
-
-    it('checkboxes disabled', () => {
-      disabled = true;
-      component = shallow(getComponent(value, items, disabled, inline, search, onValueChangeSpy, onStateChangeSpy));
-      expect(component).toMatchSnapshot();
+ 
+    it('onChange - call onValueChange with undefined value', () => {
+      componentProps.onChange(undefined);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith(undefined);
     });
-
-    it('checkboxes with search', () => {
-      search = { value: 'geller', placeholder: 'Search' };
-      component = shallow(getComponent(value, items, disabled, inline, search, onValueChangeSpy, onStateChangeSpy));
-      expect(component).toMatchSnapshot();
+ 
+    it('onSearchChange - call onStateChange with correct value', () => {
+      componentProps.onSearchChange('ra');
+      expect(jafarProps.onStateChange).toHaveBeenCalledWith(expect.any(Function));
+      const updater = jafarProps.onStateChange.mock.calls[0][0];
+      expect(updater({ state: { items: [] } })).toEqual({ items: [], search: { value: 'ra' } });
     });
   });
-
-  describe('should trigger', () => {
-    beforeEach(() => {
-      search = { value: '', placeholder: 'Search' };
-      component = mount(getComponent(value, items, disabled, inline, search, onValueChangeSpy, onStateChangeSpy));
-    });
-
-    it('onStateChange callback on search value change', () => {
-      const newValue = 'banana';
-      component
-        .find('input[type="search"]')
-        .simulate('change', { target: { value: newValue } });
-
-      const expectedSearch = Object.assign({}, search);
-      expectedSearch.value = newValue;
-      expect(onStateChangeSpy).toHaveBeenCalledWith({
-        items,
-        inline,
-        search: expectedSearch,
-      });
-    });
-
-    it('onValueChange callback on checkbox checked', () => {
-      component.find('[value="3"] input[type="checkbox"]').simulate('change', {
-        target: { value: '3', checked: true },
-      });
-      expect(onValueChangeSpy).toHaveBeenCalledWith(['1', '2', '3']);
-    });
-
-    it('onValueChange callback on checkbox unchecked', () => {
-      component.find('[value="3"] input[type="checkbox"]').simulate('change', {
-        target: { value: '2', checked: false },
-      });
-      expect(onValueChangeSpy).toHaveBeenCalledWith(['1']);
+  
+  describe('component', () => {
+    it('renders ok', () => {
+      const component = shallow(<CheckboxCollection {...jafarProps} />);
+      expect(component.props()).toMatchObject(expectedProps);
     });
   });
-
-  function getComponent(value, items, disabled, inline, search, onValueChange, onStateChange) {
-    return (
-      <CheckboxCollection value={value} state={{ items, search, inline }} disabled={disabled}
-        onValueChange={onValueChange} onStateChange={onStateChange} />);
-  }
 });
+ 

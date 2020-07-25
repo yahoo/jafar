@@ -4,10 +4,12 @@
   */
 
 import React from 'react';
-import SelectInternal from 'react-select';
-import { isEqual, noop } from 'lodash';
+import isEqual from 'lodash/isEqual';
+import noop from 'lodash/noop';
 import PropTypes from 'prop-types';
-
+import _Select from 'react-select';
+import { toJafar } from '../../utils';
+ 
 export const styleOverrides = {
   control: {
     fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
@@ -52,72 +54,78 @@ export const customStyles = (styles = {}) => ({
   menuList: getStyle(styleOverrides.menuList, styles.menuList),
 });
 
+const propTypes = {
+  value: PropTypes.any,
+  state: PropTypes.shape({
+    items: PropTypes.array,
+    placeholder: PropTypes.string,
+    searchable: PropTypes.bool,
+    searchQuery: PropTypes.string,
+    styles: PropTypes.object,
+  }),
+  disabled: PropTypes.bool,
+  required: PropTypes.bool,
+  onValueChange: PropTypes.func.isRequired,
+  onStateChange: PropTypes.func,
+};
+
+const defaultProps = {
+  value: undefined,
+  state: {
+    items: [],
+    placeholder: 'Search',
+    searchable: false,
+    searchQuery: '',
+    styles: {},
+  },
+  disabled: false,
+  required: false,
+  onStateChange: noop,
+};
+
+export const mapper = ({ value, state, disabled, required, onValueChange, onStateChange }) => {
+  const onChange = selected => {
+    const newValue = selected ? selected.value : selected;
+    onValueChange(newValue);
+  };
+
+  const onInputChange = searchQuery => onStateChange(({ state }) => ({ ...state, searchQuery }));
+
+  // null - fixes underline controlled VS uncontrolled issue when value turns to undefined
+  let selected = (state.items || []).find(x => isEqual(x.value, value)) || null;
+  const styles = customStyles(state.styles);
+
+  return {
+    value: selected,
+    options: state.items,
+    placeholder: state.placeholder,
+    isDisabled: disabled,
+    isClearable: !required,
+    isSearchable: !!state.searchable,
+    inputValue: state.searchQuery,
+    styles,
+    onChange,
+    onInputChange,
+  };
+};
+
+const Select = toJafar(_Select, mapper);
+
+Select.propTypes = propTypes;
+Select.defaultProps = defaultProps;
+
+export default Select;
+
+// hack for styleguidist (issue with hoc components)
+/** @component */
 /**
- * Represent a selection of a single item from fixed items list
+ * Represent a selection of multi items from async items list 
  * 
  * Import <a target="_blank" 
- href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Select/Select.jsx">
+ href="https://github.com/yahoo/jafar/blob/master/packages/react-components/src/components/edit/Select">
  Select</a> from '@jafar/react-components/edit/Select'
  */
-export default class Select extends React.Component {
-  static propTypes = {
-    value: PropTypes.any,
-    state: PropTypes.shape({
-      items: PropTypes.array,
-      placeholder: PropTypes.string,
-      searchable: PropTypes.bool,
-      searchQuery: PropTypes.string,
-      styles: PropTypes.object,
-    }),
-    disabled: PropTypes.bool,
-    required: PropTypes.bool,
-    onValueChange: PropTypes.func.isRequired,
-    onStateChange: PropTypes.func,
-  };
-
-  static defaultProps = {
-    value: undefined,
-    state: {
-      items: [],
-      placeholder: 'Search',
-      searchable: false,
-      searchQuery: '',
-      styles: {},
-    },
-    disabled: false,
-    required: false,
-    onStateChange: noop,
-  };
-
-  render() {
-    // null - fixes underline controlled VS uncontrolled issue when value turns to undefined
-    let selected = (this.props.state.items || []).find(x => isEqual(x.value, this.props.value)) || null;
-    const styles = customStyles(this.props.state.styles);
-
-    return (
-      <SelectInternal
-        value={selected}
-        onChange={this.onValueChange}
-        options={this.props.state.items}
-        placeholder={this.props.state.placeholder}
-        isDisabled={this.props.disabled}
-        isClearable={!this.props.required}
-        isSearchable={!!this.props.state.searchable}
-        inputValue={this.props.state.searchQuery}
-        onInputChange={this.onSearchChange}
-        styles={styles}
-      />
-    );
-  }
-
-  onValueChange = (selected) => {
-    let newValue = selected ? selected.value : selected;
-    this.props.onValueChange(newValue);
-  }
-
-  onSearchChange = (query) => {
-    const newState = Object.assign({}, this.props.state);
-    newState.searchQuery = query;
-    this.props.onStateChange(newState);
-  }
-}
+export const DemoSelect = props => <Select {...props} />;
+DemoSelect.propTypes = propTypes;
+DemoSelect.defaultProps = defaultProps;
+DemoSelect.displayName = 'Select';

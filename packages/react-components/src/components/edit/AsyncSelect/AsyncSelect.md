@@ -130,43 +130,37 @@ initialState = {
   value: { value: '3', label: 'Rachel Green' },
 };
 
+const serverItems = [{
+  value: '1',
+  label: 'Ross Geller'
+}, {
+  value: '2',
+  label: 'Monica Geller'
+}, {
+  value: '3',
+  label: 'Rachel Green'
+}, {
+  value: '4',
+  label: 'Chandler Bing'
+}, {
+  value: '5',
+  label: 'Joey Tribbiani'
+}, {
+  value: '6',
+  label: 'Phoebe Buffay'
+}];
+
+const findItems = query => serverItems.filter(x => x.label.toLowerCase().indexOf(query.toLowerCase()) > -1);
+
 <AsyncSelect
 value={state.value}
 state={state.state}
-onValueChange={(value) => {
-  setState({ value });
-}}
-onStateChange={(newState) => {
-  newState.items = [];
-  newState.isLoading = true;
-  setState({ state: newState });
+onValueChange={value => setState({ value })}
+onStateChange={updater => {
+  setState(state => ({ state: { ...updater({ state: state.state }), items: [], isLoading: true } }));
 
-  setTimeout(() => {
-    const items = [{
-      value: '1',
-      label: 'Ross Geller'
-    }, {
-      value: '2',
-      label: 'Monica Geller'
-    }, {
-      value: '3',
-      label: 'Rachel Green'
-    }, {
-      value: '4',
-      label: 'Chandler Bing'
-    }, {
-      value: '5',
-      label: 'Joey Tribbiani'
-    }, {
-      value: '6',
-      label: 'Phoebe Buffay'
-    }];
-
-    const filteredItems = items.filter(x => x.label.toLowerCase().indexOf(newState.searchQuery.toLowerCase()) > -1);
-    const newState2 = Object.assign({}, newState);
-    newState2.items = filteredItems;
-    newState2.isLoading = false;
-    setState({ state: newState2 });
+  setTimeout(() => {      
+    setState(state => ({ state: { ...state.state, items: findItems(state.state.searchQuery), isLoading: false } }));
   }, 700);
 }}
 />
@@ -182,43 +176,37 @@ initialState = {
   },
 };
 
+const serverItems = [{
+  value: '1',
+  label: 'Ross Geller'
+}, {
+  value: '2',
+  label: 'Monica Geller'
+}, {
+  value: '3',
+  label: 'Rachel Green'
+}, {
+  value: '4',
+  label: 'Chandler Bing'
+}, {
+  value: '5',
+  label: 'Joey Tribbiani'
+}, {
+  value: '6',
+  label: 'Phoebe Buffay'
+}];
+
+const findItems = query => serverItems.filter(x => x.label.toLowerCase().indexOf(query.toLowerCase()) > -1);
+
 <AsyncSelect
 value={state.value}
 state={state.state}
-onValueChange={(value) => {
-  setState({ value });
-}}
-onStateChange={(newState) => {
-  newState.items = [];
-  newState.isLoading = true;
-  setState({ state: newState });
+onValueChange={value => setState({ value })}
+onStateChange={updater => {
+  setState(state => ({ state: { ...updater({ state: state.state }), items: [], isLoading: true } }));
 
-  setTimeout(() => {
-    const items = [{
-      value: { id: '1', first: 'Ross', last: 'Geller' },
-      label: 'Ross Geller'
-    }, {
-      value: { id: '2', first: 'Monica', last: 'Geller' },
-      label: 'Monica Geller'
-    }, {
-      value: { id: '3', first: 'Rachel', last: 'Green' },
-      label: 'Rachel Green'
-    }, {
-      value: { id: '4', first: 'Chandler', last: 'Bing' },
-      label: 'Chandler Bing'
-    }, {
-      value: { id: '5', first: 'Joey', last: 'Tribbiani' },
-      label: 'Joey Tribbiani'
-    }, {
-      value: { id: '6', first: 'Phoebe', last: 'Buffay' },
-      label: 'Phoebe Buffay'
-    }];
-
-    const filteredItems = items.filter(x => x.label.toLowerCase().indexOf(newState.searchQuery.toLowerCase()) > -1);
-    const newState2 = Object.assign({}, newState);
-    newState2.items = filteredItems;
-    newState2.isLoading = false;
-    setState({ state: newState2 });
+  setTimeout(() => {      
+    setState(state => ({ state: { ...state.state, items: findItems(state.state.searchQuery), isLoading: false } }));
   }, 700);
 }}
 />
@@ -231,44 +219,38 @@ initialState = {
   value: { value: '3', label: 'Rachel Green' },
 };
 
+const serverItems = [{
+  value: '1',
+  label: 'Ross Geller'
+}, {
+  value: '2',
+  label: 'Monica Geller'
+}, {
+  value: '3',
+  label: 'Rachel Green'
+}, {
+  value: '4',
+  label: 'Chandler Bing'
+}, {
+  value: '5',
+  label: 'Joey Tribbiani'
+}, {
+  value: '6',
+  label: 'Phoebe Buffay'
+}];
+
+const findItems = query => serverItems.filter(x => x.label.toLowerCase().indexOf(query.toLowerCase()) > -1);
+
 <AsyncSelect
 value={state.value}
 state={state.state}
 required={true}
-onValueChange={(value) => {
-  setState({ value });
-}}
-onStateChange={(newState) => {
-  newState.items = [];
-  newState.isLoading = true;
-  setState({ state: newState });
+onValueChange={value => setState({ value })}
+onStateChange={updater => {
+  setState(state => ({ state: { ...updater({ state: state.state }), items: [], isLoading: true } }));
 
-  setTimeout(() => {
-    const items = [{
-      value: '1',
-      label: 'Ross Geller'
-    }, {
-      value: '2',
-      label: 'Monica Geller'
-    }, {
-      value: '3',
-      label: 'Rachel Green'
-    }, {
-      value: '4',
-      label: 'Chandler Bing'
-    }, {
-      value: '5',
-      label: 'Joey Tribbiani'
-    }, {
-      value: '6',
-      label: 'Phoebe Buffay'
-    }];
-
-    const filteredItems = items.filter(x => x.label.toLowerCase().indexOf(newState.searchQuery.toLowerCase()) > -1);
-    const newState2 = Object.assign({}, newState);
-    newState2.items = filteredItems;
-    newState2.isLoading = false;
-    setState({ state: newState2 });
+  setTimeout(() => {      
+    setState(state => ({ state: { ...state.state, items: findItems(state.state.searchQuery), isLoading: false } }));
   }, 700);
 }}
 />
@@ -281,44 +263,38 @@ initialState = {
   value: { value: '3', label: 'Rachel Green' },
 };
 
+const serverItems = [{
+  value: '1',
+  label: 'Ross Geller'
+}, {
+  value: '2',
+  label: 'Monica Geller'
+}, {
+  value: '3',
+  label: 'Rachel Green'
+}, {
+  value: '4',
+  label: 'Chandler Bing'
+}, {
+  value: '5',
+  label: 'Joey Tribbiani'
+}, {
+  value: '6',
+  label: 'Phoebe Buffay'
+}];
+
+const findItems = query => serverItems.filter(x => x.label.toLowerCase().indexOf(query.toLowerCase()) > -1);
+
 <AsyncSelect
 value={state.value}
 state={state.state}
 disabled={true}
-onValueChange={(value) => {
-  setState({ value });
-}}
-onStateChange={(newState) => {
-  newState.items = [];
-  newState.isLoading = true;
-  setState({ state: newState });
+onValueChange={value => setState({ value })}
+onStateChange={updater => {
+  setState(state => ({ state: { ...updater({ state: state.state }), items: [], isLoading: true } }));
 
-  setTimeout(() => {
-    const items = [{
-      value: '1',
-      label: 'Ross Geller'
-    }, {
-      value: '2',
-      label: 'Monica Geller'
-    }, {
-      value: '3',
-      label: 'Rachel Green'
-    }, {
-      value: '4',
-      label: 'Chandler Bing'
-    }, {
-      value: '5',
-      label: 'Joey Tribbiani'
-    }, {
-      value: '6',
-      label: 'Phoebe Buffay'
-    }];
-
-    const filteredItems = items.filter(x => x.label.toLowerCase().indexOf(newState.searchQuery.toLowerCase()) > -1);
-    const newState2 = Object.assign({}, newState);
-    newState2.items = filteredItems;
-    newState2.isLoading = false;
-    setState({ state: newState2 });
+  setTimeout(() => {      
+    setState(state => ({ state: { ...state.state, items: findItems(state.state.searchQuery), isLoading: false } }));
   }, 700);
 }}
 />
@@ -331,43 +307,37 @@ initialState = {
   value: undefined,
 };
 
+const serverItems = [{
+  value: '1',
+  label: 'Ross Geller'
+}, {
+  value: '2',
+  label: 'Monica Geller'
+}, {
+  value: '3',
+  label: 'Rachel Green'
+}, {
+  value: '4',
+  label: 'Chandler Bing'
+}, {
+  value: '5',
+  label: 'Joey Tribbiani'
+}, {
+  value: '6',
+  label: 'Phoebe Buffay'
+}];
+
+const findItems = query => serverItems.filter(x => x.label.toLowerCase().indexOf(query.toLowerCase()) > -1);
+
 <AsyncSelect
 value={state.value}
 state={state.state}
-onValueChange={(value) => {
-  setState({ value });
-}}
-onStateChange={(newState) => {
-  newState.items = [];
-  newState.isLoading = true;
-  setState({ state: newState });
+onValueChange={value => setState({ value })}
+onStateChange={updater => {
+  setState(state => ({ state: { ...updater({ state: state.state }), items: [], isLoading: true } }));
 
-  setTimeout(() => {
-    const items = [{
-      value: '1',
-      label: 'Ross Geller'
-    }, {
-      value: '2',
-      label: 'Monica Geller'
-    }, {
-      value: '3',
-      label: 'Rachel Green'
-    }, {
-      value: '4',
-      label: 'Chandler Bing'
-    }, {
-      value: '5',
-      label: 'Joey Tribbiani'
-    }, {
-      value: '6',
-      label: 'Phoebe Buffay'
-    }];
-
-    const filteredItems = items.filter(x => x.label.toLowerCase().indexOf(newState.searchQuery.toLowerCase()) > -1);
-    const newState2 = Object.assign({}, newState);
-    newState2.items = filteredItems;
-    newState2.isLoading = false;
-    setState({ state: newState2 });
+  setTimeout(() => {      
+    setState(state => ({ state: { ...state.state, items: findItems(state.state.searchQuery), isLoading: false } }));
   }, 700);
 }}
 />

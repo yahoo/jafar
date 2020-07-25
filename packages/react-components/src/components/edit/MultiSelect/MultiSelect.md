@@ -98,9 +98,7 @@ initialState = {
 <MultiSelect
 value={state.value}
 state={state.state}
-onValueChange={(value) => {
-  setState({ value });
-}}
+onValueChange={value => setState({ value })}
 />
 
 ```
@@ -137,9 +135,7 @@ initialState = {
 <MultiSelect
 value={state.value}
 state={state.state}
-onValueChange={(value) => {
-  setState({ value });
-}}
+onValueChange={value => setState({ value })}
 />
 ```
 
@@ -175,9 +171,7 @@ initialState = {
 <MultiSelect
 value={state.value}
 state={state.state}
-onValueChange={(value) => {
-  setState({ value });
-}}
+onValueChange={value => setState({ value })}
 />
 ```
 
@@ -213,13 +207,11 @@ initialState = {
 value={state.value}
 state={state.state}
 disabled={true}
-onValueChange={(value) => {
-  setState({ value });
-}}
+onValueChange={value => setState({ value })}
 />
 ```
 
-  <h4>Value undefined</h4>
+<h4>Value undefined</h4>
 
 ```javascript
 initialState = { 
@@ -250,8 +242,6 @@ initialState = {
 <MultiSelect
 value={state.value}
 state={state.state}
-onValueChange={(value) => {
-  setState({ value });
-}}
+onValueChange={value => setState({ value })}
 />
 ```
