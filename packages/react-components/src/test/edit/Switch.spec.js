@@ -28,7 +28,7 @@ describe('Switch', () => {
   });
 
   describe('mapper', () => {
-    it('mapper return correct props', () => {
+    it('return correct props', () => {
       expect(componentProps).toEqual(expectedProps);
     });
   
