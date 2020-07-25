@@ -51,9 +51,6 @@ describe('AsyncMultiSelect', () => {
   describe('mapper', () => {
     it('return correct props', () => {
       expect(componentProps).toEqual(expectedProps);
-      Object.keys(expectedProps).forEach(key => {
-        expect(componentProps[key]).toEqual(expectedProps[key]);
-      });
     });
    
     it('onChange - call onValueChange with correct value', () => {
