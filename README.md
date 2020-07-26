@@ -8,9 +8,11 @@ Jafar - not `Just another form application renderer`, a set of tools which imple
 * [Install](#install)
 * [Examples](#examples)
 * [Docs & Demos](#docs-&-demos)
-* [Run Demos Locally](#run-demos-locally)
+* [Run Demos Locally](#run-docs-&-demos-locally)
 * [Contribute](#contribute)
 * [Licence](#licence)
+
+<p align="left"><img width="40%" src="https://repository-images.githubusercontent.com/231425652/fb7b0480-3141-11ea-8092-c7a5b668f2fc"/></p>
 
 ## Background & Usage
 
@@ -19,7 +21,25 @@ make the code complicated, hard to maintain and hard to write to begin with.
 
 Jafar let developers build forms easily by defining a readable and intuitive form definition (model json & resources json) that represent the entire form lifescycle - such as fields and their corresponding data path, initial data, validators, dto conversions and more. It's based on a pure javascript, ui free form class which handles the form's definition, lifecycle and data manipulations. With the basic form class, any ui library (such as react, angular and vue) can easily use it to expose Form and Field components.
 
-<p align="left"><img width="40%" src="https://repository-images.githubusercontent.com/231425652/fb7b0480-3141-11ea-8092-c7a5b668f2fc"/></p>
+<p align="center"><img width="50%" src="https://yahoo.github.io/jafar/docs/assets/class-inheritance-v1.0.0.png"/></p>
+
+### Supported Form Products
+
+#### Javascript Form Class
+
+Javascript Form class which manage fields and data manipulations. [More info](form-overview.html)
+
+#### React
+
+Supplies 3 products to manage forms in [react](https://reactjs.org) applications. [More info](react-overview.html)
+- React Form & Field components based on Form class. 
+- Common components for usage such as Text, Number, Select and more, based on [Material UI](https://material-ui.com/)
+- Layout components to build form pages / peaces with the same UI / UX experience such as Item component which contain header, sections,
+footer actions and menu actions.
+
+Potentially a single page (edit / create / details / list) can be implemented using these 3 packages
+
+<p align="center"><img width="60%" src="https://yahoo.github.io/jafar/docs/assets/manage-page-v1.0.0.png"/></p>
 
 ### Highlights
 
@@ -41,27 +61,23 @@ Jafar let developers build forms easily by defining a readable and intuitive for
 
 ## Install
 
-Install form (javascript Form class)
+To install one of our consumable packages:
+- `form` - Javascript Form class
+- `react-form` - Form & Field components
+- `react-components` - Text, Number, Checkbox and more
+- `react-layout` - Item, Sections and more layout components
 
-`npm install --save @jafar/form`
+Run:
 
-Install react-form (Form & Field components)
+using npm - `npm install --save @jafar/{package-name-here}`
 
-`npm install --save @jafar/react-form`
-
-Install react-components (Text, Number, Checkbox and more)
-
-`npm install --save @jafar/react-components`
-
-Install react-layout (Item, Sections and more)
-
-`npm install --save @jafar/react-layout`
+using yarn - `yarn add @jafar/{package-name-here}`
 
 ## Examples
 
-The following is a simple `Form class` test example:
+The following is a simple javascript `Form class` test example:
 
-### Form class
+### Javascript Form Class
 
 ```javascript
 import Form from '@jafar/form';
@@ -179,7 +195,7 @@ const resources = { /*...*/ };
 
 Jafar's full docs and demos are [available here](https://yahoo.github.io/jafar).
 
-## Run Demos Locally
+## Run Docs & Demos Locally
 
 ### Clone repository
 
@@ -189,28 +205,19 @@ git clone https://github.com/yahoo/jafar.git
 
 ### Install packages and link them
 
-```
-cd /jafar && npm run bootstrap
-```
+using npm - `cd /jafar && npm run bootstrap`
 
-* Alternatively, run `npm install` in the desired sub-package (under `jafar/packages` folder) to install it without links.
+using yarn - `cd /jafar && yarn run bootstrap`
 
-### Run react form demos
+* Alternatively, run `npm install` (or `yarn install`) in the desired sub-package (under `jafar/packages` folder) to install it without links.
 
-To run react-form demos locally:
-```
-cd /jafar/packages/react-form && npm start
-```
+### Run website locally
 
-To run react-components demos locally:
-```
-cd /jafar/packages/react-components && npm start
-```
+To run demos and docs locally for one of `react-form`, `react-components`, `react-layout`, `react-editor` and `documentation` packages:
 
-To run react-layout demos locally:
-```
-cd /jafar/packages/react-layout && npm start
-```
+using npm - `cd /jafar/packages/{package-name-here} && npm start`
+
+using yarn - `cd /jafar/packages/{package-name-here} && yarn start`
 
 ## Contribute 
 
