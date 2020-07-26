@@ -28,15 +28,21 @@ Follow these steps while working on an issue:
 #### Getting Started
 
 Fork the repository and create your branch from master.
-Download forked repository, and run `npm run bootstrap` from root directory to initialize all packages. 
-Init builds all packages to a `dist` folder and link all packages to each other's `dist` folder.
-Some packages include a demo website, run `npm start` to see them and use them during development.
+Download forked repository, and run `npm run bootstrap` from root directory to initialize all packages: 
+- Cleans packages `node-modules` directory
+- Install and hoist all packages dependencies to the repository root `node-modules` directory
+- Build all packages (creates a `dist` folder under each package) 
+- Link all local packages to each other's `dist` folder
+
+Some packages include a demo website, run `npm start` under the specific package to see them and use them during development.
 
 #### Update Code
 
 Change the code in order to fullfil an issue needs. Keep in mind that Jafar is a `monorepo` - meaning a change in a specific package might affect other packages, or require other packages updates. For example - changing `@jafar/form` package, might affect or require additional change in `@jafar/react-form` package. See Jafar's [packages](https://yahoo.github.io/jafar/docs/packages.html) structure for more info.
 
-- To test a change in one package on another package run `npm run build-package` on the changed package to update its dist folder which is linked to other packages that depend on it.
+- To use or test a change in one package on another package, one can:
+  - Run `npm run build-package` from the updated package directory to re-build the `dist` folder which is linked to other local packages.
+  - Run `npm run watch-package` from the updated package directory. This will run `npm run build-package` automatically on each package change, and update its `dist` folder which is linked to other local packages.
 - We try to keep `@jafar/react-component` as generic as possible. We also expect all the params under state to be stringify (for example, don't pass components or functions in the state object) - because we want our common components to be stateless and support persistency.
 
 #### Add Tests

@@ -17,11 +17,11 @@ Jafar let developers build forms easily by defining a readable and intuitive for
 
 ### Form Class
 
-Javascript Form class that manage fields and data manipulations. [More info](form-overview.html)
+Javascript Form class which manage fields and data manipulations. [More info](form-overview.html)
 
 ### React
 
-Supplies 3 products to manage forms in react applications. [More info](react-overview.html)
+Supplies 3 products to manage forms in [react](https://reactjs.org) applications. [More info](react-overview.html)
 - React Form & Field components based on Form class. 
 - Common components for usage such as Text, Number, Select and more, based on [Material UI](https://material-ui.com/)
 - Layout components to build form pages / peaces with the same UI / UX experience such as Item component which contain header, sections,
