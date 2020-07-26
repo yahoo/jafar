@@ -81,72 +81,87 @@ You can still use <code>field.component.state</code> in that case as the initial
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h2>
+<p>Simple Example</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
-<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
-<span class="hljs-keyword">import</span> InternalCheckboxCollection <span class="hljs-keyword">from</span> <span class="hljs-string">'./internal/CheckboxCollection'</span>;
+<span class="hljs-keyword">import</span> Input <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Input'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CheckboxCollection</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
-  <span class="hljs-keyword">static</span> propTypes = {
-    <span class="hljs-attr">value</span>: PropTypes.array,
-    <span class="hljs-attr">state</span>: PropTypes.object,
-    <span class="hljs-attr">disabled</span>: PropTypes.bool,
-    <span class="hljs-attr">onValueChange</span>: PropTypes.func.isRequired,
-    <span class="hljs-attr">onStateChange</span>: PropTypes.func,
-  }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ({ value = <span class="hljs-string">''</span>, state = {}, onValueChange }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+  <span class="hljs-attr">value</span>=<span class="hljs-string">{value}</span>
+  <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =&gt;</span> onValueChange(e.target.value)}
+  type={state.type}
+  placeholder={state.placeholder}
+/&gt;
+</span></code></pre>
+<p>Advanced example</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> InternalCheckboxCollection <span class="hljs-keyword">from</span> <span class="hljs-string">'some-components-library/CheckboxCollection'</span>;
 
-  <span class="hljs-keyword">static</span> defaultProps = {
-    <span class="hljs-attr">value</span>: [],
-    <span class="hljs-attr">state</span>: {
-      <span class="hljs-attr">items</span>: [],
-      <span class="hljs-attr">search</span>: <span class="hljs-literal">undefined</span>, <span class="hljs-comment">// { value, placeholder }</span>
-    },
-    <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">invalid</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">onStateChange</span>: noop,
-  }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ({ value = [] state, disabled, invalid, onValueChange, onStateChange }) =&gt; {
 
-  render() {
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">InternalCheckboxCollection</span>
-        <span class="hljs-attr">search</span>=<span class="hljs-string">{this.props.state.search}</span>
-        <span class="hljs-attr">items</span>=<span class="hljs-string">{this.props.state.items}</span>
-        <span class="hljs-attr">inline</span>=<span class="hljs-string">{this.props.state.inline}</span>
-        <span class="hljs-attr">value</span>=<span class="hljs-string">{this.props.value}</span>
-        <span class="hljs-attr">disabled</span>=<span class="hljs-string">{this.props.disabled}</span>
-        <span class="hljs-attr">onCheckChange</span>=<span class="hljs-string">{this.onItemCheckChange}</span>
-        <span class="hljs-attr">onSearchChange</span>=<span class="hljs-string">{this.onSearchFilterChange}</span>
-      /&gt;</span>
-    );
-  }
-
-  onItemCheckChange = (e, checked) =&gt; {
-    // pass a new value object to the hook
-    const itemValue = e.target.value;
-    const newValue = [...this.props.value];
+  <span class="hljs-keyword">const</span> onItemCheckChange = <span class="hljs-function">(<span class="hljs-params">e, checked</span>) =&gt;</span> {
+    <span class="hljs-comment">// pass a new value object to the hook</span>
+    <span class="hljs-keyword">const</span> itemValue = e.target.value;
+    <span class="hljs-keyword">const</span> newValue = [...value];
     
-    if (checked) {
+    <span class="hljs-keyword">if</span> (checked) {
       newValue.push(itemValue);
-    } else {
-      newValue.splice(value.indexOf(itemValue), 1);
+    } <span class="hljs-keyword">else</span> {
+      newValue.splice(value.indexOf(itemValue), <span class="hljs-number">1</span>);
     }
 
-    this.props.onValueChange(newValue);
+    onValueChange(newValue);
   };
 
-  onSearchFilterChange = (filter) =&gt; {
-    // pass a new state object to the hook
-    const newState = { 
-      ...this.props.state, 
-      search: { 
-        ...this.props.state.search,
-        value: filter
-      } 
-    };
-
-    this.props.onStateChange(newState);
+  <span class="hljs-keyword">const</span> onSearchFilterChange = <span class="hljs-function">(<span class="hljs-params">filter</span>) =&gt;</span> {
+    <span class="hljs-comment">// pass a new state object to the hook</span>
+    <span class="hljs-keyword">const</span> newState = { ...state, <span class="hljs-attr">search</span>: { ...state.search, <span class="hljs-attr">value</span>: filter } };
+    onStateChange(newState);
   }
+
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">InternalCheckboxCollection</span>
+    <span class="hljs-attr">search</span>=<span class="hljs-string">{state.search}</span>
+    <span class="hljs-attr">items</span>=<span class="hljs-string">{state.items}</span>
+    <span class="hljs-attr">inline</span>=<span class="hljs-string">{state.inline}</span>
+    <span class="hljs-attr">value</span>=<span class="hljs-string">{value}</span>
+    <span class="hljs-attr">disabled</span>=<span class="hljs-string">{disabled}</span>
+    <span class="hljs-attr">onCheckChange</span>=<span class="hljs-string">{onItemCheckChange}</span>
+    <span class="hljs-attr">onSearchChange</span>=<span class="hljs-string">{onSearchFilterChange}</span>
+  /&gt;</span>;
 }
 </span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="utils"></a><a href="#utils" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utils</h2>
+<h3><a class="anchor" aria-hidden="true" id="tojafar"></a><a href="#tojafar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>toJafar</h3>
+<p>To use existing components library in a form (such as <a href="https://material-ui.com/">Material UI</a>) -
+a map from the Jafar component generic props to the existing component props is needed.</p>
+<p>Example - using react functional component</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">/* Input.js */</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> Input <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Input'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ({ value = <span class="hljs-string">''</span>, state = {}, disabled = <span class="hljs-literal">false</span>, onValueChange }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+  <span class="hljs-attr">type</span>=<span class="hljs-string">{state.type}</span>
+  <span class="hljs-attr">placeholder</span>=<span class="hljs-string">{state.placeholder}</span>
+  <span class="hljs-attr">value</span>=<span class="hljs-string">{value}</span>
+  <span class="hljs-attr">disabled</span>=<span class="hljs-string">{disabled}</span>
+  <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =&gt;</span> onValueChange(e.target.value)}
+/&gt;
+</span></code></pre>
+<p>Example - using toJafar HOC</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">/* Input.js */</span>
+<span class="hljs-keyword">import</span> { toJafar } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-components/utils'</span>;
+<span class="hljs-keyword">import</span> Input <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Input'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> mapper = <span class="hljs-function">(<span class="hljs-params">{ value = <span class="hljs-string">''</span>, disabled = <span class="hljs-literal">false</span>, state = {}, onValueChange }</span>) =&gt;</span> ({
+  <span class="hljs-attr">type</span>: state.type
+  <span class="hljs-attr">placeholder</span>: state.placeholder,
+  value,
+  disabled,
+  <span class="hljs-attr">onChange</span>: <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> onValueChange(e.target.value),
+});
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> toJafar(Input, mapper);
+</code></pre>
+<p>Using the above HOC saves the <code>react</code> import as well as simplify tests (<a href="test#components-tests">More info</a>).</p>
 <h2><a class="anchor" aria-hidden="true" id="our-common-components"></a><a href="#our-common-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Our Common Components</h2>
 <p>We have a collection of common components with unified api that can be used, documented here:
 <a href="https://yahoo.github.io/jafar/react-components/index.html">common components</a></p>
@@ -179,7 +194,7 @@ in order to fix their class names collision that causing ui to break.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">Root</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">StylesProvider</span>&gt;</span></span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/react-field.html"><span class="arrow-prev">← </span><span>Field</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/react-layout.html"><span>Layout</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#stateless-vs-stateful-components">Stateless Vs Stateful Components</a></li><li><a href="#props">Props</a></li><li><a href="#example">Example</a></li><li><a href="#our-common-components">Our Common Components</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><a target="_blank" href="https://www.verizonmedia.com/" class="nav-home"><img src="https://yahoo.github.io/jafar/img/verizon-media-white.png" alt="Jafar" width="100" height="58"/></a><div class="copyright">Copyright © 2020 Verizon Media</div></div><div><h5>DOCS</h5><a href="https://yahoo.github.io/jafar/docs/introduction">Introduction</a><a href="https://yahoo.github.io/jafar/docs/form-overview">Form Class</a><a href="https://yahoo.github.io/jafar/docs/react-overview">React Form</a><a href="https://yahoo.github.io/jafar/docs/react-components">React Components</a><a href="https://yahoo.github.io/jafar/docs/react-layout">React Layout</a></div><div><h5>DEMOS</h5><a href="https://yahoo.github.io/jafar/demo-react-form">React Form</a><a href="https://yahoo.github.io/jafar/demo-react-components">React Components</a><a href="https://yahoo.github.io/jafar/demo-react-layout">React Layout</a></div></section><section class="sitemap"><div></div><div><h5>CONTRIBUTING</h5><a href="https://yahoo.github.io/jafar/docs/code-of-conduct">Code Of Conduct</a><a href="https://yahoo.github.io/jafar/docs/contributing-guide">Contributing Guide</a><a href="https://yahoo.github.io/jafar/users">Users</a></div><div><h5>CHANNELS</h5><a target="_blank" class="github-button" href="https://github.com/yahoo/jafar" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" href="https://github.com/yahoo/jafar">GitHub</a><a target="_blank" href="https://stackoverflow.com/questions/tagged/jafar">Stack Overflow</a><a target="_blank" href="https://medium.com/search?q=jafar">Medium</a><a href="https://yahoo.github.io/jafar/docs/videos">Videos</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/react-field.html"><span class="arrow-prev">← </span><span>Field</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/react-layout.html"><span>Layout</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#stateless-vs-stateful-components">Stateless Vs Stateful Components</a></li><li><a href="#props">Props</a></li><li><a href="#example">Example</a></li><li><a href="#utils">Utils</a><ul class="toc-headings"><li><a href="#tojafar">toJafar</a></li></ul></li><li><a href="#our-common-components">Our Common Components</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><a target="_blank" href="https://www.verizonmedia.com/" class="nav-home"><img src="https://yahoo.github.io/jafar/img/verizon-media-white.png" alt="Jafar" width="100" height="58"/></a><div class="copyright">Copyright © 2020 Verizon Media</div></div><div><h5>DOCS</h5><a href="https://yahoo.github.io/jafar/docs/introduction">Introduction</a><a href="https://yahoo.github.io/jafar/docs/form-overview">Form Class</a><a href="https://yahoo.github.io/jafar/docs/react-overview">React Form</a><a href="https://yahoo.github.io/jafar/docs/react-components">React Components</a><a href="https://yahoo.github.io/jafar/docs/react-layout">React Layout</a></div><div><h5>DEMOS</h5><a href="https://yahoo.github.io/jafar/demo-react-form">React Form</a><a href="https://yahoo.github.io/jafar/demo-react-components">React Components</a><a href="https://yahoo.github.io/jafar/demo-react-layout">React Layout</a></div></section><section class="sitemap"><div></div><div><h5>CONTRIBUTING</h5><a href="https://yahoo.github.io/jafar/docs/code-of-conduct">Code Of Conduct</a><a href="https://yahoo.github.io/jafar/docs/contributing-guide">Contributing Guide</a><a href="https://yahoo.github.io/jafar/users">Users</a></div><div><h5>CHANNELS</h5><a target="_blank" class="github-button" href="https://github.com/yahoo/jafar" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" href="https://github.com/yahoo/jafar">GitHub</a><a target="_blank" href="https://stackoverflow.com/questions/tagged/jafar">Stack Overflow</a><a target="_blank" href="https://medium.com/search?q=jafar">Medium</a><a href="https://yahoo.github.io/jafar/docs/videos">Videos</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

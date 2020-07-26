@@ -163,10 +163,80 @@ expect(form.fields.firstName.errors).toEqual([{
   <span class="hljs-attr">message</span>: <span class="hljs-string">'Minimum length is 2'</span>,
 }]);
 </code></pre>
+<h3><a class="anchor" aria-hidden="true" id="components-tests"></a><a href="#components-tests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components tests</h3>
+<p>Since Jafar uses generic component props for all of its components, a mapping layer to existing component props is required,
+which should be tested.</p>
+<p>Example - component Input using <a href="react-components#tojafar">toJafar</a> hoc</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">/* Input.js */</span>
+<span class="hljs-keyword">import</span> { toJafar } <span class="hljs-keyword">from</span> <span class="hljs-string">'@jafar/react-components/utils'</span>;
+<span class="hljs-keyword">import</span> Input <span class="hljs-keyword">from</span> <span class="hljs-string">'@material-ui/core/Input'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> mapper = <span class="hljs-function">(<span class="hljs-params">{ value = <span class="hljs-string">''</span>, disabled = <span class="hljs-literal">false</span>, state = {}, onValueChange }</span>) =&gt;</span> ({
+  <span class="hljs-attr">type</span>: state.type
+  <span class="hljs-attr">placeholder</span>: state.placeholder,
+  value,
+  disabled,
+  <span class="hljs-attr">onChange</span>: <span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> onValueChange(e.target.value),
+});
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> toJafar(Input, mapper);
+</code></pre>
+<p>Using the above format saves the <code>react</code> import as well as simplify tests.
+The following code tests mapper function with a simple javascript test.</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">/* Input.spec.js */</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { shallow } <span class="hljs-keyword">from</span> <span class="hljs-string">'enzyme'</span>;
+<span class="hljs-keyword">import</span> Input, { mapper } <span class="hljs-keyword">from</span> <span class="hljs-string">'./Input.js'</span>;
+
+describe(<span class="hljs-string">'Input'</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> jafarProps = {
+    <span class="hljs-attr">state</span>: {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'text'</span>,
+      <span class="hljs-attr">placeholder</span>: <span class="hljs-string">'Enter name...'</span>,
+    },
+    <span class="hljs-attr">value</span>: <span class="hljs-string">'Rachel'</span>,
+    <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">onValueChange</span>: jest.fn(),
+  };
+
+  <span class="hljs-keyword">const</span> expectedInputProps = {
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'text'</span>,
+    <span class="hljs-attr">placeholder</span>: <span class="hljs-string">'Enter name...'</span>,
+    <span class="hljs-attr">value</span>: <span class="hljs-string">'Rachel Green'</span>,
+    <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">onChange</span>: expect.any(<span class="hljs-built_in">Function</span>),
+  };
+
+  <span class="hljs-keyword">let</span> inputProps;
+  
+  beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    inputProps = mapper(jafarProps);
+  });
+  
+  describe(<span class="hljs-string">'mapper'</span>, () =&gt; {
+    it(<span class="hljs-string">'return correct props'</span>, () =&gt; {
+      expect(inputProps).toEqual(expectedInputProps);
+    });
+
+    it(<span class="hljs-string">'call onValueChange with correct value'</span>, () =&gt; {
+      <span class="hljs-keyword">const</span> mockEvent = { <span class="hljs-attr">target</span>: { <span class="hljs-attr">value</span>: <span class="hljs-string">'Ross'</span> } };
+      inputProps.onChange(mockEvent);
+      expect(jafarProps.onValueChange).toHaveBeenCalledWith(<span class="hljs-string">'Ross'</span>);
+    });
+  });
+
+  describe(<span class="hljs-string">'component'</span>, () =&gt; {
+    it(<span class="hljs-string">'renders ok'</span>, () =&gt; {
+      <span class="hljs-keyword">const</span> component = shallow(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Input</span> {<span class="hljs-attr">...jafarProps</span>} /&gt;</span>);
+      expect(component.props()).toEqual(expectedInputProps);
+    });
+  });
+});
+</span></code></pre>
 <h3><a class="anchor" aria-hidden="true" id="e2e-tests"></a><a href="#e2e-tests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>E2E tests</h3>
 <p>Add e2e tests to verify that your ui was loaded and perform some real user changes to verify it works correctly.
 We covered all <code>@jafar/react-form</code> <a href="https://github.com/yahoo/jafar/blob/master/packages/react-form/src/website/Root.e2e.js">demos with e2e</a> using <a href="https://github.com/GoogleChrome/puppeteer">puppeteer</a>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/react-demos.html"><span class="arrow-prev">← </span><span>Demos</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/packages.html"><span>Packages</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#recommended-tests">Recommended tests</a><ul class="toc-headings"><li><a href="#verify-form-definition">Verify form definition</a></li><li><a href="#handlers-unit-tests">Handlers unit tests</a></li><li><a href="#form-integration-tests">Form integration tests</a></li><li><a href="#e2e-tests">E2E tests</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><a target="_blank" href="https://www.verizonmedia.com/" class="nav-home"><img src="https://yahoo.github.io/jafar/img/verizon-media-white.png" alt="Jafar" width="100" height="58"/></a><div class="copyright">Copyright © 2020 Verizon Media</div></div><div><h5>DOCS</h5><a href="https://yahoo.github.io/jafar/docs/introduction">Introduction</a><a href="https://yahoo.github.io/jafar/docs/form-overview">Form Class</a><a href="https://yahoo.github.io/jafar/docs/react-overview">React Form</a><a href="https://yahoo.github.io/jafar/docs/react-components">React Components</a><a href="https://yahoo.github.io/jafar/docs/react-layout">React Layout</a></div><div><h5>DEMOS</h5><a href="https://yahoo.github.io/jafar/demo-react-form">React Form</a><a href="https://yahoo.github.io/jafar/demo-react-components">React Components</a><a href="https://yahoo.github.io/jafar/demo-react-layout">React Layout</a></div></section><section class="sitemap"><div></div><div><h5>CONTRIBUTING</h5><a href="https://yahoo.github.io/jafar/docs/code-of-conduct">Code Of Conduct</a><a href="https://yahoo.github.io/jafar/docs/contributing-guide">Contributing Guide</a><a href="https://yahoo.github.io/jafar/users">Users</a></div><div><h5>CHANNELS</h5><a target="_blank" class="github-button" href="https://github.com/yahoo/jafar" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" href="https://github.com/yahoo/jafar">GitHub</a><a target="_blank" href="https://stackoverflow.com/questions/tagged/jafar">Stack Overflow</a><a target="_blank" href="https://medium.com/search?q=jafar">Medium</a><a href="https://yahoo.github.io/jafar/docs/videos">Videos</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="https://yahoo.github.io/jafar/docs/react-demos.html"><span class="arrow-prev">← </span><span>Demos</span></a><a class="docs-next button" href="https://yahoo.github.io/jafar/docs/packages.html"><span>Packages</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#recommended-tests">Recommended tests</a><ul class="toc-headings"><li><a href="#verify-form-definition">Verify form definition</a></li><li><a href="#handlers-unit-tests">Handlers unit tests</a></li><li><a href="#form-integration-tests">Form integration tests</a></li><li><a href="#components-tests">Components tests</a></li><li><a href="#e2e-tests">E2E tests</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><a target="_blank" href="https://www.verizonmedia.com/" class="nav-home"><img src="https://yahoo.github.io/jafar/img/verizon-media-white.png" alt="Jafar" width="100" height="58"/></a><div class="copyright">Copyright © 2020 Verizon Media</div></div><div><h5>DOCS</h5><a href="https://yahoo.github.io/jafar/docs/introduction">Introduction</a><a href="https://yahoo.github.io/jafar/docs/form-overview">Form Class</a><a href="https://yahoo.github.io/jafar/docs/react-overview">React Form</a><a href="https://yahoo.github.io/jafar/docs/react-components">React Components</a><a href="https://yahoo.github.io/jafar/docs/react-layout">React Layout</a></div><div><h5>DEMOS</h5><a href="https://yahoo.github.io/jafar/demo-react-form">React Form</a><a href="https://yahoo.github.io/jafar/demo-react-components">React Components</a><a href="https://yahoo.github.io/jafar/demo-react-layout">React Layout</a></div></section><section class="sitemap"><div></div><div><h5>CONTRIBUTING</h5><a href="https://yahoo.github.io/jafar/docs/code-of-conduct">Code Of Conduct</a><a href="https://yahoo.github.io/jafar/docs/contributing-guide">Contributing Guide</a><a href="https://yahoo.github.io/jafar/users">Users</a></div><div><h5>CHANNELS</h5><a target="_blank" class="github-button" href="https://github.com/yahoo/jafar" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a target="_blank" href="https://github.com/yahoo/jafar">GitHub</a><a target="_blank" href="https://stackoverflow.com/questions/tagged/jafar">Stack Overflow</a><a target="_blank" href="https://medium.com/search?q=jafar">Medium</a><a href="https://yahoo.github.io/jafar/docs/videos">Videos</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
