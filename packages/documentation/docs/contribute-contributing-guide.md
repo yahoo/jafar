@@ -25,6 +25,10 @@ For new feature suggestion - please mention a real life usage example, to establ
 
 Follow these steps while working on an issue:
 
+> **Note:** Docs are using `npm` commands. To use `yarn` replace:
+>  - `npm run` with `yarn run`
+>  - `npm start` with `yarn start`
+
 #### Getting Started
 
 Fork the repository and create your branch from master.
