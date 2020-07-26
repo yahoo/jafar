@@ -69,7 +69,9 @@ To install one of our consumable packages:
 
 Run:
 
-`npm install --save @jafar/{package-name-here}`
+using npm - `npm install --save @jafar/{package-name-here}`
+
+using yarn - `yarn add @jafar/{package-name-here}`
 
 ## Examples
 
@@ -203,18 +205,19 @@ git clone https://github.com/yahoo/jafar.git
 
 ### Install packages and link them
 
-```
-cd /jafar && npm run bootstrap
-```
+using npm - `cd /jafar && npm run bootstrap`
 
-* Alternatively, run `npm install` in the desired sub-package (under `jafar/packages` folder) to install it without links.
+using yarn - `cd /jafar && yarn run bootstrap`
+
+* Alternatively, run `npm install` (or `yarn install`) in the desired sub-package (under `jafar/packages` folder) to install it without links.
 
 ### Run website locally
 
 To run demos and docs locally for one of `react-form`, `react-components`, `react-layout`, `react-editor` and `documentation` packages:
-```
-cd /jafar/packages/{package-name-here} && npm start
-```
+
+using npm - `cd /jafar/packages/{package-name-here} && npm start`
+
+using yarn - `cd /jafar/packages/{package-name-here} && yarn start`
 
 ## Contribute 
 
