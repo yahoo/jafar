@@ -26,9 +26,9 @@ class Footer extends React.Component {
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
           <div>
-            <a target="_blank" href="https://www.verizonmedia.com/" className="nav-home">
+            <a target="_blank" href="https://www.yahooinc.com/" className="nav-home">
             <img
-              src={this.props.config.baseUrl + 'img/verizon-media-white.png'}
+              src={this.props.config.baseUrl + 'img/yahooinc-white.png'}
               alt={this.props.config.title}
               width="100"
               height="58"
