@@ -44,7 +44,7 @@ const siteConfig = {
   },
   // Used for publishing and more
   projectName: 'jafar',
-  organizationName: 'Verizon Media',
+  organizationName: 'Yahoo',
   // If you have users set above, you add it here:
   users,
   // path to images for header/footer
@@ -71,7 +71,7 @@ const siteConfig = {
   },
   */
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Verizon Media`,
+  copyright: `Copyright © ${new Date().getFullYear()} Yahoo`,
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default',
